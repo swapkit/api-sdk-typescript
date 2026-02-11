@@ -1,80 +1,90 @@
-export { createSwapKitClient } from "./client";
-export type { SwapKitClientOptions } from "./client";
-export type { paths } from "./generated/api";
+export { configureSwapKit, client } from "./config";
+export type { SwapKitClientOptions } from "./config";
+
+// Re-export all generated types
+export type * from "./types";
+
+// Re-export all generated SDK functions
+export * from "./sdk";
 
 // ---------------------------------------------------------------------------
-// Convenience type helpers
+// SwapKitService — single unified service class with all SDK methods
 // ---------------------------------------------------------------------------
 
-import type { paths } from "./generated/api";
+import {
+  getProviders,
+  getTokens,
+  getSwapToAssets,
+  getSwapFromAssets,
+  getQuote,
+  executeSwap1 as getSwap,
+  trackTransaction,
+  screenAddress,
+  getGasPrices,
+  getGasHistory,
+  getCachedPrice,
+  createBrokerChannel,
+} from "./sdk";
 
-/** Extracts the JSON response body for a given path + method + status */
-type JsonBody<
-  P extends keyof paths,
-  M extends keyof paths[P],
-  S extends string = "200",
-> = paths[P][M] extends { responses: infer R }
-  ? R extends Record<S, { content: { "application/json": infer B } }>
-    ? B
-    : never
-  : never;
+export class SwapKitService {
+  static getProviders = getProviders;
+  static getTokens = getTokens;
+  static getSwapTo = getSwapToAssets;
+  static getSwapFrom = getSwapFromAssets;
+  static getQuote = getQuote;
+  static getSwap = getSwap;
+  static trackTransaction = trackTransaction;
+  static screenAddress = screenAddress;
+  static getGasPrices = getGasPrices;
+  static getGasHistory = getGasHistory;
+  static getCachedPrice = getCachedPrice;
+  static createBrokerChannel = createBrokerChannel;
+}
 
-/** Extracts the JSON request body for a given path + method */
-type JsonRequest<
-  P extends keyof paths,
-  M extends keyof paths[P],
-> = paths[P][M] extends { requestBody?: { content: { "application/json": infer B } } }
-  ? B
-  : paths[P][M] extends { requestBody: { content: { "application/json": infer B } } }
-    ? B
-    : never;
+// ---------------------------------------------------------------------------
+// Backward-compatible service namespace aliases (deprecated)
+// ---------------------------------------------------------------------------
 
-// -- Quote ------------------------------------------------------------------
-export type QuoteRequest = JsonRequest<"/v3/quote", "post">;
-export type QuoteResponse = JsonBody<"/v3/quote", "post">;
-export type Route = QuoteResponse["routes"][number];
-export type RouteLeg = Route["legs"][number];
-export type RouteFee = Route["fees"][number];
-export type RouteWarning = Route["warnings"][number];
-export type RouteMeta = Route["meta"];
+/** @deprecated Use `SwapKitService` instead */
+export const TokenlistService = {
+  getProviders,
+  getTokens,
+  getSwapTo: getSwapToAssets,
+  getSwapFrom: getSwapFromAssets,
+} as const;
 
-// -- Swap -------------------------------------------------------------------
-export type SwapRequest = JsonRequest<"/v3/swap", "post">;
-export type SwapResponse = JsonBody<"/v3/swap", "post">;
+/** @deprecated Use `SwapKitService` instead */
+export const QuoteService = {
+  getQuote,
+} as const;
 
-// -- Track ------------------------------------------------------------------
-export type TrackRequest = JsonRequest<"/track", "post">;
-export type TrackResponse = JsonBody<"/track", "post">;
-export type TrackLeg = TrackResponse["legs"][number];
+/** @deprecated Use `SwapKitService` instead */
+export const SwapService = {
+  getSwap,
+} as const;
 
-// -- Tokens / Providers -----------------------------------------------------
-export type ProvidersResponse = JsonBody<"/providers", "get">;
-export type Provider = ProvidersResponse extends (infer P)[] ? P : never;
-export type TokensResponse = JsonBody<"/tokens", "get">;
+/** @deprecated Use `SwapKitService` instead */
+export const TrackService = {
+  trackTransaction,
+} as const;
 
-// -- Price ------------------------------------------------------------------
-export type PriceRequest = JsonRequest<"/price/cached-price", "post">;
-export type PriceResponse = JsonBody<"/price/cached-price", "post">;
+/** @deprecated Use `SwapKitService` instead */
+export const ScreenService = {
+  screenAddress,
+} as const;
 
-// -- Screen -----------------------------------------------------------------
-export type ScreenRequest = JsonRequest<"/screen", "post">;
-export type ScreenResponse = JsonBody<"/screen", "post">;
+/** @deprecated Use `SwapKitService` instead */
+export const GasService = {
+  getGasPrices,
+  getGasHistory,
+} as const;
 
-// -- Gas --------------------------------------------------------------------
-export type GasResponse = JsonBody<"/gas", "get">;
-export type GasHistoryResponse = JsonBody<"/gas/history", "get">;
+/** @deprecated Use `SwapKitService` instead */
+export const PriceService = {
+  getCachedPrice,
+} as const;
 
-// -- Chainflip Broker -------------------------------------------------------
-export type ChainflipChannelRequest = JsonRequest<"/chainflip/broker/channel", "post">;
-export type ChainflipChannelResponse = JsonBody<"/chainflip/broker/channel", "post">;
-
-// -- Shared enums (extracted from generated types) --------------------------
-export type ProviderName = Route["providers"][number];
-export type ChainId = NonNullable<Provider["enabledChainIds"]>[number];
-export type FeeType = RouteFee["type"];
-export type TxType = NonNullable<SwapResponse["txType"]>;
-export type WarningCode = RouteWarning["code"];
-export type TrackingStatus = NonNullable<TrackResponse["trackingStatus"]>;
-export type TransactionStatus = TrackResponse["status"];
-export type TransactionType = TrackResponse["type"];
-export type RouteTag = RouteMeta["tags"][number];
+/** @deprecated Use `SwapKitService` instead */
+export const ChainflipService = {
+  createBrokerChannel,
+} as const;
