@@ -19,7 +19,10 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts"
+    "clean": "rm -rf dist",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "type-check": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {},
   "devDependencies": {
