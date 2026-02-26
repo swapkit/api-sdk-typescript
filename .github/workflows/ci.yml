@@ -1,0 +1,19 @@
+name: CI
+
+# Disabled until generated src/index.ts is synced with src/sdk.ts exports
+# on:
+#   pull_request:
+#     branches: [main]
+#   push:
+#     branches: [main]
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install
+      - run: bun run type-check
+      - run: bun run build
