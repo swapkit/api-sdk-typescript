@@ -21,7 +21,7 @@
     "clean": "rm -rf dist",
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "type-check": "tsc --noEmit",
-    "prepublishOnly": "npm run type-check && npm run build"
+    "prepublishOnly": "bun run type-check && bun run build"
   },
   "dependencies": {},
   "devDependencies": {
