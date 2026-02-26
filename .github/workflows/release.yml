@@ -3,6 +3,10 @@ name: Release
 on:
   push:
     branches: [main]
+    paths:
+      - 'src/**'
+      - 'package.json'
+      - 'tsconfig.json'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -20,8 +24,34 @@ jobs:
         with:
           node-version: '22'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm install
+          cache: 'npm'
+
+      - name: Check if version is already published
+        id: version-check
+        run: |
+          LOCAL_VERSION=$(node -p "require('./package.json').version")
+          PKG_NAME=$(node -p "require('./package.json').name")
+          PUBLISHED_VERSION=$(npm view "${PKG_NAME}" version 2>/dev/null || echo "0.0.0")
+          echo "local=${LOCAL_VERSION}" >> "$GITHUB_OUTPUT"
+          echo "published=${PUBLISHED_VERSION}" >> "$GITHUB_OUTPUT"
+          if [ "${LOCAL_VERSION}" = "${PUBLISHED_VERSION}" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Version ${LOCAL_VERSION} is already published — skipping."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            echo "Publishing ${PKG_NAME}@${LOCAL_VERSION} (current: ${PUBLISHED_VERSION})"
+          fi
+
+      - run: npm ci
+        if: steps.version-check.outputs.skip == 'false'
+
+      - run: npm run type-check
+        if: steps.version-check.outputs.skip == 'false'
+
       - run: npm run build
+        if: steps.version-check.outputs.skip == 'false'
+
       - run: npm publish --provenance --access public
+        if: steps.version-check.outputs.skip == 'false'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -14,31 +14,31 @@ export * from "./sdk";
 import {
   getProviders,
   getTokens,
-  getSwapToAssets,
-  getSwapFromAssets,
-  getQuote,
-  executeSwap1 as getSwap,
-  trackTransaction,
-  screenAddress,
-  getGasPrices,
+  getSwapTo,
+  getSwapFrom,
+  postV3Quote,
+  postV3Swap,
+  postTrack,
+  postScreen,
+  getGas,
   getGasHistory,
-  getCachedPrice,
-  createBrokerChannel,
+  postPriceCachedPrice,
+  postChainflipBrokerChannel,
 } from "./sdk";
 
 export class SwapKitService {
   static getProviders = getProviders;
   static getTokens = getTokens;
-  static getSwapTo = getSwapToAssets;
-  static getSwapFrom = getSwapFromAssets;
-  static getQuote = getQuote;
-  static getSwap = getSwap;
-  static trackTransaction = trackTransaction;
-  static screenAddress = screenAddress;
-  static getGasPrices = getGasPrices;
+  static getSwapTo = getSwapTo;
+  static getSwapFrom = getSwapFrom;
+  static getQuote = postV3Quote;
+  static getSwap = postV3Swap;
+  static trackTransaction = postTrack;
+  static screenAddress = postScreen;
+  static getGasPrices = getGas;
   static getGasHistory = getGasHistory;
-  static getCachedPrice = getCachedPrice;
-  static createBrokerChannel = createBrokerChannel;
+  static getCachedPrice = postPriceCachedPrice;
+  static createBrokerChannel = postChainflipBrokerChannel;
 }
 
 // ---------------------------------------------------------------------------
@@ -49,42 +49,42 @@ export class SwapKitService {
 export const TokenlistService = {
   getProviders,
   getTokens,
-  getSwapTo: getSwapToAssets,
-  getSwapFrom: getSwapFromAssets,
+  getSwapTo,
+  getSwapFrom,
 } as const;
 
 /** @deprecated Use `SwapKitService` instead */
 export const QuoteService = {
-  getQuote,
+  getQuote: postV3Quote,
 } as const;
 
 /** @deprecated Use `SwapKitService` instead */
 export const SwapService = {
-  getSwap,
+  getSwap: postV3Swap,
 } as const;
 
 /** @deprecated Use `SwapKitService` instead */
 export const TrackService = {
-  trackTransaction,
+  trackTransaction: postTrack,
 } as const;
 
 /** @deprecated Use `SwapKitService` instead */
 export const ScreenService = {
-  screenAddress,
+  screenAddress: postScreen,
 } as const;
 
 /** @deprecated Use `SwapKitService` instead */
 export const GasService = {
-  getGasPrices,
+  getGasPrices: getGas,
   getGasHistory,
 } as const;
 
 /** @deprecated Use `SwapKitService` instead */
 export const PriceService = {
-  getCachedPrice,
+  getCachedPrice: postPriceCachedPrice,
 } as const;
 
 /** @deprecated Use `SwapKitService` instead */
 export const ChainflipService = {
-  createBrokerChannel,
+  createBrokerChannel: postChainflipBrokerChannel,
 } as const;
