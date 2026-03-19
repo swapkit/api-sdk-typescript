@@ -1,10 +1,11 @@
-# Template for the public repo's .github/workflows/publish.yml
-# Copy this file to: swapkit/api-sdk-typescript/.github/workflows/publish.yml
+# Publish workflow for the public api-sdk-typescript repo.
+# Managed by the SDK Sync workflow in the API monorepo — do not edit directly.
 #
-# Required secret in the public repo:
-#   NPM_TOKEN — npm automation token with publish access to @swapkit scope
+# Uses npm Trusted Publishing (OIDC) — no NPM_TOKEN secret needed.
+# Configure at: https://www.npmjs.com/package/@swapkit/api-sdk-typescript/access
+#   Trusted Publisher → swapkit/api-sdk-typescript → release.yml
 
-name: Publish to npm
+name: Release
 
 on:
   push:
@@ -25,7 +26,7 @@ jobs:
           registry-url: "https://registry.npmjs.org"
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build
         run: npm run build
@@ -45,5 +46,3 @@ jobs:
 
       - name: Publish
         run: npm publish --access public --provenance
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
