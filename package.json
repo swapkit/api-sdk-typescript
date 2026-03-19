@@ -12,16 +12,14 @@
     }
   },
   "files": [
-    "dist/"
+    "dist/",
+    "src/"
   ],
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "clean": "rm -rf dist",
-    "build": "tsup src/index.ts --format cjs,esm --dts",
-    "type-check": "tsc --noEmit",
-    "prepublishOnly": "bun run type-check && bun run build"
+    "build": "tsup src/index.ts --format cjs,esm --dts"
   },
   "dependencies": {},
   "devDependencies": {

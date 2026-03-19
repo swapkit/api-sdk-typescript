@@ -9,6 +9,8 @@ export * from "./sdk";
 
 // ---------------------------------------------------------------------------
 // SwapKitService — single unified service class with all SDK methods
+//
+// Maps generated path-derived names to user-friendly method names.
 // ---------------------------------------------------------------------------
 
 import {
