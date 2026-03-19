@@ -2,6 +2,7 @@
 # Managed by the SDK Sync workflow in the API monorepo — do not edit directly.
 #
 # Uses npm Trusted Publishing (OIDC) — no NPM_TOKEN secret needed.
+# Requires npm CLI v11+ for OIDC support.
 # Configure at: https://www.npmjs.com/package/@swapkit/api-sdk-typescript/access
 #   Trusted Publisher → swapkit/api-sdk-typescript → release.yml
 
@@ -11,19 +12,23 @@ on:
   push:
     tags: ["v*"]
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   publish:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           registry-url: "https://registry.npmjs.org"
+
+      - name: Upgrade npm to v11
+        run: npm install -g npm@11
 
       - name: Install dependencies
         run: npm install
@@ -45,4 +50,4 @@ jobs:
           echo "Publishing v${PKG_VERSION}"
 
       - name: Publish
-        run: npm publish --access public --provenance
+        run: npm publish --access public
