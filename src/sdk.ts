@@ -2,9 +2,9 @@
 
 import type { Client, Options as Options2, TDataShape } from './http';
 import { client } from './client';
-import type { GetGasData, GetGasHistoryData, GetGasHistoryResponses, GetGasResponses, GetProvidersData, GetProvidersErrors, GetProvidersResponses, GetSwapFromData, GetSwapFromErrors, GetSwapFromResponses, GetSwapToData, GetSwapToErrors, GetSwapToResponses, GetTokensData, GetTokensErrors, GetTokensResponses, PostChainflipBrokerChannelData, PostChainflipBrokerChannelResponses, PostPriceCachedPriceData, PostPriceCachedPriceResponses, PostScreenData, PostScreenErrors, PostScreenResponses, PostTrackData, PostTrackResponses, PostV3QuoteData, PostV3QuoteErrors, PostV3QuoteResponses, PostV3SwapData, PostV3SwapErrors, PostV3SwapResponses } from './types';
+import type { CreateBrokerChannelData, CreateBrokerChannelResponses, ExecuteSwapData, ExecuteSwapErrors, ExecuteSwapResponses, GetCachedPriceData, GetCachedPriceResponses, GetGasHistoryData, GetGasHistoryResponses, GetGasPricesData, GetGasPricesResponses, GetProvidersData, GetProvidersErrors, GetProvidersResponses, GetQuoteData, GetQuoteErrors, GetQuoteResponses, GetSwapFromAssetsData, GetSwapFromAssetsErrors, GetSwapFromAssetsResponses, GetSwapToAssetsData, GetSwapToAssetsErrors, GetSwapToAssetsResponses, GetTokensData, GetTokensErrors, GetTokensResponses, ScreenAddressData, ScreenAddressErrors, ScreenAddressResponses, TrackTransactionData, TrackTransactionErrors, TrackTransactionResponses } from './types';
 
-export type Options<TData extends TDataShape = TDataShape, ThrowOnError extends boolean = boolean> = Options2<TData, ThrowOnError> & {
+export type Options<TData extends TDataShape = TDataShape, ThrowOnError extends boolean = boolean, TResponse = unknown> = Options2<TData, ThrowOnError, TResponse> & {
     /**
      * You can provide a client instance returned by `createClient()` instead of
      * individual options. This might be also useful if you want to implement a
@@ -30,19 +30,19 @@ export const getTokens = <ThrowOnError extends boolean = false>(options?: Option
     ...options
 });
 
-export const getSwapTo = <ThrowOnError extends boolean = false>(options: Options<GetSwapToData, ThrowOnError>) => (options.client ?? client).get<GetSwapToResponses, GetSwapToErrors, ThrowOnError>({
+export const getSwapToAssets = <ThrowOnError extends boolean = false>(options: Options<GetSwapToAssetsData, ThrowOnError>) => (options.client ?? client).get<GetSwapToAssetsResponses, GetSwapToAssetsErrors, ThrowOnError>({
     security: [{ name: 'x-api-key', type: 'apiKey' }],
     url: '/swapTo',
     ...options
 });
 
-export const getSwapFrom = <ThrowOnError extends boolean = false>(options: Options<GetSwapFromData, ThrowOnError>) => (options.client ?? client).get<GetSwapFromResponses, GetSwapFromErrors, ThrowOnError>({
+export const getSwapFromAssets = <ThrowOnError extends boolean = false>(options: Options<GetSwapFromAssetsData, ThrowOnError>) => (options.client ?? client).get<GetSwapFromAssetsResponses, GetSwapFromAssetsErrors, ThrowOnError>({
     security: [{ name: 'x-api-key', type: 'apiKey' }],
     url: '/swapFrom',
     ...options
 });
 
-export const postChainflipBrokerChannel = <ThrowOnError extends boolean = false>(options: Options<PostChainflipBrokerChannelData, ThrowOnError>) => (options.client ?? client).post<PostChainflipBrokerChannelResponses, unknown, ThrowOnError>({
+export const createBrokerChannel = <ThrowOnError extends boolean = false>(options: Options<CreateBrokerChannelData, ThrowOnError>) => (options.client ?? client).post<CreateBrokerChannelResponses, unknown, ThrowOnError>({
     security: [{ name: 'x-api-key', type: 'apiKey' }],
     url: '/chainflip/broker/channel',
     ...options,
@@ -52,7 +52,7 @@ export const postChainflipBrokerChannel = <ThrowOnError extends boolean = false>
     }
 });
 
-export const postTrack = <ThrowOnError extends boolean = false>(options?: Options<PostTrackData, ThrowOnError>) => (options?.client ?? client).post<PostTrackResponses, unknown, ThrowOnError>({
+export const trackTransaction = <ThrowOnError extends boolean = false>(options?: Options<TrackTransactionData, ThrowOnError>) => (options?.client ?? client).post<TrackTransactionResponses, TrackTransactionErrors, ThrowOnError>({
     security: [{ name: 'x-api-key', type: 'apiKey' }],
     url: '/track',
     ...options,
@@ -62,7 +62,7 @@ export const postTrack = <ThrowOnError extends boolean = false>(options?: Option
     }
 });
 
-export const postScreen = <ThrowOnError extends boolean = false>(options: Options<PostScreenData, ThrowOnError>) => (options.client ?? client).post<PostScreenResponses, PostScreenErrors, ThrowOnError>({
+export const screenAddress = <ThrowOnError extends boolean = false>(options: Options<ScreenAddressData, ThrowOnError>) => (options.client ?? client).post<ScreenAddressResponses, ScreenAddressErrors, ThrowOnError>({
     security: [{ name: 'x-api-key', type: 'apiKey' }],
     url: '/screen',
     ...options,
@@ -72,19 +72,19 @@ export const postScreen = <ThrowOnError extends boolean = false>(options: Option
     }
 });
 
+export const getGasPrices = <ThrowOnError extends boolean = false>(options?: Options<GetGasPricesData, ThrowOnError>) => (options?.client ?? client).get<GetGasPricesResponses, unknown, ThrowOnError>({
+    security: [{ name: 'x-api-key', type: 'apiKey' }],
+    url: '/gas',
+    ...options
+});
+
 export const getGasHistory = <ThrowOnError extends boolean = false>(options?: Options<GetGasHistoryData, ThrowOnError>) => (options?.client ?? client).get<GetGasHistoryResponses, unknown, ThrowOnError>({
     security: [{ name: 'x-api-key', type: 'apiKey' }],
     url: '/gas/history',
     ...options
 });
 
-export const getGas = <ThrowOnError extends boolean = false>(options?: Options<GetGasData, ThrowOnError>) => (options?.client ?? client).get<GetGasResponses, unknown, ThrowOnError>({
-    security: [{ name: 'x-api-key', type: 'apiKey' }],
-    url: '/gas',
-    ...options
-});
-
-export const postPriceCachedPrice = <ThrowOnError extends boolean = false>(options: Options<PostPriceCachedPriceData, ThrowOnError>) => (options.client ?? client).post<PostPriceCachedPriceResponses, unknown, ThrowOnError>({
+export const getCachedPrice = <ThrowOnError extends boolean = false>(options: Options<GetCachedPriceData, ThrowOnError>) => (options.client ?? client).post<GetCachedPriceResponses, unknown, ThrowOnError>({
     security: [{ name: 'x-api-key', type: 'apiKey' }],
     url: '/price/cached-price',
     ...options,
@@ -94,7 +94,7 @@ export const postPriceCachedPrice = <ThrowOnError extends boolean = false>(optio
     }
 });
 
-export const postV3Quote = <ThrowOnError extends boolean = false>(options: Options<PostV3QuoteData, ThrowOnError>) => (options.client ?? client).post<PostV3QuoteResponses, PostV3QuoteErrors, ThrowOnError>({
+export const getQuote = <ThrowOnError extends boolean = false>(options: Options<GetQuoteData, ThrowOnError>) => (options.client ?? client).post<GetQuoteResponses, GetQuoteErrors, ThrowOnError>({
     security: [{ name: 'x-api-key', type: 'apiKey' }],
     url: '/v3/quote',
     ...options,
@@ -104,7 +104,7 @@ export const postV3Quote = <ThrowOnError extends boolean = false>(options: Optio
     }
 });
 
-export const postV3Swap = <ThrowOnError extends boolean = false>(options: Options<PostV3SwapData, ThrowOnError>) => (options.client ?? client).post<PostV3SwapResponses, PostV3SwapErrors, ThrowOnError>({
+export const executeSwap = <ThrowOnError extends boolean = false>(options: Options<ExecuteSwapData, ThrowOnError>) => (options.client ?? client).post<ExecuteSwapResponses, ExecuteSwapErrors, ThrowOnError>({
     security: [{ name: 'x-api-key', type: 'apiKey' }],
     url: '/v3/swap',
     ...options,
