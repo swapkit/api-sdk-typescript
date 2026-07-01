@@ -1,9 +1,13 @@
 # Publish workflow for the public api-sdk-typescript repo.
-# Managed by the SDK Sync workflow in the API monorepo — do not edit directly.
+# Managed by the SDK Release workflow in the API monorepo — do not edit directly.
 #
-# Uses npm Trusted Publishing (OIDC) — no NPM_TOKEN secret needed.
-# Uses Node 24 so the runner gets npm 11+ without a brittle npm self-upgrade.
-# Configure at: https://www.npmjs.com/package/@swapkit/api-sdk-typescript/access
+# Triggered by a tag pushed from the monorepo:
+#   vX.Y.Z              → stable    → npm dist-tag `latest`
+#   vX.Y.Z-nightly.<ts> → prerelease → npm dist-tag `nightly`
+#
+# Uses npm Trusted Publishing (OIDC) — no NPM_TOKEN. Node 24 gives the runner
+# npm 11+ for the OIDC handshake. Install/build run on bun (matches the monorepo).
+#   Configure at https://www.npmjs.com/package/@swapkit/api-sdk-typescript/access
 #   Trusted Publisher → swapkit/api-sdk-typescript → release.yml
 
 name: Release
@@ -13,70 +17,58 @@ on:
     tags: ["v*"]
 
 permissions:
-  id-token: write
-  contents: read
+  id-token: write # npm OIDC trusted publishing
+  contents: write # create the GitHub release
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
-  validate:
-    name: Validate release
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: "24"
-          registry-url: "https://registry.npmjs.org"
-
-      - name: Verify npm supports Trusted Publishing
-        run: npm --version
+          bun-version: latest
 
       - name: Install dependencies
-        run: npm ci
+        run: bun install
+
+      - name: Type check
+        run: bun run typecheck
+
+      - name: Build
+        run: bun run build
 
       - name: Verify version matches tag
         run: |
           TAG_VERSION="${GITHUB_REF#refs/tags/v}"
-          if ! echo "$TAG_VERSION" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+$'; then
-            echo "Release tags must use stable semver format vX.Y.Z"
-            exit 1
-          fi
-          PKG_VERSION=$(node -p "require('./package.json').version")
+          PKG_VERSION=$(bun -e "console.log(require('./package.json').version)")
           if [ "$PKG_VERSION" != "$TAG_VERSION" ]; then
             echo "Tag version ($TAG_VERSION) != package.json version ($PKG_VERSION)"
             exit 1
           fi
           echo "Validated v${PKG_VERSION}"
 
-      - name: Type check
-        run: npm run typecheck
-
-      - name: Build
-        run: npm run build
-
-      - name: Verify package contents
-        run: npm pack --dry-run
-
-  publish:
-    name: Publish to npm
-    needs: validate
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
+      # Node 24 → npm 11+, required for the OIDC trusted-publishing handshake.
       - uses: actions/setup-node@v4
         with:
           node-version: "24"
           registry-url: "https://registry.npmjs.org"
 
-      - name: Verify npm supports Trusted Publishing
-        run: npm --version
+      - name: Publish to npm
+        run: |
+          TAG_VERSION="${GITHUB_REF#refs/tags/v}"
+          if [[ "$TAG_VERSION" == *-* ]]; then DIST_TAG="nightly"; else DIST_TAG="latest"; fi
+          echo "Publishing v${TAG_VERSION} to dist-tag '${DIST_TAG}'"
+          npm publish --access public --tag "$DIST_TAG"
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
-
-      - name: Publish
-        run: npm publish --access public
+      # A GitHub release per stable version (skipped for nightly prereleases).
+      - name: Create GitHub release
+        if: ${{ !contains(github.ref, '-') }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "${GITHUB_REF#refs/tags/}" --generate-notes --title "${GITHUB_REF#refs/tags/}"
