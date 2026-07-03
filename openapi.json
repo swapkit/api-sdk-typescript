@@ -2760,7 +2760,7 @@
         }
       }
     },
-    "/price/cached-price": {
+    "/price": {
       "post": {
         "operationId": "getCachedPrice",
         "tags": [

@@ -1997,7 +1997,7 @@ export type GetCachedPriceData = {
     body: GetCachedPriceRequest;
     path?: never;
     query?: never;
-    url: '/price/cached-price';
+    url: '/price';
 };
 
 export type GetCachedPriceResponses = {

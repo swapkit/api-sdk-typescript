@@ -86,7 +86,7 @@ export const getGasHistory = <ThrowOnError extends boolean = false>(options?: Op
 
 export const getCachedPrice = <ThrowOnError extends boolean = false>(options: Options<GetCachedPriceData, ThrowOnError>): RequestResult<GetCachedPriceResponses, unknown, ThrowOnError> => (options.client ?? client).post<GetCachedPriceResponses, unknown, ThrowOnError>({
     security: [{ name: 'x-api-key', type: 'apiKey' }],
-    url: '/price/cached-price',
+    url: '/price',
     ...options,
     headers: {
         'Content-Type': 'application/json',
