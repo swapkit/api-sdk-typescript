@@ -1134,7 +1134,7 @@ export type ExecuteSwapResponse = {
      * Memo to include in the transaction
      */
     memo?: string;
-    txType?: 'PSBT' | 'EVM' | 'COSMOS' | 'SERIALIZED_BASE64' | 'RIPPLE' | 'TRON' | 'NEAR' | 'SUI' | 'CBOR' | 'TON' | 'STARKNET' | 'zcash-unsigned';
+    txType?: 'PSBT' | 'EVM' | 'COSMOS' | 'SERIALIZED_BASE64' | 'RIPPLE' | 'TRON' | 'NEAR' | 'SUI' | 'CBOR' | 'TON' | 'STARKNET' | 'zcash-unsigned' | 'STELLAR';
     txHint?: 'simpleTransfer' | 'transferWithMemo' | 'contractCall';
     tx?: {
         /**
@@ -1248,7 +1248,7 @@ export type ExecuteSwapResponse = {
         approvalAddress?: string;
         affiliate?: string;
         affiliateFee?: string;
-        txType?: 'PSBT' | 'EVM' | 'COSMOS' | 'SERIALIZED_BASE64' | 'RIPPLE' | 'TRON' | 'NEAR' | 'SUI' | 'CBOR' | 'TON' | 'STARKNET' | 'zcash-unsigned';
+        txType?: 'PSBT' | 'EVM' | 'COSMOS' | 'SERIALIZED_BASE64' | 'RIPPLE' | 'TRON' | 'NEAR' | 'SUI' | 'CBOR' | 'TON' | 'STARKNET' | 'zcash-unsigned' | 'STELLAR';
         chainflip?: {
             destinationAddress: string;
             sellAsset: {

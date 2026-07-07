@@ -9748,7 +9748,8 @@
               "CBOR",
               "TON",
               "STARKNET",
-              "zcash-unsigned"
+              "zcash-unsigned",
+              "STELLAR"
             ]
           },
           "txHint": {
@@ -10133,7 +10134,8 @@
                   "CBOR",
                   "TON",
                   "STARKNET",
-                  "zcash-unsigned"
+                  "zcash-unsigned",
+                  "STELLAR"
                 ]
               },
               "chainflip": {
