@@ -8294,6 +8294,15 @@
           "referrer": {
             "type": "string"
           },
+          "quoteType": {
+            "default": "EXACT_INPUT",
+            "type": "string",
+            "enum": [
+              "EXACT_INPUT",
+              "FLEX_INPUT"
+            ],
+            "description": "EXACT_INPUT (default) or FLEX_INPUT. Providers that can't honour the mode are filtered out; currently only NEAR supports FLEX_INPUT."
+          },
           "disableEstimate": {
             "default": true,
             "type": "boolean",

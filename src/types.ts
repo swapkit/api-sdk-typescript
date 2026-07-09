@@ -748,6 +748,10 @@ export type GetQuoteRequest = {
     cfBoost?: boolean;
     referrer?: string;
     /**
+     * EXACT_INPUT (default) or FLEX_INPUT. Providers that can't honour the mode are filtered out; currently only NEAR supports FLEX_INPUT.
+     */
+    quoteType?: 'EXACT_INPUT' | 'FLEX_INPUT';
+    /**
      * Set to true to disable on-chain estimation
      */
     disableEstimate?: boolean;
