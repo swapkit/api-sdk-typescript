@@ -8301,7 +8301,7 @@
               "EXACT_INPUT",
               "FLEX_INPUT"
             ],
-            "description": "EXACT_INPUT (default) or FLEX_INPUT. Providers that can't honour the mode are filtered out; currently only NEAR supports FLEX_INPUT."
+            "description": "EXACT_INPUT (default) or FLEX_INPUT. On FLEX_INPUT, routes whose first-leg provider can't honour the mode are filtered out. Supported first-leg providers: THORCHAIN, MAYACHAIN, CHAINFLIP (incl. streaming variants), and NEAR."
           },
           "disableEstimate": {
             "default": true,
@@ -9208,6 +9208,14 @@
           "routeId": {
             "type": "string",
             "description": "The ID of the route to swap"
+          },
+          "quoteType": {
+            "type": "string",
+            "enum": [
+              "EXACT_INPUT",
+              "FLEX_INPUT"
+            ],
+            "description": "Override the EXACT_INPUT/FLEX_INPUT mode for this swap. Defaults to the quoteType from the original /v3/quote request when omitted."
           },
           "sourceAddress": {
             "type": "string",

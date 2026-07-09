@@ -748,7 +748,7 @@ export type GetQuoteRequest = {
     cfBoost?: boolean;
     referrer?: string;
     /**
-     * EXACT_INPUT (default) or FLEX_INPUT. Providers that can't honour the mode are filtered out; currently only NEAR supports FLEX_INPUT.
+     * EXACT_INPUT (default) or FLEX_INPUT. On FLEX_INPUT, routes whose first-leg provider can't honour the mode are filtered out. Supported first-leg providers: THORCHAIN, MAYACHAIN, CHAINFLIP (incl. streaming variants), and NEAR.
      */
     quoteType?: 'EXACT_INPUT' | 'FLEX_INPUT';
     /**
@@ -948,6 +948,10 @@ export type ExecuteSwapRequest = {
      * The ID of the route to swap
      */
     routeId: string;
+    /**
+     * Override the EXACT_INPUT/FLEX_INPUT mode for this swap. Defaults to the quoteType from the original /v3/quote request when omitted.
+     */
+    quoteType?: 'EXACT_INPUT' | 'FLEX_INPUT';
     /**
      * Address to send asset from
      */
