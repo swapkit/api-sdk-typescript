@@ -8336,6 +8336,10 @@
             "type": "string",
             "description": "Quote ID"
           },
+          "createdAt": {
+            "type": "string",
+            "description": "Quote creation timestamp (ISO 8601)"
+          },
           "routes": {
             "type": "array",
             "items": {
@@ -9198,6 +9202,7 @@
         },
         "required": [
           "quoteId",
+          "createdAt",
           "routes"
         ],
         "additionalProperties": false
@@ -10555,6 +10560,14 @@
             "type": "string",
             "description": "The unique swap ID for tracking"
           },
+          "createdAt": {
+            "type": "string",
+            "description": "Swap creation timestamp (ISO 8601)"
+          },
+          "quoteCreatedAt": {
+            "type": "string",
+            "description": "Creation timestamp of the underlying quote (ISO 8601)"
+          },
           "approvalTx": {
             "description": "Optional approval transaction if ERC-20 approval is required before swap",
             "type": "object",
@@ -10606,7 +10619,9 @@
           "sourceAddress",
           "destinationAddress",
           "meta",
-          "swapId"
+          "swapId",
+          "createdAt",
+          "quoteCreatedAt"
         ],
         "additionalProperties": false
       }

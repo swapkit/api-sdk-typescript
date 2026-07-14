@@ -774,6 +774,10 @@ export type GetQuoteResponse = {
      * Quote ID
      */
     quoteId: string;
+    /**
+     * Quote creation timestamp (ISO 8601)
+     */
+    createdAt: string;
     routes: Array<{
         /**
          * Asset to sell
@@ -1366,6 +1370,14 @@ export type ExecuteSwapResponse = {
      * The unique swap ID for tracking
      */
     swapId: string;
+    /**
+     * Swap creation timestamp (ISO 8601)
+     */
+    createdAt: string;
+    /**
+     * Creation timestamp of the underlying quote (ISO 8601)
+     */
+    quoteCreatedAt: string;
     /**
      * Optional approval transaction if ERC-20 approval is required before swap
      */
