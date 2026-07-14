@@ -5,8 +5,8 @@ export type ClientOptions = {
 };
 
 export type GetTokensResponse = {
-    provider: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
-    chainId?: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hypercore' | 'kaiyo-1' | 'litecoin' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
+    provider: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3' | 'SWAPKIT';
+    chainId?: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
     name: string;
     tags?: {
         [key: string]: unknown;
@@ -20,9 +20,9 @@ export type GetTokensResponse = {
     keywords?: Array<string>;
     count: number;
     tokens: Array<{
-        chain?: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+        chain?: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
         address?: string;
-        chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hypercore' | 'kaiyo-1' | 'litecoin' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
+        chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
         ticker: string;
         identifier: string;
         symbol?: string;
@@ -37,12 +37,12 @@ export type GetTokensResponse = {
     }>;
     logoURI?: string;
     url?: string;
-    enabledChainIds?: Array<'36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hypercore' | 'kaiyo-1' | 'litecoin' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash'>;
-    supportedActions?: Array<'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake'>;
-    supportedChainIds?: Array<'36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hypercore' | 'kaiyo-1' | 'litecoin' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash'>;
+    enabledChainIds?: Array<'36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash'>;
+    supportedActions?: Array<'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder'>;
+    supportedChainIds?: Array<'36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash'>;
 } | Array<{
-    provider: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
-    chainId?: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hypercore' | 'kaiyo-1' | 'litecoin' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
+    provider: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3' | 'SWAPKIT';
+    chainId?: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
     name: string;
     tags?: {
         [key: string]: unknown;
@@ -56,9 +56,9 @@ export type GetTokensResponse = {
     keywords?: Array<string>;
     count: number;
     tokens: Array<{
-        chain?: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+        chain?: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
         address?: string;
-        chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hypercore' | 'kaiyo-1' | 'litecoin' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
+        chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
         ticker: string;
         identifier: string;
         symbol?: string;
@@ -73,28 +73,602 @@ export type GetTokensResponse = {
     }>;
     logoURI?: string;
     url?: string;
-    enabledChainIds?: Array<'36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hypercore' | 'kaiyo-1' | 'litecoin' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash'>;
-    supportedActions?: Array<'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake'>;
-    supportedChainIds?: Array<'36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hypercore' | 'kaiyo-1' | 'litecoin' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash'>;
+    enabledChainIds?: Array<'36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash'>;
+    supportedActions?: Array<'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder'>;
+    supportedChainIds?: Array<'36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash'>;
 }>;
 
 export type GetProvidersResponse = Array<{
-    name: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
-    provider: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+    name: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+    provider: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
     displayName?: string;
     displayNameLong?: string;
     keywords?: Array<string>;
     count: number;
     logoURI?: string;
     url?: string;
-    enabledChainIds?: Array<'36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hypercore' | 'kaiyo-1' | 'litecoin' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash'>;
-    supportedActions?: Array<'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake'>;
-    supportedChainIds?: Array<'36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hypercore' | 'kaiyo-1' | 'litecoin' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash'>;
+    enabledChainIds?: Array<'36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash'>;
+    supportedActions?: Array<'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder'>;
+    supportedChainIds?: Array<'36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash'>;
 }>;
+
+export type GetProvidersStatusResponse = {
+    providersChains: Array<{
+        name: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+        supportedChainsGlobal: Array<'36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash'>;
+        enabledChainsGlobal: Array<'36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash'>;
+        disabledChainsGlobal: Array<'36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash'>;
+        enabledChainsApiKey: Array<'36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash'>;
+        disabledChainsApiKey: Array<'36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash'>;
+    }>;
+};
 
 export type GetSwapFromAssetsResponse = Array<string>;
 
 export type GetSwapToAssetsResponse = Array<string>;
+
+export type ScreenAddressRequest = {
+    addresses: string | Array<string>;
+    chains: string | Array<string>;
+};
+
+export type ScreenAddressResponse = {
+    confirm: boolean;
+    isBlacklisted?: boolean;
+    isRisky?: boolean;
+    isSanctioned?: boolean;
+    module?: number;
+};
+
+export type TrackTransactionRequest = {
+    /**
+     * Hash for the first transaction broadcasted by the end user. e.g. `88D1819378ECD09E5284C54937CDC1E99B52F253C007617A02DD1200710CE677`
+     */
+    hash?: string;
+    /**
+     * ChainId for the hash. e.g. `thorchain-1`
+     */
+    chainId?: string;
+    /**
+     * Block number. Required for Polkadot chain. e.g. `123456`
+     */
+    block?: number;
+    /**
+     * Deposit channel ID, required for Chainflip if tx was broadcasted without wallet connection
+     */
+    depositChannelId?: string;
+    /**
+     * Deposit address associated with a deposit channel
+     */
+    depositAddress?: string;
+};
+
+export type TrackTransactionResponse = {
+    chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
+    hash: string;
+    block: number;
+    type: 'approve' | 'claim' | 'deposit' | 'lending' | 'lp_action' | 'native_contract_call' | 'native_send' | 'stake' | 'unstake' | 'streaming_swap' | 'swap' | 'thorname_action' | 'token_contract_call' | 'token_transfer' | 'unknown' | 'donate';
+    status: 'unknown' | 'not_started' | 'pending' | 'swapping' | 'completed' | 'refunded' | 'failed';
+    trackingStatus?: 'not_started' | 'starting' | 'broadcasted' | 'mempool' | 'inbound' | 'outbound' | 'swapping' | 'completed' | 'refunded' | 'partially_refunded' | 'dropped' | 'reverted' | 'replaced' | 'retries_exceeded' | 'parsing_error';
+    fromAsset: string;
+    fromAmount: string;
+    fromAddress: string;
+    toAsset: string;
+    toAmount: string;
+    toAddress: string;
+    finalAsset?: {
+        chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+        symbol: string;
+        ticker: string;
+        decimal?: number;
+        address?: string;
+        isGasAsset: boolean;
+        isSynthetic: boolean;
+        tax?: {
+            buy: number;
+            sell: number;
+        };
+    };
+    finalAddress?: string;
+    finalisedAt: number;
+    transient?: {
+        estimatedTimeToComplete: number;
+        currentLegIndex?: number;
+        estimates?: {
+            inboundObservation: number;
+            inboundConfirmation: number;
+            streamingSwap: number;
+            outboundDelay: number;
+            outboundObservation: number;
+            currentStage: string;
+        };
+        providerDetails?: {
+            streamingDetails?: {
+                quantity?: number;
+                count?: number;
+                interval?: number;
+                subSwapsMap?: Array<number>;
+            };
+            depositChannelId?: string;
+            depositAddress?: string;
+        };
+    };
+    meta?: {
+        broadcastedAt?: number;
+        wallet?: string;
+        quoteId?: string;
+        explorerUrl?: string;
+        providerExplorerUrl?: string;
+        affiliate?: string;
+        fees?: {
+            network?: {
+                chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                symbol: string;
+                ticker: string;
+                decimal?: number;
+                address?: string;
+                isGasAsset: boolean;
+                isSynthetic: boolean;
+                tax?: {
+                    buy: number;
+                    sell: number;
+                };
+            };
+            affiliate?: {
+                chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                symbol: string;
+                ticker: string;
+                decimal?: number;
+                address?: string;
+                isGasAsset: boolean;
+                isSynthetic: boolean;
+                tax?: {
+                    buy: number;
+                    sell: number;
+                };
+            };
+            liquidity?: {
+                chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                symbol: string;
+                ticker: string;
+                decimal?: number;
+                address?: string;
+                isGasAsset: boolean;
+                isSynthetic: boolean;
+                tax?: {
+                    buy: number;
+                    sell: number;
+                };
+            };
+            protocol?: {
+                chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                symbol: string;
+                ticker: string;
+                decimal?: number;
+                address?: string;
+                isGasAsset: boolean;
+                isSynthetic: boolean;
+                tax?: {
+                    buy: number;
+                    sell: number;
+                };
+            };
+            tax?: {
+                chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                symbol: string;
+                ticker: string;
+                decimal?: number;
+                address?: string;
+                isGasAsset: boolean;
+                isSynthetic: boolean;
+                tax?: {
+                    buy: number;
+                    sell: number;
+                };
+            };
+        };
+        provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+        providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder';
+        providerOrderId?: string;
+        images?: {
+            from?: string;
+            to?: string;
+            provider?: string;
+            chain?: string;
+        };
+        affiliateFees?: Array<{
+            affiliate: string;
+            bps: string;
+            isReferrer: boolean;
+        }>;
+        failReason?: string;
+        failTargetAddress?: string;
+    };
+    payload?: {
+        evmCalldata?: string;
+        evmValue?: string;
+        logs?: unknown;
+        memo?: string;
+        spender?: string;
+        manifest?: unknown;
+        intentHash?: string;
+        thorname?: string;
+        decodedPayload?: unknown;
+    };
+    legs: Array<{
+        chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
+        hash: string;
+        block: number;
+        type: 'approve' | 'claim' | 'deposit' | 'lending' | 'lp_action' | 'native_contract_call' | 'native_send' | 'stake' | 'unstake' | 'streaming_swap' | 'swap' | 'thorname_action' | 'token_contract_call' | 'token_transfer' | 'unknown' | 'donate';
+        status: 'unknown' | 'not_started' | 'pending' | 'swapping' | 'completed' | 'refunded' | 'failed';
+        trackingStatus?: 'not_started' | 'starting' | 'broadcasted' | 'mempool' | 'inbound' | 'outbound' | 'swapping' | 'completed' | 'refunded' | 'partially_refunded' | 'dropped' | 'reverted' | 'replaced' | 'retries_exceeded' | 'parsing_error';
+        fromAsset: string;
+        fromAmount: string;
+        fromAddress: string;
+        toAsset: string;
+        toAmount: string;
+        toAddress: string;
+        finalAsset?: {
+            chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+            symbol: string;
+            ticker: string;
+            decimal?: number;
+            address?: string;
+            isGasAsset: boolean;
+            isSynthetic: boolean;
+            tax?: {
+                buy: number;
+                sell: number;
+            };
+        };
+        finalAddress?: string;
+        finalisedAt: number;
+        transient?: {
+            estimatedTimeToComplete: number;
+            currentLegIndex?: number;
+            estimates?: {
+                inboundObservation: number;
+                inboundConfirmation: number;
+                streamingSwap: number;
+                outboundDelay: number;
+                outboundObservation: number;
+                currentStage: string;
+            };
+            providerDetails?: {
+                streamingDetails?: {
+                    quantity?: number;
+                    count?: number;
+                    interval?: number;
+                    subSwapsMap?: Array<number>;
+                };
+                depositChannelId?: string;
+                depositAddress?: string;
+            };
+        };
+        meta?: {
+            broadcastedAt?: number;
+            wallet?: string;
+            quoteId?: string;
+            explorerUrl?: string;
+            providerExplorerUrl?: string;
+            affiliate?: string;
+            fees?: {
+                network?: {
+                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                    symbol: string;
+                    ticker: string;
+                    decimal?: number;
+                    address?: string;
+                    isGasAsset: boolean;
+                    isSynthetic: boolean;
+                    tax?: {
+                        buy: number;
+                        sell: number;
+                    };
+                };
+                affiliate?: {
+                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                    symbol: string;
+                    ticker: string;
+                    decimal?: number;
+                    address?: string;
+                    isGasAsset: boolean;
+                    isSynthetic: boolean;
+                    tax?: {
+                        buy: number;
+                        sell: number;
+                    };
+                };
+                liquidity?: {
+                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                    symbol: string;
+                    ticker: string;
+                    decimal?: number;
+                    address?: string;
+                    isGasAsset: boolean;
+                    isSynthetic: boolean;
+                    tax?: {
+                        buy: number;
+                        sell: number;
+                    };
+                };
+                protocol?: {
+                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                    symbol: string;
+                    ticker: string;
+                    decimal?: number;
+                    address?: string;
+                    isGasAsset: boolean;
+                    isSynthetic: boolean;
+                    tax?: {
+                        buy: number;
+                        sell: number;
+                    };
+                };
+                tax?: {
+                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                    symbol: string;
+                    ticker: string;
+                    decimal?: number;
+                    address?: string;
+                    isGasAsset: boolean;
+                    isSynthetic: boolean;
+                    tax?: {
+                        buy: number;
+                        sell: number;
+                    };
+                };
+            };
+            provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+            providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder';
+            providerOrderId?: string;
+            images?: {
+                from?: string;
+                to?: string;
+                provider?: string;
+                chain?: string;
+            };
+            affiliateFees?: Array<{
+                affiliate: string;
+                bps: string;
+                isReferrer: boolean;
+            }>;
+            failReason?: string;
+            failTargetAddress?: string;
+        };
+        payload?: {
+            evmCalldata?: string;
+            evmValue?: string;
+            logs?: unknown;
+            memo?: string;
+            spender?: string;
+            manifest?: unknown;
+            intentHash?: string;
+            thorname?: string;
+            decodedPayload?: unknown;
+        };
+    }>;
+};
+
+export type InsertTrackedTransactionRequest = {
+    legs: Array<{
+        chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
+        hash: string;
+        block: number;
+        type: 'approve' | 'claim' | 'deposit' | 'lending' | 'lp_action' | 'native_contract_call' | 'native_send' | 'stake' | 'unstake' | 'streaming_swap' | 'swap' | 'thorname_action' | 'token_contract_call' | 'token_transfer' | 'unknown' | 'donate';
+        status: 'unknown' | 'not_started' | 'pending' | 'swapping' | 'completed' | 'refunded' | 'failed';
+        trackingStatus?: 'not_started' | 'starting' | 'broadcasted' | 'mempool' | 'inbound' | 'outbound' | 'swapping' | 'completed' | 'refunded' | 'partially_refunded' | 'dropped' | 'reverted' | 'replaced' | 'retries_exceeded' | 'parsing_error';
+        fromAsset: string;
+        fromAmount: string;
+        fromAddress: string;
+        toAsset: string;
+        toAmount: string;
+        toAddress: string;
+        finalAsset?: {
+            chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+            symbol: string;
+            ticker: string;
+            decimal?: number;
+            address?: string;
+            isGasAsset: boolean;
+            isSynthetic: boolean;
+            tax?: {
+                buy: number;
+                sell: number;
+            };
+        };
+        finalAddress?: string;
+        finalisedAt: number;
+        transient?: {
+            estimatedTimeToComplete: number;
+            currentLegIndex?: number;
+            estimates?: {
+                inboundObservation: number;
+                inboundConfirmation: number;
+                streamingSwap: number;
+                outboundDelay: number;
+                outboundObservation: number;
+                currentStage: string;
+            };
+            providerDetails?: {
+                streamingDetails?: {
+                    quantity?: number;
+                    count?: number;
+                    interval?: number;
+                    subSwapsMap?: Array<number>;
+                };
+                depositChannelId?: string;
+                depositAddress?: string;
+            };
+        };
+        meta?: {
+            broadcastedAt?: number;
+            wallet?: string;
+            quoteId?: string;
+            explorerUrl?: string;
+            providerExplorerUrl?: string;
+            affiliate?: string;
+            fees?: {
+                network?: {
+                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                    symbol: string;
+                    ticker: string;
+                    decimal?: number;
+                    address?: string;
+                    isGasAsset: boolean;
+                    isSynthetic: boolean;
+                    tax?: {
+                        buy: number;
+                        sell: number;
+                    };
+                };
+                affiliate?: {
+                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                    symbol: string;
+                    ticker: string;
+                    decimal?: number;
+                    address?: string;
+                    isGasAsset: boolean;
+                    isSynthetic: boolean;
+                    tax?: {
+                        buy: number;
+                        sell: number;
+                    };
+                };
+                liquidity?: {
+                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                    symbol: string;
+                    ticker: string;
+                    decimal?: number;
+                    address?: string;
+                    isGasAsset: boolean;
+                    isSynthetic: boolean;
+                    tax?: {
+                        buy: number;
+                        sell: number;
+                    };
+                };
+                protocol?: {
+                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                    symbol: string;
+                    ticker: string;
+                    decimal?: number;
+                    address?: string;
+                    isGasAsset: boolean;
+                    isSynthetic: boolean;
+                    tax?: {
+                        buy: number;
+                        sell: number;
+                    };
+                };
+                tax?: {
+                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                    symbol: string;
+                    ticker: string;
+                    decimal?: number;
+                    address?: string;
+                    isGasAsset: boolean;
+                    isSynthetic: boolean;
+                    tax?: {
+                        buy: number;
+                        sell: number;
+                    };
+                };
+            };
+            provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+            providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder';
+            providerOrderId?: string;
+            images?: {
+                from?: string;
+                to?: string;
+                provider?: string;
+                chain?: string;
+            };
+            affiliateFees?: Array<{
+                affiliate: string;
+                bps: string;
+                isReferrer: boolean;
+            }>;
+            failReason?: string;
+            failTargetAddress?: string;
+        };
+        payload?: {
+            evmCalldata?: string;
+            evmValue?: string;
+            logs?: unknown;
+            memo?: string;
+            spender?: string;
+            manifest?: unknown;
+            intentHash?: string;
+            thorname?: string;
+            decodedPayload?: unknown;
+        };
+    }>;
+    depositChannelId?: string;
+    depositAddress?: string;
+};
+
+export type InsertTrackedTransactionResponse = {
+    id: string;
+    hash: string;
+    status: string;
+    message: string;
+};
+
+export type GetGasHistoryResponse = Array<{
+    id: number;
+    chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
+    value: string;
+    unit: string;
+    createdAt: string;
+}> | {
+    [key: string]: Array<{
+        id: number;
+        chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
+        value: string;
+        unit: string;
+        createdAt: string;
+    }>;
+};
+
+export type GetGasPricesResponse = {
+    id: number;
+    chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
+    value: string;
+    unit: string;
+    createdAt: string;
+} | Array<{
+    id: number;
+    chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
+    value: string;
+    unit: string;
+    createdAt: string;
+}>;
+
+export type GetCachedPriceRequest = {
+    tokens: Array<{
+        identifier: string;
+    }>;
+    metadata: boolean;
+};
+
+export type GetCachedPriceResponse = Array<{
+    identifier?: string;
+    provider?: string;
+    cg?: {
+        id: string;
+        name?: string;
+        market_cap?: number;
+        total_volume?: number;
+        price_change_24h_usd?: number | null;
+        price_change_percentage_24h_usd?: number | null;
+        sparkline_in_7d?: Array<number>;
+        timestamp?: string;
+    };
+    price_usd?: number;
+    timestamp?: number;
+    error?: string;
+}>;
 
 export type CreateBrokerChannelRequest = {
     destinationAddress: string;
@@ -142,41 +716,235 @@ export type CreateBrokerChannelResponse = {
     error?: string;
 };
 
-export type GetCachedPriceRequest = {
-    tokens: Array<{
-        identifier: string;
+export type GetQuoteRequest = {
+    /**
+     * Asset to sell
+     */
+    sellAsset: string;
+    /**
+     * Asset to buy
+     */
+    buyAsset: string;
+    /**
+     * Amount of asset to sell
+     */
+    sellAmount: string;
+    providers?: Array<string>;
+    /**
+     * Address to send asset from
+     */
+    sourceAddress?: string;
+    /**
+     * Address to send asset to
+     */
+    destinationAddress?: string;
+    /**
+     * Slippage tolerance as a percentage. Default is 3%.
+     */
+    slippage?: number;
+    /**
+     * Set to true to enable CF boost to speed up Chainflip swaps. BTC only.
+     */
+    cfBoost?: boolean;
+    referrer?: string;
+    /**
+     * EXACT_INPUT (default) or FLEX_INPUT. On FLEX_INPUT, routes whose first-leg provider can't honour the mode are filtered out. Supported first-leg providers: THORCHAIN, MAYACHAIN, CHAINFLIP (incl. streaming variants), and NEAR.
+     */
+    quoteType?: 'EXACT_INPUT' | 'FLEX_INPUT';
+    /**
+     * Set to true to disable on-chain estimation
+     */
+    disableEstimate?: boolean;
+    /**
+     * Set to true to disable the default behaviour of sweeping wallet funds if the transaction was to leave unspendable dust in the address.
+     */
+    disableSweep?: boolean;
+    /**
+     * Maximum execution time in seconds. Routes exceeding this time will be filtered out.
+     */
+    maxExecutionTime?: number;
+    /**
+     * Affiliate fee in basis points. This should only be used as an override, for example when you have some rebate or discount program. If not provided, the fees configured in your API Key will be used.
+     */
+    affiliateFee?: number;
+};
+
+export type GetQuoteResponse = {
+    /**
+     * Quote ID
+     */
+    quoteId: string;
+    /**
+     * Quote creation timestamp (ISO 8601)
+     */
+    createdAt: string;
+    routes: Array<{
+        /**
+         * Asset to sell
+         */
+        sellAsset: string;
+        /**
+         * Sell amount
+         */
+        sellAmount: string;
+        /**
+         * Asset to buy
+         */
+        buyAsset: string;
+        /**
+         * Buy amount
+         */
+        buyAmount?: string;
+        /**
+         * Buy amount max slippage
+         */
+        buyAmountMaxSlippage?: string;
+        /**
+         * Expected Buy amount
+         */
+        expectedBuyAmount?: string;
+        /**
+         * Expected Buy amount max slippage
+         */
+        expectedBuyAmountMaxSlippage?: string;
+        fees: Array<{
+            type: 'liquidity' | 'network' | 'inbound' | 'outbound' | 'affiliate' | 'service' | 'tax' | 'priority';
+            amount: string;
+            amountBps?: number;
+            asset: string;
+            chain: string;
+            protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+        }>;
+        /**
+         * The provider of the previous leg in the route, if any
+         */
+        previousLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+        /**
+         * The provider of the next leg in the route, if any
+         */
+        nextLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+        /**
+         * Route ID
+         */
+        routeId: string;
+        providers: Array<'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3'>;
+        /**
+         * Expiration
+         */
+        expiration?: string;
+        estimatedTime?: {
+            /**
+             * Time to receive inbound asset in seconds
+             */
+            inbound?: number;
+            /**
+             * Time to swap assets in seconds
+             */
+            swap?: number;
+            /**
+             * Time to receive outbound asset in seconds
+             */
+            outbound?: number;
+            /**
+             * Total time in seconds
+             */
+            total: number;
+        };
+        /**
+         * Total slippage in bps
+         */
+        totalSlippageBps: number;
+        legs: Array<{
+            provider: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+            /**
+             * Asset to sell
+             */
+            sellAsset: string;
+            /**
+             * Sell amount
+             */
+            sellAmount: string;
+            /**
+             * Asset to buy
+             */
+            buyAsset: string;
+            /**
+             * Buy amount
+             */
+            buyAmount?: string;
+            /**
+             * Buy amount max slippage
+             */
+            buyAmountMaxSlippage?: string;
+            /**
+             * Expected Buy amount
+             */
+            expectedBuyAmount?: string;
+            /**
+             * Expected Buy amount max slippage
+             */
+            expectedBuyAmountMaxSlippage?: string;
+            fees: Array<{
+                type: 'liquidity' | 'network' | 'inbound' | 'outbound' | 'affiliate' | 'service' | 'tax' | 'priority';
+                amount: string;
+                amountBps?: number;
+                asset: string;
+                chain: string;
+                protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+            }>;
+            /**
+             * The provider of the previous leg in the route, if any
+             */
+            previousLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+            /**
+             * The provider of the next leg in the route, if any
+             */
+            nextLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+        }>;
+        warnings: Array<{
+            code: 'highSlippage' | 'highPriceImpact' | 'noSourceAddressToBuildTransaction' | 'affiliateFeeTooSmallSoRemoved' | 'unableToApplyReferralProgram' | 'insufficientBalance' | 'unableToBuildTransaction' | 'unableToEstimateGas' | 'limitPriceBelowSpot' | 'limitPriceWithinFeeGap';
+            display: string;
+            tooltip?: string;
+        }>;
+        meta: {
+            assets?: Array<{
+                /**
+                 * Asset name
+                 */
+                asset: string;
+                /**
+                 * Price in USD
+                 */
+                price: number;
+                /**
+                 * Asset image
+                 */
+                image: string;
+            }>;
+            tags: Array<'CHEAPEST' | 'FASTEST' | 'RECOMMENDED'>;
+            streamingInterval?: number;
+            maxStreamingQuantity?: number;
+            referrer?: string;
+            /**
+             * Approval address for token swap
+             */
+            approvalAddress?: string;
+        };
+        nextActions?: Array<{
+            method: string;
+            url: string;
+            payload?: unknown;
+        }>;
     }>;
-    metadata: boolean;
-};
-
-export type GetCachedPriceResponse = Array<{
-    identifier?: string;
-    provider?: string;
-    cg?: {
-        id: string;
-        name?: string;
-        market_cap?: number;
-        total_volume?: number;
-        price_change_24h_usd?: number | null;
-        price_change_percentage_24h_usd?: number | null;
-        sparkline_in_7d?: Array<number>;
-        timestamp?: string;
-    };
-    price_usd?: number;
-    timestamp?: number;
-}>;
-
-export type ScreenAddressRequest = {
-    addresses: string | Array<string>;
-    chains: string | Array<string>;
-};
-
-export type ScreenAddressResponse = {
-    confirm: boolean;
-    isBlacklisted?: boolean;
-    isRisky?: boolean;
-    isSanctioned?: boolean;
-    module?: number;
+    /**
+     * Error message
+     */
+    error?: string;
+    providerErrors?: Array<{
+        provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+        errorCode?: 'noRpcFallbacks' | 'requestTimeout' | 'invalidApiVersion' | 'isSanctionedAddress' | 'unknownError' | 'internalServerError' | 'test_error' | 'blockHeaderNotFound' | 'blockHashNotFoundAtHeight' | 'blackListAsset' | 'txHashMissing' | 'invalidAsset' | 'currentBlockHeaderNotFound' | 'failedToRetrieveBalance' | 'failedToRetrieveBlock' | 'failedToRetrieveFees' | 'notImplementedBCH' | 'notImplementedDoge' | 'noPoolsFound' | 'noVaultsFound' | 'noTxFound' | 'multipleCosmosMessages' | 'heightOrHashNotProvided' | 'priceTooVolatile' | 'unknownDenom' | 'invalidBlockHeight' | 'timestampExtrinsicNoArgumentsForBlock' | 'timestampExtrinsicNoTimestampForBlock' | 'noTimestampExtrinsicForHash' | 'timestampExtrinsicNoArgumentsForHash' | 'txMemoUndefined' | 'txMemoIncorrect' | 'txTypeNotFound' | 'txNoMessage' | 'txNotFound' | 'txReceiptNotFound' | 'txParsingError' | 'txLogsParsingError' | 'txFailed' | 'jobDataParsingError' | 'blockNotFound' | 'balanceNotFound' | 'blockbookCallFailed' | 'configError' | 'synthSwapDisallowed' | 'noQuoteResponse' | 'noPoolAssetsFound' | 'noThorchainPools' | 'noMayachainPools' | 'noThorchainNetworkInfo' | 'invalidAffiliateFee' | 'invalidBuyAssetAddress' | 'invalidSellAssetAddress' | 'invalidSourceAddress' | 'invalidDestinationAddress' | 'invalidParam' | 'xrpAddressRequiresTag' | 'invalidChainId' | 'invalidChain' | 'unsupportedChainId' | 'unsupportedEVMChainId' | 'unsupportedMethod' | 'unsupportedProvider' | 'unsupportedProgram' | 'unsupportedEvent' | 'invalidParamsForMethod' | 'noWhitelistTokens' | 'failedFetchGasPrice' | 'chainflipBrokerApiUnavailable' | 'failedToBuildVaultSwapTransaction' | 'failedToOpenBtcPrivateChannel' | 'failedToCloseBtcPrivateChannel' | 'affiliateNotRegistered' | 'failedToCreateDepositChannel' | 'failedToRegisterAccount' | 'failedToRegisterAffiliate' | 'failedToWithdrawAffiliate' | 'noProviderDetailsFound' | 'noTokenListsFound' | 'tokenNotFound' | 'tokenPriceNotFound' | 'tokenPriceUnavailable' | 'tokenPriceFailedToUpdate' | 'legsArrayIsEmpty' | 'failedToFetchQuoteForLeg' | 'noBlockHeaderFound' | 'failedToSimulateSwap' | 'swapHalted' | 'addressScreeningFailed' | 'missingScreeningConfig' | 'insufficientLiquidity' | 'noSaversFound' | 'noInbounDataFound' | 'noInboundAddressesFound' | 'noTargetAddress' | 'noInboundAddressFoundForChain' | 'noLastBlocksFound' | 'noVersionFound' | 'noConstantsFound' | 'noMimirsFound' | 'noRoutesFound' | 'quoteNotFound' | 'ledgerWrongPayload' | 'failedToFetchTx' | 'failedBuildTransactionDetails' | 'failedToCreateRouteMetadata' | 'txBuildingTimeout' | 'noLegsForRoute' | 'insufficientBalance' | 'insufficientAllowance' | 'unableToBuildTransaction' | 'noRouterAddressFound' | 'noAggregatorAddressFound' | 'noContractInstanceFound' | 'noContractAddressFound' | 'invalidAffiliate' | 'invalidAffiliateName' | 'thornameNotFound' | 'thornameAffiliate' | 'No provider found' | 'providerAssetNotFound' | 'No Record found' | 'Slippage too low' | 'tradingHalted' | 'mayanameNotFound' | 'noWrappedGasAsset' | 'aggregatorAddressNotFound' | 'routerAddressNotFound' | 'dummyAddressNotFound' | 'trackerError' | 'thorchainPoolUnavailable' | 'noTradingPairs' | 'missingState' | 'ledgerSwapNotFound' | 'ledgerSwapNotReadyForTracking' | 'ledgerInvalidParsingMode' | 'errorEstimatingGas' | 'apiKeyInvalid' | 'apiKeyFailedToUpdate' | 'apiKeySignatureExists' | 'apiKeySignatureKeyTypeMismatch' | 'apiKeyExpired' | 'unauthorized' | 'failedToCreateMemo' | 'invalidAddressForChain' | 'riskyAddress' | 'noRoutesToProcess' | 'sellAssetAmountTooSmall' | 'sellAssetAmountTooLarge' | 'missingPrivateKey' | 'noMemoPriceProtection' | 'nodeMethodNotFound' | 'nodeRpcNotFound' | 'thirdPartyProviderNotFound' | 'quoteUnavailable' | 'targetInstructionNotFound' | 'referrerExist' | 'referrerNotFound' | 'invalidReferrer' | 'quoteLogicError' | 'missingDecimal' | 'noGasInfoInDB' | 'quoteError' | 'valueOverflow' | 'missingChainflipMeta' | 'contractAndMethodRequired' | 'tokenImageError' | 'fileNotFound' | 'fileFormatError' | 'ipError' | 'failedToSaveLedgerSwap' | 'missingValue' | 'missingDBQueryParam' | 'unableEstimateTxTime' | 'affiliateStatsMissingDate' | 'affiliateStatsMissingNextFilter' | 'affiliateStatsNoActions' | 'unsupportedNotificationEvent' | 'unsupportedNotificationChannel' | 'invalidWebhookUrl' | 'webhookDeliveryFailed' | 'serverStateNotFound' | 'apiRequestFailed' | 'apiRateLimit' | 'invalidActionStep' | 'providerIsRequired' | 'rateLimitExceeded' | 'depositChannelNotFound' | 'snowflakeFailedToFetchSwaps' | 'auditLogInsertFailed' | 'affiliateNameHistoryInsertFailed' | 'invalidRouteId' | 'invalidQuoteId' | 'invalidRoute' | 'quoteExpired' | 'swapQuoteNotFound' | 'swapRouteNotFound' | 'swapTransactionFailed' | 'swapChainflipMetaMissing' | 'swapChainflipChannelFailed' | 'swapTransferTxFailed' | 'chainflipVaultSwapNotSupported' | 'chainflipVaultSwapEncodingFailed' | 'chainflipVaultSwapInvalidChain' | 'chainflipVaultSwapBitcoinCCMNotSupported' | 'chainflipVaultSwapTransactionBuildFailed' | 'zcashInvalidAddress' | 'zcashInsufficientUTXOs' | 'zcashUTXOSelectionFailed' | 'zcashTransactionBuildFailed' | 'invalidTokenProgram' | 'invalidRequest' | 'pubsubEventNotRegistered' | 'pubsubTopicNotFound' | 'invalidSpender' | 'outputAmountDeviationTooHigh' | 'swapSizeExceeded' | 'v2EndpointNotAllowed' | 'externalServiceFailed' | 'tenantEncryptKeyNotFound' | 'tenantKeyPairEncryptionError' | 'slip24AmountOverflow' | 'slip24InvalidSignature' | 'slip24DigestComputationFailed' | 'invalidTxHashFormat' | 'affiliateNotFound' | 'nearAffiliateProviderAssetNotFound' | 'nearAffiliateDepositAddressFailed' | 'flashnetAffiliateRegistrationFailed' | 'flashnetAffiliateClaimFailed' | 'flashnetAffiliateNotFound' | 'limitOrderUnsupportedChain' | 'limitOrderQuoteNotFound' | 'limitOrderRouteNotFound' | 'limitOrderNotFound' | 'limitOrderInvalidState' | 'limitOrderBuildFailed' | 'limitOrderSubmissionFailed' | 'limitOrderCancelFailed' | 'limitOrderExpirationOutOfBounds' | 'limitOrderUnsupportedFillFlags' | 'limitOrderAmountAmbiguous' | 'limitOrderChainMismatch' | 'limitOrderUnsupportedPair' | 'limitOrderActionUnavailable';
+        message?: string;
+    }>;
 };
 
 export type ExecuteSwapRequest = {
@@ -184,6 +952,10 @@ export type ExecuteSwapRequest = {
      * The ID of the route to swap
      */
     routeId: string;
+    /**
+     * Override the EXACT_INPUT/FLEX_INPUT mode for this swap. Defaults to the quoteType from the original /v3/quote request when omitted.
+     */
+    quoteType?: 'EXACT_INPUT' | 'FLEX_INPUT';
     /**
      * Address to send asset from
      */
@@ -220,6 +992,10 @@ export type ExecuteSwapRequest = {
      * Set to true to skip building a transaction. Used when you build a custom transaction from our response.
      */
     disableBuildTx?: boolean;
+    /**
+     * Set to true to disable max-spend sweep behaviour for UTXO assets, overriding the ENABLE_SWEEP_BALANCE default.
+     */
+    disableSweep?: boolean;
 };
 
 export type ExecuteSwapResponse = {
@@ -257,21 +1033,21 @@ export type ExecuteSwapResponse = {
         amountBps?: number;
         asset: string;
         chain: string;
-        protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+        protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
     }>;
     /**
      * The provider of the previous leg in the route, if any
      */
-    previousLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+    previousLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
     /**
      * The provider of the next leg in the route, if any
      */
-    nextLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+    nextLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
     /**
      * Route ID
      */
     routeId: string;
-    providers: Array<'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3'>;
+    providers: Array<'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3'>;
     /**
      * Expiration
      */
@@ -299,7 +1075,7 @@ export type ExecuteSwapResponse = {
      */
     totalSlippageBps: number;
     legs: Array<{
-        provider: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+        provider: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
         /**
          * Asset to sell
          */
@@ -334,19 +1110,19 @@ export type ExecuteSwapResponse = {
             amountBps?: number;
             asset: string;
             chain: string;
-            protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+            protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
         }>;
         /**
          * The provider of the previous leg in the route, if any
          */
-        previousLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+        previousLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
         /**
          * The provider of the next leg in the route, if any
          */
-        nextLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+        nextLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
     }>;
     warnings: Array<{
-        code: 'highSlippage' | 'highPriceImpact' | 'noSourceAddressToBuildTransaction' | 'affiliateFeeTooSmallSoRemoved' | 'unableToApplyReferralProgram' | 'insufficientBalance' | 'unableToBuildTransaction' | 'unableToEstimateGas';
+        code: 'highSlippage' | 'highPriceImpact' | 'noSourceAddressToBuildTransaction' | 'affiliateFeeTooSmallSoRemoved' | 'unableToApplyReferralProgram' | 'insufficientBalance' | 'unableToBuildTransaction' | 'unableToEstimateGas' | 'limitPriceBelowSpot' | 'limitPriceWithinFeeGap';
         display: string;
         tooltip?: string;
     }>;
@@ -370,7 +1146,8 @@ export type ExecuteSwapResponse = {
      * Memo to include in the transaction
      */
     memo?: string;
-    txType?: 'PSBT' | 'EVM' | 'COSMOS' | 'SOLANA' | 'RIPPLE' | 'TRON' | 'NEAR' | 'SUI' | 'CARDANO' | 'TON' | 'STARKNET' | 'zcash-unsigned';
+    txType?: 'PSBT' | 'EVM' | 'COSMOS' | 'SERIALIZED_BASE64' | 'RIPPLE' | 'TRON' | 'NEAR' | 'SUI' | 'CBOR' | 'TON' | 'STARKNET' | 'zcash-unsigned' | 'STELLAR';
+    txHint?: 'simpleTransfer' | 'transferWithMemo' | 'contractCall';
     tx?: {
         /**
          * Address of the recipient
@@ -400,7 +1177,7 @@ export type ExecuteSwapResponse = {
         memo: string;
         accountNumber: number;
         sequence: number;
-        chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hypercore' | 'kaiyo-1' | 'litecoin' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
+        chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
         msgs: Array<{
             type: string;
             value: unknown;
@@ -449,6 +1226,10 @@ export type ExecuteSwapResponse = {
          * Base64 BOC of state init
          */
         stateInit?: string;
+        /**
+         * Optional @ton/ton SendMode bitmask. Set to 130 (CARRY_ALL_REMAINING_BALANCE | IGNORE_ERRORS) on sweeps so the wallet sends balance − fees instead of the literal amount.
+         */
+        sendMode?: number;
     }> | string;
     meta: {
         assets?: Array<{
@@ -479,7 +1260,7 @@ export type ExecuteSwapResponse = {
         approvalAddress?: string;
         affiliate?: string;
         affiliateFee?: string;
-        txType?: 'PSBT' | 'EVM' | 'COSMOS' | 'SOLANA' | 'RIPPLE' | 'TRON' | 'NEAR' | 'SUI' | 'CARDANO' | 'TON' | 'STARKNET' | 'zcash-unsigned';
+        txType?: 'PSBT' | 'EVM' | 'COSMOS' | 'SERIALIZED_BASE64' | 'RIPPLE' | 'TRON' | 'NEAR' | 'SUI' | 'CBOR' | 'TON' | 'STARKNET' | 'zcash-unsigned' | 'STELLAR';
         chainflip?: {
             destinationAddress: string;
             sellAsset: {
@@ -550,8 +1331,16 @@ export type ExecuteSwapResponse = {
          * Indicates if the tx is wrapped
          */
         isWrapped?: boolean;
+        /**
+         * True when the request was treated as a max-spend sweep (sellAmount adjusted for gas/fees).
+         */
+        isSweep?: boolean;
         signedTx?: string;
         signature?: string;
+        /**
+         * Exact byte string that was SHA-256 hashed and ES256-signed (RFC 8785 canonical JSON for object txs, or the raw serialized tx for string txs). Verify `signature` over these literal bytes — no re-serialization needed.
+         */
+        signedTxString?: string;
         slip24?: {
             recipientName: string;
             nonce: string | null;
@@ -582,6 +1371,14 @@ export type ExecuteSwapResponse = {
      */
     swapId: string;
     /**
+     * Swap creation timestamp (ISO 8601)
+     */
+    createdAt: string;
+    /**
+     * Creation timestamp of the underlying quote (ISO 8601)
+     */
+    quoteCreatedAt: string;
+    /**
      * Optional approval transaction if ERC-20 approval is required before swap
      */
     approvalTx?: {
@@ -610,738 +1407,6 @@ export type ExecuteSwapResponse = {
          */
         gasPrice?: string;
     };
-};
-
-export type GetGasHistoryResponse = Array<{
-    id: number;
-    chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hypercore' | 'kaiyo-1' | 'litecoin' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
-    value: string;
-    unit: string;
-    createdAt: string;
-}> | {
-    [key: string]: Array<{
-        id: number;
-        chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hypercore' | 'kaiyo-1' | 'litecoin' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
-        value: string;
-        unit: string;
-        createdAt: string;
-    }>;
-};
-
-export type GetGasPricesResponse = {
-    id: number;
-    chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hypercore' | 'kaiyo-1' | 'litecoin' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
-    value: string;
-    unit: string;
-    createdAt: string;
-} | Array<{
-    id: number;
-    chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hypercore' | 'kaiyo-1' | 'litecoin' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
-    value: string;
-    unit: string;
-    createdAt: string;
-}>;
-
-export type GetQuoteRequest = {
-    /**
-     * Asset to sell
-     */
-    sellAsset: string;
-    /**
-     * Asset to buy
-     */
-    buyAsset: string;
-    /**
-     * Amount of asset to sell
-     */
-    sellAmount: string;
-    providers?: Array<string>;
-    /**
-     * Address to send asset from
-     */
-    sourceAddress?: string;
-    /**
-     * Address to send asset to
-     */
-    destinationAddress?: string;
-    /**
-     * Slippage tolerance as a percentage. Default is 3%.
-     */
-    slippage?: number;
-    /**
-     * Set to true to enable CF boost to speed up Chainflip swaps. BTC only.
-     */
-    cfBoost?: boolean;
-    referrer?: string;
-    /**
-     * Set to true to disable on-chain estimation
-     */
-    disableEstimate?: boolean;
-    /**
-     * Maximum execution time in seconds. Routes exceeding this time will be filtered out.
-     */
-    maxExecutionTime?: number;
-    /**
-     * Affiliate fee in basis points. This should only be used as an override, for example when you have some rebate or discount program. If not provided, the fees configured in your API Key will be used.
-     */
-    affiliateFee?: number;
-};
-
-export type GetQuoteResponse = {
-    /**
-     * Quote ID
-     */
-    quoteId: string;
-    routes: Array<{
-        /**
-         * Asset to sell
-         */
-        sellAsset: string;
-        /**
-         * Sell amount
-         */
-        sellAmount: string;
-        /**
-         * Asset to buy
-         */
-        buyAsset: string;
-        /**
-         * Buy amount
-         */
-        buyAmount?: string;
-        /**
-         * Buy amount max slippage
-         */
-        buyAmountMaxSlippage?: string;
-        /**
-         * Expected Buy amount
-         */
-        expectedBuyAmount?: string;
-        /**
-         * Expected Buy amount max slippage
-         */
-        expectedBuyAmountMaxSlippage?: string;
-        fees: Array<{
-            type: 'liquidity' | 'network' | 'inbound' | 'outbound' | 'affiliate' | 'service' | 'tax' | 'priority';
-            amount: string;
-            amountBps?: number;
-            asset: string;
-            chain: string;
-            protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
-        }>;
-        /**
-         * The provider of the previous leg in the route, if any
-         */
-        previousLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
-        /**
-         * The provider of the next leg in the route, if any
-         */
-        nextLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
-        /**
-         * Route ID
-         */
-        routeId: string;
-        providers: Array<'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3'>;
-        /**
-         * Expiration
-         */
-        expiration?: string;
-        estimatedTime?: {
-            /**
-             * Time to receive inbound asset in seconds
-             */
-            inbound?: number;
-            /**
-             * Time to swap assets in seconds
-             */
-            swap?: number;
-            /**
-             * Time to receive outbound asset in seconds
-             */
-            outbound?: number;
-            /**
-             * Total time in seconds
-             */
-            total: number;
-        };
-        /**
-         * Total slippage in bps
-         */
-        totalSlippageBps: number;
-        legs: Array<{
-            provider: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
-            /**
-             * Asset to sell
-             */
-            sellAsset: string;
-            /**
-             * Sell amount
-             */
-            sellAmount: string;
-            /**
-             * Asset to buy
-             */
-            buyAsset: string;
-            /**
-             * Buy amount
-             */
-            buyAmount?: string;
-            /**
-             * Buy amount max slippage
-             */
-            buyAmountMaxSlippage?: string;
-            /**
-             * Expected Buy amount
-             */
-            expectedBuyAmount?: string;
-            /**
-             * Expected Buy amount max slippage
-             */
-            expectedBuyAmountMaxSlippage?: string;
-            fees: Array<{
-                type: 'liquidity' | 'network' | 'inbound' | 'outbound' | 'affiliate' | 'service' | 'tax' | 'priority';
-                amount: string;
-                amountBps?: number;
-                asset: string;
-                chain: string;
-                protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
-            }>;
-            /**
-             * The provider of the previous leg in the route, if any
-             */
-            previousLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
-            /**
-             * The provider of the next leg in the route, if any
-             */
-            nextLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
-        }>;
-        warnings: Array<{
-            code: 'highSlippage' | 'highPriceImpact' | 'noSourceAddressToBuildTransaction' | 'affiliateFeeTooSmallSoRemoved' | 'unableToApplyReferralProgram' | 'insufficientBalance' | 'unableToBuildTransaction' | 'unableToEstimateGas';
-            display: string;
-            tooltip?: string;
-        }>;
-        meta: {
-            assets?: Array<{
-                /**
-                 * Asset name
-                 */
-                asset: string;
-                /**
-                 * Price in USD
-                 */
-                price: number;
-                /**
-                 * Asset image
-                 */
-                image: string;
-            }>;
-            tags: Array<'CHEAPEST' | 'FASTEST' | 'RECOMMENDED'>;
-            streamingInterval?: number;
-            maxStreamingQuantity?: number;
-            referrer?: string;
-            /**
-             * Approval address for token swap
-             */
-            approvalAddress?: string;
-        };
-        nextActions?: Array<{
-            method: string;
-            url: string;
-            payload?: unknown;
-        }>;
-    }>;
-    /**
-     * Error message
-     */
-    error?: string;
-    providerErrors?: Array<{
-        provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
-        errorCode?: 'noRpcFallbacks' | 'requestTimeout' | 'invalidApiVersion' | 'isSanctionedAddress' | 'unknownError' | 'test_error' | 'blockHeaderNotFound' | 'blockHashNotFoundAtHeight' | 'blackListAsset' | 'txHashMissing' | 'invalidAsset' | 'currentBlockHeaderNotFound' | 'failedToRetrieveBalance' | 'failedToRetrieveBlock' | 'failedToRetrieveFees' | 'notImplementedBCH' | 'notImplementedDoge' | 'noPoolsFound' | 'noVaultsFound' | 'noTxFound' | 'multipleCosmosMessages' | 'heightOrHashNotProvided' | 'priceTooVolatile' | 'unknownDenom' | 'invalidBlockHeight' | 'timestampExtrinsicNoArgumentsForBlock' | 'timestampExtrinsicNoTimestampForBlock' | 'noTimestampExtrinsicForHash' | 'timestampExtrinsicNoArgumentsForHash' | 'txMemoUndefined' | 'txMemoIncorrect' | 'txTypeNotFound' | 'txNoMessage' | 'txNotFound' | 'txReceiptNotFound' | 'txParsingError' | 'txLogsParsingError' | 'txFailed' | 'jobDataParsingError' | 'blockNotFound' | 'balanceNotFound' | 'blockbookCallFailed' | 'configError' | 'synthSwapDisallowed' | 'noQuoteResponse' | 'noPoolAssetsFound' | 'noThorchainPools' | 'noMayachainPools' | 'noThorchainNetworkInfo' | 'invalidAffiliateFee' | 'invalidBuyAssetAddress' | 'invalidSellAssetAddress' | 'invalidSourceAddress' | 'invalidDestinationAddress' | 'invalidParam' | 'xrpAddressRequiresTag' | 'invalidChainId' | 'invalidChain' | 'unsupportedChainId' | 'unsupportedEVMChainId' | 'unsupportedMethod' | 'unsupportedProvider' | 'unsupportedProgram' | 'unsupportedEvent' | 'invalidParamsForMethod' | 'noWhitelistTokens' | 'failedFetchGasPrice' | 'chainflipBrokerApiUnavailable' | 'failedToBuildVaultSwapTransaction' | 'failedToOpenBtcPrivateChannel' | 'failedToCloseBtcPrivateChannel' | 'affiliateNotRegistered' | 'failedToCreateDepositChannel' | 'failedToRegisterAccount' | 'failedToRegisterAffiliate' | 'failedToWithdrawAffiliate' | 'noProviderDetailsFound' | 'noTokenListsFound' | 'tokenNotFound' | 'tokenPriceNotFound' | 'tokenPriceFailedToUpdate' | 'legsArrayIsEmpty' | 'failedToFetchQuoteForLeg' | 'noBlockHeaderFound' | 'failedToSimulateSwap' | 'swapHalted' | 'addressScreeningFailed' | 'missingScreeningConfig' | 'insufficientLiquidity' | 'noSaversFound' | 'noInbounDataFound' | 'noInboundAddressesFound' | 'noTargetAddress' | 'noInboundAddressFoundForChain' | 'noLastBlocksFound' | 'noVersionFound' | 'noConstantsFound' | 'noMimirsFound' | 'noRoutesFound' | 'quoteNotFound' | 'ledgerWrongPayload' | 'failedToFetchTx' | 'failedBuildTransactionDetails' | 'failedToCreateRouteMetadata' | 'txBuildingTimeout' | 'noLegsForRoute' | 'insufficientBalance' | 'insufficientAllowance' | 'unableToBuildTransaction' | 'noRouterAddressFound' | 'noAggregatorAddressFound' | 'noContractInstanceFound' | 'noContractAddressFound' | 'invalidAffiliate' | 'invalidAffiliateName' | 'thornameNotFound' | 'thornameAffiliate' | 'No provider found' | 'No Record found' | 'Slippage too low' | 'tradingHalted' | 'mayanameNotFound' | 'noWrappedGasAsset' | 'aggregatorAddressNotFound' | 'routerAddressNotFound' | 'dummyAddressNotFound' | 'trackerError' | 'thorchainPoolUnavailable' | 'noTradingPairs' | 'missingState' | 'ledgerSwapNotFound' | 'ledgerSwapNotReadyForTracking' | 'ledgerInvalidParsingMode' | 'errorEstimatingGas' | 'apiKeyInvalid' | 'apiKeyFailedToUpdate' | 'apiKeySignatureExists' | 'apiKeySignatureKeyTypeMismatch' | 'apiKeyExpired' | 'unauthorized' | 'failedToCreateMemo' | 'invalidAddressForChain' | 'riskyAddress' | 'noRoutesToProcess' | 'sellAssetAmountTooSmall' | 'sellAssetAmountTooLarge' | 'missingPrivateKey' | 'noMemoPriceProtection' | 'nodeMethodNotFound' | 'nodeRpcNotFound' | 'thirdPartyProviderNotFound' | 'quoteUnavailable' | 'targetInstructionNotFound' | 'referrerExist' | 'referrerNotFound' | 'invalidReferrer' | 'quoteLogicError' | 'missingDecimal' | 'noGasInfoInDB' | 'quoteError' | 'valueOverflow' | 'missingChainflipMeta' | 'contractAndMethodRequired' | 'tokenImageError' | 'fileNotFound' | 'fileFormatError' | 'ipError' | 'failedToSaveLedgerSwap' | 'missingValue' | 'missingDBQueryParam' | 'unableEstimateTxTime' | 'affiliateStatsMissingDate' | 'affiliateStatsMissingNextFilter' | 'affiliateStatsNoActions' | 'unsupportedNotificationEvent' | 'unsupportedNotificationChannel' | 'invalidWebhookUrl' | 'webhookDeliveryFailed' | 'serverStateNotFound' | 'apiRequestFailed' | 'apiRateLimit' | 'invalidActionStep' | 'providerIsRequired' | 'rateLimitExceeded' | 'depositChannelNotFound' | 'snowflakeFailedToFetchSwaps' | 'auditLogInsertFailed' | 'affiliateNameHistoryInsertFailed' | 'invalidRouteId' | 'invalidQuoteId' | 'invalidRoute' | 'quoteExpired' | 'swapQuoteNotFound' | 'swapRouteNotFound' | 'swapTransactionFailed' | 'swapChainflipMetaMissing' | 'swapChainflipChannelFailed' | 'swapTransferTxFailed' | 'chainflipVaultSwapNotSupported' | 'chainflipVaultSwapEncodingFailed' | 'chainflipVaultSwapInvalidChain' | 'chainflipVaultSwapBitcoinCCMNotSupported' | 'chainflipVaultSwapTransactionBuildFailed' | 'zcashInvalidAddress' | 'zcashInsufficientUTXOs' | 'zcashUTXOSelectionFailed' | 'zcashTransactionBuildFailed' | 'invalidTokenProgram' | 'invalidRequest' | 'pubsubEventNotRegistered' | 'pubsubTopicNotFound' | 'invalidSpender' | 'outputAmountDeviationTooHigh' | 'swapSizeExceeded' | 'v2EndpointNotAllowed' | 'externalServiceFailed' | 'tenantEncryptKeyNotFound' | 'tenantKeyPairEncryptionError' | 'slip24AmountOverflow' | 'slip24InvalidSignature' | 'slip24DigestComputationFailed' | 'invalidTxHashFormat' | 'nearAffiliateProviderAssetNotFound' | 'nearAffiliateDepositAddressFailed' | 'nearAffiliateNotFound' | 'flashnetAffiliateRegistrationFailed' | 'flashnetAffiliateNotFound' | 'flashnetAffiliateClaimFailed';
-        message?: string;
-    }>;
-};
-
-export type TrackTransactionRequest = {
-    /**
-     * Hash for the first transaction broadcasted by the end user. e.g. `88D1819378ECD09E5284C54937CDC1E99B52F253C007617A02DD1200710CE677`
-     */
-    hash?: string;
-    /**
-     * ChainId for the hash. e.g. `thorchain-1`
-     */
-    chainId?: string;
-    /**
-     * Block number. Required for Polkadot chain. e.g. `123456`
-     */
-    block?: number;
-    /**
-     * Deposit channel ID, required for Chainflip if tx was broadcasted without wallet connection
-     */
-    depositChannelId?: string;
-    /**
-     * Deposit address associated with a deposit channel
-     */
-    depositAddress?: string;
-};
-
-export type TrackTransactionResponse = {
-    chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hypercore' | 'kaiyo-1' | 'litecoin' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
-    hash: string;
-    block: number;
-    type: 'approve' | 'claim' | 'deposit' | 'lending' | 'lp_action' | 'native_contract_call' | 'native_send' | 'stake' | 'unstake' | 'streaming_swap' | 'swap' | 'thorname_action' | 'token_contract_call' | 'token_transfer' | 'unknown' | 'donate';
-    status: 'unknown' | 'not_started' | 'pending' | 'swapping' | 'completed' | 'refunded' | 'failed';
-    trackingStatus?: 'not_started' | 'starting' | 'broadcasted' | 'mempool' | 'inbound' | 'outbound' | 'swapping' | 'completed' | 'refunded' | 'partially_refunded' | 'dropped' | 'reverted' | 'replaced' | 'retries_exceeded' | 'parsing_error';
-    fromAsset: string;
-    fromAmount: string;
-    fromAddress: string;
-    toAsset: string;
-    toAmount: string;
-    toAddress: string;
-    finalAsset?: {
-        chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-        symbol: string;
-        ticker: string;
-        decimal?: number;
-        address?: string;
-        isGasAsset: boolean;
-        isSynthetic: boolean;
-        tax?: {
-            buy: number;
-            sell: number;
-        };
-    };
-    finalAddress?: string;
-    finalisedAt: number;
-    transient?: {
-        estimatedTimeToComplete: number;
-        currentLegIndex?: number;
-        estimates?: {
-            inboundObservation: number;
-            inboundConfirmation: number;
-            streamingSwap: number;
-            outboundDelay: number;
-            outboundObservation: number;
-            currentStage: string;
-        };
-        providerDetails?: {
-            streamingDetails?: {
-                quantity?: number;
-                count?: number;
-                interval?: number;
-                subSwapsMap?: Array<number>;
-            };
-            depositChannelId?: string;
-            depositAddress?: string;
-        };
-    };
-    meta?: {
-        broadcastedAt?: number;
-        wallet?: string;
-        quoteId?: string;
-        explorerUrl?: string;
-        affiliate?: string;
-        fees?: {
-            network?: {
-                chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                symbol: string;
-                ticker: string;
-                decimal?: number;
-                address?: string;
-                isGasAsset: boolean;
-                isSynthetic: boolean;
-                tax?: {
-                    buy: number;
-                    sell: number;
-                };
-            };
-            affiliate?: {
-                chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                symbol: string;
-                ticker: string;
-                decimal?: number;
-                address?: string;
-                isGasAsset: boolean;
-                isSynthetic: boolean;
-                tax?: {
-                    buy: number;
-                    sell: number;
-                };
-            };
-            liquidity?: {
-                chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                symbol: string;
-                ticker: string;
-                decimal?: number;
-                address?: string;
-                isGasAsset: boolean;
-                isSynthetic: boolean;
-                tax?: {
-                    buy: number;
-                    sell: number;
-                };
-            };
-            protocol?: {
-                chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                symbol: string;
-                ticker: string;
-                decimal?: number;
-                address?: string;
-                isGasAsset: boolean;
-                isSynthetic: boolean;
-                tax?: {
-                    buy: number;
-                    sell: number;
-                };
-            };
-            tax?: {
-                chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                symbol: string;
-                ticker: string;
-                decimal?: number;
-                address?: string;
-                isGasAsset: boolean;
-                isSynthetic: boolean;
-                tax?: {
-                    buy: number;
-                    sell: number;
-                };
-            };
-        };
-        provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
-        providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake';
-        images?: {
-            from?: string;
-            to?: string;
-            provider?: string;
-            chain?: string;
-        };
-        affiliateFees?: Array<{
-            affiliate: string;
-            bps: string;
-            isReferrer: boolean;
-        }>;
-    };
-    payload?: {
-        evmCalldata?: string;
-        evmValue?: string;
-        logs?: unknown;
-        memo?: string;
-        spender?: string;
-        manifest?: unknown;
-        intentHash?: string;
-        thorname?: string;
-        decodedPayload?: unknown;
-    };
-    legs: Array<{
-        chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hypercore' | 'kaiyo-1' | 'litecoin' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
-        hash: string;
-        block: number;
-        type: 'approve' | 'claim' | 'deposit' | 'lending' | 'lp_action' | 'native_contract_call' | 'native_send' | 'stake' | 'unstake' | 'streaming_swap' | 'swap' | 'thorname_action' | 'token_contract_call' | 'token_transfer' | 'unknown' | 'donate';
-        status: 'unknown' | 'not_started' | 'pending' | 'swapping' | 'completed' | 'refunded' | 'failed';
-        trackingStatus?: 'not_started' | 'starting' | 'broadcasted' | 'mempool' | 'inbound' | 'outbound' | 'swapping' | 'completed' | 'refunded' | 'partially_refunded' | 'dropped' | 'reverted' | 'replaced' | 'retries_exceeded' | 'parsing_error';
-        fromAsset: string;
-        fromAmount: string;
-        fromAddress: string;
-        toAsset: string;
-        toAmount: string;
-        toAddress: string;
-        finalAsset?: {
-            chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-            symbol: string;
-            ticker: string;
-            decimal?: number;
-            address?: string;
-            isGasAsset: boolean;
-            isSynthetic: boolean;
-            tax?: {
-                buy: number;
-                sell: number;
-            };
-        };
-        finalAddress?: string;
-        finalisedAt: number;
-        transient?: {
-            estimatedTimeToComplete: number;
-            currentLegIndex?: number;
-            estimates?: {
-                inboundObservation: number;
-                inboundConfirmation: number;
-                streamingSwap: number;
-                outboundDelay: number;
-                outboundObservation: number;
-                currentStage: string;
-            };
-            providerDetails?: {
-                streamingDetails?: {
-                    quantity?: number;
-                    count?: number;
-                    interval?: number;
-                    subSwapsMap?: Array<number>;
-                };
-                depositChannelId?: string;
-                depositAddress?: string;
-            };
-        };
-        meta?: {
-            broadcastedAt?: number;
-            wallet?: string;
-            quoteId?: string;
-            explorerUrl?: string;
-            affiliate?: string;
-            fees?: {
-                network?: {
-                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
-                };
-                affiliate?: {
-                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
-                };
-                liquidity?: {
-                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
-                };
-                protocol?: {
-                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
-                };
-                tax?: {
-                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
-                };
-            };
-            provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
-            providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake';
-            images?: {
-                from?: string;
-                to?: string;
-                provider?: string;
-                chain?: string;
-            };
-            affiliateFees?: Array<{
-                affiliate: string;
-                bps: string;
-                isReferrer: boolean;
-            }>;
-        };
-        payload?: {
-            evmCalldata?: string;
-            evmValue?: string;
-            logs?: unknown;
-            memo?: string;
-            spender?: string;
-            manifest?: unknown;
-            intentHash?: string;
-            thorname?: string;
-            decodedPayload?: unknown;
-        };
-    }>;
-};
-
-export type InsertTrackedTransactionRequest = {
-    legs: Array<{
-        chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hypercore' | 'kaiyo-1' | 'litecoin' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
-        hash: string;
-        block: number;
-        type: 'approve' | 'claim' | 'deposit' | 'lending' | 'lp_action' | 'native_contract_call' | 'native_send' | 'stake' | 'unstake' | 'streaming_swap' | 'swap' | 'thorname_action' | 'token_contract_call' | 'token_transfer' | 'unknown' | 'donate';
-        status: 'unknown' | 'not_started' | 'pending' | 'swapping' | 'completed' | 'refunded' | 'failed';
-        trackingStatus?: 'not_started' | 'starting' | 'broadcasted' | 'mempool' | 'inbound' | 'outbound' | 'swapping' | 'completed' | 'refunded' | 'partially_refunded' | 'dropped' | 'reverted' | 'replaced' | 'retries_exceeded' | 'parsing_error';
-        fromAsset: string;
-        fromAmount: string;
-        fromAddress: string;
-        toAsset: string;
-        toAmount: string;
-        toAddress: string;
-        finalAsset?: {
-            chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-            symbol: string;
-            ticker: string;
-            decimal?: number;
-            address?: string;
-            isGasAsset: boolean;
-            isSynthetic: boolean;
-            tax?: {
-                buy: number;
-                sell: number;
-            };
-        };
-        finalAddress?: string;
-        finalisedAt: number;
-        transient?: {
-            estimatedTimeToComplete: number;
-            currentLegIndex?: number;
-            estimates?: {
-                inboundObservation: number;
-                inboundConfirmation: number;
-                streamingSwap: number;
-                outboundDelay: number;
-                outboundObservation: number;
-                currentStage: string;
-            };
-            providerDetails?: {
-                streamingDetails?: {
-                    quantity?: number;
-                    count?: number;
-                    interval?: number;
-                    subSwapsMap?: Array<number>;
-                };
-                depositChannelId?: string;
-                depositAddress?: string;
-            };
-        };
-        meta?: {
-            broadcastedAt?: number;
-            wallet?: string;
-            quoteId?: string;
-            explorerUrl?: string;
-            affiliate?: string;
-            fees?: {
-                network?: {
-                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
-                };
-                affiliate?: {
-                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
-                };
-                liquidity?: {
-                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
-                };
-                protocol?: {
-                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
-                };
-                tax?: {
-                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
-                };
-            };
-            provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
-            providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake';
-            images?: {
-                from?: string;
-                to?: string;
-                provider?: string;
-                chain?: string;
-            };
-            affiliateFees?: Array<{
-                affiliate: string;
-                bps: string;
-                isReferrer: boolean;
-            }>;
-        };
-        payload?: {
-            evmCalldata?: string;
-            evmValue?: string;
-            logs?: unknown;
-            memo?: string;
-            spender?: string;
-            manifest?: unknown;
-            intentHash?: string;
-            thorname?: string;
-            decodedPayload?: unknown;
-        };
-    }>;
-    depositChannelId?: string;
-    depositAddress?: string;
-};
-
-export type InsertTrackedTransactionResponse = {
-    id: string;
-    hash: string;
-    status: string;
-    message: string;
 };
 
 export type GetProvidersData = {
@@ -1378,9 +1443,9 @@ export type GetTokensData = {
     path?: never;
     query?: {
         /**
-         * Provider name
+         * Provider name, or "all" to combine all providers
          */
-        provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+        provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3' | 'all';
     };
     url: '/tokens';
 };
@@ -1562,7 +1627,7 @@ export type TrackTransactionResponses = {
      * Default Response
      */
     202: {
-        chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hypercore' | 'kaiyo-1' | 'litecoin' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
+        chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
         hash: string;
         block: number;
         type: 'approve' | 'claim' | 'deposit' | 'lending' | 'lp_action' | 'native_contract_call' | 'native_send' | 'stake' | 'unstake' | 'streaming_swap' | 'swap' | 'thorname_action' | 'token_contract_call' | 'token_transfer' | 'unknown' | 'donate';
@@ -1575,7 +1640,7 @@ export type TrackTransactionResponses = {
         toAmount: string;
         toAddress: string;
         finalAsset?: {
-            chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+            chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
             symbol: string;
             ticker: string;
             decimal?: number;
@@ -1616,10 +1681,11 @@ export type TrackTransactionResponses = {
             wallet?: string;
             quoteId?: string;
             explorerUrl?: string;
+            providerExplorerUrl?: string;
             affiliate?: string;
             fees?: {
                 network?: {
-                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
                     symbol: string;
                     ticker: string;
                     decimal?: number;
@@ -1632,7 +1698,7 @@ export type TrackTransactionResponses = {
                     };
                 };
                 affiliate?: {
-                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
                     symbol: string;
                     ticker: string;
                     decimal?: number;
@@ -1645,7 +1711,7 @@ export type TrackTransactionResponses = {
                     };
                 };
                 liquidity?: {
-                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
                     symbol: string;
                     ticker: string;
                     decimal?: number;
@@ -1658,7 +1724,7 @@ export type TrackTransactionResponses = {
                     };
                 };
                 protocol?: {
-                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
                     symbol: string;
                     ticker: string;
                     decimal?: number;
@@ -1671,7 +1737,7 @@ export type TrackTransactionResponses = {
                     };
                 };
                 tax?: {
-                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                    chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
                     symbol: string;
                     ticker: string;
                     decimal?: number;
@@ -1684,8 +1750,9 @@ export type TrackTransactionResponses = {
                     };
                 };
             };
-            provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
-            providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake';
+            provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+            providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder';
+            providerOrderId?: string;
             images?: {
                 from?: string;
                 to?: string;
@@ -1697,6 +1764,8 @@ export type TrackTransactionResponses = {
                 bps: string;
                 isReferrer: boolean;
             }>;
+            failReason?: string;
+            failTargetAddress?: string;
         };
         payload?: {
             evmCalldata?: string;
@@ -1710,7 +1779,7 @@ export type TrackTransactionResponses = {
             decodedPayload?: unknown;
         };
         legs: Array<{
-            chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hypercore' | 'kaiyo-1' | 'litecoin' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
+            chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
             hash: string;
             block: number;
             type: 'approve' | 'claim' | 'deposit' | 'lending' | 'lp_action' | 'native_contract_call' | 'native_send' | 'stake' | 'unstake' | 'streaming_swap' | 'swap' | 'thorname_action' | 'token_contract_call' | 'token_transfer' | 'unknown' | 'donate';
@@ -1723,7 +1792,7 @@ export type TrackTransactionResponses = {
             toAmount: string;
             toAddress: string;
             finalAsset?: {
-                chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
                 symbol: string;
                 ticker: string;
                 decimal?: number;
@@ -1764,10 +1833,11 @@ export type TrackTransactionResponses = {
                 wallet?: string;
                 quoteId?: string;
                 explorerUrl?: string;
+                providerExplorerUrl?: string;
                 affiliate?: string;
                 fees?: {
                     network?: {
-                        chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                        chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
                         symbol: string;
                         ticker: string;
                         decimal?: number;
@@ -1780,7 +1850,7 @@ export type TrackTransactionResponses = {
                         };
                     };
                     affiliate?: {
-                        chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                        chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
                         symbol: string;
                         ticker: string;
                         decimal?: number;
@@ -1793,7 +1863,7 @@ export type TrackTransactionResponses = {
                         };
                     };
                     liquidity?: {
-                        chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                        chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
                         symbol: string;
                         ticker: string;
                         decimal?: number;
@@ -1806,7 +1876,7 @@ export type TrackTransactionResponses = {
                         };
                     };
                     protocol?: {
-                        chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                        chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
                         symbol: string;
                         ticker: string;
                         decimal?: number;
@@ -1819,7 +1889,7 @@ export type TrackTransactionResponses = {
                         };
                     };
                     tax?: {
-                        chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPERCORE' | 'KUJI' | 'LTC' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                        chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
                         symbol: string;
                         ticker: string;
                         decimal?: number;
@@ -1832,8 +1902,9 @@ export type TrackTransactionResponses = {
                         };
                     };
                 };
-                provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
-                providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake';
+                provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+                providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder';
+                providerOrderId?: string;
                 images?: {
                     from?: string;
                     to?: string;
@@ -1845,6 +1916,8 @@ export type TrackTransactionResponses = {
                     bps: string;
                     isReferrer: boolean;
                 }>;
+                failReason?: string;
+                failTargetAddress?: string;
             };
             payload?: {
                 evmCalldata?: string;
@@ -1897,7 +1970,7 @@ export type GetGasPricesData = {
         /**
          * Chain id, if omitted return gas for all chains
          */
-        chainId?: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hypercore' | 'kaiyo-1' | 'litecoin' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
+        chainId?: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
         /**
          * Time frame to get gas history
          */
@@ -1922,7 +1995,7 @@ export type GetGasHistoryData = {
         /**
          * Chain id, if omitted return gas for all chains
          */
-        chainId?: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hypercore' | 'kaiyo-1' | 'litecoin' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
+        chainId?: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
         /**
          * Time frame to get gas history
          */
@@ -1944,7 +2017,7 @@ export type GetCachedPriceData = {
     body: GetCachedPriceRequest;
     path?: never;
     query?: never;
-    url: '/price/cached-price';
+    url: '/price';
 };
 
 export type GetCachedPriceResponses = {

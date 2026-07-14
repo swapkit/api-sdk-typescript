@@ -10,6 +10,12 @@ npm install @swapkit/api-sdk-typescript
 bun add @swapkit/api-sdk-typescript
 ```
 
+For the bleeding-edge build tracking the API's `develop` branch, install the `nightly` tag:
+
+```bash
+npm install @swapkit/api-sdk-typescript@nightly
+```
+
 ## Quick Start
 
 ```typescript
