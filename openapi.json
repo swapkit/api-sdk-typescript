@@ -8291,6 +8291,10 @@
             "type": "boolean",
             "description": "Set to true to enable CF boost to speed up Chainflip swaps. BTC only."
           },
+          "useConfidentialIntents": {
+            "type": "boolean",
+            "description": "Set to true to request a confidential swap through NEAR Intents. NEAR provider only, requires Confidential Intents access (invite-only)."
+          },
           "referrer": {
             "type": "string"
           },
@@ -9090,6 +9094,7 @@
                     "unauthorized",
                     "failedToCreateMemo",
                     "invalidAddressForChain",
+                    "invalidAddress",
                     "riskyAddress",
                     "noRoutesToProcess",
                     "sellAssetAmountTooSmall",
@@ -9189,7 +9194,8 @@
                     "limitOrderAmountAmbiguous",
                     "limitOrderChainMismatch",
                     "limitOrderUnsupportedPair",
-                    "limitOrderActionUnavailable"
+                    "limitOrderActionUnavailable",
+                    "limitOrderProviderError"
                   ]
                 },
                 "message": {
@@ -9771,7 +9777,8 @@
               "TON",
               "STARKNET",
               "zcash-unsigned",
-              "STELLAR"
+              "STELLAR",
+              "EIP_712_HYPE_WITHDRAW"
             ]
           },
           "txHint": {
@@ -9784,6 +9791,38 @@
           },
           "tx": {
             "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "to": {
+                    "type": "string",
+                    "description": "Hex-encoded recipient address (native TRX) or TRC-20 token contract address"
+                  },
+                  "from": {
+                    "type": "string",
+                    "description": "Hex-encoded sender address"
+                  },
+                  "value": {
+                    "type": "string",
+                    "description": "Transfer amount in base units"
+                  },
+                  "data": {
+                    "type": "string",
+                    "description": "ABI-encoded TRC-20 transfer parameters, or 0x for native TRX"
+                  },
+                  "memo": {
+                    "type": "string",
+                    "description": "Transaction memo to attach on-chain: either a plain-text provider memo (e.g. THORChain) or a 0x-prefixed hex byte payload (e.g. Chainflip vault swap parameters), which must be attached as raw bytes"
+                  }
+                },
+                "required": [
+                  "to",
+                  "value",
+                  "data",
+                  "memo"
+                ],
+                "additionalProperties": false
+              },
               {
                 "type": "object",
                 "properties": {
@@ -10075,6 +10114,67 @@
                 }
               },
               {
+                "type": "object",
+                "properties": {
+                  "domain": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "version": {
+                        "type": "string"
+                      },
+                      "chainId": {
+                        "type": "number"
+                      },
+                      "verifyingContract": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "version",
+                      "chainId",
+                      "verifyingContract"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "types": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string"
+                          },
+                          "type": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "name",
+                          "type"
+                        ],
+                        "additionalProperties": false
+                      }
+                    }
+                  },
+                  "value": {
+                    "type": "object",
+                    "additionalProperties": {}
+                  }
+                },
+                "required": [
+                  "domain",
+                  "types",
+                  "value"
+                ],
+                "additionalProperties": false
+              },
+              {
                 "type": "string"
               }
             ]
@@ -10157,7 +10257,8 @@
                   "TON",
                   "STARKNET",
                   "zcash-unsigned",
-                  "STELLAR"
+                  "STELLAR",
+                  "EIP_712_HYPE_WITHDRAW"
                 ]
               },
               "chainflip": {
