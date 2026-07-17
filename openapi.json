@@ -8305,7 +8305,7 @@
               "EXACT_INPUT",
               "FLEX_INPUT"
             ],
-            "description": "EXACT_INPUT (default) or FLEX_INPUT. On FLEX_INPUT, routes whose first-leg provider can't honour the mode are filtered out. Supported first-leg providers: THORCHAIN, MAYACHAIN, CHAINFLIP (incl. streaming variants), and NEAR."
+            "description": "EXACT_INPUT (default) or FLEX_INPUT. On FLEX_INPUT, routes whose first-leg provider can't honour the mode are filtered out. Supported first-leg providers: THORCHAIN, MAYACHAIN, CHAINFLIP (incl. streaming variants), NEAR, and FLASHNET."
           },
           "disableEstimate": {
             "default": true,
@@ -8861,6 +8861,14 @@
                     },
                     "referrer": {
                       "type": "string"
+                    },
+                    "quoteType": {
+                      "type": "string",
+                      "enum": [
+                        "EXACT_INPUT",
+                        "FLEX_INPUT"
+                      ],
+                      "description": "The quoteType this route was built for (EXACT_INPUT or FLEX_INPUT). Echoes the request's quoteType so /swap can carry the mode forward."
                     },
                     "approvalAddress": {
                       "type": "string",
@@ -10227,6 +10235,14 @@
               },
               "referrer": {
                 "type": "string"
+              },
+              "quoteType": {
+                "type": "string",
+                "enum": [
+                  "EXACT_INPUT",
+                  "FLEX_INPUT"
+                ],
+                "description": "The quoteType this route was built for (EXACT_INPUT or FLEX_INPUT). Echoes the request's quoteType so /swap can carry the mode forward."
               },
               "priceImpact": {
                 "type": "number",

@@ -752,7 +752,7 @@ export type GetQuoteRequest = {
     useConfidentialIntents?: boolean;
     referrer?: string;
     /**
-     * EXACT_INPUT (default) or FLEX_INPUT. On FLEX_INPUT, routes whose first-leg provider can't honour the mode are filtered out. Supported first-leg providers: THORCHAIN, MAYACHAIN, CHAINFLIP (incl. streaming variants), and NEAR.
+     * EXACT_INPUT (default) or FLEX_INPUT. On FLEX_INPUT, routes whose first-leg provider can't honour the mode are filtered out. Supported first-leg providers: THORCHAIN, MAYACHAIN, CHAINFLIP (incl. streaming variants), NEAR, and FLASHNET.
      */
     quoteType?: 'EXACT_INPUT' | 'FLEX_INPUT';
     /**
@@ -929,6 +929,10 @@ export type GetQuoteResponse = {
             streamingInterval?: number;
             maxStreamingQuantity?: number;
             referrer?: string;
+            /**
+             * The quoteType this route was built for (EXACT_INPUT or FLEX_INPUT). Echoes the request's quoteType so /swap can carry the mode forward.
+             */
+            quoteType?: 'EXACT_INPUT' | 'FLEX_INPUT';
             /**
              * Approval address for token swap
              */
@@ -1291,6 +1295,10 @@ export type ExecuteSwapResponse = {
         streamingInterval?: number;
         maxStreamingQuantity?: number;
         referrer?: string;
+        /**
+         * The quoteType this route was built for (EXACT_INPUT or FLEX_INPUT). Echoes the request's quoteType so /swap can carry the mode forward.
+         */
+        quoteType?: 'EXACT_INPUT' | 'FLEX_INPUT';
         /**
          * Price impact
          */
