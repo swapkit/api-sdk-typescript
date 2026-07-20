@@ -181,6 +181,205 @@
         }
       }
     },
+    "/tokens/search": {
+      "get": {
+        "operationId": "searchTokens",
+        "tags": [
+          "Tokenlist"
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256
+            },
+            "in": "query",
+            "name": "query",
+            "required": true,
+            "description": "Free-text token search query"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "ADI",
+                "APT",
+                "ARB",
+                "AURORA",
+                "AVAX",
+                "BASE",
+                "BERA",
+                "BSC",
+                "BTC",
+                "BCH",
+                "BOTANIX",
+                "ADA",
+                "FLIP",
+                "CORE",
+                "CORN",
+                "GAIA",
+                "CRO",
+                "DASH",
+                "DOGE",
+                "ETH",
+                "GNO",
+                "HARBOR",
+                "HYPEREVM",
+                "HYPE",
+                "KUJI",
+                "LTC",
+                "LINEA",
+                "MAYA",
+                "MEGAETH",
+                "MONAD",
+                "NEAR",
+                "NOBLE",
+                "OP",
+                "XPL",
+                "DOT",
+                "POL",
+                "XRD",
+                "XRP",
+                "SOL",
+                "SONIC",
+                "SPARK",
+                "XLM",
+                "STRK",
+                "SUI",
+                "THOR",
+                "TON",
+                "TRON",
+                "UNI",
+                "XLAYER",
+                "ZEC"
+              ]
+            },
+            "in": "query",
+            "name": "chain",
+            "required": false,
+            "description": "Restrict results to a chain"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "CHAINFLIP",
+                "CHAINFLIP_STREAMING",
+                "MAYACHAIN",
+                "MAYACHAIN_STREAMING",
+                "ONEINCH",
+                "PANCAKESWAP",
+                "SUSHISWAP_V2",
+                "THORCHAIN",
+                "THORCHAIN_STREAMING",
+                "TRADERJOE_V2",
+                "UNISWAP_V2",
+                "UNISWAP_V3",
+                "JUPITER",
+                "OKX",
+                "NEAR",
+                "GARDEN",
+                "HARBOR",
+                "FLASHNET",
+                "MAYAN",
+                "PANGOLIN_V1",
+                "CAVIAR_V1",
+                "OPENOCEAN_V2",
+                "OCISWAP_V1",
+                "CAMELOT_V3"
+              ]
+            },
+            "in": "query",
+            "name": "provider",
+            "required": false,
+            "description": "Restrict search to a provider token list"
+          },
+          {
+            "schema": {
+              "default": 100,
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100
+            },
+            "in": "query",
+            "name": "limit",
+            "required": false
+          },
+          {
+            "schema": {
+              "default": 1,
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991
+            },
+            "in": "query",
+            "name": "page",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchTokensResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "string"
+                    },
+                    "data": {}
+                  },
+                  "required": [
+                    "message",
+                    "error"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "string"
+                    },
+                    "data": {}
+                  },
+                  "required": [
+                    "message",
+                    "error"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/swapTo": {
       "get": {
         "operationId": "getSwapToAssets",
@@ -3901,6 +4100,220 @@
             }
           }
         ]
+      },
+      "SearchTokensResponse": {
+        "type": "object",
+        "properties": {
+          "tokens": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "identifier": {
+                  "type": "string"
+                },
+                "chainId": {
+                  "type": "string",
+                  "enum": [
+                    "36900",
+                    "aptos",
+                    "42161",
+                    "1313161554",
+                    "43114",
+                    "8453",
+                    "80094",
+                    "56",
+                    "bitcoin",
+                    "bitcoincash",
+                    "3637",
+                    "cardano",
+                    "chainflip",
+                    "1116",
+                    "21000000",
+                    "cosmoshub-4",
+                    "25",
+                    "dash",
+                    "dogecoin",
+                    "1",
+                    "100",
+                    "harbor-1",
+                    "harbor-stagenet-1",
+                    "999",
+                    "hype",
+                    "kaiyo-1",
+                    "litecoin",
+                    "59144",
+                    "mayachain-mainnet-v1",
+                    "mayachain-stagenet-v1",
+                    "4326",
+                    "143",
+                    "near",
+                    "noble-1",
+                    "10",
+                    "9745",
+                    "polkadot",
+                    "137",
+                    "radix-mainnet",
+                    "ripple",
+                    "solana",
+                    "146",
+                    "spark",
+                    "stellar",
+                    "0x534e5f4d41494e",
+                    "sui",
+                    "thorchain-1",
+                    "thorchain-stagenet-v2",
+                    "ton",
+                    "728126428",
+                    "130",
+                    "196",
+                    "zcash"
+                  ]
+                },
+                "ticker": {
+                  "type": "string"
+                },
+                "symbol": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "address": {
+                  "type": "string"
+                },
+                "decimals": {
+                  "type": "number"
+                },
+                "logoURI": {
+                  "type": "string"
+                },
+                "coingeckoId": {
+                  "type": "string"
+                },
+                "chain": {
+                  "type": "string",
+                  "enum": [
+                    "ADI",
+                    "APT",
+                    "ARB",
+                    "AURORA",
+                    "AVAX",
+                    "BASE",
+                    "BERA",
+                    "BSC",
+                    "BTC",
+                    "BCH",
+                    "BOTANIX",
+                    "ADA",
+                    "FLIP",
+                    "CORE",
+                    "CORN",
+                    "GAIA",
+                    "CRO",
+                    "DASH",
+                    "DOGE",
+                    "ETH",
+                    "GNO",
+                    "HARBOR",
+                    "HYPEREVM",
+                    "HYPE",
+                    "KUJI",
+                    "LTC",
+                    "LINEA",
+                    "MAYA",
+                    "MEGAETH",
+                    "MONAD",
+                    "NEAR",
+                    "NOBLE",
+                    "OP",
+                    "XPL",
+                    "DOT",
+                    "POL",
+                    "XRD",
+                    "XRP",
+                    "SOL",
+                    "SONIC",
+                    "SPARK",
+                    "XLM",
+                    "STRK",
+                    "SUI",
+                    "THOR",
+                    "TON",
+                    "TRON",
+                    "UNI",
+                    "XLAYER",
+                    "ZEC"
+                  ]
+                },
+                "providers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "CHAINFLIP",
+                      "CHAINFLIP_STREAMING",
+                      "MAYACHAIN",
+                      "MAYACHAIN_STREAMING",
+                      "ONEINCH",
+                      "PANCAKESWAP",
+                      "SUSHISWAP_V2",
+                      "THORCHAIN",
+                      "THORCHAIN_STREAMING",
+                      "TRADERJOE_V2",
+                      "UNISWAP_V2",
+                      "UNISWAP_V3",
+                      "JUPITER",
+                      "OKX",
+                      "NEAR",
+                      "GARDEN",
+                      "HARBOR",
+                      "FLASHNET",
+                      "MAYAN",
+                      "PANGOLIN_V1",
+                      "CAVIAR_V1",
+                      "OPENOCEAN_V2",
+                      "OCISWAP_V1",
+                      "CAMELOT_V3"
+                    ]
+                  }
+                },
+                "marketCapUsd": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "identifier",
+                "chainId",
+                "ticker",
+                "decimals",
+                "chain",
+                "providers"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "total": {
+            "type": "number"
+          },
+          "page": {
+            "type": "number"
+          },
+          "limit": {
+            "type": "number"
+          },
+          "hasMore": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "tokens",
+          "total",
+          "page",
+          "limit",
+          "hasMore"
+        ],
+        "additionalProperties": false
       },
       "GetProvidersResponse": {
         "type": "array",

@@ -78,6 +78,27 @@ export type GetTokensResponse = {
     supportedChainIds?: Array<'36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash'>;
 }>;
 
+export type SearchTokensResponse = {
+    tokens: Array<{
+        identifier: string;
+        chainId: '36900' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
+        ticker: string;
+        symbol?: string;
+        name?: string;
+        address?: string;
+        decimals: number;
+        logoURI?: string;
+        coingeckoId?: string;
+        chain: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+        providers: Array<'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3'>;
+        marketCapUsd?: number;
+    }>;
+    total: number;
+    page: number;
+    limit: number;
+    hasMore: boolean;
+};
+
 export type GetProvidersResponse = Array<{
     name: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
     provider: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
@@ -1528,6 +1549,58 @@ export type GetTokensResponses = {
 };
 
 export type GetTokensResponse2 = GetTokensResponses[keyof GetTokensResponses];
+
+export type SearchTokensData = {
+    body?: never;
+    path?: never;
+    query: {
+        /**
+         * Free-text token search query
+         */
+        query: string;
+        /**
+         * Restrict results to a chain
+         */
+        chain?: 'ADI' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+        /**
+         * Restrict search to a provider token list
+         */
+        provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+        limit?: number;
+        page?: number;
+    };
+    url: '/tokens/search';
+};
+
+export type SearchTokensErrors = {
+    /**
+     * Default Response
+     */
+    400: {
+        message: string;
+        error: string;
+        data?: unknown;
+    };
+    /**
+     * Default Response
+     */
+    500: {
+        message: string;
+        error: string;
+        data?: unknown;
+    };
+};
+
+export type SearchTokensError = SearchTokensErrors[keyof SearchTokensErrors];
+
+export type SearchTokensResponses = {
+    /**
+     * Default Response
+     */
+    200: SearchTokensResponse;
+};
+
+export type SearchTokensResponse2 = SearchTokensResponses[keyof SearchTokensResponses];
 
 export type GetSwapToAssetsData = {
     body?: never;
