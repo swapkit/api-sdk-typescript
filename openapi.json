@@ -204,6 +204,7 @@
               "type": "string",
               "enum": [
                 "ADI",
+                "ALEO",
                 "APT",
                 "ARB",
                 "AURORA",
@@ -241,6 +242,7 @@
                 "POL",
                 "XRD",
                 "XRP",
+                "HOOD",
                 "SOL",
                 "SONIC",
                 "SPARK",
@@ -615,6 +617,7 @@
                       "type": "string",
                       "enum": [
                         "36900",
+                        "aleo",
                         "aptos",
                         "42161",
                         "1313161554",
@@ -654,6 +657,7 @@
                         "137",
                         "radix-mainnet",
                         "ripple",
+                        "4663",
                         "solana",
                         "146",
                         "spark",
@@ -753,6 +757,7 @@
                           "type": "string",
                           "enum": [
                             "ADI",
+                            "ALEO",
                             "APT",
                             "ARB",
                             "AURORA",
@@ -790,6 +795,7 @@
                             "POL",
                             "XRD",
                             "XRP",
+                            "HOOD",
                             "SOL",
                             "SONIC",
                             "SPARK",
@@ -965,6 +971,7 @@
                                   "type": "string",
                                   "enum": [
                                     "ADI",
+                                    "ALEO",
                                     "APT",
                                     "ARB",
                                     "AURORA",
@@ -1002,6 +1009,7 @@
                                     "POL",
                                     "XRD",
                                     "XRP",
+                                    "HOOD",
                                     "SOL",
                                     "SONIC",
                                     "SPARK",
@@ -1067,6 +1075,7 @@
                                   "type": "string",
                                   "enum": [
                                     "ADI",
+                                    "ALEO",
                                     "APT",
                                     "ARB",
                                     "AURORA",
@@ -1104,6 +1113,7 @@
                                     "POL",
                                     "XRD",
                                     "XRP",
+                                    "HOOD",
                                     "SOL",
                                     "SONIC",
                                     "SPARK",
@@ -1169,6 +1179,7 @@
                                   "type": "string",
                                   "enum": [
                                     "ADI",
+                                    "ALEO",
                                     "APT",
                                     "ARB",
                                     "AURORA",
@@ -1206,6 +1217,7 @@
                                     "POL",
                                     "XRD",
                                     "XRP",
+                                    "HOOD",
                                     "SOL",
                                     "SONIC",
                                     "SPARK",
@@ -1271,6 +1283,7 @@
                                   "type": "string",
                                   "enum": [
                                     "ADI",
+                                    "ALEO",
                                     "APT",
                                     "ARB",
                                     "AURORA",
@@ -1308,6 +1321,7 @@
                                     "POL",
                                     "XRD",
                                     "XRP",
+                                    "HOOD",
                                     "SOL",
                                     "SONIC",
                                     "SPARK",
@@ -1373,6 +1387,7 @@
                                   "type": "string",
                                   "enum": [
                                     "ADI",
+                                    "ALEO",
                                     "APT",
                                     "ARB",
                                     "AURORA",
@@ -1410,6 +1425,7 @@
                                     "POL",
                                     "XRD",
                                     "XRP",
+                                    "HOOD",
                                     "SOL",
                                     "SONIC",
                                     "SPARK",
@@ -1609,6 +1625,7 @@
                             "type": "string",
                             "enum": [
                               "36900",
+                              "aleo",
                               "aptos",
                               "42161",
                               "1313161554",
@@ -1648,6 +1665,7 @@
                               "137",
                               "radix-mainnet",
                               "ripple",
+                              "4663",
                               "solana",
                               "146",
                               "spark",
@@ -1747,6 +1765,7 @@
                                 "type": "string",
                                 "enum": [
                                   "ADI",
+                                  "ALEO",
                                   "APT",
                                   "ARB",
                                   "AURORA",
@@ -1784,6 +1803,7 @@
                                   "POL",
                                   "XRD",
                                   "XRP",
+                                  "HOOD",
                                   "SOL",
                                   "SONIC",
                                   "SPARK",
@@ -1959,6 +1979,7 @@
                                         "type": "string",
                                         "enum": [
                                           "ADI",
+                                          "ALEO",
                                           "APT",
                                           "ARB",
                                           "AURORA",
@@ -1996,6 +2017,7 @@
                                           "POL",
                                           "XRD",
                                           "XRP",
+                                          "HOOD",
                                           "SOL",
                                           "SONIC",
                                           "SPARK",
@@ -2061,6 +2083,7 @@
                                         "type": "string",
                                         "enum": [
                                           "ADI",
+                                          "ALEO",
                                           "APT",
                                           "ARB",
                                           "AURORA",
@@ -2098,6 +2121,7 @@
                                           "POL",
                                           "XRD",
                                           "XRP",
+                                          "HOOD",
                                           "SOL",
                                           "SONIC",
                                           "SPARK",
@@ -2163,6 +2187,7 @@
                                         "type": "string",
                                         "enum": [
                                           "ADI",
+                                          "ALEO",
                                           "APT",
                                           "ARB",
                                           "AURORA",
@@ -2200,6 +2225,7 @@
                                           "POL",
                                           "XRD",
                                           "XRP",
+                                          "HOOD",
                                           "SOL",
                                           "SONIC",
                                           "SPARK",
@@ -2265,6 +2291,7 @@
                                         "type": "string",
                                         "enum": [
                                           "ADI",
+                                          "ALEO",
                                           "APT",
                                           "ARB",
                                           "AURORA",
@@ -2302,6 +2329,7 @@
                                           "POL",
                                           "XRD",
                                           "XRP",
+                                          "HOOD",
                                           "SOL",
                                           "SONIC",
                                           "SPARK",
@@ -2367,6 +2395,7 @@
                                         "type": "string",
                                         "enum": [
                                           "ADI",
+                                          "ALEO",
                                           "APT",
                                           "ARB",
                                           "AURORA",
@@ -2404,6 +2433,7 @@
                                           "POL",
                                           "XRD",
                                           "XRP",
+                                          "HOOD",
                                           "SOL",
                                           "SONIC",
                                           "SPARK",
@@ -2769,6 +2799,7 @@
               "type": "string",
               "enum": [
                 "36900",
+                "aleo",
                 "aptos",
                 "42161",
                 "1313161554",
@@ -2808,6 +2839,7 @@
                 "137",
                 "radix-mainnet",
                 "ripple",
+                "4663",
                 "solana",
                 "146",
                 "spark",
@@ -2870,6 +2902,7 @@
               "type": "string",
               "enum": [
                 "36900",
+                "aleo",
                 "aptos",
                 "42161",
                 "1313161554",
@@ -2909,6 +2942,7 @@
                 "137",
                 "radix-mainnet",
                 "ripple",
+                "4663",
                 "solana",
                 "146",
                 "spark",
@@ -3220,6 +3254,7 @@
                 "type": "string",
                 "enum": [
                   "36900",
+                  "aleo",
                   "aptos",
                   "42161",
                   "1313161554",
@@ -3259,6 +3294,7 @@
                   "137",
                   "radix-mainnet",
                   "ripple",
+                  "4663",
                   "solana",
                   "146",
                   "spark",
@@ -3323,6 +3359,7 @@
                       "type": "string",
                       "enum": [
                         "ADI",
+                        "ALEO",
                         "APT",
                         "ARB",
                         "AURORA",
@@ -3360,6 +3397,7 @@
                         "POL",
                         "XRD",
                         "XRP",
+                        "HOOD",
                         "SOL",
                         "SONIC",
                         "SPARK",
@@ -3381,6 +3419,7 @@
                       "type": "string",
                       "enum": [
                         "36900",
+                        "aleo",
                         "aptos",
                         "42161",
                         "1313161554",
@@ -3420,6 +3459,7 @@
                         "137",
                         "radix-mainnet",
                         "ripple",
+                        "4663",
                         "solana",
                         "146",
                         "spark",
@@ -3486,6 +3526,7 @@
                   "type": "string",
                   "enum": [
                     "36900",
+                    "aleo",
                     "aptos",
                     "42161",
                     "1313161554",
@@ -3525,6 +3566,7 @@
                     "137",
                     "radix-mainnet",
                     "ripple",
+                    "4663",
                     "solana",
                     "146",
                     "spark",
@@ -3570,6 +3612,7 @@
                   "type": "string",
                   "enum": [
                     "36900",
+                    "aleo",
                     "aptos",
                     "42161",
                     "1313161554",
@@ -3609,6 +3652,7 @@
                     "137",
                     "radix-mainnet",
                     "ripple",
+                    "4663",
                     "solana",
                     "146",
                     "spark",
@@ -3683,6 +3727,7 @@
                   "type": "string",
                   "enum": [
                     "36900",
+                    "aleo",
                     "aptos",
                     "42161",
                     "1313161554",
@@ -3722,6 +3767,7 @@
                     "137",
                     "radix-mainnet",
                     "ripple",
+                    "4663",
                     "solana",
                     "146",
                     "spark",
@@ -3786,6 +3832,7 @@
                         "type": "string",
                         "enum": [
                           "ADI",
+                          "ALEO",
                           "APT",
                           "ARB",
                           "AURORA",
@@ -3823,6 +3870,7 @@
                           "POL",
                           "XRD",
                           "XRP",
+                          "HOOD",
                           "SOL",
                           "SONIC",
                           "SPARK",
@@ -3844,6 +3892,7 @@
                         "type": "string",
                         "enum": [
                           "36900",
+                          "aleo",
                           "aptos",
                           "42161",
                           "1313161554",
@@ -3883,6 +3932,7 @@
                           "137",
                           "radix-mainnet",
                           "ripple",
+                          "4663",
                           "solana",
                           "146",
                           "spark",
@@ -3949,6 +3999,7 @@
                     "type": "string",
                     "enum": [
                       "36900",
+                      "aleo",
                       "aptos",
                       "42161",
                       "1313161554",
@@ -3988,6 +4039,7 @@
                       "137",
                       "radix-mainnet",
                       "ripple",
+                      "4663",
                       "solana",
                       "146",
                       "spark",
@@ -4033,6 +4085,7 @@
                     "type": "string",
                     "enum": [
                       "36900",
+                      "aleo",
                       "aptos",
                       "42161",
                       "1313161554",
@@ -4072,6 +4125,7 @@
                       "137",
                       "radix-mainnet",
                       "ripple",
+                      "4663",
                       "solana",
                       "146",
                       "spark",
@@ -4116,6 +4170,7 @@
                   "type": "string",
                   "enum": [
                     "36900",
+                    "aleo",
                     "aptos",
                     "42161",
                     "1313161554",
@@ -4155,6 +4210,7 @@
                     "137",
                     "radix-mainnet",
                     "ripple",
+                    "4663",
                     "solana",
                     "146",
                     "spark",
@@ -4195,6 +4251,7 @@
                   "type": "string",
                   "enum": [
                     "ADI",
+                    "ALEO",
                     "APT",
                     "ARB",
                     "AURORA",
@@ -4232,6 +4289,7 @@
                     "POL",
                     "XRD",
                     "XRP",
+                    "HOOD",
                     "SOL",
                     "SONIC",
                     "SPARK",
@@ -4405,6 +4463,7 @@
                 "type": "string",
                 "enum": [
                   "36900",
+                  "aleo",
                   "aptos",
                   "42161",
                   "1313161554",
@@ -4444,6 +4503,7 @@
                   "137",
                   "radix-mainnet",
                   "ripple",
+                  "4663",
                   "solana",
                   "146",
                   "spark",
@@ -4489,6 +4549,7 @@
                 "type": "string",
                 "enum": [
                   "36900",
+                  "aleo",
                   "aptos",
                   "42161",
                   "1313161554",
@@ -4528,6 +4589,7 @@
                   "137",
                   "radix-mainnet",
                   "ripple",
+                  "4663",
                   "solana",
                   "146",
                   "spark",
@@ -4596,6 +4658,7 @@
                     "type": "string",
                     "enum": [
                       "36900",
+                      "aleo",
                       "aptos",
                       "42161",
                       "1313161554",
@@ -4635,6 +4698,7 @@
                       "137",
                       "radix-mainnet",
                       "ripple",
+                      "4663",
                       "solana",
                       "146",
                       "spark",
@@ -4657,6 +4721,7 @@
                     "type": "string",
                     "enum": [
                       "36900",
+                      "aleo",
                       "aptos",
                       "42161",
                       "1313161554",
@@ -4696,6 +4761,7 @@
                       "137",
                       "radix-mainnet",
                       "ripple",
+                      "4663",
                       "solana",
                       "146",
                       "spark",
@@ -4718,6 +4784,7 @@
                     "type": "string",
                     "enum": [
                       "36900",
+                      "aleo",
                       "aptos",
                       "42161",
                       "1313161554",
@@ -4757,6 +4824,7 @@
                       "137",
                       "radix-mainnet",
                       "ripple",
+                      "4663",
                       "solana",
                       "146",
                       "spark",
@@ -4779,6 +4847,7 @@
                     "type": "string",
                     "enum": [
                       "36900",
+                      "aleo",
                       "aptos",
                       "42161",
                       "1313161554",
@@ -4818,6 +4887,7 @@
                       "137",
                       "radix-mainnet",
                       "ripple",
+                      "4663",
                       "solana",
                       "146",
                       "spark",
@@ -4840,6 +4910,7 @@
                     "type": "string",
                     "enum": [
                       "36900",
+                      "aleo",
                       "aptos",
                       "42161",
                       "1313161554",
@@ -4879,6 +4950,7 @@
                       "137",
                       "radix-mainnet",
                       "ripple",
+                      "4663",
                       "solana",
                       "146",
                       "spark",
@@ -4913,6 +4985,36 @@
         ],
         "additionalProperties": false
       },
+      "GetProviderIdentifiersMappingResponse": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "swapkitIdentifier": {
+              "type": "string",
+              "description": "SwapKit token identifier"
+            },
+            "providerMapping": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "Mapping of provider names to their token identifiers"
+            }
+          },
+          "required": [
+            "swapkitIdentifier",
+            "providerMapping"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "GetAssetProvidersResponse": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
       "GetSwapFromAssetsResponse": {
         "type": "array",
         "items": {
@@ -4923,6 +5025,456 @@
         "type": "array",
         "items": {
           "type": "string"
+        }
+      },
+      "GetWhitelistPoolsResponse": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "timestamp": {
+              "type": "string"
+            },
+            "version": {
+              "type": "object",
+              "properties": {
+                "major": {
+                  "type": "number"
+                },
+                "minor": {
+                  "type": "number"
+                },
+                "patch": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "major",
+                "minor",
+                "patch"
+              ],
+              "additionalProperties": false
+            },
+            "keywords": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "tokens": {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "chain": {
+                        "type": "string",
+                        "enum": [
+                          "ADI",
+                          "ALEO",
+                          "APT",
+                          "ARB",
+                          "AURORA",
+                          "AVAX",
+                          "BASE",
+                          "BERA",
+                          "BSC",
+                          "BTC",
+                          "BCH",
+                          "BOTANIX",
+                          "ADA",
+                          "FLIP",
+                          "CORE",
+                          "CORN",
+                          "GAIA",
+                          "CRO",
+                          "DASH",
+                          "DOGE",
+                          "ETH",
+                          "GNO",
+                          "HARBOR",
+                          "HYPEREVM",
+                          "HYPE",
+                          "KUJI",
+                          "LTC",
+                          "LINEA",
+                          "MAYA",
+                          "MEGAETH",
+                          "MONAD",
+                          "NEAR",
+                          "NOBLE",
+                          "OP",
+                          "XPL",
+                          "DOT",
+                          "POL",
+                          "XRD",
+                          "XRP",
+                          "HOOD",
+                          "SOL",
+                          "SONIC",
+                          "SPARK",
+                          "XLM",
+                          "STRK",
+                          "SUI",
+                          "THOR",
+                          "TON",
+                          "TRON",
+                          "UNI",
+                          "XLAYER",
+                          "ZEC"
+                        ]
+                      },
+                      "address": {
+                        "type": "string"
+                      },
+                      "chainId": {
+                        "type": "string",
+                        "enum": [
+                          "36900",
+                          "aleo",
+                          "aptos",
+                          "42161",
+                          "1313161554",
+                          "43114",
+                          "8453",
+                          "80094",
+                          "56",
+                          "bitcoin",
+                          "bitcoincash",
+                          "3637",
+                          "cardano",
+                          "chainflip",
+                          "1116",
+                          "21000000",
+                          "cosmoshub-4",
+                          "25",
+                          "dash",
+                          "dogecoin",
+                          "1",
+                          "100",
+                          "harbor-1",
+                          "harbor-stagenet-1",
+                          "999",
+                          "hype",
+                          "kaiyo-1",
+                          "litecoin",
+                          "59144",
+                          "mayachain-mainnet-v1",
+                          "mayachain-stagenet-v1",
+                          "4326",
+                          "143",
+                          "near",
+                          "noble-1",
+                          "10",
+                          "9745",
+                          "polkadot",
+                          "137",
+                          "radix-mainnet",
+                          "ripple",
+                          "4663",
+                          "solana",
+                          "146",
+                          "spark",
+                          "stellar",
+                          "0x534e5f4d41494e",
+                          "sui",
+                          "thorchain-1",
+                          "thorchain-stagenet-v2",
+                          "ton",
+                          "728126428",
+                          "130",
+                          "196",
+                          "zcash"
+                        ]
+                      },
+                      "ticker": {
+                        "type": "string"
+                      },
+                      "identifier": {
+                        "type": "string"
+                      },
+                      "symbol": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "decimals": {
+                        "type": "number"
+                      },
+                      "logoURI": {
+                        "type": "string"
+                      },
+                      "extensions": {
+                        "type": "object",
+                        "properties": {},
+                        "additionalProperties": {}
+                      },
+                      "shortCode": {
+                        "type": "string"
+                      },
+                      "coingeckoId": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "chainId",
+                      "ticker",
+                      "identifier",
+                      "decimals"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "cg": {}
+                    },
+                    "additionalProperties": false
+                  }
+                ]
+              }
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "timestamp",
+            "tokens",
+            "url"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "GetWhitelistTokensResponse": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "timestamp": {
+              "type": "string"
+            },
+            "version": {
+              "type": "object",
+              "properties": {
+                "major": {
+                  "type": "number"
+                },
+                "minor": {
+                  "type": "number"
+                },
+                "patch": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "major",
+                "minor",
+                "patch"
+              ],
+              "additionalProperties": false
+            },
+            "keywords": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "tokens": {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "chain": {
+                        "type": "string",
+                        "enum": [
+                          "ADI",
+                          "ALEO",
+                          "APT",
+                          "ARB",
+                          "AURORA",
+                          "AVAX",
+                          "BASE",
+                          "BERA",
+                          "BSC",
+                          "BTC",
+                          "BCH",
+                          "BOTANIX",
+                          "ADA",
+                          "FLIP",
+                          "CORE",
+                          "CORN",
+                          "GAIA",
+                          "CRO",
+                          "DASH",
+                          "DOGE",
+                          "ETH",
+                          "GNO",
+                          "HARBOR",
+                          "HYPEREVM",
+                          "HYPE",
+                          "KUJI",
+                          "LTC",
+                          "LINEA",
+                          "MAYA",
+                          "MEGAETH",
+                          "MONAD",
+                          "NEAR",
+                          "NOBLE",
+                          "OP",
+                          "XPL",
+                          "DOT",
+                          "POL",
+                          "XRD",
+                          "XRP",
+                          "HOOD",
+                          "SOL",
+                          "SONIC",
+                          "SPARK",
+                          "XLM",
+                          "STRK",
+                          "SUI",
+                          "THOR",
+                          "TON",
+                          "TRON",
+                          "UNI",
+                          "XLAYER",
+                          "ZEC"
+                        ]
+                      },
+                      "address": {
+                        "type": "string"
+                      },
+                      "chainId": {
+                        "type": "string",
+                        "enum": [
+                          "36900",
+                          "aleo",
+                          "aptos",
+                          "42161",
+                          "1313161554",
+                          "43114",
+                          "8453",
+                          "80094",
+                          "56",
+                          "bitcoin",
+                          "bitcoincash",
+                          "3637",
+                          "cardano",
+                          "chainflip",
+                          "1116",
+                          "21000000",
+                          "cosmoshub-4",
+                          "25",
+                          "dash",
+                          "dogecoin",
+                          "1",
+                          "100",
+                          "harbor-1",
+                          "harbor-stagenet-1",
+                          "999",
+                          "hype",
+                          "kaiyo-1",
+                          "litecoin",
+                          "59144",
+                          "mayachain-mainnet-v1",
+                          "mayachain-stagenet-v1",
+                          "4326",
+                          "143",
+                          "near",
+                          "noble-1",
+                          "10",
+                          "9745",
+                          "polkadot",
+                          "137",
+                          "radix-mainnet",
+                          "ripple",
+                          "4663",
+                          "solana",
+                          "146",
+                          "spark",
+                          "stellar",
+                          "0x534e5f4d41494e",
+                          "sui",
+                          "thorchain-1",
+                          "thorchain-stagenet-v2",
+                          "ton",
+                          "728126428",
+                          "130",
+                          "196",
+                          "zcash"
+                        ]
+                      },
+                      "ticker": {
+                        "type": "string"
+                      },
+                      "identifier": {
+                        "type": "string"
+                      },
+                      "symbol": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "decimals": {
+                        "type": "number"
+                      },
+                      "logoURI": {
+                        "type": "string"
+                      },
+                      "extensions": {
+                        "type": "object",
+                        "properties": {},
+                        "additionalProperties": {}
+                      },
+                      "shortCode": {
+                        "type": "string"
+                      },
+                      "coingeckoId": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "chainId",
+                      "ticker",
+                      "identifier",
+                      "decimals"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "cg": {}
+                    },
+                    "additionalProperties": false
+                  }
+                ]
+              }
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "timestamp",
+            "tokens",
+            "url"
+          ],
+          "additionalProperties": false
         }
       },
       "ScreenAddressRequest": {
@@ -5016,6 +5568,7 @@
             "type": "string",
             "enum": [
               "36900",
+              "aleo",
               "aptos",
               "42161",
               "1313161554",
@@ -5055,6 +5608,7 @@
               "137",
               "radix-mainnet",
               "ripple",
+              "4663",
               "solana",
               "146",
               "spark",
@@ -5154,6 +5708,7 @@
                 "type": "string",
                 "enum": [
                   "ADI",
+                  "ALEO",
                   "APT",
                   "ARB",
                   "AURORA",
@@ -5191,6 +5746,7 @@
                   "POL",
                   "XRD",
                   "XRP",
+                  "HOOD",
                   "SOL",
                   "SONIC",
                   "SPARK",
@@ -5366,6 +5922,7 @@
                         "type": "string",
                         "enum": [
                           "ADI",
+                          "ALEO",
                           "APT",
                           "ARB",
                           "AURORA",
@@ -5403,6 +5960,7 @@
                           "POL",
                           "XRD",
                           "XRP",
+                          "HOOD",
                           "SOL",
                           "SONIC",
                           "SPARK",
@@ -5468,6 +6026,7 @@
                         "type": "string",
                         "enum": [
                           "ADI",
+                          "ALEO",
                           "APT",
                           "ARB",
                           "AURORA",
@@ -5505,6 +6064,7 @@
                           "POL",
                           "XRD",
                           "XRP",
+                          "HOOD",
                           "SOL",
                           "SONIC",
                           "SPARK",
@@ -5570,6 +6130,7 @@
                         "type": "string",
                         "enum": [
                           "ADI",
+                          "ALEO",
                           "APT",
                           "ARB",
                           "AURORA",
@@ -5607,6 +6168,7 @@
                           "POL",
                           "XRD",
                           "XRP",
+                          "HOOD",
                           "SOL",
                           "SONIC",
                           "SPARK",
@@ -5672,6 +6234,7 @@
                         "type": "string",
                         "enum": [
                           "ADI",
+                          "ALEO",
                           "APT",
                           "ARB",
                           "AURORA",
@@ -5709,6 +6272,7 @@
                           "POL",
                           "XRD",
                           "XRP",
+                          "HOOD",
                           "SOL",
                           "SONIC",
                           "SPARK",
@@ -5774,6 +6338,7 @@
                         "type": "string",
                         "enum": [
                           "ADI",
+                          "ALEO",
                           "APT",
                           "ARB",
                           "AURORA",
@@ -5811,6 +6376,7 @@
                           "POL",
                           "XRD",
                           "XRP",
+                          "HOOD",
                           "SOL",
                           "SONIC",
                           "SPARK",
@@ -6010,6 +6576,7 @@
                   "type": "string",
                   "enum": [
                     "36900",
+                    "aleo",
                     "aptos",
                     "42161",
                     "1313161554",
@@ -6049,6 +6616,7 @@
                     "137",
                     "radix-mainnet",
                     "ripple",
+                    "4663",
                     "solana",
                     "146",
                     "spark",
@@ -6148,6 +6716,7 @@
                       "type": "string",
                       "enum": [
                         "ADI",
+                        "ALEO",
                         "APT",
                         "ARB",
                         "AURORA",
@@ -6185,6 +6754,7 @@
                         "POL",
                         "XRD",
                         "XRP",
+                        "HOOD",
                         "SOL",
                         "SONIC",
                         "SPARK",
@@ -6360,6 +6930,7 @@
                               "type": "string",
                               "enum": [
                                 "ADI",
+                                "ALEO",
                                 "APT",
                                 "ARB",
                                 "AURORA",
@@ -6397,6 +6968,7 @@
                                 "POL",
                                 "XRD",
                                 "XRP",
+                                "HOOD",
                                 "SOL",
                                 "SONIC",
                                 "SPARK",
@@ -6462,6 +7034,7 @@
                               "type": "string",
                               "enum": [
                                 "ADI",
+                                "ALEO",
                                 "APT",
                                 "ARB",
                                 "AURORA",
@@ -6499,6 +7072,7 @@
                                 "POL",
                                 "XRD",
                                 "XRP",
+                                "HOOD",
                                 "SOL",
                                 "SONIC",
                                 "SPARK",
@@ -6564,6 +7138,7 @@
                               "type": "string",
                               "enum": [
                                 "ADI",
+                                "ALEO",
                                 "APT",
                                 "ARB",
                                 "AURORA",
@@ -6601,6 +7176,7 @@
                                 "POL",
                                 "XRD",
                                 "XRP",
+                                "HOOD",
                                 "SOL",
                                 "SONIC",
                                 "SPARK",
@@ -6666,6 +7242,7 @@
                               "type": "string",
                               "enum": [
                                 "ADI",
+                                "ALEO",
                                 "APT",
                                 "ARB",
                                 "AURORA",
@@ -6703,6 +7280,7 @@
                                 "POL",
                                 "XRD",
                                 "XRP",
+                                "HOOD",
                                 "SOL",
                                 "SONIC",
                                 "SPARK",
@@ -6768,6 +7346,7 @@
                               "type": "string",
                               "enum": [
                                 "ADI",
+                                "ALEO",
                                 "APT",
                                 "ARB",
                                 "AURORA",
@@ -6805,6 +7384,7 @@
                                 "POL",
                                 "XRD",
                                 "XRP",
+                                "HOOD",
                                 "SOL",
                                 "SONIC",
                                 "SPARK",
@@ -7044,6 +7624,7 @@
                   "type": "string",
                   "enum": [
                     "36900",
+                    "aleo",
                     "aptos",
                     "42161",
                     "1313161554",
@@ -7083,6 +7664,7 @@
                     "137",
                     "radix-mainnet",
                     "ripple",
+                    "4663",
                     "solana",
                     "146",
                     "spark",
@@ -7182,6 +7764,7 @@
                       "type": "string",
                       "enum": [
                         "ADI",
+                        "ALEO",
                         "APT",
                         "ARB",
                         "AURORA",
@@ -7219,6 +7802,7 @@
                         "POL",
                         "XRD",
                         "XRP",
+                        "HOOD",
                         "SOL",
                         "SONIC",
                         "SPARK",
@@ -7388,6 +7972,7 @@
                               "type": "string",
                               "enum": [
                                 "ADI",
+                                "ALEO",
                                 "APT",
                                 "ARB",
                                 "AURORA",
@@ -7425,6 +8010,7 @@
                                 "POL",
                                 "XRD",
                                 "XRP",
+                                "HOOD",
                                 "SOL",
                                 "SONIC",
                                 "SPARK",
@@ -7488,6 +8074,7 @@
                               "type": "string",
                               "enum": [
                                 "ADI",
+                                "ALEO",
                                 "APT",
                                 "ARB",
                                 "AURORA",
@@ -7525,6 +8112,7 @@
                                 "POL",
                                 "XRD",
                                 "XRP",
+                                "HOOD",
                                 "SOL",
                                 "SONIC",
                                 "SPARK",
@@ -7588,6 +8176,7 @@
                               "type": "string",
                               "enum": [
                                 "ADI",
+                                "ALEO",
                                 "APT",
                                 "ARB",
                                 "AURORA",
@@ -7625,6 +8214,7 @@
                                 "POL",
                                 "XRD",
                                 "XRP",
+                                "HOOD",
                                 "SOL",
                                 "SONIC",
                                 "SPARK",
@@ -7688,6 +8278,7 @@
                               "type": "string",
                               "enum": [
                                 "ADI",
+                                "ALEO",
                                 "APT",
                                 "ARB",
                                 "AURORA",
@@ -7725,6 +8316,7 @@
                                 "POL",
                                 "XRD",
                                 "XRP",
+                                "HOOD",
                                 "SOL",
                                 "SONIC",
                                 "SPARK",
@@ -7788,6 +8380,7 @@
                               "type": "string",
                               "enum": [
                                 "ADI",
+                                "ALEO",
                                 "APT",
                                 "ARB",
                                 "AURORA",
@@ -7825,6 +8418,7 @@
                                 "POL",
                                 "XRD",
                                 "XRP",
+                                "HOOD",
                                 "SOL",
                                 "SONIC",
                                 "SPARK",
@@ -8074,6 +8668,7 @@
                   "type": "string",
                   "enum": [
                     "36900",
+                    "aleo",
                     "aptos",
                     "42161",
                     "1313161554",
@@ -8113,6 +8708,7 @@
                     "137",
                     "radix-mainnet",
                     "ripple",
+                    "4663",
                     "solana",
                     "146",
                     "spark",
@@ -8163,6 +8759,7 @@
                     "type": "string",
                     "enum": [
                       "36900",
+                      "aleo",
                       "aptos",
                       "42161",
                       "1313161554",
@@ -8202,6 +8799,7 @@
                       "137",
                       "radix-mainnet",
                       "ripple",
+                      "4663",
                       "solana",
                       "146",
                       "spark",
@@ -8253,6 +8851,7 @@
                 "type": "string",
                 "enum": [
                   "36900",
+                  "aleo",
                   "aptos",
                   "42161",
                   "1313161554",
@@ -8292,6 +8891,7 @@
                   "137",
                   "radix-mainnet",
                   "ripple",
+                  "4663",
                   "solana",
                   "146",
                   "spark",
@@ -8339,6 +8939,7 @@
                   "type": "string",
                   "enum": [
                     "36900",
+                    "aleo",
                     "aptos",
                     "42161",
                     "1313161554",
@@ -8378,6 +8979,7 @@
                     "137",
                     "radix-mainnet",
                     "ripple",
+                    "4663",
                     "solana",
                     "146",
                     "spark",
@@ -10385,6 +10987,7 @@
                     "type": "string",
                     "enum": [
                       "36900",
+                      "aleo",
                       "aptos",
                       "42161",
                       "1313161554",
@@ -10424,6 +11027,7 @@
                       "137",
                       "radix-mainnet",
                       "ripple",
+                      "4663",
                       "solana",
                       "146",
                       "spark",
