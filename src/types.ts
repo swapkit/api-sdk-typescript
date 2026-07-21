@@ -674,8 +674,8 @@ export type GetCachedPriceRequest = {
 };
 
 export type GetCachedPriceResponse = Array<{
-    identifier?: string;
-    provider?: string;
+    identifier: string;
+    provider: string;
     cg?: {
         id: string;
         name?: string;
@@ -735,6 +735,32 @@ export type CreateBrokerChannelResponse = {
      * Error message
      */
     error?: string;
+};
+
+export type RegisterChainflipAffiliateRequest = {
+    withdrawalAddress: string;
+    key: string;
+    updatedBy: {
+        userId?: string;
+    };
+};
+
+export type RegisterChainflipAffiliateResponse = {
+    affiliateAddress: string;
+    withdrawalAddress: string;
+    explorerUrl: string;
+};
+
+export type WithdrawChainflipAffiliateFeesRequest = {
+    key: string;
+};
+
+export type WithdrawChainflipAffiliateFeesResponse = {
+    txHash: string;
+    explorerUrl: string;
+    amount: string;
+    fee: string;
+    destinationAddress: string;
 };
 
 export type GetQuoteRequest = {
