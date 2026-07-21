@@ -9621,6 +9621,10 @@
                 },
                 "message": {
                   "type": "string"
+                },
+                "minAmount": {
+                  "description": "Provider minimum sell amount (human units), when the provider reported one",
+                  "type": "string"
                 }
               },
               "additionalProperties": false
