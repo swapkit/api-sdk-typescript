@@ -25,12 +25,14 @@ import {
   getSwapToAssets,
   getTokens,
   screenAddress,
+  searchTokens,
   trackTransaction,
 } from "./sdk";
 
 export class SwapKitService {
   static getProviders = getProviders;
   static getTokens = getTokens;
+  static searchTokens = searchTokens;
   static getSwapTo = getSwapToAssets;
   static getSwapFrom = getSwapFromAssets;
   static getQuote = getQuote;
@@ -51,6 +53,7 @@ export class SwapKitService {
 export const TokenlistService = {
   getProviders,
   getTokens,
+  searchTokens,
   getSwapTo: getSwapToAssets,
   getSwapFrom: getSwapFromAssets,
 } as const;

@@ -2,7 +2,7 @@
 
 import type { Client, ClientMeta, Options as Options2, RequestResult, TDataShape } from './http';
 import { client } from './client';
-import type { CreateBrokerChannelData, CreateBrokerChannelResponses, ExecuteSwapData, ExecuteSwapErrors, ExecuteSwapResponses, GetCachedPriceData, GetCachedPriceResponses, GetGasHistoryData, GetGasHistoryResponses, GetGasPricesData, GetGasPricesResponses, GetProvidersData, GetProvidersErrors, GetProvidersResponses, GetQuoteData, GetQuoteErrors, GetQuoteResponses, GetSwapFromAssetsData, GetSwapFromAssetsErrors, GetSwapFromAssetsResponses, GetSwapToAssetsData, GetSwapToAssetsErrors, GetSwapToAssetsResponses, GetTokensData, GetTokensErrors, GetTokensResponses, ScreenAddressData, ScreenAddressErrors, ScreenAddressResponses, TrackTransactionData, TrackTransactionErrors, TrackTransactionResponses } from './types';
+import type { CreateBrokerChannelData, CreateBrokerChannelResponses, ExecuteSwapData, ExecuteSwapErrors, ExecuteSwapResponses, GetCachedPriceData, GetCachedPriceResponses, GetGasHistoryData, GetGasHistoryResponses, GetGasPricesData, GetGasPricesResponses, GetProvidersData, GetProvidersErrors, GetProvidersResponses, GetQuoteData, GetQuoteErrors, GetQuoteResponses, GetSwapFromAssetsData, GetSwapFromAssetsErrors, GetSwapFromAssetsResponses, GetSwapToAssetsData, GetSwapToAssetsErrors, GetSwapToAssetsResponses, GetTokensData, GetTokensErrors, GetTokensResponses, ScreenAddressData, ScreenAddressErrors, ScreenAddressResponses, SearchTokensData, SearchTokensErrors, SearchTokensResponses, TrackTransactionData, TrackTransactionErrors, TrackTransactionResponses } from './types';
 
 export type Options<TData extends TDataShape = TDataShape, ThrowOnError extends boolean = boolean, TResponse = unknown> = Options2<TData, ThrowOnError, TResponse> & {
     /**
@@ -27,6 +27,12 @@ export const getProviders = <ThrowOnError extends boolean = false>(options?: Opt
 export const getTokens = <ThrowOnError extends boolean = false>(options?: Options<GetTokensData, ThrowOnError>): RequestResult<GetTokensResponses, GetTokensErrors, ThrowOnError> => (options?.client ?? client).get<GetTokensResponses, GetTokensErrors, ThrowOnError>({
     security: [{ name: 'x-api-key', type: 'apiKey' }],
     url: '/tokens',
+    ...options
+});
+
+export const searchTokens = <ThrowOnError extends boolean = false>(options: Options<SearchTokensData, ThrowOnError>): RequestResult<SearchTokensResponses, SearchTokensErrors, ThrowOnError> => (options.client ?? client).get<SearchTokensResponses, SearchTokensErrors, ThrowOnError>({
+    security: [{ name: 'x-api-key', type: 'apiKey' }],
+    url: '/tokens/search',
     ...options
 });
 
