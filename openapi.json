@@ -10147,6 +10147,7 @@
                     "noBlockHeaderFound",
                     "failedToSimulateSwap",
                     "swapHalted",
+                    "memoTooLongForSourceChain",
                     "addressScreeningFailed",
                     "missingScreeningConfig",
                     "insufficientLiquidity",
@@ -10269,6 +10270,10 @@
                     "zcashInsufficientUTXOs",
                     "zcashUTXOSelectionFailed",
                     "zcashTransactionBuildFailed",
+                    "zcashShieldedRefundMissing",
+                    "zcashMemoTooLong",
+                    "zcashUnifiedAddressUnsupported",
+                    "zcashShieldedMemoUnavailable",
                     "invalidTokenProgram",
                     "invalidRequest",
                     "pubsubEventNotRegistered",
@@ -10870,6 +10875,24 @@
           "inboundAddress": {
             "type": "string",
             "description": "Inbound address"
+          },
+          "shieldedMemo": {
+            "description": "Shielded ZEC source only: send a 0-value shielded note carrying the memo to this unified address, in the SAME transaction as the value output to inboundAddress",
+            "type": "object",
+            "properties": {
+              "unifiedAddress": {
+                "type": "string",
+                "description": "Maya's unified address that receives the 0-value shielded memo note"
+              },
+              "uivk": {
+                "description": "Maya's unified incoming viewing key used to decrypt the memo note",
+                "type": "string"
+              }
+            },
+            "required": [
+              "unifiedAddress"
+            ],
+            "additionalProperties": false
           },
           "memo": {
             "type": "string",
