@@ -882,9 +882,9 @@ export type GetQuoteRequest = {
      */
     disableEstimate?: boolean;
     /**
-     * Set to true to disable the default behaviour of sweeping wallet funds if the transaction was to leave unspendable dust in the address.
+     * Set to true to enable sweeping wallet funds when the transaction would otherwise leave unspendable dust in the address (opt-in).
      */
-    disableSweep?: boolean;
+    enableSweep?: boolean;
     /**
      * Maximum execution time in seconds. Routes exceeding this time will be filtered out.
      */
@@ -1127,9 +1127,9 @@ export type ExecuteSwapRequest = {
      */
     disableBuildTx?: boolean;
     /**
-     * Set to true to disable max-spend sweep behaviour for UTXO assets, overriding the ENABLE_SWEEP_BALANCE default.
+     * Set to true to enable max-spend sweep behaviour for UTXO/gas assets (opt-in).
      */
-    disableSweep?: boolean;
+    enableSweep?: boolean;
 };
 
 export type ExecuteSwapResponse = {
