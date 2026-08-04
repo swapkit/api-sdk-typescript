@@ -10915,7 +10915,8 @@
               "STARKNET",
               "zcash-unsigned",
               "STELLAR",
-              "EIP_712_HYPE_WITHDRAW"
+              "EIP_712_HYPE_WITHDRAW",
+              "EIP_712_HYPE_USD_SEND"
             ]
           },
           "txHint": {
@@ -11314,6 +11315,120 @@
                 "additionalProperties": false
               },
               {
+                "type": "object",
+                "properties": {
+                  "typedData": {
+                    "type": "object",
+                    "properties": {
+                      "domain": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string"
+                          },
+                          "version": {
+                            "type": "string"
+                          },
+                          "chainId": {
+                            "type": "number"
+                          },
+                          "verifyingContract": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "name",
+                          "version",
+                          "chainId",
+                          "verifyingContract"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "primaryType": {
+                        "type": "string"
+                      },
+                      "types": {
+                        "type": "object",
+                        "additionalProperties": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "name": {
+                                "type": "string"
+                              },
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "name",
+                              "type"
+                            ],
+                            "additionalProperties": false
+                          }
+                        }
+                      },
+                      "message": {
+                        "type": "object",
+                        "additionalProperties": {}
+                      }
+                    },
+                    "required": [
+                      "domain",
+                      "primaryType",
+                      "types",
+                      "message"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "action": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "enum": [
+                          "usdSend"
+                        ]
+                      },
+                      "hyperliquidChain": {
+                        "type": "string"
+                      },
+                      "signatureChainId": {
+                        "type": "string"
+                      },
+                      "destination": {
+                        "type": "string"
+                      },
+                      "amount": {
+                        "type": "string"
+                      },
+                      "time": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "hyperliquidChain",
+                      "signatureChainId",
+                      "destination",
+                      "amount",
+                      "time"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "submitTo": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "typedData",
+                  "action",
+                  "submitTo"
+                ],
+                "additionalProperties": false
+              },
+              {
                 "type": "string"
               }
             ]
@@ -11405,7 +11520,8 @@
                   "STARKNET",
                   "zcash-unsigned",
                   "STELLAR",
-                  "EIP_712_HYPE_WITHDRAW"
+                  "EIP_712_HYPE_WITHDRAW",
+                  "EIP_712_HYPE_USD_SEND"
                 ]
               },
               "chainflip": {
