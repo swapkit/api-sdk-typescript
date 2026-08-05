@@ -1293,7 +1293,7 @@ export type ExecuteSwapResponse = {
      * Memo to include in the transaction
      */
     memo?: string;
-    txType?: 'PSBT' | 'EVM' | 'COSMOS' | 'SERIALIZED_BASE64' | 'RIPPLE' | 'TRON' | 'NEAR' | 'SUI' | 'CBOR' | 'TON' | 'STARKNET' | 'zcash-unsigned' | 'STELLAR' | 'EIP_712_HYPE_WITHDRAW';
+    txType?: 'PSBT' | 'EVM' | 'COSMOS' | 'SERIALIZED_BASE64' | 'RIPPLE' | 'TRON' | 'NEAR' | 'SUI' | 'CBOR' | 'TON' | 'STARKNET' | 'zcash-unsigned' | 'STELLAR' | 'EIP_712_HYPE_WITHDRAW' | 'EIP_712_HYPE_USD_SEND';
     txHint?: 'simpleTransfer' | 'transferWithMemo' | 'contractCall';
     tx?: {
         /**
@@ -1414,6 +1414,34 @@ export type ExecuteSwapResponse = {
         value: {
             [key: string]: unknown;
         };
+    } | {
+        typedData: {
+            domain: {
+                name: string;
+                version: string;
+                chainId: number;
+                verifyingContract: string;
+            };
+            primaryType: string;
+            types: {
+                [key: string]: Array<{
+                    name: string;
+                    type: string;
+                }>;
+            };
+            message: {
+                [key: string]: unknown;
+            };
+        };
+        action: {
+            type: 'usdSend';
+            hyperliquidChain: string;
+            signatureChainId: string;
+            destination: string;
+            amount: string;
+            time: number;
+        };
+        submitTo: string;
     } | string;
     meta: {
         assets?: Array<{
@@ -1448,7 +1476,7 @@ export type ExecuteSwapResponse = {
         approvalAddress?: string;
         affiliate?: string;
         affiliateFee?: string;
-        txType?: 'PSBT' | 'EVM' | 'COSMOS' | 'SERIALIZED_BASE64' | 'RIPPLE' | 'TRON' | 'NEAR' | 'SUI' | 'CBOR' | 'TON' | 'STARKNET' | 'zcash-unsigned' | 'STELLAR' | 'EIP_712_HYPE_WITHDRAW';
+        txType?: 'PSBT' | 'EVM' | 'COSMOS' | 'SERIALIZED_BASE64' | 'RIPPLE' | 'TRON' | 'NEAR' | 'SUI' | 'CBOR' | 'TON' | 'STARKNET' | 'zcash-unsigned' | 'STELLAR' | 'EIP_712_HYPE_WITHDRAW' | 'EIP_712_HYPE_USD_SEND';
         chainflip?: {
             destinationAddress: string;
             sellAsset: {
