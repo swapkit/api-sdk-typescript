@@ -967,520 +967,95 @@
                             "network": {
                               "type": "object",
                               "properties": {
-                                "chain": {
-                                  "type": "string",
-                                  "enum": [
-                                    "ADI",
-                                    "ALEO",
-                                    "APT",
-                                    "ARB",
-                                    "AURORA",
-                                    "AVAX",
-                                    "BASE",
-                                    "BERA",
-                                    "BSC",
-                                    "BTC",
-                                    "BCH",
-                                    "BOTANIX",
-                                    "ADA",
-                                    "FLIP",
-                                    "CORE",
-                                    "CORN",
-                                    "GAIA",
-                                    "CRO",
-                                    "DASH",
-                                    "DOGE",
-                                    "ETH",
-                                    "GNO",
-                                    "HARBOR",
-                                    "HYPEREVM",
-                                    "HYPE",
-                                    "KUJI",
-                                    "LTC",
-                                    "LINEA",
-                                    "MAYA",
-                                    "MEGAETH",
-                                    "MONAD",
-                                    "NEAR",
-                                    "NOBLE",
-                                    "OP",
-                                    "XPL",
-                                    "DOT",
-                                    "POL",
-                                    "XRD",
-                                    "XRP",
-                                    "HOOD",
-                                    "SOL",
-                                    "SONIC",
-                                    "SPARK",
-                                    "XLM",
-                                    "STRK",
-                                    "SUI",
-                                    "THOR",
-                                    "TON",
-                                    "TRON",
-                                    "UNI",
-                                    "XLAYER",
-                                    "ZEC"
-                                  ]
-                                },
-                                "symbol": {
+                                "identifier": {
                                   "type": "string"
                                 },
-                                "ticker": {
+                                "amount": {
                                   "type": "string"
                                 },
                                 "decimal": {
                                   "type": "number"
-                                },
-                                "address": {
-                                  "type": "string"
-                                },
-                                "isGasAsset": {
-                                  "type": "boolean"
-                                },
-                                "isSynthetic": {
-                                  "type": "boolean"
-                                },
-                                "tax": {
-                                  "type": "object",
-                                  "properties": {
-                                    "buy": {
-                                      "type": "number"
-                                    },
-                                    "sell": {
-                                      "type": "number"
-                                    }
-                                  },
-                                  "required": [
-                                    "buy",
-                                    "sell"
-                                  ],
-                                  "additionalProperties": false
                                 }
                               },
                               "required": [
-                                "chain",
-                                "symbol",
-                                "ticker",
-                                "isGasAsset",
-                                "isSynthetic"
+                                "identifier",
+                                "amount"
                               ],
                               "additionalProperties": false
                             },
                             "affiliate": {
                               "type": "object",
                               "properties": {
-                                "chain": {
-                                  "type": "string",
-                                  "enum": [
-                                    "ADI",
-                                    "ALEO",
-                                    "APT",
-                                    "ARB",
-                                    "AURORA",
-                                    "AVAX",
-                                    "BASE",
-                                    "BERA",
-                                    "BSC",
-                                    "BTC",
-                                    "BCH",
-                                    "BOTANIX",
-                                    "ADA",
-                                    "FLIP",
-                                    "CORE",
-                                    "CORN",
-                                    "GAIA",
-                                    "CRO",
-                                    "DASH",
-                                    "DOGE",
-                                    "ETH",
-                                    "GNO",
-                                    "HARBOR",
-                                    "HYPEREVM",
-                                    "HYPE",
-                                    "KUJI",
-                                    "LTC",
-                                    "LINEA",
-                                    "MAYA",
-                                    "MEGAETH",
-                                    "MONAD",
-                                    "NEAR",
-                                    "NOBLE",
-                                    "OP",
-                                    "XPL",
-                                    "DOT",
-                                    "POL",
-                                    "XRD",
-                                    "XRP",
-                                    "HOOD",
-                                    "SOL",
-                                    "SONIC",
-                                    "SPARK",
-                                    "XLM",
-                                    "STRK",
-                                    "SUI",
-                                    "THOR",
-                                    "TON",
-                                    "TRON",
-                                    "UNI",
-                                    "XLAYER",
-                                    "ZEC"
-                                  ]
-                                },
-                                "symbol": {
+                                "identifier": {
                                   "type": "string"
                                 },
-                                "ticker": {
+                                "amount": {
                                   "type": "string"
                                 },
                                 "decimal": {
                                   "type": "number"
-                                },
-                                "address": {
-                                  "type": "string"
-                                },
-                                "isGasAsset": {
-                                  "type": "boolean"
-                                },
-                                "isSynthetic": {
-                                  "type": "boolean"
-                                },
-                                "tax": {
-                                  "type": "object",
-                                  "properties": {
-                                    "buy": {
-                                      "type": "number"
-                                    },
-                                    "sell": {
-                                      "type": "number"
-                                    }
-                                  },
-                                  "required": [
-                                    "buy",
-                                    "sell"
-                                  ],
-                                  "additionalProperties": false
                                 }
                               },
                               "required": [
-                                "chain",
-                                "symbol",
-                                "ticker",
-                                "isGasAsset",
-                                "isSynthetic"
+                                "identifier",
+                                "amount"
                               ],
                               "additionalProperties": false
                             },
                             "liquidity": {
                               "type": "object",
                               "properties": {
-                                "chain": {
-                                  "type": "string",
-                                  "enum": [
-                                    "ADI",
-                                    "ALEO",
-                                    "APT",
-                                    "ARB",
-                                    "AURORA",
-                                    "AVAX",
-                                    "BASE",
-                                    "BERA",
-                                    "BSC",
-                                    "BTC",
-                                    "BCH",
-                                    "BOTANIX",
-                                    "ADA",
-                                    "FLIP",
-                                    "CORE",
-                                    "CORN",
-                                    "GAIA",
-                                    "CRO",
-                                    "DASH",
-                                    "DOGE",
-                                    "ETH",
-                                    "GNO",
-                                    "HARBOR",
-                                    "HYPEREVM",
-                                    "HYPE",
-                                    "KUJI",
-                                    "LTC",
-                                    "LINEA",
-                                    "MAYA",
-                                    "MEGAETH",
-                                    "MONAD",
-                                    "NEAR",
-                                    "NOBLE",
-                                    "OP",
-                                    "XPL",
-                                    "DOT",
-                                    "POL",
-                                    "XRD",
-                                    "XRP",
-                                    "HOOD",
-                                    "SOL",
-                                    "SONIC",
-                                    "SPARK",
-                                    "XLM",
-                                    "STRK",
-                                    "SUI",
-                                    "THOR",
-                                    "TON",
-                                    "TRON",
-                                    "UNI",
-                                    "XLAYER",
-                                    "ZEC"
-                                  ]
-                                },
-                                "symbol": {
+                                "identifier": {
                                   "type": "string"
                                 },
-                                "ticker": {
+                                "amount": {
                                   "type": "string"
                                 },
                                 "decimal": {
                                   "type": "number"
-                                },
-                                "address": {
-                                  "type": "string"
-                                },
-                                "isGasAsset": {
-                                  "type": "boolean"
-                                },
-                                "isSynthetic": {
-                                  "type": "boolean"
-                                },
-                                "tax": {
-                                  "type": "object",
-                                  "properties": {
-                                    "buy": {
-                                      "type": "number"
-                                    },
-                                    "sell": {
-                                      "type": "number"
-                                    }
-                                  },
-                                  "required": [
-                                    "buy",
-                                    "sell"
-                                  ],
-                                  "additionalProperties": false
                                 }
                               },
                               "required": [
-                                "chain",
-                                "symbol",
-                                "ticker",
-                                "isGasAsset",
-                                "isSynthetic"
+                                "identifier",
+                                "amount"
                               ],
                               "additionalProperties": false
                             },
                             "protocol": {
                               "type": "object",
                               "properties": {
-                                "chain": {
-                                  "type": "string",
-                                  "enum": [
-                                    "ADI",
-                                    "ALEO",
-                                    "APT",
-                                    "ARB",
-                                    "AURORA",
-                                    "AVAX",
-                                    "BASE",
-                                    "BERA",
-                                    "BSC",
-                                    "BTC",
-                                    "BCH",
-                                    "BOTANIX",
-                                    "ADA",
-                                    "FLIP",
-                                    "CORE",
-                                    "CORN",
-                                    "GAIA",
-                                    "CRO",
-                                    "DASH",
-                                    "DOGE",
-                                    "ETH",
-                                    "GNO",
-                                    "HARBOR",
-                                    "HYPEREVM",
-                                    "HYPE",
-                                    "KUJI",
-                                    "LTC",
-                                    "LINEA",
-                                    "MAYA",
-                                    "MEGAETH",
-                                    "MONAD",
-                                    "NEAR",
-                                    "NOBLE",
-                                    "OP",
-                                    "XPL",
-                                    "DOT",
-                                    "POL",
-                                    "XRD",
-                                    "XRP",
-                                    "HOOD",
-                                    "SOL",
-                                    "SONIC",
-                                    "SPARK",
-                                    "XLM",
-                                    "STRK",
-                                    "SUI",
-                                    "THOR",
-                                    "TON",
-                                    "TRON",
-                                    "UNI",
-                                    "XLAYER",
-                                    "ZEC"
-                                  ]
-                                },
-                                "symbol": {
+                                "identifier": {
                                   "type": "string"
                                 },
-                                "ticker": {
+                                "amount": {
                                   "type": "string"
                                 },
                                 "decimal": {
                                   "type": "number"
-                                },
-                                "address": {
-                                  "type": "string"
-                                },
-                                "isGasAsset": {
-                                  "type": "boolean"
-                                },
-                                "isSynthetic": {
-                                  "type": "boolean"
-                                },
-                                "tax": {
-                                  "type": "object",
-                                  "properties": {
-                                    "buy": {
-                                      "type": "number"
-                                    },
-                                    "sell": {
-                                      "type": "number"
-                                    }
-                                  },
-                                  "required": [
-                                    "buy",
-                                    "sell"
-                                  ],
-                                  "additionalProperties": false
                                 }
                               },
                               "required": [
-                                "chain",
-                                "symbol",
-                                "ticker",
-                                "isGasAsset",
-                                "isSynthetic"
+                                "identifier",
+                                "amount"
                               ],
                               "additionalProperties": false
                             },
                             "tax": {
                               "type": "object",
                               "properties": {
-                                "chain": {
-                                  "type": "string",
-                                  "enum": [
-                                    "ADI",
-                                    "ALEO",
-                                    "APT",
-                                    "ARB",
-                                    "AURORA",
-                                    "AVAX",
-                                    "BASE",
-                                    "BERA",
-                                    "BSC",
-                                    "BTC",
-                                    "BCH",
-                                    "BOTANIX",
-                                    "ADA",
-                                    "FLIP",
-                                    "CORE",
-                                    "CORN",
-                                    "GAIA",
-                                    "CRO",
-                                    "DASH",
-                                    "DOGE",
-                                    "ETH",
-                                    "GNO",
-                                    "HARBOR",
-                                    "HYPEREVM",
-                                    "HYPE",
-                                    "KUJI",
-                                    "LTC",
-                                    "LINEA",
-                                    "MAYA",
-                                    "MEGAETH",
-                                    "MONAD",
-                                    "NEAR",
-                                    "NOBLE",
-                                    "OP",
-                                    "XPL",
-                                    "DOT",
-                                    "POL",
-                                    "XRD",
-                                    "XRP",
-                                    "HOOD",
-                                    "SOL",
-                                    "SONIC",
-                                    "SPARK",
-                                    "XLM",
-                                    "STRK",
-                                    "SUI",
-                                    "THOR",
-                                    "TON",
-                                    "TRON",
-                                    "UNI",
-                                    "XLAYER",
-                                    "ZEC"
-                                  ]
-                                },
-                                "symbol": {
+                                "identifier": {
                                   "type": "string"
                                 },
-                                "ticker": {
+                                "amount": {
                                   "type": "string"
                                 },
                                 "decimal": {
                                   "type": "number"
-                                },
-                                "address": {
-                                  "type": "string"
-                                },
-                                "isGasAsset": {
-                                  "type": "boolean"
-                                },
-                                "isSynthetic": {
-                                  "type": "boolean"
-                                },
-                                "tax": {
-                                  "type": "object",
-                                  "properties": {
-                                    "buy": {
-                                      "type": "number"
-                                    },
-                                    "sell": {
-                                      "type": "number"
-                                    }
-                                  },
-                                  "required": [
-                                    "buy",
-                                    "sell"
-                                  ],
-                                  "additionalProperties": false
                                 }
                               },
                               "required": [
-                                "chain",
-                                "symbol",
-                                "ticker",
-                                "isGasAsset",
-                                "isSynthetic"
+                                "identifier",
+                                "amount"
                               ],
                               "additionalProperties": false
                             }
@@ -1975,520 +1550,95 @@
                                   "network": {
                                     "type": "object",
                                     "properties": {
-                                      "chain": {
-                                        "type": "string",
-                                        "enum": [
-                                          "ADI",
-                                          "ALEO",
-                                          "APT",
-                                          "ARB",
-                                          "AURORA",
-                                          "AVAX",
-                                          "BASE",
-                                          "BERA",
-                                          "BSC",
-                                          "BTC",
-                                          "BCH",
-                                          "BOTANIX",
-                                          "ADA",
-                                          "FLIP",
-                                          "CORE",
-                                          "CORN",
-                                          "GAIA",
-                                          "CRO",
-                                          "DASH",
-                                          "DOGE",
-                                          "ETH",
-                                          "GNO",
-                                          "HARBOR",
-                                          "HYPEREVM",
-                                          "HYPE",
-                                          "KUJI",
-                                          "LTC",
-                                          "LINEA",
-                                          "MAYA",
-                                          "MEGAETH",
-                                          "MONAD",
-                                          "NEAR",
-                                          "NOBLE",
-                                          "OP",
-                                          "XPL",
-                                          "DOT",
-                                          "POL",
-                                          "XRD",
-                                          "XRP",
-                                          "HOOD",
-                                          "SOL",
-                                          "SONIC",
-                                          "SPARK",
-                                          "XLM",
-                                          "STRK",
-                                          "SUI",
-                                          "THOR",
-                                          "TON",
-                                          "TRON",
-                                          "UNI",
-                                          "XLAYER",
-                                          "ZEC"
-                                        ]
-                                      },
-                                      "symbol": {
+                                      "identifier": {
                                         "type": "string"
                                       },
-                                      "ticker": {
+                                      "amount": {
                                         "type": "string"
                                       },
                                       "decimal": {
                                         "type": "number"
-                                      },
-                                      "address": {
-                                        "type": "string"
-                                      },
-                                      "isGasAsset": {
-                                        "type": "boolean"
-                                      },
-                                      "isSynthetic": {
-                                        "type": "boolean"
-                                      },
-                                      "tax": {
-                                        "type": "object",
-                                        "properties": {
-                                          "buy": {
-                                            "type": "number"
-                                          },
-                                          "sell": {
-                                            "type": "number"
-                                          }
-                                        },
-                                        "required": [
-                                          "buy",
-                                          "sell"
-                                        ],
-                                        "additionalProperties": false
                                       }
                                     },
                                     "required": [
-                                      "chain",
-                                      "symbol",
-                                      "ticker",
-                                      "isGasAsset",
-                                      "isSynthetic"
+                                      "identifier",
+                                      "amount"
                                     ],
                                     "additionalProperties": false
                                   },
                                   "affiliate": {
                                     "type": "object",
                                     "properties": {
-                                      "chain": {
-                                        "type": "string",
-                                        "enum": [
-                                          "ADI",
-                                          "ALEO",
-                                          "APT",
-                                          "ARB",
-                                          "AURORA",
-                                          "AVAX",
-                                          "BASE",
-                                          "BERA",
-                                          "BSC",
-                                          "BTC",
-                                          "BCH",
-                                          "BOTANIX",
-                                          "ADA",
-                                          "FLIP",
-                                          "CORE",
-                                          "CORN",
-                                          "GAIA",
-                                          "CRO",
-                                          "DASH",
-                                          "DOGE",
-                                          "ETH",
-                                          "GNO",
-                                          "HARBOR",
-                                          "HYPEREVM",
-                                          "HYPE",
-                                          "KUJI",
-                                          "LTC",
-                                          "LINEA",
-                                          "MAYA",
-                                          "MEGAETH",
-                                          "MONAD",
-                                          "NEAR",
-                                          "NOBLE",
-                                          "OP",
-                                          "XPL",
-                                          "DOT",
-                                          "POL",
-                                          "XRD",
-                                          "XRP",
-                                          "HOOD",
-                                          "SOL",
-                                          "SONIC",
-                                          "SPARK",
-                                          "XLM",
-                                          "STRK",
-                                          "SUI",
-                                          "THOR",
-                                          "TON",
-                                          "TRON",
-                                          "UNI",
-                                          "XLAYER",
-                                          "ZEC"
-                                        ]
-                                      },
-                                      "symbol": {
+                                      "identifier": {
                                         "type": "string"
                                       },
-                                      "ticker": {
+                                      "amount": {
                                         "type": "string"
                                       },
                                       "decimal": {
                                         "type": "number"
-                                      },
-                                      "address": {
-                                        "type": "string"
-                                      },
-                                      "isGasAsset": {
-                                        "type": "boolean"
-                                      },
-                                      "isSynthetic": {
-                                        "type": "boolean"
-                                      },
-                                      "tax": {
-                                        "type": "object",
-                                        "properties": {
-                                          "buy": {
-                                            "type": "number"
-                                          },
-                                          "sell": {
-                                            "type": "number"
-                                          }
-                                        },
-                                        "required": [
-                                          "buy",
-                                          "sell"
-                                        ],
-                                        "additionalProperties": false
                                       }
                                     },
                                     "required": [
-                                      "chain",
-                                      "symbol",
-                                      "ticker",
-                                      "isGasAsset",
-                                      "isSynthetic"
+                                      "identifier",
+                                      "amount"
                                     ],
                                     "additionalProperties": false
                                   },
                                   "liquidity": {
                                     "type": "object",
                                     "properties": {
-                                      "chain": {
-                                        "type": "string",
-                                        "enum": [
-                                          "ADI",
-                                          "ALEO",
-                                          "APT",
-                                          "ARB",
-                                          "AURORA",
-                                          "AVAX",
-                                          "BASE",
-                                          "BERA",
-                                          "BSC",
-                                          "BTC",
-                                          "BCH",
-                                          "BOTANIX",
-                                          "ADA",
-                                          "FLIP",
-                                          "CORE",
-                                          "CORN",
-                                          "GAIA",
-                                          "CRO",
-                                          "DASH",
-                                          "DOGE",
-                                          "ETH",
-                                          "GNO",
-                                          "HARBOR",
-                                          "HYPEREVM",
-                                          "HYPE",
-                                          "KUJI",
-                                          "LTC",
-                                          "LINEA",
-                                          "MAYA",
-                                          "MEGAETH",
-                                          "MONAD",
-                                          "NEAR",
-                                          "NOBLE",
-                                          "OP",
-                                          "XPL",
-                                          "DOT",
-                                          "POL",
-                                          "XRD",
-                                          "XRP",
-                                          "HOOD",
-                                          "SOL",
-                                          "SONIC",
-                                          "SPARK",
-                                          "XLM",
-                                          "STRK",
-                                          "SUI",
-                                          "THOR",
-                                          "TON",
-                                          "TRON",
-                                          "UNI",
-                                          "XLAYER",
-                                          "ZEC"
-                                        ]
-                                      },
-                                      "symbol": {
+                                      "identifier": {
                                         "type": "string"
                                       },
-                                      "ticker": {
+                                      "amount": {
                                         "type": "string"
                                       },
                                       "decimal": {
                                         "type": "number"
-                                      },
-                                      "address": {
-                                        "type": "string"
-                                      },
-                                      "isGasAsset": {
-                                        "type": "boolean"
-                                      },
-                                      "isSynthetic": {
-                                        "type": "boolean"
-                                      },
-                                      "tax": {
-                                        "type": "object",
-                                        "properties": {
-                                          "buy": {
-                                            "type": "number"
-                                          },
-                                          "sell": {
-                                            "type": "number"
-                                          }
-                                        },
-                                        "required": [
-                                          "buy",
-                                          "sell"
-                                        ],
-                                        "additionalProperties": false
                                       }
                                     },
                                     "required": [
-                                      "chain",
-                                      "symbol",
-                                      "ticker",
-                                      "isGasAsset",
-                                      "isSynthetic"
+                                      "identifier",
+                                      "amount"
                                     ],
                                     "additionalProperties": false
                                   },
                                   "protocol": {
                                     "type": "object",
                                     "properties": {
-                                      "chain": {
-                                        "type": "string",
-                                        "enum": [
-                                          "ADI",
-                                          "ALEO",
-                                          "APT",
-                                          "ARB",
-                                          "AURORA",
-                                          "AVAX",
-                                          "BASE",
-                                          "BERA",
-                                          "BSC",
-                                          "BTC",
-                                          "BCH",
-                                          "BOTANIX",
-                                          "ADA",
-                                          "FLIP",
-                                          "CORE",
-                                          "CORN",
-                                          "GAIA",
-                                          "CRO",
-                                          "DASH",
-                                          "DOGE",
-                                          "ETH",
-                                          "GNO",
-                                          "HARBOR",
-                                          "HYPEREVM",
-                                          "HYPE",
-                                          "KUJI",
-                                          "LTC",
-                                          "LINEA",
-                                          "MAYA",
-                                          "MEGAETH",
-                                          "MONAD",
-                                          "NEAR",
-                                          "NOBLE",
-                                          "OP",
-                                          "XPL",
-                                          "DOT",
-                                          "POL",
-                                          "XRD",
-                                          "XRP",
-                                          "HOOD",
-                                          "SOL",
-                                          "SONIC",
-                                          "SPARK",
-                                          "XLM",
-                                          "STRK",
-                                          "SUI",
-                                          "THOR",
-                                          "TON",
-                                          "TRON",
-                                          "UNI",
-                                          "XLAYER",
-                                          "ZEC"
-                                        ]
-                                      },
-                                      "symbol": {
+                                      "identifier": {
                                         "type": "string"
                                       },
-                                      "ticker": {
+                                      "amount": {
                                         "type": "string"
                                       },
                                       "decimal": {
                                         "type": "number"
-                                      },
-                                      "address": {
-                                        "type": "string"
-                                      },
-                                      "isGasAsset": {
-                                        "type": "boolean"
-                                      },
-                                      "isSynthetic": {
-                                        "type": "boolean"
-                                      },
-                                      "tax": {
-                                        "type": "object",
-                                        "properties": {
-                                          "buy": {
-                                            "type": "number"
-                                          },
-                                          "sell": {
-                                            "type": "number"
-                                          }
-                                        },
-                                        "required": [
-                                          "buy",
-                                          "sell"
-                                        ],
-                                        "additionalProperties": false
                                       }
                                     },
                                     "required": [
-                                      "chain",
-                                      "symbol",
-                                      "ticker",
-                                      "isGasAsset",
-                                      "isSynthetic"
+                                      "identifier",
+                                      "amount"
                                     ],
                                     "additionalProperties": false
                                   },
                                   "tax": {
                                     "type": "object",
                                     "properties": {
-                                      "chain": {
-                                        "type": "string",
-                                        "enum": [
-                                          "ADI",
-                                          "ALEO",
-                                          "APT",
-                                          "ARB",
-                                          "AURORA",
-                                          "AVAX",
-                                          "BASE",
-                                          "BERA",
-                                          "BSC",
-                                          "BTC",
-                                          "BCH",
-                                          "BOTANIX",
-                                          "ADA",
-                                          "FLIP",
-                                          "CORE",
-                                          "CORN",
-                                          "GAIA",
-                                          "CRO",
-                                          "DASH",
-                                          "DOGE",
-                                          "ETH",
-                                          "GNO",
-                                          "HARBOR",
-                                          "HYPEREVM",
-                                          "HYPE",
-                                          "KUJI",
-                                          "LTC",
-                                          "LINEA",
-                                          "MAYA",
-                                          "MEGAETH",
-                                          "MONAD",
-                                          "NEAR",
-                                          "NOBLE",
-                                          "OP",
-                                          "XPL",
-                                          "DOT",
-                                          "POL",
-                                          "XRD",
-                                          "XRP",
-                                          "HOOD",
-                                          "SOL",
-                                          "SONIC",
-                                          "SPARK",
-                                          "XLM",
-                                          "STRK",
-                                          "SUI",
-                                          "THOR",
-                                          "TON",
-                                          "TRON",
-                                          "UNI",
-                                          "XLAYER",
-                                          "ZEC"
-                                        ]
-                                      },
-                                      "symbol": {
+                                      "identifier": {
                                         "type": "string"
                                       },
-                                      "ticker": {
+                                      "amount": {
                                         "type": "string"
                                       },
                                       "decimal": {
                                         "type": "number"
-                                      },
-                                      "address": {
-                                        "type": "string"
-                                      },
-                                      "isGasAsset": {
-                                        "type": "boolean"
-                                      },
-                                      "isSynthetic": {
-                                        "type": "boolean"
-                                      },
-                                      "tax": {
-                                        "type": "object",
-                                        "properties": {
-                                          "buy": {
-                                            "type": "number"
-                                          },
-                                          "sell": {
-                                            "type": "number"
-                                          }
-                                        },
-                                        "required": [
-                                          "buy",
-                                          "sell"
-                                        ],
-                                        "additionalProperties": false
                                       }
                                     },
                                     "required": [
-                                      "chain",
-                                      "symbol",
-                                      "ticker",
-                                      "isGasAsset",
-                                      "isSynthetic"
+                                      "identifier",
+                                      "amount"
                                     ],
                                     "additionalProperties": false
                                   }
@@ -5918,520 +5068,95 @@
                   "network": {
                     "type": "object",
                     "properties": {
-                      "chain": {
-                        "type": "string",
-                        "enum": [
-                          "ADI",
-                          "ALEO",
-                          "APT",
-                          "ARB",
-                          "AURORA",
-                          "AVAX",
-                          "BASE",
-                          "BERA",
-                          "BSC",
-                          "BTC",
-                          "BCH",
-                          "BOTANIX",
-                          "ADA",
-                          "FLIP",
-                          "CORE",
-                          "CORN",
-                          "GAIA",
-                          "CRO",
-                          "DASH",
-                          "DOGE",
-                          "ETH",
-                          "GNO",
-                          "HARBOR",
-                          "HYPEREVM",
-                          "HYPE",
-                          "KUJI",
-                          "LTC",
-                          "LINEA",
-                          "MAYA",
-                          "MEGAETH",
-                          "MONAD",
-                          "NEAR",
-                          "NOBLE",
-                          "OP",
-                          "XPL",
-                          "DOT",
-                          "POL",
-                          "XRD",
-                          "XRP",
-                          "HOOD",
-                          "SOL",
-                          "SONIC",
-                          "SPARK",
-                          "XLM",
-                          "STRK",
-                          "SUI",
-                          "THOR",
-                          "TON",
-                          "TRON",
-                          "UNI",
-                          "XLAYER",
-                          "ZEC"
-                        ]
-                      },
-                      "symbol": {
+                      "identifier": {
                         "type": "string"
                       },
-                      "ticker": {
+                      "amount": {
                         "type": "string"
                       },
                       "decimal": {
                         "type": "number"
-                      },
-                      "address": {
-                        "type": "string"
-                      },
-                      "isGasAsset": {
-                        "type": "boolean"
-                      },
-                      "isSynthetic": {
-                        "type": "boolean"
-                      },
-                      "tax": {
-                        "type": "object",
-                        "properties": {
-                          "buy": {
-                            "type": "number"
-                          },
-                          "sell": {
-                            "type": "number"
-                          }
-                        },
-                        "required": [
-                          "buy",
-                          "sell"
-                        ],
-                        "additionalProperties": false
                       }
                     },
                     "required": [
-                      "chain",
-                      "symbol",
-                      "ticker",
-                      "isGasAsset",
-                      "isSynthetic"
+                      "identifier",
+                      "amount"
                     ],
                     "additionalProperties": false
                   },
                   "affiliate": {
                     "type": "object",
                     "properties": {
-                      "chain": {
-                        "type": "string",
-                        "enum": [
-                          "ADI",
-                          "ALEO",
-                          "APT",
-                          "ARB",
-                          "AURORA",
-                          "AVAX",
-                          "BASE",
-                          "BERA",
-                          "BSC",
-                          "BTC",
-                          "BCH",
-                          "BOTANIX",
-                          "ADA",
-                          "FLIP",
-                          "CORE",
-                          "CORN",
-                          "GAIA",
-                          "CRO",
-                          "DASH",
-                          "DOGE",
-                          "ETH",
-                          "GNO",
-                          "HARBOR",
-                          "HYPEREVM",
-                          "HYPE",
-                          "KUJI",
-                          "LTC",
-                          "LINEA",
-                          "MAYA",
-                          "MEGAETH",
-                          "MONAD",
-                          "NEAR",
-                          "NOBLE",
-                          "OP",
-                          "XPL",
-                          "DOT",
-                          "POL",
-                          "XRD",
-                          "XRP",
-                          "HOOD",
-                          "SOL",
-                          "SONIC",
-                          "SPARK",
-                          "XLM",
-                          "STRK",
-                          "SUI",
-                          "THOR",
-                          "TON",
-                          "TRON",
-                          "UNI",
-                          "XLAYER",
-                          "ZEC"
-                        ]
-                      },
-                      "symbol": {
+                      "identifier": {
                         "type": "string"
                       },
-                      "ticker": {
+                      "amount": {
                         "type": "string"
                       },
                       "decimal": {
                         "type": "number"
-                      },
-                      "address": {
-                        "type": "string"
-                      },
-                      "isGasAsset": {
-                        "type": "boolean"
-                      },
-                      "isSynthetic": {
-                        "type": "boolean"
-                      },
-                      "tax": {
-                        "type": "object",
-                        "properties": {
-                          "buy": {
-                            "type": "number"
-                          },
-                          "sell": {
-                            "type": "number"
-                          }
-                        },
-                        "required": [
-                          "buy",
-                          "sell"
-                        ],
-                        "additionalProperties": false
                       }
                     },
                     "required": [
-                      "chain",
-                      "symbol",
-                      "ticker",
-                      "isGasAsset",
-                      "isSynthetic"
+                      "identifier",
+                      "amount"
                     ],
                     "additionalProperties": false
                   },
                   "liquidity": {
                     "type": "object",
                     "properties": {
-                      "chain": {
-                        "type": "string",
-                        "enum": [
-                          "ADI",
-                          "ALEO",
-                          "APT",
-                          "ARB",
-                          "AURORA",
-                          "AVAX",
-                          "BASE",
-                          "BERA",
-                          "BSC",
-                          "BTC",
-                          "BCH",
-                          "BOTANIX",
-                          "ADA",
-                          "FLIP",
-                          "CORE",
-                          "CORN",
-                          "GAIA",
-                          "CRO",
-                          "DASH",
-                          "DOGE",
-                          "ETH",
-                          "GNO",
-                          "HARBOR",
-                          "HYPEREVM",
-                          "HYPE",
-                          "KUJI",
-                          "LTC",
-                          "LINEA",
-                          "MAYA",
-                          "MEGAETH",
-                          "MONAD",
-                          "NEAR",
-                          "NOBLE",
-                          "OP",
-                          "XPL",
-                          "DOT",
-                          "POL",
-                          "XRD",
-                          "XRP",
-                          "HOOD",
-                          "SOL",
-                          "SONIC",
-                          "SPARK",
-                          "XLM",
-                          "STRK",
-                          "SUI",
-                          "THOR",
-                          "TON",
-                          "TRON",
-                          "UNI",
-                          "XLAYER",
-                          "ZEC"
-                        ]
-                      },
-                      "symbol": {
+                      "identifier": {
                         "type": "string"
                       },
-                      "ticker": {
+                      "amount": {
                         "type": "string"
                       },
                       "decimal": {
                         "type": "number"
-                      },
-                      "address": {
-                        "type": "string"
-                      },
-                      "isGasAsset": {
-                        "type": "boolean"
-                      },
-                      "isSynthetic": {
-                        "type": "boolean"
-                      },
-                      "tax": {
-                        "type": "object",
-                        "properties": {
-                          "buy": {
-                            "type": "number"
-                          },
-                          "sell": {
-                            "type": "number"
-                          }
-                        },
-                        "required": [
-                          "buy",
-                          "sell"
-                        ],
-                        "additionalProperties": false
                       }
                     },
                     "required": [
-                      "chain",
-                      "symbol",
-                      "ticker",
-                      "isGasAsset",
-                      "isSynthetic"
+                      "identifier",
+                      "amount"
                     ],
                     "additionalProperties": false
                   },
                   "protocol": {
                     "type": "object",
                     "properties": {
-                      "chain": {
-                        "type": "string",
-                        "enum": [
-                          "ADI",
-                          "ALEO",
-                          "APT",
-                          "ARB",
-                          "AURORA",
-                          "AVAX",
-                          "BASE",
-                          "BERA",
-                          "BSC",
-                          "BTC",
-                          "BCH",
-                          "BOTANIX",
-                          "ADA",
-                          "FLIP",
-                          "CORE",
-                          "CORN",
-                          "GAIA",
-                          "CRO",
-                          "DASH",
-                          "DOGE",
-                          "ETH",
-                          "GNO",
-                          "HARBOR",
-                          "HYPEREVM",
-                          "HYPE",
-                          "KUJI",
-                          "LTC",
-                          "LINEA",
-                          "MAYA",
-                          "MEGAETH",
-                          "MONAD",
-                          "NEAR",
-                          "NOBLE",
-                          "OP",
-                          "XPL",
-                          "DOT",
-                          "POL",
-                          "XRD",
-                          "XRP",
-                          "HOOD",
-                          "SOL",
-                          "SONIC",
-                          "SPARK",
-                          "XLM",
-                          "STRK",
-                          "SUI",
-                          "THOR",
-                          "TON",
-                          "TRON",
-                          "UNI",
-                          "XLAYER",
-                          "ZEC"
-                        ]
-                      },
-                      "symbol": {
+                      "identifier": {
                         "type": "string"
                       },
-                      "ticker": {
+                      "amount": {
                         "type": "string"
                       },
                       "decimal": {
                         "type": "number"
-                      },
-                      "address": {
-                        "type": "string"
-                      },
-                      "isGasAsset": {
-                        "type": "boolean"
-                      },
-                      "isSynthetic": {
-                        "type": "boolean"
-                      },
-                      "tax": {
-                        "type": "object",
-                        "properties": {
-                          "buy": {
-                            "type": "number"
-                          },
-                          "sell": {
-                            "type": "number"
-                          }
-                        },
-                        "required": [
-                          "buy",
-                          "sell"
-                        ],
-                        "additionalProperties": false
                       }
                     },
                     "required": [
-                      "chain",
-                      "symbol",
-                      "ticker",
-                      "isGasAsset",
-                      "isSynthetic"
+                      "identifier",
+                      "amount"
                     ],
                     "additionalProperties": false
                   },
                   "tax": {
                     "type": "object",
                     "properties": {
-                      "chain": {
-                        "type": "string",
-                        "enum": [
-                          "ADI",
-                          "ALEO",
-                          "APT",
-                          "ARB",
-                          "AURORA",
-                          "AVAX",
-                          "BASE",
-                          "BERA",
-                          "BSC",
-                          "BTC",
-                          "BCH",
-                          "BOTANIX",
-                          "ADA",
-                          "FLIP",
-                          "CORE",
-                          "CORN",
-                          "GAIA",
-                          "CRO",
-                          "DASH",
-                          "DOGE",
-                          "ETH",
-                          "GNO",
-                          "HARBOR",
-                          "HYPEREVM",
-                          "HYPE",
-                          "KUJI",
-                          "LTC",
-                          "LINEA",
-                          "MAYA",
-                          "MEGAETH",
-                          "MONAD",
-                          "NEAR",
-                          "NOBLE",
-                          "OP",
-                          "XPL",
-                          "DOT",
-                          "POL",
-                          "XRD",
-                          "XRP",
-                          "HOOD",
-                          "SOL",
-                          "SONIC",
-                          "SPARK",
-                          "XLM",
-                          "STRK",
-                          "SUI",
-                          "THOR",
-                          "TON",
-                          "TRON",
-                          "UNI",
-                          "XLAYER",
-                          "ZEC"
-                        ]
-                      },
-                      "symbol": {
+                      "identifier": {
                         "type": "string"
                       },
-                      "ticker": {
+                      "amount": {
                         "type": "string"
                       },
                       "decimal": {
                         "type": "number"
-                      },
-                      "address": {
-                        "type": "string"
-                      },
-                      "isGasAsset": {
-                        "type": "boolean"
-                      },
-                      "isSynthetic": {
-                        "type": "boolean"
-                      },
-                      "tax": {
-                        "type": "object",
-                        "properties": {
-                          "buy": {
-                            "type": "number"
-                          },
-                          "sell": {
-                            "type": "number"
-                          }
-                        },
-                        "required": [
-                          "buy",
-                          "sell"
-                        ],
-                        "additionalProperties": false
                       }
                     },
                     "required": [
-                      "chain",
-                      "symbol",
-                      "ticker",
-                      "isGasAsset",
-                      "isSynthetic"
+                      "identifier",
+                      "amount"
                     ],
                     "additionalProperties": false
                   }
@@ -6926,520 +5651,95 @@
                         "network": {
                           "type": "object",
                           "properties": {
-                            "chain": {
-                              "type": "string",
-                              "enum": [
-                                "ADI",
-                                "ALEO",
-                                "APT",
-                                "ARB",
-                                "AURORA",
-                                "AVAX",
-                                "BASE",
-                                "BERA",
-                                "BSC",
-                                "BTC",
-                                "BCH",
-                                "BOTANIX",
-                                "ADA",
-                                "FLIP",
-                                "CORE",
-                                "CORN",
-                                "GAIA",
-                                "CRO",
-                                "DASH",
-                                "DOGE",
-                                "ETH",
-                                "GNO",
-                                "HARBOR",
-                                "HYPEREVM",
-                                "HYPE",
-                                "KUJI",
-                                "LTC",
-                                "LINEA",
-                                "MAYA",
-                                "MEGAETH",
-                                "MONAD",
-                                "NEAR",
-                                "NOBLE",
-                                "OP",
-                                "XPL",
-                                "DOT",
-                                "POL",
-                                "XRD",
-                                "XRP",
-                                "HOOD",
-                                "SOL",
-                                "SONIC",
-                                "SPARK",
-                                "XLM",
-                                "STRK",
-                                "SUI",
-                                "THOR",
-                                "TON",
-                                "TRON",
-                                "UNI",
-                                "XLAYER",
-                                "ZEC"
-                              ]
-                            },
-                            "symbol": {
+                            "identifier": {
                               "type": "string"
                             },
-                            "ticker": {
+                            "amount": {
                               "type": "string"
                             },
                             "decimal": {
                               "type": "number"
-                            },
-                            "address": {
-                              "type": "string"
-                            },
-                            "isGasAsset": {
-                              "type": "boolean"
-                            },
-                            "isSynthetic": {
-                              "type": "boolean"
-                            },
-                            "tax": {
-                              "type": "object",
-                              "properties": {
-                                "buy": {
-                                  "type": "number"
-                                },
-                                "sell": {
-                                  "type": "number"
-                                }
-                              },
-                              "required": [
-                                "buy",
-                                "sell"
-                              ],
-                              "additionalProperties": false
                             }
                           },
                           "required": [
-                            "chain",
-                            "symbol",
-                            "ticker",
-                            "isGasAsset",
-                            "isSynthetic"
+                            "identifier",
+                            "amount"
                           ],
                           "additionalProperties": false
                         },
                         "affiliate": {
                           "type": "object",
                           "properties": {
-                            "chain": {
-                              "type": "string",
-                              "enum": [
-                                "ADI",
-                                "ALEO",
-                                "APT",
-                                "ARB",
-                                "AURORA",
-                                "AVAX",
-                                "BASE",
-                                "BERA",
-                                "BSC",
-                                "BTC",
-                                "BCH",
-                                "BOTANIX",
-                                "ADA",
-                                "FLIP",
-                                "CORE",
-                                "CORN",
-                                "GAIA",
-                                "CRO",
-                                "DASH",
-                                "DOGE",
-                                "ETH",
-                                "GNO",
-                                "HARBOR",
-                                "HYPEREVM",
-                                "HYPE",
-                                "KUJI",
-                                "LTC",
-                                "LINEA",
-                                "MAYA",
-                                "MEGAETH",
-                                "MONAD",
-                                "NEAR",
-                                "NOBLE",
-                                "OP",
-                                "XPL",
-                                "DOT",
-                                "POL",
-                                "XRD",
-                                "XRP",
-                                "HOOD",
-                                "SOL",
-                                "SONIC",
-                                "SPARK",
-                                "XLM",
-                                "STRK",
-                                "SUI",
-                                "THOR",
-                                "TON",
-                                "TRON",
-                                "UNI",
-                                "XLAYER",
-                                "ZEC"
-                              ]
-                            },
-                            "symbol": {
+                            "identifier": {
                               "type": "string"
                             },
-                            "ticker": {
+                            "amount": {
                               "type": "string"
                             },
                             "decimal": {
                               "type": "number"
-                            },
-                            "address": {
-                              "type": "string"
-                            },
-                            "isGasAsset": {
-                              "type": "boolean"
-                            },
-                            "isSynthetic": {
-                              "type": "boolean"
-                            },
-                            "tax": {
-                              "type": "object",
-                              "properties": {
-                                "buy": {
-                                  "type": "number"
-                                },
-                                "sell": {
-                                  "type": "number"
-                                }
-                              },
-                              "required": [
-                                "buy",
-                                "sell"
-                              ],
-                              "additionalProperties": false
                             }
                           },
                           "required": [
-                            "chain",
-                            "symbol",
-                            "ticker",
-                            "isGasAsset",
-                            "isSynthetic"
+                            "identifier",
+                            "amount"
                           ],
                           "additionalProperties": false
                         },
                         "liquidity": {
                           "type": "object",
                           "properties": {
-                            "chain": {
-                              "type": "string",
-                              "enum": [
-                                "ADI",
-                                "ALEO",
-                                "APT",
-                                "ARB",
-                                "AURORA",
-                                "AVAX",
-                                "BASE",
-                                "BERA",
-                                "BSC",
-                                "BTC",
-                                "BCH",
-                                "BOTANIX",
-                                "ADA",
-                                "FLIP",
-                                "CORE",
-                                "CORN",
-                                "GAIA",
-                                "CRO",
-                                "DASH",
-                                "DOGE",
-                                "ETH",
-                                "GNO",
-                                "HARBOR",
-                                "HYPEREVM",
-                                "HYPE",
-                                "KUJI",
-                                "LTC",
-                                "LINEA",
-                                "MAYA",
-                                "MEGAETH",
-                                "MONAD",
-                                "NEAR",
-                                "NOBLE",
-                                "OP",
-                                "XPL",
-                                "DOT",
-                                "POL",
-                                "XRD",
-                                "XRP",
-                                "HOOD",
-                                "SOL",
-                                "SONIC",
-                                "SPARK",
-                                "XLM",
-                                "STRK",
-                                "SUI",
-                                "THOR",
-                                "TON",
-                                "TRON",
-                                "UNI",
-                                "XLAYER",
-                                "ZEC"
-                              ]
-                            },
-                            "symbol": {
+                            "identifier": {
                               "type": "string"
                             },
-                            "ticker": {
+                            "amount": {
                               "type": "string"
                             },
                             "decimal": {
                               "type": "number"
-                            },
-                            "address": {
-                              "type": "string"
-                            },
-                            "isGasAsset": {
-                              "type": "boolean"
-                            },
-                            "isSynthetic": {
-                              "type": "boolean"
-                            },
-                            "tax": {
-                              "type": "object",
-                              "properties": {
-                                "buy": {
-                                  "type": "number"
-                                },
-                                "sell": {
-                                  "type": "number"
-                                }
-                              },
-                              "required": [
-                                "buy",
-                                "sell"
-                              ],
-                              "additionalProperties": false
                             }
                           },
                           "required": [
-                            "chain",
-                            "symbol",
-                            "ticker",
-                            "isGasAsset",
-                            "isSynthetic"
+                            "identifier",
+                            "amount"
                           ],
                           "additionalProperties": false
                         },
                         "protocol": {
                           "type": "object",
                           "properties": {
-                            "chain": {
-                              "type": "string",
-                              "enum": [
-                                "ADI",
-                                "ALEO",
-                                "APT",
-                                "ARB",
-                                "AURORA",
-                                "AVAX",
-                                "BASE",
-                                "BERA",
-                                "BSC",
-                                "BTC",
-                                "BCH",
-                                "BOTANIX",
-                                "ADA",
-                                "FLIP",
-                                "CORE",
-                                "CORN",
-                                "GAIA",
-                                "CRO",
-                                "DASH",
-                                "DOGE",
-                                "ETH",
-                                "GNO",
-                                "HARBOR",
-                                "HYPEREVM",
-                                "HYPE",
-                                "KUJI",
-                                "LTC",
-                                "LINEA",
-                                "MAYA",
-                                "MEGAETH",
-                                "MONAD",
-                                "NEAR",
-                                "NOBLE",
-                                "OP",
-                                "XPL",
-                                "DOT",
-                                "POL",
-                                "XRD",
-                                "XRP",
-                                "HOOD",
-                                "SOL",
-                                "SONIC",
-                                "SPARK",
-                                "XLM",
-                                "STRK",
-                                "SUI",
-                                "THOR",
-                                "TON",
-                                "TRON",
-                                "UNI",
-                                "XLAYER",
-                                "ZEC"
-                              ]
-                            },
-                            "symbol": {
+                            "identifier": {
                               "type": "string"
                             },
-                            "ticker": {
+                            "amount": {
                               "type": "string"
                             },
                             "decimal": {
                               "type": "number"
-                            },
-                            "address": {
-                              "type": "string"
-                            },
-                            "isGasAsset": {
-                              "type": "boolean"
-                            },
-                            "isSynthetic": {
-                              "type": "boolean"
-                            },
-                            "tax": {
-                              "type": "object",
-                              "properties": {
-                                "buy": {
-                                  "type": "number"
-                                },
-                                "sell": {
-                                  "type": "number"
-                                }
-                              },
-                              "required": [
-                                "buy",
-                                "sell"
-                              ],
-                              "additionalProperties": false
                             }
                           },
                           "required": [
-                            "chain",
-                            "symbol",
-                            "ticker",
-                            "isGasAsset",
-                            "isSynthetic"
+                            "identifier",
+                            "amount"
                           ],
                           "additionalProperties": false
                         },
                         "tax": {
                           "type": "object",
                           "properties": {
-                            "chain": {
-                              "type": "string",
-                              "enum": [
-                                "ADI",
-                                "ALEO",
-                                "APT",
-                                "ARB",
-                                "AURORA",
-                                "AVAX",
-                                "BASE",
-                                "BERA",
-                                "BSC",
-                                "BTC",
-                                "BCH",
-                                "BOTANIX",
-                                "ADA",
-                                "FLIP",
-                                "CORE",
-                                "CORN",
-                                "GAIA",
-                                "CRO",
-                                "DASH",
-                                "DOGE",
-                                "ETH",
-                                "GNO",
-                                "HARBOR",
-                                "HYPEREVM",
-                                "HYPE",
-                                "KUJI",
-                                "LTC",
-                                "LINEA",
-                                "MAYA",
-                                "MEGAETH",
-                                "MONAD",
-                                "NEAR",
-                                "NOBLE",
-                                "OP",
-                                "XPL",
-                                "DOT",
-                                "POL",
-                                "XRD",
-                                "XRP",
-                                "HOOD",
-                                "SOL",
-                                "SONIC",
-                                "SPARK",
-                                "XLM",
-                                "STRK",
-                                "SUI",
-                                "THOR",
-                                "TON",
-                                "TRON",
-                                "UNI",
-                                "XLAYER",
-                                "ZEC"
-                              ]
-                            },
-                            "symbol": {
+                            "identifier": {
                               "type": "string"
                             },
-                            "ticker": {
+                            "amount": {
                               "type": "string"
                             },
                             "decimal": {
                               "type": "number"
-                            },
-                            "address": {
-                              "type": "string"
-                            },
-                            "isGasAsset": {
-                              "type": "boolean"
-                            },
-                            "isSynthetic": {
-                              "type": "boolean"
-                            },
-                            "tax": {
-                              "type": "object",
-                              "properties": {
-                                "buy": {
-                                  "type": "number"
-                                },
-                                "sell": {
-                                  "type": "number"
-                                }
-                              },
-                              "required": [
-                                "buy",
-                                "sell"
-                              ],
-                              "additionalProperties": false
                             }
                           },
                           "required": [
-                            "chain",
-                            "symbol",
-                            "ticker",
-                            "isGasAsset",
-                            "isSynthetic"
+                            "identifier",
+                            "amount"
                           ],
                           "additionalProperties": false
                         }
@@ -7968,511 +6268,91 @@
                         "network": {
                           "type": "object",
                           "properties": {
-                            "chain": {
-                              "type": "string",
-                              "enum": [
-                                "ADI",
-                                "ALEO",
-                                "APT",
-                                "ARB",
-                                "AURORA",
-                                "AVAX",
-                                "BASE",
-                                "BERA",
-                                "BSC",
-                                "BTC",
-                                "BCH",
-                                "BOTANIX",
-                                "ADA",
-                                "FLIP",
-                                "CORE",
-                                "CORN",
-                                "GAIA",
-                                "CRO",
-                                "DASH",
-                                "DOGE",
-                                "ETH",
-                                "GNO",
-                                "HARBOR",
-                                "HYPEREVM",
-                                "HYPE",
-                                "KUJI",
-                                "LTC",
-                                "LINEA",
-                                "MAYA",
-                                "MEGAETH",
-                                "MONAD",
-                                "NEAR",
-                                "NOBLE",
-                                "OP",
-                                "XPL",
-                                "DOT",
-                                "POL",
-                                "XRD",
-                                "XRP",
-                                "HOOD",
-                                "SOL",
-                                "SONIC",
-                                "SPARK",
-                                "XLM",
-                                "STRK",
-                                "SUI",
-                                "THOR",
-                                "TON",
-                                "TRON",
-                                "UNI",
-                                "XLAYER",
-                                "ZEC"
-                              ]
-                            },
-                            "symbol": {
+                            "identifier": {
                               "type": "string"
                             },
-                            "ticker": {
+                            "amount": {
                               "type": "string"
                             },
                             "decimal": {
                               "type": "number"
-                            },
-                            "address": {
-                              "type": "string"
-                            },
-                            "isGasAsset": {
-                              "type": "boolean"
-                            },
-                            "isSynthetic": {
-                              "type": "boolean"
-                            },
-                            "tax": {
-                              "type": "object",
-                              "properties": {
-                                "buy": {
-                                  "type": "number"
-                                },
-                                "sell": {
-                                  "type": "number"
-                                }
-                              },
-                              "required": [
-                                "buy",
-                                "sell"
-                              ]
                             }
                           },
                           "required": [
-                            "chain",
-                            "symbol",
-                            "ticker",
-                            "isGasAsset",
-                            "isSynthetic"
+                            "identifier",
+                            "amount"
                           ]
                         },
                         "affiliate": {
                           "type": "object",
                           "properties": {
-                            "chain": {
-                              "type": "string",
-                              "enum": [
-                                "ADI",
-                                "ALEO",
-                                "APT",
-                                "ARB",
-                                "AURORA",
-                                "AVAX",
-                                "BASE",
-                                "BERA",
-                                "BSC",
-                                "BTC",
-                                "BCH",
-                                "BOTANIX",
-                                "ADA",
-                                "FLIP",
-                                "CORE",
-                                "CORN",
-                                "GAIA",
-                                "CRO",
-                                "DASH",
-                                "DOGE",
-                                "ETH",
-                                "GNO",
-                                "HARBOR",
-                                "HYPEREVM",
-                                "HYPE",
-                                "KUJI",
-                                "LTC",
-                                "LINEA",
-                                "MAYA",
-                                "MEGAETH",
-                                "MONAD",
-                                "NEAR",
-                                "NOBLE",
-                                "OP",
-                                "XPL",
-                                "DOT",
-                                "POL",
-                                "XRD",
-                                "XRP",
-                                "HOOD",
-                                "SOL",
-                                "SONIC",
-                                "SPARK",
-                                "XLM",
-                                "STRK",
-                                "SUI",
-                                "THOR",
-                                "TON",
-                                "TRON",
-                                "UNI",
-                                "XLAYER",
-                                "ZEC"
-                              ]
-                            },
-                            "symbol": {
+                            "identifier": {
                               "type": "string"
                             },
-                            "ticker": {
+                            "amount": {
                               "type": "string"
                             },
                             "decimal": {
                               "type": "number"
-                            },
-                            "address": {
-                              "type": "string"
-                            },
-                            "isGasAsset": {
-                              "type": "boolean"
-                            },
-                            "isSynthetic": {
-                              "type": "boolean"
-                            },
-                            "tax": {
-                              "type": "object",
-                              "properties": {
-                                "buy": {
-                                  "type": "number"
-                                },
-                                "sell": {
-                                  "type": "number"
-                                }
-                              },
-                              "required": [
-                                "buy",
-                                "sell"
-                              ]
                             }
                           },
                           "required": [
-                            "chain",
-                            "symbol",
-                            "ticker",
-                            "isGasAsset",
-                            "isSynthetic"
+                            "identifier",
+                            "amount"
                           ]
                         },
                         "liquidity": {
                           "type": "object",
                           "properties": {
-                            "chain": {
-                              "type": "string",
-                              "enum": [
-                                "ADI",
-                                "ALEO",
-                                "APT",
-                                "ARB",
-                                "AURORA",
-                                "AVAX",
-                                "BASE",
-                                "BERA",
-                                "BSC",
-                                "BTC",
-                                "BCH",
-                                "BOTANIX",
-                                "ADA",
-                                "FLIP",
-                                "CORE",
-                                "CORN",
-                                "GAIA",
-                                "CRO",
-                                "DASH",
-                                "DOGE",
-                                "ETH",
-                                "GNO",
-                                "HARBOR",
-                                "HYPEREVM",
-                                "HYPE",
-                                "KUJI",
-                                "LTC",
-                                "LINEA",
-                                "MAYA",
-                                "MEGAETH",
-                                "MONAD",
-                                "NEAR",
-                                "NOBLE",
-                                "OP",
-                                "XPL",
-                                "DOT",
-                                "POL",
-                                "XRD",
-                                "XRP",
-                                "HOOD",
-                                "SOL",
-                                "SONIC",
-                                "SPARK",
-                                "XLM",
-                                "STRK",
-                                "SUI",
-                                "THOR",
-                                "TON",
-                                "TRON",
-                                "UNI",
-                                "XLAYER",
-                                "ZEC"
-                              ]
-                            },
-                            "symbol": {
+                            "identifier": {
                               "type": "string"
                             },
-                            "ticker": {
+                            "amount": {
                               "type": "string"
                             },
                             "decimal": {
                               "type": "number"
-                            },
-                            "address": {
-                              "type": "string"
-                            },
-                            "isGasAsset": {
-                              "type": "boolean"
-                            },
-                            "isSynthetic": {
-                              "type": "boolean"
-                            },
-                            "tax": {
-                              "type": "object",
-                              "properties": {
-                                "buy": {
-                                  "type": "number"
-                                },
-                                "sell": {
-                                  "type": "number"
-                                }
-                              },
-                              "required": [
-                                "buy",
-                                "sell"
-                              ]
                             }
                           },
                           "required": [
-                            "chain",
-                            "symbol",
-                            "ticker",
-                            "isGasAsset",
-                            "isSynthetic"
+                            "identifier",
+                            "amount"
                           ]
                         },
                         "protocol": {
                           "type": "object",
                           "properties": {
-                            "chain": {
-                              "type": "string",
-                              "enum": [
-                                "ADI",
-                                "ALEO",
-                                "APT",
-                                "ARB",
-                                "AURORA",
-                                "AVAX",
-                                "BASE",
-                                "BERA",
-                                "BSC",
-                                "BTC",
-                                "BCH",
-                                "BOTANIX",
-                                "ADA",
-                                "FLIP",
-                                "CORE",
-                                "CORN",
-                                "GAIA",
-                                "CRO",
-                                "DASH",
-                                "DOGE",
-                                "ETH",
-                                "GNO",
-                                "HARBOR",
-                                "HYPEREVM",
-                                "HYPE",
-                                "KUJI",
-                                "LTC",
-                                "LINEA",
-                                "MAYA",
-                                "MEGAETH",
-                                "MONAD",
-                                "NEAR",
-                                "NOBLE",
-                                "OP",
-                                "XPL",
-                                "DOT",
-                                "POL",
-                                "XRD",
-                                "XRP",
-                                "HOOD",
-                                "SOL",
-                                "SONIC",
-                                "SPARK",
-                                "XLM",
-                                "STRK",
-                                "SUI",
-                                "THOR",
-                                "TON",
-                                "TRON",
-                                "UNI",
-                                "XLAYER",
-                                "ZEC"
-                              ]
-                            },
-                            "symbol": {
+                            "identifier": {
                               "type": "string"
                             },
-                            "ticker": {
+                            "amount": {
                               "type": "string"
                             },
                             "decimal": {
                               "type": "number"
-                            },
-                            "address": {
-                              "type": "string"
-                            },
-                            "isGasAsset": {
-                              "type": "boolean"
-                            },
-                            "isSynthetic": {
-                              "type": "boolean"
-                            },
-                            "tax": {
-                              "type": "object",
-                              "properties": {
-                                "buy": {
-                                  "type": "number"
-                                },
-                                "sell": {
-                                  "type": "number"
-                                }
-                              },
-                              "required": [
-                                "buy",
-                                "sell"
-                              ]
                             }
                           },
                           "required": [
-                            "chain",
-                            "symbol",
-                            "ticker",
-                            "isGasAsset",
-                            "isSynthetic"
+                            "identifier",
+                            "amount"
                           ]
                         },
                         "tax": {
                           "type": "object",
                           "properties": {
-                            "chain": {
-                              "type": "string",
-                              "enum": [
-                                "ADI",
-                                "ALEO",
-                                "APT",
-                                "ARB",
-                                "AURORA",
-                                "AVAX",
-                                "BASE",
-                                "BERA",
-                                "BSC",
-                                "BTC",
-                                "BCH",
-                                "BOTANIX",
-                                "ADA",
-                                "FLIP",
-                                "CORE",
-                                "CORN",
-                                "GAIA",
-                                "CRO",
-                                "DASH",
-                                "DOGE",
-                                "ETH",
-                                "GNO",
-                                "HARBOR",
-                                "HYPEREVM",
-                                "HYPE",
-                                "KUJI",
-                                "LTC",
-                                "LINEA",
-                                "MAYA",
-                                "MEGAETH",
-                                "MONAD",
-                                "NEAR",
-                                "NOBLE",
-                                "OP",
-                                "XPL",
-                                "DOT",
-                                "POL",
-                                "XRD",
-                                "XRP",
-                                "HOOD",
-                                "SOL",
-                                "SONIC",
-                                "SPARK",
-                                "XLM",
-                                "STRK",
-                                "SUI",
-                                "THOR",
-                                "TON",
-                                "TRON",
-                                "UNI",
-                                "XLAYER",
-                                "ZEC"
-                              ]
-                            },
-                            "symbol": {
+                            "identifier": {
                               "type": "string"
                             },
-                            "ticker": {
+                            "amount": {
                               "type": "string"
                             },
                             "decimal": {
                               "type": "number"
-                            },
-                            "address": {
-                              "type": "string"
-                            },
-                            "isGasAsset": {
-                              "type": "boolean"
-                            },
-                            "isSynthetic": {
-                              "type": "boolean"
-                            },
-                            "tax": {
-                              "type": "object",
-                              "properties": {
-                                "buy": {
-                                  "type": "number"
-                                },
-                                "sell": {
-                                  "type": "number"
-                                }
-                              },
-                              "required": [
-                                "buy",
-                                "sell"
-                              ]
                             }
                           },
                           "required": [
-                            "chain",
-                            "symbol",
-                            "ticker",
-                            "isGasAsset",
-                            "isSynthetic"
+                            "identifier",
+                            "amount"
                           ]
                         }
                       }
