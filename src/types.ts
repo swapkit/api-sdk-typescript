@@ -298,74 +298,29 @@ export type TrackTransactionResponse = {
         affiliate?: string;
         fees?: {
             network?: {
-                chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                symbol: string;
-                ticker: string;
-                decimal?: number;
-                address?: string;
-                isGasAsset: boolean;
-                isSynthetic: boolean;
-                tax?: {
-                    buy: number;
-                    sell: number;
-                };
+                identifier: string;
                 amount: string;
+                decimal?: number;
             };
             affiliate?: {
-                chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                symbol: string;
-                ticker: string;
-                decimal?: number;
-                address?: string;
-                isGasAsset: boolean;
-                isSynthetic: boolean;
-                tax?: {
-                    buy: number;
-                    sell: number;
-                };
+                identifier: string;
                 amount: string;
+                decimal?: number;
             };
             liquidity?: {
-                chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                symbol: string;
-                ticker: string;
-                decimal?: number;
-                address?: string;
-                isGasAsset: boolean;
-                isSynthetic: boolean;
-                tax?: {
-                    buy: number;
-                    sell: number;
-                };
+                identifier: string;
                 amount: string;
+                decimal?: number;
             };
             protocol?: {
-                chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                symbol: string;
-                ticker: string;
-                decimal?: number;
-                address?: string;
-                isGasAsset: boolean;
-                isSynthetic: boolean;
-                tax?: {
-                    buy: number;
-                    sell: number;
-                };
+                identifier: string;
                 amount: string;
+                decimal?: number;
             };
             tax?: {
-                chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                symbol: string;
-                ticker: string;
-                decimal?: number;
-                address?: string;
-                isGasAsset: boolean;
-                isSynthetic: boolean;
-                tax?: {
-                    buy: number;
-                    sell: number;
-                };
+                identifier: string;
                 amount: string;
+                decimal?: number;
             };
         };
         provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
@@ -455,74 +410,29 @@ export type TrackTransactionResponse = {
             affiliate?: string;
             fees?: {
                 network?: {
-                    chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
+                    identifier: string;
                     amount: string;
+                    decimal?: number;
                 };
                 affiliate?: {
-                    chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
+                    identifier: string;
                     amount: string;
+                    decimal?: number;
                 };
                 liquidity?: {
-                    chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
+                    identifier: string;
                     amount: string;
+                    decimal?: number;
                 };
                 protocol?: {
-                    chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
+                    identifier: string;
                     amount: string;
+                    decimal?: number;
                 };
                 tax?: {
-                    chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
+                    identifier: string;
                     amount: string;
+                    decimal?: number;
                 };
             };
             provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
@@ -616,74 +526,29 @@ export type InsertTrackedTransactionRequest = {
             affiliate?: string;
             fees?: {
                 network?: {
-                    chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
+                    identifier: string;
                     amount: string;
+                    decimal?: number;
                 };
                 affiliate?: {
-                    chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
+                    identifier: string;
                     amount: string;
+                    decimal?: number;
                 };
                 liquidity?: {
-                    chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
+                    identifier: string;
                     amount: string;
+                    decimal?: number;
                 };
                 protocol?: {
-                    chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
+                    identifier: string;
                     amount: string;
+                    decimal?: number;
                 };
                 tax?: {
-                    chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
+                    identifier: string;
                     amount: string;
+                    decimal?: number;
                 };
             };
             provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
@@ -1968,74 +1833,29 @@ export type TrackTransactionResponses = {
             affiliate?: string;
             fees?: {
                 network?: {
-                    chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
+                    identifier: string;
                     amount: string;
+                    decimal?: number;
                 };
                 affiliate?: {
-                    chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
+                    identifier: string;
                     amount: string;
+                    decimal?: number;
                 };
                 liquidity?: {
-                    chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
+                    identifier: string;
                     amount: string;
+                    decimal?: number;
                 };
                 protocol?: {
-                    chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
+                    identifier: string;
                     amount: string;
+                    decimal?: number;
                 };
                 tax?: {
-                    chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                    symbol: string;
-                    ticker: string;
-                    decimal?: number;
-                    address?: string;
-                    isGasAsset: boolean;
-                    isSynthetic: boolean;
-                    tax?: {
-                        buy: number;
-                        sell: number;
-                    };
+                    identifier: string;
                     amount: string;
+                    decimal?: number;
                 };
             };
             provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
@@ -2125,74 +1945,29 @@ export type TrackTransactionResponses = {
                 affiliate?: string;
                 fees?: {
                     network?: {
-                        chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                        symbol: string;
-                        ticker: string;
-                        decimal?: number;
-                        address?: string;
-                        isGasAsset: boolean;
-                        isSynthetic: boolean;
-                        tax?: {
-                            buy: number;
-                            sell: number;
-                        };
+                        identifier: string;
                         amount: string;
+                        decimal?: number;
                     };
                     affiliate?: {
-                        chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                        symbol: string;
-                        ticker: string;
-                        decimal?: number;
-                        address?: string;
-                        isGasAsset: boolean;
-                        isSynthetic: boolean;
-                        tax?: {
-                            buy: number;
-                            sell: number;
-                        };
+                        identifier: string;
                         amount: string;
+                        decimal?: number;
                     };
                     liquidity?: {
-                        chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                        symbol: string;
-                        ticker: string;
-                        decimal?: number;
-                        address?: string;
-                        isGasAsset: boolean;
-                        isSynthetic: boolean;
-                        tax?: {
-                            buy: number;
-                            sell: number;
-                        };
+                        identifier: string;
                         amount: string;
+                        decimal?: number;
                     };
                     protocol?: {
-                        chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                        symbol: string;
-                        ticker: string;
-                        decimal?: number;
-                        address?: string;
-                        isGasAsset: boolean;
-                        isSynthetic: boolean;
-                        tax?: {
-                            buy: number;
-                            sell: number;
-                        };
+                        identifier: string;
                         amount: string;
+                        decimal?: number;
                     };
                     tax?: {
-                        chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-                        symbol: string;
-                        ticker: string;
-                        decimal?: number;
-                        address?: string;
-                        isGasAsset: boolean;
-                        isSynthetic: boolean;
-                        tax?: {
-                            buy: number;
-                            sell: number;
-                        };
+                        identifier: string;
                         amount: string;
+                        decimal?: number;
                     };
                 };
                 provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
