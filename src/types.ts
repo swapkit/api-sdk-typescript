@@ -209,10 +209,10 @@ export type ScreenAddressRequest = {
 };
 
 export type ScreenAddressResponse = {
-    confirm: boolean;
-    isBlacklisted?: boolean;
     isRisky?: boolean;
     isSanctioned?: boolean;
+    isBlacklisted?: boolean;
+    confirm: boolean;
     module?: number;
 };
 

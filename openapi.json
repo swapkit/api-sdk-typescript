@@ -4603,16 +4603,16 @@
       "ScreenAddressResponse": {
         "type": "object",
         "properties": {
-          "confirm": {
+          "isRisky": {
+            "type": "boolean"
+          },
+          "isSanctioned": {
             "type": "boolean"
           },
           "isBlacklisted": {
             "type": "boolean"
           },
-          "isRisky": {
-            "type": "boolean"
-          },
-          "isSanctioned": {
+          "confirm": {
             "type": "boolean"
           },
           "module": {
