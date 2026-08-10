@@ -296,33 +296,14 @@ export type TrackTransactionResponse = {
         explorerUrl?: string;
         providerExplorerUrl?: string;
         affiliate?: string;
-        fees?: {
-            network?: {
-                identifier: string;
-                amount: string;
-                decimal?: number;
-            };
-            affiliate?: {
-                identifier: string;
-                amount: string;
-                decimal?: number;
-            };
-            liquidity?: {
-                identifier: string;
-                amount: string;
-                decimal?: number;
-            };
-            protocol?: {
-                identifier: string;
-                amount: string;
-                decimal?: number;
-            };
-            tax?: {
-                identifier: string;
-                amount: string;
-                decimal?: number;
-            };
-        };
+        fees?: Array<{
+            type: 'liquidity' | 'network' | 'inbound' | 'outbound' | 'affiliate' | 'service' | 'tax' | 'priority';
+            amount: string;
+            amountBps?: number;
+            asset: string;
+            chain: string;
+            protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+        }>;
         provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
         providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder';
         providerOrderId?: string;
@@ -408,33 +389,14 @@ export type TrackTransactionResponse = {
             explorerUrl?: string;
             providerExplorerUrl?: string;
             affiliate?: string;
-            fees?: {
-                network?: {
-                    identifier: string;
-                    amount: string;
-                    decimal?: number;
-                };
-                affiliate?: {
-                    identifier: string;
-                    amount: string;
-                    decimal?: number;
-                };
-                liquidity?: {
-                    identifier: string;
-                    amount: string;
-                    decimal?: number;
-                };
-                protocol?: {
-                    identifier: string;
-                    amount: string;
-                    decimal?: number;
-                };
-                tax?: {
-                    identifier: string;
-                    amount: string;
-                    decimal?: number;
-                };
-            };
+            fees?: Array<{
+                type: 'liquidity' | 'network' | 'inbound' | 'outbound' | 'affiliate' | 'service' | 'tax' | 'priority';
+                amount: string;
+                amountBps?: number;
+                asset: string;
+                chain: string;
+                protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+            }>;
             provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
             providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder';
             providerOrderId?: string;
@@ -524,33 +486,14 @@ export type InsertTrackedTransactionRequest = {
             explorerUrl?: string;
             providerExplorerUrl?: string;
             affiliate?: string;
-            fees?: {
-                network?: {
-                    identifier: string;
-                    amount: string;
-                    decimal?: number;
-                };
-                affiliate?: {
-                    identifier: string;
-                    amount: string;
-                    decimal?: number;
-                };
-                liquidity?: {
-                    identifier: string;
-                    amount: string;
-                    decimal?: number;
-                };
-                protocol?: {
-                    identifier: string;
-                    amount: string;
-                    decimal?: number;
-                };
-                tax?: {
-                    identifier: string;
-                    amount: string;
-                    decimal?: number;
-                };
-            };
+            fees?: Array<{
+                type: 'liquidity' | 'network' | 'inbound' | 'outbound' | 'affiliate' | 'service' | 'tax' | 'priority';
+                amount: string;
+                amountBps?: number;
+                asset: string;
+                chain: string;
+                protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+            }>;
             provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
             providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder';
             providerOrderId?: string;
@@ -1831,33 +1774,14 @@ export type TrackTransactionResponses = {
             explorerUrl?: string;
             providerExplorerUrl?: string;
             affiliate?: string;
-            fees?: {
-                network?: {
-                    identifier: string;
-                    amount: string;
-                    decimal?: number;
-                };
-                affiliate?: {
-                    identifier: string;
-                    amount: string;
-                    decimal?: number;
-                };
-                liquidity?: {
-                    identifier: string;
-                    amount: string;
-                    decimal?: number;
-                };
-                protocol?: {
-                    identifier: string;
-                    amount: string;
-                    decimal?: number;
-                };
-                tax?: {
-                    identifier: string;
-                    amount: string;
-                    decimal?: number;
-                };
-            };
+            fees?: Array<{
+                type: 'liquidity' | 'network' | 'inbound' | 'outbound' | 'affiliate' | 'service' | 'tax' | 'priority';
+                amount: string;
+                amountBps?: number;
+                asset: string;
+                chain: string;
+                protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+            }>;
             provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
             providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder';
             providerOrderId?: string;
@@ -1943,33 +1867,14 @@ export type TrackTransactionResponses = {
                 explorerUrl?: string;
                 providerExplorerUrl?: string;
                 affiliate?: string;
-                fees?: {
-                    network?: {
-                        identifier: string;
-                        amount: string;
-                        decimal?: number;
-                    };
-                    affiliate?: {
-                        identifier: string;
-                        amount: string;
-                        decimal?: number;
-                    };
-                    liquidity?: {
-                        identifier: string;
-                        amount: string;
-                        decimal?: number;
-                    };
-                    protocol?: {
-                        identifier: string;
-                        amount: string;
-                        decimal?: number;
-                    };
-                    tax?: {
-                        identifier: string;
-                        amount: string;
-                        decimal?: number;
-                    };
-                };
+                fees?: Array<{
+                    type: 'liquidity' | 'network' | 'inbound' | 'outbound' | 'affiliate' | 'service' | 'tax' | 'priority';
+                    amount: string;
+                    amountBps?: number;
+                    asset: string;
+                    chain: string;
+                    protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+                }>;
                 provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
                 providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder';
                 providerOrderId?: string;
