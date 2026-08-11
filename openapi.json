@@ -7893,6 +7893,7 @@
                     "noMimirsFound",
                     "noRoutesFound",
                     "quoteNotFound",
+                    "providerResponseFormError",
                     "ledgerWrongPayload",
                     "failedToFetchTx",
                     "failedBuildTransactionDetails",
