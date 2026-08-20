@@ -304,6 +304,8 @@ export type TrackTransactionResponse = {
             chain: string;
             protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
         }>;
+        amountInUsd?: string;
+        amountOutUsd?: string;
         provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
         providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder';
         providerOrderId?: string;
@@ -397,6 +399,8 @@ export type TrackTransactionResponse = {
                 chain: string;
                 protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
             }>;
+            amountInUsd?: string;
+            amountOutUsd?: string;
             provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
             providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder';
             providerOrderId?: string;
@@ -494,6 +498,8 @@ export type InsertTrackedTransactionRequest = {
                 chain: string;
                 protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
             }>;
+            amountInUsd?: string;
+            amountOutUsd?: string;
             provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
             providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder';
             providerOrderId?: string;
@@ -671,9 +677,9 @@ export type GetQuoteRequest = {
      */
     buyAsset: string;
     /**
-     * Amount of asset to sell
+     * Amount of asset to sell. Required unless quoteType is EXACT_OUTPUT, which must omit it.
      */
-    sellAmount: string;
+    sellAmount?: string;
     providers?: Array<string>;
     /**
      * Address to send asset from
@@ -684,7 +690,7 @@ export type GetQuoteRequest = {
      */
     destinationAddress?: string;
     /**
-     * Slippage tolerance as a percentage. Default is 3%.
+     * Slippage tolerance as a percentage. Default is 1%.
      */
     slippage?: number;
     /**
@@ -692,14 +698,14 @@ export type GetQuoteRequest = {
      */
     cfBoost?: boolean;
     /**
-     * Set to true to request a confidential swap through NEAR Intents. NEAR provider only, requires Confidential Intents access (invite-only).
+     * Set to true to request a privacy-preserving swap, where the trade details are not exposed publicly while the swap executes. Acts as a filter, not a hint: only routes on which EVERY provider supports a privacy mode are returned, since a single public leg would expose the trade. Today NEAR (Confidential Intents) is the only such provider, so routes touching any other provider are dropped and a pair with no privacy-capable route returns no routes at all.
      */
-    useConfidentialIntents?: boolean;
+    usePrivacyMode?: boolean;
     referrer?: string;
     /**
-     * EXACT_INPUT (default) or FLEX_INPUT. On FLEX_INPUT, routes whose first-leg provider can't honour the mode are filtered out. Supported first-leg providers: THORCHAIN, MAYACHAIN, CHAINFLIP (incl. streaming variants), NEAR, and FLASHNET.
+     * EXACT_INPUT (default), FLEX_INPUT or EXACT_OUTPUT. EXACT_OUTPUT requires buyAmount and is currently supported by Flashnet only. On FLEX_INPUT, routes whose first-leg provider can't honour the mode are filtered out.
      */
-    quoteType?: 'EXACT_INPUT' | 'FLEX_INPUT';
+    quoteType?: 'EXACT_INPUT' | 'FLEX_INPUT' | 'EXACT_OUTPUT';
     /**
      * Set to true to disable on-chain estimation
      */
@@ -709,6 +715,10 @@ export type GetQuoteRequest = {
      */
     enableSweep?: boolean;
     /**
+     * Set to true to check the wallet's native gas balance and warn when it can't cover the network fee (opt-in). Acted on at /swap, which inherits this value unless it sets its own.
+     */
+    gasCheck?: boolean;
+    /**
      * Maximum execution time in seconds. Routes exceeding this time will be filtered out.
      */
     maxExecutionTime?: number;
@@ -716,6 +726,10 @@ export type GetQuoteRequest = {
      * Affiliate fee in basis points. This should only be used as an override, for example when you have some rebate or discount program. If not provided, the fees configured in your API Key will be used.
      */
     affiliateFee?: number;
+    /**
+     * Amount of asset to buy. Required when quoteType is EXACT_OUTPUT, and rejected otherwise.
+     */
+    buyAmount?: string;
 };
 
 export type GetQuoteResponse = {
@@ -851,7 +865,7 @@ export type GetQuoteResponse = {
             nextLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
         }>;
         warnings: Array<{
-            code: 'highSlippage' | 'highPriceImpact' | 'noSourceAddressToBuildTransaction' | 'affiliateFeeTooSmallSoRemoved' | 'unableToApplyReferralProgram' | 'insufficientBalance' | 'unableToBuildTransaction' | 'unableToEstimateGas' | 'limitPriceBelowSpot' | 'limitPriceWithinFeeGap';
+            code: 'highSlippage' | 'highPriceImpact' | 'noSourceAddressToBuildTransaction' | 'affiliateFeeTooSmallSoRemoved' | 'unableToApplyReferralProgram' | 'insufficientBalance' | 'insufficientGas' | 'unableToBuildTransaction' | 'unableToEstimateGas' | 'limitPriceBelowSpot' | 'limitPriceWithinFeeGap';
             display: string;
             tooltip?: string;
         }>;
@@ -877,7 +891,7 @@ export type GetQuoteResponse = {
             /**
              * The quoteType this route was built for (EXACT_INPUT or FLEX_INPUT). Echoes the request's quoteType so /swap can carry the mode forward.
              */
-            quoteType?: 'EXACT_INPUT' | 'FLEX_INPUT';
+            quoteType?: 'EXACT_INPUT' | 'FLEX_INPUT' | 'EXACT_OUTPUT';
             /**
              * Approval address for token swap
              */
@@ -895,7 +909,7 @@ export type GetQuoteResponse = {
     error?: string;
     providerErrors?: Array<{
         provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
-        errorCode?: 'noRpcFallbacks' | 'requestTimeout' | 'invalidApiVersion' | 'isSanctionedAddress' | 'unknownError' | 'internalServerError' | 'test_error' | 'blockHeaderNotFound' | 'blockHashNotFoundAtHeight' | 'blackListAsset' | 'txHashMissing' | 'invalidAsset' | 'currentBlockHeaderNotFound' | 'failedToRetrieveBalance' | 'failedToRetrieveBlock' | 'failedToRetrieveFees' | 'notImplementedBCH' | 'notImplementedDoge' | 'noPoolsFound' | 'noVaultsFound' | 'noTxFound' | 'multipleCosmosMessages' | 'heightOrHashNotProvided' | 'priceTooVolatile' | 'unknownDenom' | 'invalidBlockHeight' | 'timestampExtrinsicNoArgumentsForBlock' | 'timestampExtrinsicNoTimestampForBlock' | 'noTimestampExtrinsicForHash' | 'timestampExtrinsicNoArgumentsForHash' | 'txMemoUndefined' | 'txMemoIncorrect' | 'txTypeNotFound' | 'txNoMessage' | 'txNotFound' | 'txReceiptNotFound' | 'txParsingError' | 'txLogsParsingError' | 'txFailed' | 'jobDataParsingError' | 'blockNotFound' | 'balanceNotFound' | 'blockbookCallFailed' | 'configError' | 'unsafeTestDatabase' | 'synthSwapDisallowed' | 'noQuoteResponse' | 'noPoolAssetsFound' | 'noThorchainPools' | 'noMayachainPools' | 'noThorchainNetworkInfo' | 'invalidAffiliateFee' | 'invalidBuyAssetAddress' | 'invalidSellAssetAddress' | 'invalidSourceAddress' | 'invalidDestinationAddress' | 'invalidParam' | 'xrpAddressRequiresTag' | 'invalidChainId' | 'invalidChain' | 'unsupportedChainId' | 'unsupportedEVMChainId' | 'unsupportedMethod' | 'unsupportedProvider' | 'unsupportedProgram' | 'unsupportedEvent' | 'invalidParamsForMethod' | 'noWhitelistTokens' | 'failedFetchGasPrice' | 'chainflipBrokerApiUnavailable' | 'failedToBuildVaultSwapTransaction' | 'failedToOpenBtcPrivateChannel' | 'failedToCloseBtcPrivateChannel' | 'affiliateNotRegistered' | 'failedToCreateDepositChannel' | 'failedToRegisterAccount' | 'failedToRegisterAffiliate' | 'failedToWithdrawAffiliate' | 'noProviderDetailsFound' | 'noTokenListsFound' | 'tokenNotFound' | 'tokenPriceNotFound' | 'tokenPriceUnavailable' | 'tokenPriceFailedToUpdate' | 'legsArrayIsEmpty' | 'failedToFetchQuoteForLeg' | 'noBlockHeaderFound' | 'failedToSimulateSwap' | 'swapHalted' | 'memoTooLongForSourceChain' | 'addressScreeningFailed' | 'missingScreeningConfig' | 'insufficientLiquidity' | 'noSaversFound' | 'noInbounDataFound' | 'noInboundAddressesFound' | 'noTargetAddress' | 'noInboundAddressFoundForChain' | 'noLastBlocksFound' | 'noVersionFound' | 'noConstantsFound' | 'noMimirsFound' | 'noRoutesFound' | 'quoteNotFound' | 'providerResponseFormError' | 'ledgerWrongPayload' | 'failedToFetchTx' | 'failedBuildTransactionDetails' | 'failedToCreateRouteMetadata' | 'txBuildingTimeout' | 'noLegsForRoute' | 'insufficientBalance' | 'insufficientAllowance' | 'unableToBuildTransaction' | 'noRouterAddressFound' | 'noAggregatorAddressFound' | 'noContractInstanceFound' | 'noContractAddressFound' | 'invalidAffiliate' | 'invalidAffiliateName' | 'thornameNotFound' | 'thornameAffiliate' | 'No provider found' | 'providerAssetNotFound' | 'No Record found' | 'Slippage too low' | 'tradingHalted' | 'mayanameNotFound' | 'noWrappedGasAsset' | 'aggregatorAddressNotFound' | 'routerAddressNotFound' | 'dummyAddressNotFound' | 'trackerError' | 'thorchainPoolUnavailable' | 'noTradingPairs' | 'missingState' | 'ledgerSwapNotFound' | 'ledgerSwapNotReadyForTracking' | 'ledgerInvalidParsingMode' | 'errorEstimatingGas' | 'apiKeyInvalid' | 'apiKeyFailedToUpdate' | 'apiKeySignatureExists' | 'apiKeySignatureKeyTypeMismatch' | 'apiKeyExpired' | 'unauthorized' | 'failedToCreateMemo' | 'invalidAddressForChain' | 'invalidAddress' | 'riskyAddress' | 'noRoutesToProcess' | 'sellAssetAmountTooSmall' | 'sellAssetAmountTooLarge' | 'missingPrivateKey' | 'noMemoPriceProtection' | 'nodeMethodNotFound' | 'nodeRpcNotFound' | 'thirdPartyProviderNotFound' | 'quoteUnavailable' | 'targetInstructionNotFound' | 'referrerExist' | 'referrerNotFound' | 'invalidReferrer' | 'quoteLogicError' | 'missingDecimal' | 'noGasInfoInDB' | 'quoteError' | 'valueOverflow' | 'missingChainflipMeta' | 'contractAndMethodRequired' | 'tokenImageError' | 'fileNotFound' | 'fileFormatError' | 'ipError' | 'failedToSaveLedgerSwap' | 'missingValue' | 'missingDBQueryParam' | 'unableEstimateTxTime' | 'affiliateStatsMissingDate' | 'affiliateStatsMissingNextFilter' | 'affiliateStatsNoActions' | 'unsupportedNotificationEvent' | 'unsupportedNotificationChannel' | 'invalidWebhookUrl' | 'webhookDeliveryFailed' | 'serverStateNotFound' | 'apiRequestFailed' | 'apiRateLimit' | 'invalidActionStep' | 'providerIsRequired' | 'rateLimitExceeded' | 'depositChannelNotFound' | 'auditLogInsertFailed' | 'affiliateNameHistoryInsertFailed' | 'invalidRouteId' | 'invalidQuoteId' | 'invalidRoute' | 'quoteExpired' | 'swapQuoteNotFound' | 'swapRouteNotFound' | 'swapTransactionFailed' | 'swapChainflipMetaMissing' | 'swapChainflipChannelFailed' | 'swapTransferTxFailed' | 'chainflipVaultSwapNotSupported' | 'chainflipVaultSwapEncodingFailed' | 'chainflipVaultSwapInvalidChain' | 'chainflipVaultSwapBitcoinCCMNotSupported' | 'chainflipVaultSwapTransactionBuildFailed' | 'zcashInvalidAddress' | 'zcashInsufficientUTXOs' | 'zcashUTXOSelectionFailed' | 'zcashTransactionBuildFailed' | 'zcashShieldedRefundMissing' | 'zcashMemoTooLong' | 'zcashUnifiedAddressUnsupported' | 'zcashShieldedMemoUnavailable' | 'invalidTokenProgram' | 'invalidRequest' | 'pubsubEventNotRegistered' | 'pubsubTopicNotFound' | 'invalidSpender' | 'outputAmountDeviationTooHigh' | 'swapSizeExceeded' | 'v2EndpointNotAllowed' | 'externalServiceFailed' | 'tenantEncryptKeyNotFound' | 'tenantKeyPairEncryptionError' | 'slip24AmountOverflow' | 'slip24InvalidSignature' | 'slip24DigestComputationFailed' | 'invalidTxHashFormat' | 'affiliateNotFound' | 'nearAffiliateProviderAssetNotFound' | 'nearAffiliateDepositAddressFailed' | 'flashnetAffiliateRegistrationFailed' | 'flashnetAffiliateClaimFailed' | 'flashnetAffiliateNotFound' | 'limitOrderUnsupportedChain' | 'limitOrderQuoteNotFound' | 'limitOrderRouteNotFound' | 'limitOrderNotFound' | 'limitOrderInvalidState' | 'limitOrderBuildFailed' | 'limitOrderSubmissionFailed' | 'limitOrderCancelFailed' | 'limitOrderExpirationOutOfBounds' | 'limitOrderUnsupportedFillFlags' | 'limitOrderAmountAmbiguous' | 'limitOrderChainMismatch' | 'limitOrderUnsupportedPair' | 'limitOrderActionUnavailable' | 'limitOrderProviderError';
+        errorCode?: 'noRpcFallbacks' | 'requestTimeout' | 'invalidApiVersion' | 'isSanctionedAddress' | 'unknownError' | 'internalServerError' | 'test_error' | 'blockHeaderNotFound' | 'blockHashNotFoundAtHeight' | 'blackListAsset' | 'txHashMissing' | 'invalidAsset' | 'currentBlockHeaderNotFound' | 'failedToRetrieveBalance' | 'failedToRetrieveBlock' | 'failedToRetrieveFees' | 'notImplementedBCH' | 'notImplementedDoge' | 'noPoolsFound' | 'noVaultsFound' | 'noTxFound' | 'multipleCosmosMessages' | 'heightOrHashNotProvided' | 'priceTooVolatile' | 'unknownDenom' | 'invalidBlockHeight' | 'timestampExtrinsicNoArgumentsForBlock' | 'timestampExtrinsicNoTimestampForBlock' | 'noTimestampExtrinsicForHash' | 'timestampExtrinsicNoArgumentsForHash' | 'txMemoUndefined' | 'txMemoIncorrect' | 'txTypeNotFound' | 'txNoMessage' | 'txNotFound' | 'txReceiptNotFound' | 'txParsingError' | 'txLogsParsingError' | 'txFailed' | 'jobDataParsingError' | 'blockNotFound' | 'balanceNotFound' | 'blockbookCallFailed' | 'configError' | 'unsafeTestDatabase' | 'synthSwapDisallowed' | 'noQuoteResponse' | 'noPoolAssetsFound' | 'noThorchainPools' | 'noMayachainPools' | 'noThorchainNetworkInfo' | 'invalidAffiliateFee' | 'invalidBuyAssetAddress' | 'invalidSellAssetAddress' | 'invalidSourceAddress' | 'invalidDestinationAddress' | 'invalidParam' | 'xrpAddressRequiresTag' | 'invalidChainId' | 'invalidChain' | 'unsupportedChainId' | 'unsupportedEVMChainId' | 'unsupportedMethod' | 'unsupportedProvider' | 'unsupportedProgram' | 'unsupportedEvent' | 'invalidParamsForMethod' | 'noWhitelistTokens' | 'failedFetchGasPrice' | 'chainflipBrokerApiUnavailable' | 'failedToBuildVaultSwapTransaction' | 'failedToOpenBtcPrivateChannel' | 'failedToCloseBtcPrivateChannel' | 'affiliateNotRegistered' | 'failedToCreateDepositChannel' | 'failedToRegisterAccount' | 'failedToRegisterAffiliate' | 'failedToWithdrawAffiliate' | 'noProviderDetailsFound' | 'noTokenListsFound' | 'tokenNotFound' | 'tokenPriceNotFound' | 'tokenPriceUnavailable' | 'tokenPriceFailedToUpdate' | 'legsArrayIsEmpty' | 'failedToFetchQuoteForLeg' | 'noBlockHeaderFound' | 'failedToSimulateSwap' | 'swapHalted' | 'memoTooLongForSourceChain' | 'addressScreeningFailed' | 'missingScreeningConfig' | 'insufficientLiquidity' | 'noSaversFound' | 'noInbounDataFound' | 'noInboundAddressesFound' | 'noTargetAddress' | 'noInboundAddressFoundForChain' | 'noLastBlocksFound' | 'noVersionFound' | 'noConstantsFound' | 'noMimirsFound' | 'noRoutesFound' | 'quoteNotFound' | 'providerResponseFormError' | 'ledgerWrongPayload' | 'failedToFetchTx' | 'failedBuildTransactionDetails' | 'failedToCreateRouteMetadata' | 'txBuildingTimeout' | 'noLegsForRoute' | 'insufficientBalance' | 'insufficientAllowance' | 'insufficientGas' | 'unableToBuildTransaction' | 'noRouterAddressFound' | 'noAggregatorAddressFound' | 'noContractInstanceFound' | 'noContractAddressFound' | 'invalidAffiliate' | 'invalidAffiliateName' | 'thornameNotFound' | 'thornameAffiliate' | 'No provider found' | 'providerAssetNotFound' | 'No Record found' | 'Slippage too low' | 'tradingHalted' | 'mayanameNotFound' | 'noWrappedGasAsset' | 'aggregatorAddressNotFound' | 'routerAddressNotFound' | 'dummyAddressNotFound' | 'trackerError' | 'thorchainPoolUnavailable' | 'noTradingPairs' | 'missingState' | 'ledgerSwapNotFound' | 'ledgerSwapNotReadyForTracking' | 'ledgerInvalidParsingMode' | 'ledgerWebhookNotifyFailed' | 'errorEstimatingGas' | 'apiKeyInvalid' | 'apiKeyFailedToUpdate' | 'apiKeySignatureExists' | 'apiKeySignatureKeyTypeMismatch' | 'apiKeyExpired' | 'unauthorized' | 'failedToCreateMemo' | 'invalidAddressForChain' | 'invalidAddress' | 'riskyAddress' | 'noRoutesToProcess' | 'sellAssetAmountTooSmall' | 'sellAssetAmountTooLarge' | 'missingPrivateKey' | 'noMemoPriceProtection' | 'nodeMethodNotFound' | 'nodeRpcNotFound' | 'thirdPartyProviderNotFound' | 'quoteUnavailable' | 'targetInstructionNotFound' | 'referrerExist' | 'referrerNotFound' | 'invalidReferrer' | 'quoteLogicError' | 'missingDecimal' | 'noGasInfoInDB' | 'quoteError' | 'valueOverflow' | 'missingChainflipMeta' | 'contractAndMethodRequired' | 'tokenImageError' | 'fileNotFound' | 'fileFormatError' | 'ipError' | 'failedToSaveLedgerSwap' | 'missingValue' | 'missingDBQueryParam' | 'unableEstimateTxTime' | 'affiliateStatsMissingDate' | 'affiliateStatsMissingNextFilter' | 'affiliateStatsNoActions' | 'unsupportedNotificationEvent' | 'unsupportedNotificationChannel' | 'invalidWebhookUrl' | 'webhookDeliveryFailed' | 'serverStateNotFound' | 'apiRequestFailed' | 'apiRateLimit' | 'invalidActionStep' | 'providerIsRequired' | 'rateLimitExceeded' | 'depositChannelNotFound' | 'auditLogInsertFailed' | 'affiliateNameHistoryInsertFailed' | 'invalidRouteId' | 'invalidQuoteId' | 'invalidRoute' | 'quoteExpired' | 'swapQuoteNotFound' | 'swapRouteNotFound' | 'swapTransactionFailed' | 'swapChainflipMetaMissing' | 'swapChainflipChannelFailed' | 'swapTransferTxFailed' | 'chainflipVaultSwapNotSupported' | 'chainflipVaultSwapEncodingFailed' | 'chainflipVaultSwapInvalidChain' | 'chainflipVaultSwapBitcoinCCMNotSupported' | 'chainflipVaultSwapTransactionBuildFailed' | 'zcashInvalidAddress' | 'zcashInsufficientUTXOs' | 'zcashUTXOSelectionFailed' | 'zcashTransactionBuildFailed' | 'zcashShieldedRefundMissing' | 'zcashMemoTooLong' | 'zcashUnifiedAddressUnsupported' | 'zcashShieldedMemoUnavailable' | 'invalidTokenProgram' | 'invalidRequest' | 'pubsubEventNotRegistered' | 'pubsubTopicNotFound' | 'pubsubEnvelopeParsingError' | 'invalidSpender' | 'outputAmountDeviationTooHigh' | 'swapSizeExceeded' | 'v2EndpointNotAllowed' | 'externalServiceFailed' | 'tenantEncryptKeyNotFound' | 'tenantKeyPairEncryptionError' | 'slip24AmountOverflow' | 'slip24InvalidSignature' | 'slip24DigestComputationFailed' | 'invalidTxHashFormat' | 'affiliateNotFound' | 'nearAffiliateProviderAssetNotFound' | 'nearAffiliateDepositAddressFailed' | 'flashnetAffiliateRegistrationFailed' | 'flashnetAffiliateClaimFailed' | 'flashnetAffiliateNotFound' | 'limitOrderUnsupportedChain' | 'limitOrderQuoteNotFound' | 'limitOrderRouteNotFound' | 'limitOrderNotFound' | 'limitOrderInvalidState' | 'limitOrderBuildFailed' | 'limitOrderSubmissionFailed' | 'limitOrderCancelFailed' | 'limitOrderExpirationOutOfBounds' | 'limitOrderUnsupportedFillFlags' | 'limitOrderAmountAmbiguous' | 'limitOrderChainMismatch' | 'limitOrderUnsupportedPair' | 'limitOrderActionUnavailable' | 'limitOrderProviderError';
         message?: string;
         /**
          * Provider minimum sell amount (human units), when the provider reported one
@@ -912,7 +926,7 @@ export type ExecuteSwapRequest = {
     /**
      * Override the EXACT_INPUT/FLEX_INPUT mode for this swap. Defaults to the quoteType from the original /v3/quote request when omitted.
      */
-    quoteType?: 'EXACT_INPUT' | 'FLEX_INPUT';
+    quoteType?: 'EXACT_INPUT' | 'FLEX_INPUT' | 'EXACT_OUTPUT';
     /**
      * Address to send asset from
      */
@@ -953,6 +967,14 @@ export type ExecuteSwapRequest = {
      * Set to true to enable max-spend sweep behaviour for UTXO/gas assets (opt-in).
      */
     enableSweep?: boolean;
+    /**
+     * Set to true to check the wallet's native gas balance and warn when it can't cover the network fee (opt-in). Costs a balance lookup, and on TRON an extra estimate for low-balance wallets. Inherited from the /v3/quote request when omitted.
+     */
+    gasCheck?: boolean;
+    /**
+     * UTXO chains only. Set to true to embed the full previous transaction (nonWitnessUtxo) for each input in the returned PSBT. Required by legacy signers such as the Ledger Litecoin app.
+     */
+    includeNonWitnessUtxo?: boolean;
 };
 
 export type ExecuteSwapResponse = {
@@ -1079,7 +1101,7 @@ export type ExecuteSwapResponse = {
         nextLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
     }>;
     warnings: Array<{
-        code: 'highSlippage' | 'highPriceImpact' | 'noSourceAddressToBuildTransaction' | 'affiliateFeeTooSmallSoRemoved' | 'unableToApplyReferralProgram' | 'insufficientBalance' | 'unableToBuildTransaction' | 'unableToEstimateGas' | 'limitPriceBelowSpot' | 'limitPriceWithinFeeGap';
+        code: 'highSlippage' | 'highPriceImpact' | 'noSourceAddressToBuildTransaction' | 'affiliateFeeTooSmallSoRemoved' | 'unableToApplyReferralProgram' | 'insufficientBalance' | 'insufficientGas' | 'unableToBuildTransaction' | 'unableToEstimateGas' | 'limitPriceBelowSpot' | 'limitPriceWithinFeeGap';
         display: string;
         tooltip?: string;
     }>;
@@ -1116,7 +1138,7 @@ export type ExecuteSwapResponse = {
      * Memo to include in the transaction
      */
     memo?: string;
-    txType?: 'PSBT' | 'EVM' | 'COSMOS' | 'SERIALIZED_BASE64' | 'RIPPLE' | 'TRON' | 'NEAR' | 'SUI' | 'CBOR' | 'TON' | 'STARKNET' | 'zcash-unsigned' | 'STELLAR' | 'EIP_712_HYPE_WITHDRAW' | 'EIP_712_HYPE_USD_SEND';
+    txType?: 'PSBT' | 'EVM' | 'COSMOS' | 'SERIALIZED_BASE64' | 'RIPPLE' | 'TRON' | 'NEAR' | 'SUI' | 'CBOR' | 'TON' | 'STARKNET' | 'zcash-unsigned' | 'STELLAR' | 'EIP_712_HYPE_WITHDRAW' | 'EIP_712_HYPE_SEND_ASSET';
     txHint?: 'simpleTransfer' | 'transferWithMemo' | 'contractCall';
     tx?: {
         /**
@@ -1257,12 +1279,16 @@ export type ExecuteSwapResponse = {
             };
         };
         action: {
-            type: 'usdSend';
+            type: 'sendAsset';
             hyperliquidChain: string;
             signatureChainId: string;
             destination: string;
+            sourceDex: string;
+            destinationDex: string;
+            token: string;
             amount: string;
-            time: number;
+            fromSubAccount: string;
+            nonce: number;
         };
         submitTo: string;
     } | string;
@@ -1288,7 +1314,7 @@ export type ExecuteSwapResponse = {
         /**
          * The quoteType this route was built for (EXACT_INPUT or FLEX_INPUT). Echoes the request's quoteType so /swap can carry the mode forward.
          */
-        quoteType?: 'EXACT_INPUT' | 'FLEX_INPUT';
+        quoteType?: 'EXACT_INPUT' | 'FLEX_INPUT' | 'EXACT_OUTPUT';
         /**
          * Price impact
          */
@@ -1299,7 +1325,7 @@ export type ExecuteSwapResponse = {
         approvalAddress?: string;
         affiliate?: string;
         affiliateFee?: string;
-        txType?: 'PSBT' | 'EVM' | 'COSMOS' | 'SERIALIZED_BASE64' | 'RIPPLE' | 'TRON' | 'NEAR' | 'SUI' | 'CBOR' | 'TON' | 'STARKNET' | 'zcash-unsigned' | 'STELLAR' | 'EIP_712_HYPE_WITHDRAW' | 'EIP_712_HYPE_USD_SEND';
+        txType?: 'PSBT' | 'EVM' | 'COSMOS' | 'SERIALIZED_BASE64' | 'RIPPLE' | 'TRON' | 'NEAR' | 'SUI' | 'CBOR' | 'TON' | 'STARKNET' | 'zcash-unsigned' | 'STELLAR' | 'EIP_712_HYPE_WITHDRAW' | 'EIP_712_HYPE_SEND_ASSET';
         chainflip?: {
             destinationAddress: string;
             sellAsset: {
@@ -1361,6 +1387,18 @@ export type ExecuteSwapResponse = {
             };
             slippage: number;
         };
+        /**
+         * Deposit channel ID
+         */
+        providerDepositChannelId?: string;
+        /**
+         * Deposit channel expiry, unix seconds. NEAR/FLASHNET/GARDEN: the provider's own real deadline. CHAINFLIP: channel creation time + 24h (Chainflip's documented fixed channel lifetime).
+         */
+        depositChannelExpiration?: number;
+        /**
+         * CHAINFLIP only: the raw source-chain block at which the deposit channel expires (sourceChainExpiryBlock). Not used to compute depositChannelExpiration.
+         */
+        depositChannelExpirationBlock?: number;
         isFastQuote?: boolean;
         /**
          * Indicates if the quote was refreshed
@@ -1404,6 +1442,10 @@ export type ExecuteSwapResponse = {
             }>;
             signature: string;
         };
+        /**
+         * Current on-chain allowance held by meta.approvalAddress for the sell token, in base units (unlike sellAmount, which is human decimals). Omitted when no ERC-20 approval applies (gas assets, non-EVM). `approvalTx` presence, not this value, signals approval is required.
+         */
+        allowance?: string;
     };
     /**
      * The unique swap ID for tracking
@@ -1782,6 +1824,8 @@ export type TrackTransactionResponses = {
                 chain: string;
                 protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
             }>;
+            amountInUsd?: string;
+            amountOutUsd?: string;
             provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
             providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder';
             providerOrderId?: string;
@@ -1875,6 +1919,8 @@ export type TrackTransactionResponses = {
                     chain: string;
                     protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
                 }>;
+                amountInUsd?: string;
+                amountOutUsd?: string;
                 provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
                 providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder';
                 providerOrderId?: string;
