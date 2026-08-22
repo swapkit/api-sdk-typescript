@@ -1987,9 +1987,9 @@ export type GetGasPricesData = {
     path?: never;
     query?: {
         /**
-         * Chain id, if omitted return gas for all chains
+         * Chain id, if omitted return gas for all chains with gas support
          */
-        chainId?: '36900' | 'aleo' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | '4663' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
+        chainId?: '1' | '10' | '56' | '100' | '137' | '143' | '196' | '4663' | '8453' | '36900' | '42161' | '43114' | '80094' | '728126428' | 'aleo' | 'bitcoin' | 'bitcoincash' | 'cardano' | 'cosmoshub-4' | 'dash' | 'dogecoin' | 'kaiyo-1' | 'litecoin' | 'mayachain-mainnet-v1' | 'near' | 'solana' | '0x534e5f4d41494e' | 'stellar' | 'sui' | 'ripple' | 'thorchain-1' | 'ton' | 'zcash';
         /**
          * Time frame to get gas history
          */
@@ -2012,9 +2012,9 @@ export type GetGasHistoryData = {
     path?: never;
     query?: {
         /**
-         * Chain id, if omitted return gas for all chains
+         * Chain id, if omitted return gas for all chains with gas support
          */
-        chainId?: '36900' | 'aleo' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | '4663' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
+        chainId?: '1' | '10' | '56' | '100' | '137' | '143' | '196' | '4663' | '8453' | '36900' | '42161' | '43114' | '80094' | '728126428' | 'aleo' | 'bitcoin' | 'bitcoincash' | 'cardano' | 'cosmoshub-4' | 'dash' | 'dogecoin' | 'kaiyo-1' | 'litecoin' | 'mayachain-mainnet-v1' | 'near' | 'solana' | '0x534e5f4d41494e' | 'stellar' | 'sui' | 'ripple' | 'thorchain-1' | 'ton' | 'zcash';
         /**
          * Time frame to get gas history
          */
