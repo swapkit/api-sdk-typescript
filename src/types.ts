@@ -237,6 +237,10 @@ export type TrackTransactionRequest = {
      * Deposit address associated with a deposit channel
      */
     depositAddress?: string;
+    /**
+     * routeId of the /v3/quote route this transaction executed. Pass it on /track calls until the response contains a parsed transaction, to enable realized-slippage reporting on completion. Best-effort: quote data expires ~5 minutes after quoting and is region-local, so the first call should come right after broadcast.
+     */
+    routeId?: string;
 };
 
 export type TrackTransactionResponse = {
@@ -267,6 +271,14 @@ export type TrackTransactionResponse = {
     };
     finalAddress?: string;
     finalisedAt: number;
+    /**
+     * Slippage tolerance from the original quote, in basis points
+     */
+    slippageTolerance?: number;
+    /**
+     * Realized slippage of the settled output vs the quoted expected output, in basis points. Positive means the swap settled for less than quoted
+     */
+    realizedSlippageBps?: number;
     transient?: {
         estimatedTimeToComplete: number;
         currentLegIndex?: number;
@@ -362,6 +374,14 @@ export type TrackTransactionResponse = {
         };
         finalAddress?: string;
         finalisedAt: number;
+        /**
+         * Slippage tolerance from the original quote, in basis points
+         */
+        slippageTolerance?: number;
+        /**
+         * Realized slippage of the settled output vs the quoted expected output, in basis points. Positive means the swap settled for less than quoted
+         */
+        realizedSlippageBps?: number;
         transient?: {
             estimatedTimeToComplete: number;
             currentLegIndex?: number;
@@ -461,6 +481,14 @@ export type InsertTrackedTransactionRequest = {
         };
         finalAddress?: string;
         finalisedAt: number;
+        /**
+         * Slippage tolerance from the original quote, in basis points
+         */
+        slippageTolerance?: number;
+        /**
+         * Realized slippage of the settled output vs the quoted expected output, in basis points. Positive means the swap settled for less than quoted
+         */
+        realizedSlippageBps?: number;
         transient?: {
             estimatedTimeToComplete: number;
             currentLegIndex?: number;
@@ -1787,6 +1815,14 @@ export type TrackTransactionResponses = {
         };
         finalAddress?: string;
         finalisedAt: number;
+        /**
+         * Slippage tolerance from the original quote, in basis points
+         */
+        slippageTolerance?: number;
+        /**
+         * Realized slippage of the settled output vs the quoted expected output, in basis points. Positive means the swap settled for less than quoted
+         */
+        realizedSlippageBps?: number;
         transient?: {
             estimatedTimeToComplete: number;
             currentLegIndex?: number;
@@ -1882,6 +1918,14 @@ export type TrackTransactionResponses = {
             };
             finalAddress?: string;
             finalisedAt: number;
+            /**
+             * Slippage tolerance from the original quote, in basis points
+             */
+            slippageTolerance?: number;
+            /**
+             * Realized slippage of the settled output vs the quoted expected output, in basis points. Positive means the swap settled for less than quoted
+             */
+            realizedSlippageBps?: number;
             transient?: {
                 estimatedTimeToComplete: number;
                 currentLegIndex?: number;

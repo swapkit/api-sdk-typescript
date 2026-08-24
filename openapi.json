@@ -860,6 +860,14 @@
                     "finalisedAt": {
                       "type": "number"
                     },
+                    "slippageTolerance": {
+                      "type": "number",
+                      "description": "Slippage tolerance from the original quote, in basis points"
+                    },
+                    "realizedSlippageBps": {
+                      "type": "number",
+                      "description": "Realized slippage of the settled output vs the quoted expected output, in basis points. Positive means the swap settled for less than quoted"
+                    },
                     "transient": {
                       "type": "object",
                       "properties": {
@@ -1417,6 +1425,14 @@
                           },
                           "finalisedAt": {
                             "type": "number"
+                          },
+                          "slippageTolerance": {
+                            "type": "number",
+                            "description": "Slippage tolerance from the original quote, in basis points"
+                          },
+                          "realizedSlippageBps": {
+                            "type": "number",
+                            "description": "Realized slippage of the settled output vs the quoted expected output, in basis points. Positive means the swap settled for less than quoted"
                           },
                           "transient": {
                             "type": "object",
@@ -4614,6 +4630,10 @@
           "depositAddress": {
             "type": "string",
             "description": "Deposit address associated with a deposit channel"
+          },
+          "routeId": {
+            "type": "string",
+            "description": "routeId of the /v3/quote route this transaction executed. Pass it on /track calls until the response contains a parsed transaction, to enable realized-slippage reporting on completion. Best-effort: quote data expires ~5 minutes after quoting and is region-local, so the first call should come right after broadcast."
           }
         }
       },
@@ -4866,6 +4886,14 @@
           },
           "finalisedAt": {
             "type": "number"
+          },
+          "slippageTolerance": {
+            "type": "number",
+            "description": "Slippage tolerance from the original quote, in basis points"
+          },
+          "realizedSlippageBps": {
+            "type": "number",
+            "description": "Realized slippage of the settled output vs the quoted expected output, in basis points. Positive means the swap settled for less than quoted"
           },
           "transient": {
             "type": "object",
@@ -5424,6 +5452,14 @@
                 },
                 "finalisedAt": {
                   "type": "number"
+                },
+                "slippageTolerance": {
+                  "type": "number",
+                  "description": "Slippage tolerance from the original quote, in basis points"
+                },
+                "realizedSlippageBps": {
+                  "type": "number",
+                  "description": "Realized slippage of the settled output vs the quoted expected output, in basis points. Positive means the swap settled for less than quoted"
                 },
                 "transient": {
                   "type": "object",
@@ -6020,6 +6056,14 @@
                 },
                 "finalisedAt": {
                   "type": "number"
+                },
+                "slippageTolerance": {
+                  "type": "number",
+                  "description": "Slippage tolerance from the original quote, in basis points"
+                },
+                "realizedSlippageBps": {
+                  "type": "number",
+                  "description": "Realized slippage of the settled output vs the quoted expected output, in basis points. Positive means the swap settled for less than quoted"
                 },
                 "transient": {
                   "type": "object",
