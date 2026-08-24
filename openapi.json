@@ -7684,6 +7684,14 @@
                     "additionalProperties": false
                   }
                 },
+                "txHint": {
+                  "type": "string",
+                  "enum": [
+                    "simpleTransfer",
+                    "transferWithMemo",
+                    "contractCall"
+                  ]
+                },
                 "meta": {
                   "type": "object",
                   "properties": {
@@ -8645,6 +8653,14 @@
               "additionalProperties": false
             }
           },
+          "txHint": {
+            "type": "string",
+            "enum": [
+              "simpleTransfer",
+              "transferWithMemo",
+              "contractCall"
+            ]
+          },
           "sourceAddress": {
             "type": "string",
             "description": "Source address"
@@ -8701,14 +8717,6 @@
               "STELLAR",
               "EIP_712_HYPE_WITHDRAW",
               "EIP_712_HYPE_SEND_ASSET"
-            ]
-          },
-          "txHint": {
-            "type": "string",
-            "enum": [
-              "simpleTransfer",
-              "transferWithMemo",
-              "contractCall"
             ]
           },
           "tx": {

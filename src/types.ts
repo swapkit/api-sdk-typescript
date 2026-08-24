@@ -897,6 +897,7 @@ export type GetQuoteResponse = {
             display: string;
             tooltip?: string;
         }>;
+        txHint?: 'simpleTransfer' | 'transferWithMemo' | 'contractCall';
         meta: {
             assets?: Array<{
                 /**
@@ -1133,6 +1134,7 @@ export type ExecuteSwapResponse = {
         display: string;
         tooltip?: string;
     }>;
+    txHint?: 'simpleTransfer' | 'transferWithMemo' | 'contractCall';
     /**
      * Source address
      */
@@ -1167,7 +1169,6 @@ export type ExecuteSwapResponse = {
      */
     memo?: string;
     txType?: 'PSBT' | 'EVM' | 'COSMOS' | 'SERIALIZED_BASE64' | 'RIPPLE' | 'TRON' | 'NEAR' | 'SUI' | 'CBOR' | 'TON' | 'STARKNET' | 'zcash-unsigned' | 'STELLAR' | 'EIP_712_HYPE_WITHDRAW' | 'EIP_712_HYPE_SEND_ASSET';
-    txHint?: 'simpleTransfer' | 'transferWithMemo' | 'contractCall';
     tx?: {
         /**
          * Hex-encoded recipient address (native TRX) or TRC-20 token contract address
