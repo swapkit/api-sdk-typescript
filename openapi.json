@@ -860,6 +860,14 @@
                     "finalisedAt": {
                       "type": "number"
                     },
+                    "slippageTolerance": {
+                      "type": "number",
+                      "description": "Slippage tolerance from the original quote, in basis points"
+                    },
+                    "realizedSlippageBps": {
+                      "type": "number",
+                      "description": "Realized slippage of the settled output vs the quoted expected output, in basis points. Positive means the swap settled for less than quoted"
+                    },
                     "transient": {
                       "type": "object",
                       "properties": {
@@ -1030,6 +1038,12 @@
                             ],
                             "additionalProperties": false
                           }
+                        },
+                        "amountInUsd": {
+                          "type": "string"
+                        },
+                        "amountOutUsd": {
+                          "type": "string"
                         },
                         "provider": {
                           "type": "string",
@@ -1412,6 +1426,14 @@
                           "finalisedAt": {
                             "type": "number"
                           },
+                          "slippageTolerance": {
+                            "type": "number",
+                            "description": "Slippage tolerance from the original quote, in basis points"
+                          },
+                          "realizedSlippageBps": {
+                            "type": "number",
+                            "description": "Realized slippage of the settled output vs the quoted expected output, in basis points. Positive means the swap settled for less than quoted"
+                          },
                           "transient": {
                             "type": "object",
                             "properties": {
@@ -1582,6 +1604,12 @@
                                   ],
                                   "additionalProperties": false
                                 }
+                              },
+                              "amountInUsd": {
+                                "type": "string"
+                              },
+                              "amountOutUsd": {
+                                "type": "string"
                               },
                               "provider": {
                                 "type": "string",
@@ -1886,67 +1914,45 @@
             "schema": {
               "type": "string",
               "enum": [
-                "36900",
-                "aleo",
-                "aptos",
-                "42161",
-                "1313161554",
-                "43114",
-                "8453",
-                "80094",
+                "1",
+                "10",
                 "56",
+                "100",
+                "137",
+                "143",
+                "196",
+                "4663",
+                "8453",
+                "36900",
+                "42161",
+                "43114",
+                "80094",
+                "728126428",
+                "aleo",
                 "bitcoin",
                 "bitcoincash",
-                "3637",
                 "cardano",
-                "chainflip",
-                "1116",
-                "21000000",
                 "cosmoshub-4",
-                "25",
                 "dash",
                 "dogecoin",
-                "1",
-                "100",
-                "harbor-1",
-                "harbor-stagenet-1",
-                "999",
-                "hype",
                 "kaiyo-1",
                 "litecoin",
-                "59144",
                 "mayachain-mainnet-v1",
-                "mayachain-stagenet-v1",
-                "4326",
-                "143",
                 "near",
-                "noble-1",
-                "10",
-                "9745",
-                "polkadot",
-                "137",
-                "radix-mainnet",
-                "ripple",
-                "4663",
                 "solana",
-                "146",
-                "spark",
-                "stellar",
                 "0x534e5f4d41494e",
+                "stellar",
                 "sui",
+                "ripple",
                 "thorchain-1",
-                "thorchain-stagenet-v2",
                 "ton",
-                "728126428",
-                "130",
-                "196",
                 "zcash"
               ]
             },
             "in": "query",
             "name": "chainId",
             "required": false,
-            "description": "Chain id, if omitted return gas for all chains"
+            "description": "Chain id, if omitted return gas for all chains with gas support"
           },
           {
             "schema": {
@@ -1989,67 +1995,45 @@
             "schema": {
               "type": "string",
               "enum": [
-                "36900",
-                "aleo",
-                "aptos",
-                "42161",
-                "1313161554",
-                "43114",
-                "8453",
-                "80094",
+                "1",
+                "10",
                 "56",
+                "100",
+                "137",
+                "143",
+                "196",
+                "4663",
+                "8453",
+                "36900",
+                "42161",
+                "43114",
+                "80094",
+                "728126428",
+                "aleo",
                 "bitcoin",
                 "bitcoincash",
-                "3637",
                 "cardano",
-                "chainflip",
-                "1116",
-                "21000000",
                 "cosmoshub-4",
-                "25",
                 "dash",
                 "dogecoin",
-                "1",
-                "100",
-                "harbor-1",
-                "harbor-stagenet-1",
-                "999",
-                "hype",
                 "kaiyo-1",
                 "litecoin",
-                "59144",
                 "mayachain-mainnet-v1",
-                "mayachain-stagenet-v1",
-                "4326",
-                "143",
                 "near",
-                "noble-1",
-                "10",
-                "9745",
-                "polkadot",
-                "137",
-                "radix-mainnet",
-                "ripple",
-                "4663",
                 "solana",
-                "146",
-                "spark",
-                "stellar",
                 "0x534e5f4d41494e",
+                "stellar",
                 "sui",
+                "ripple",
                 "thorchain-1",
-                "thorchain-stagenet-v2",
                 "ton",
-                "728126428",
-                "130",
-                "196",
                 "zcash"
               ]
             },
             "in": "query",
             "name": "chainId",
             "required": false,
-            "description": "Chain id, if omitted return gas for all chains"
+            "description": "Chain id, if omitted return gas for all chains with gas support"
           },
           {
             "schema": {
@@ -4603,16 +4587,16 @@
       "ScreenAddressResponse": {
         "type": "object",
         "properties": {
-          "confirm": {
+          "isRisky": {
+            "type": "boolean"
+          },
+          "isSanctioned": {
             "type": "boolean"
           },
           "isBlacklisted": {
             "type": "boolean"
           },
-          "isRisky": {
-            "type": "boolean"
-          },
-          "isSanctioned": {
+          "confirm": {
             "type": "boolean"
           },
           "module": {
@@ -4646,6 +4630,10 @@
           "depositAddress": {
             "type": "string",
             "description": "Deposit address associated with a deposit channel"
+          },
+          "routeId": {
+            "type": "string",
+            "description": "routeId of the /v3/quote route this transaction executed. Pass it on /track calls until the response contains a parsed transaction, to enable realized-slippage reporting on completion. Best-effort: quote data expires ~5 minutes after quoting and is region-local, so the first call should come right after broadcast."
           }
         }
       },
@@ -4899,6 +4887,14 @@
           "finalisedAt": {
             "type": "number"
           },
+          "slippageTolerance": {
+            "type": "number",
+            "description": "Slippage tolerance from the original quote, in basis points"
+          },
+          "realizedSlippageBps": {
+            "type": "number",
+            "description": "Realized slippage of the settled output vs the quoted expected output, in basis points. Positive means the swap settled for less than quoted"
+          },
           "transient": {
             "type": "object",
             "properties": {
@@ -5069,6 +5065,12 @@
                   ],
                   "additionalProperties": false
                 }
+              },
+              "amountInUsd": {
+                "type": "string"
+              },
+              "amountOutUsd": {
+                "type": "string"
               },
               "provider": {
                 "type": "string",
@@ -5451,6 +5453,14 @@
                 "finalisedAt": {
                   "type": "number"
                 },
+                "slippageTolerance": {
+                  "type": "number",
+                  "description": "Slippage tolerance from the original quote, in basis points"
+                },
+                "realizedSlippageBps": {
+                  "type": "number",
+                  "description": "Realized slippage of the settled output vs the quoted expected output, in basis points. Positive means the swap settled for less than quoted"
+                },
                 "transient": {
                   "type": "object",
                   "properties": {
@@ -5621,6 +5631,12 @@
                         ],
                         "additionalProperties": false
                       }
+                    },
+                    "amountInUsd": {
+                      "type": "string"
+                    },
+                    "amountOutUsd": {
+                      "type": "string"
                     },
                     "provider": {
                       "type": "string",
@@ -6041,6 +6057,14 @@
                 "finalisedAt": {
                   "type": "number"
                 },
+                "slippageTolerance": {
+                  "type": "number",
+                  "description": "Slippage tolerance from the original quote, in basis points"
+                },
+                "realizedSlippageBps": {
+                  "type": "number",
+                  "description": "Realized slippage of the settled output vs the quoted expected output, in basis points. Positive means the swap settled for less than quoted"
+                },
                 "transient": {
                   "type": "object",
                   "properties": {
@@ -6206,6 +6230,12 @@
                           "protocol"
                         ]
                       }
+                    },
+                    "amountInUsd": {
+                      "type": "string"
+                    },
+                    "amountOutUsd": {
+                      "type": "string"
                     },
                     "provider": {
                       "type": "string",
@@ -7096,7 +7126,7 @@
           },
           "sellAmount": {
             "type": "string",
-            "description": "Amount of asset to sell"
+            "description": "Amount of asset to sell. Required unless quoteType is EXACT_OUTPUT, which must omit it."
           },
           "providers": {
             "type": "array",
@@ -7117,15 +7147,15 @@
             "type": "number",
             "minimum": 0,
             "maximum": 100,
-            "description": "Slippage tolerance as a percentage. Default is 3%."
+            "description": "Slippage tolerance as a percentage. Default is 1%."
           },
           "cfBoost": {
             "type": "boolean",
             "description": "Set to true to enable CF boost to speed up Chainflip swaps. BTC only."
           },
-          "useConfidentialIntents": {
+          "usePrivacyMode": {
             "type": "boolean",
-            "description": "Set to true to request a confidential swap through NEAR Intents. NEAR provider only, requires Confidential Intents access (invite-only)."
+            "description": "Set to true to request a privacy-preserving swap, where the trade details are not exposed publicly while the swap executes. Acts as a filter, not a hint: only routes on which EVERY provider supports a privacy mode are returned, since a single public leg would expose the trade. Today NEAR (Confidential Intents) is the only such provider, so routes touching any other provider are dropped and a pair with no privacy-capable route returns no routes at all."
           },
           "referrer": {
             "type": "string"
@@ -7135,9 +7165,10 @@
             "type": "string",
             "enum": [
               "EXACT_INPUT",
-              "FLEX_INPUT"
+              "FLEX_INPUT",
+              "EXACT_OUTPUT"
             ],
-            "description": "EXACT_INPUT (default) or FLEX_INPUT. On FLEX_INPUT, routes whose first-leg provider can't honour the mode are filtered out. Supported first-leg providers: THORCHAIN, MAYACHAIN, CHAINFLIP (incl. streaming variants), NEAR, and FLASHNET."
+            "description": "EXACT_INPUT (default), FLEX_INPUT or EXACT_OUTPUT. EXACT_OUTPUT requires buyAmount and is currently supported by Flashnet only. On FLEX_INPUT, routes whose first-leg provider can't honour the mode are filtered out."
           },
           "disableEstimate": {
             "default": true,
@@ -7148,6 +7179,10 @@
             "type": "boolean",
             "description": "Set to true to enable sweeping wallet funds when the transaction would otherwise leave unspendable dust in the address (opt-in)."
           },
+          "gasCheck": {
+            "type": "boolean",
+            "description": "Set to true to check the wallet's native gas balance and warn when it can't cover the network fee (opt-in). Acted on at /swap, which inherits this value unless it sets its own."
+          },
           "maxExecutionTime": {
             "type": "number",
             "minimum": 1,
@@ -7157,12 +7192,15 @@
             "type": "number",
             "maximum": 1000,
             "description": "Affiliate fee in basis points. This should only be used as an override, for example when you have some rebate or discount program. If not provided, the fees configured in your API Key will be used."
+          },
+          "buyAmount": {
+            "type": "string",
+            "description": "Amount of asset to buy. Required when quoteType is EXACT_OUTPUT, and rejected otherwise."
           }
         },
         "required": [
           "sellAsset",
-          "buyAsset",
-          "sellAmount"
+          "buyAsset"
         ]
       },
       "GetQuoteResponse": {
@@ -7625,6 +7663,7 @@
                           "affiliateFeeTooSmallSoRemoved",
                           "unableToApplyReferralProgram",
                           "insufficientBalance",
+                          "insufficientGas",
                           "unableToBuildTransaction",
                           "unableToEstimateGas",
                           "limitPriceBelowSpot",
@@ -7644,6 +7683,14 @@
                     ],
                     "additionalProperties": false
                   }
+                },
+                "txHint": {
+                  "type": "string",
+                  "enum": [
+                    "simpleTransfer",
+                    "transferWithMemo",
+                    "contractCall"
+                  ]
                 },
                 "meta": {
                   "type": "object",
@@ -7698,7 +7745,8 @@
                       "type": "string",
                       "enum": [
                         "EXACT_INPUT",
-                        "FLEX_INPUT"
+                        "FLEX_INPUT",
+                        "EXACT_OUTPUT"
                       ],
                       "description": "The quoteType this route was built for (EXACT_INPUT or FLEX_INPUT). Echoes the request's quoteType so /swap can carry the mode forward."
                     },
@@ -7893,6 +7941,7 @@
                     "noMimirsFound",
                     "noRoutesFound",
                     "quoteNotFound",
+                    "providerResponseFormError",
                     "ledgerWrongPayload",
                     "failedToFetchTx",
                     "failedBuildTransactionDetails",
@@ -7901,6 +7950,7 @@
                     "noLegsForRoute",
                     "insufficientBalance",
                     "insufficientAllowance",
+                    "insufficientGas",
                     "unableToBuildTransaction",
                     "noRouterAddressFound",
                     "noAggregatorAddressFound",
@@ -7927,6 +7977,7 @@
                     "ledgerSwapNotFound",
                     "ledgerSwapNotReadyForTracking",
                     "ledgerInvalidParsingMode",
+                    "ledgerWebhookNotifyFailed",
                     "errorEstimatingGas",
                     "apiKeyInvalid",
                     "apiKeyFailedToUpdate",
@@ -8009,6 +8060,7 @@
                     "invalidRequest",
                     "pubsubEventNotRegistered",
                     "pubsubTopicNotFound",
+                    "pubsubEnvelopeParsingError",
                     "invalidSpender",
                     "outputAmountDeviationTooHigh",
                     "swapSizeExceeded",
@@ -8073,7 +8125,8 @@
             "type": "string",
             "enum": [
               "EXACT_INPUT",
-              "FLEX_INPUT"
+              "FLEX_INPUT",
+              "EXACT_OUTPUT"
             ],
             "description": "Override the EXACT_INPUT/FLEX_INPUT mode for this swap. Defaults to the quoteType from the original /v3/quote request when omitted."
           },
@@ -8116,6 +8169,14 @@
           "enableSweep": {
             "type": "boolean",
             "description": "Set to true to enable max-spend sweep behaviour for UTXO/gas assets (opt-in)."
+          },
+          "gasCheck": {
+            "type": "boolean",
+            "description": "Set to true to check the wallet's native gas balance and warn when it can't cover the network fee (opt-in). Costs a balance lookup, and on TRON an extra estimate for low-balance wallets. Inherited from the /v3/quote request when omitted."
+          },
+          "includeNonWitnessUtxo": {
+            "type": "boolean",
+            "description": "UTXO chains only. Set to true to embed the full previous transaction (nonWitnessUtxo) for each input in the returned PSBT. Required by legacy signers such as the Ledger Litecoin app."
           }
         },
         "required": [
@@ -8571,6 +8632,7 @@
                     "affiliateFeeTooSmallSoRemoved",
                     "unableToApplyReferralProgram",
                     "insufficientBalance",
+                    "insufficientGas",
                     "unableToBuildTransaction",
                     "unableToEstimateGas",
                     "limitPriceBelowSpot",
@@ -8590,6 +8652,14 @@
               ],
               "additionalProperties": false
             }
+          },
+          "txHint": {
+            "type": "string",
+            "enum": [
+              "simpleTransfer",
+              "transferWithMemo",
+              "contractCall"
+            ]
           },
           "sourceAddress": {
             "type": "string",
@@ -8646,15 +8716,7 @@
               "zcash-unsigned",
               "STELLAR",
               "EIP_712_HYPE_WITHDRAW",
-              "EIP_712_HYPE_USD_SEND"
-            ]
-          },
-          "txHint": {
-            "type": "string",
-            "enum": [
-              "simpleTransfer",
-              "transferWithMemo",
-              "contractCall"
+              "EIP_712_HYPE_SEND_ASSET"
             ]
           },
           "tx": {
@@ -9118,7 +9180,7 @@
                       "type": {
                         "type": "string",
                         "enum": [
-                          "usdSend"
+                          "sendAsset"
                         ]
                       },
                       "hyperliquidChain": {
@@ -9130,10 +9192,22 @@
                       "destination": {
                         "type": "string"
                       },
+                      "sourceDex": {
+                        "type": "string"
+                      },
+                      "destinationDex": {
+                        "type": "string"
+                      },
+                      "token": {
+                        "type": "string"
+                      },
                       "amount": {
                         "type": "string"
                       },
-                      "time": {
+                      "fromSubAccount": {
+                        "type": "string"
+                      },
+                      "nonce": {
                         "type": "number"
                       }
                     },
@@ -9142,8 +9216,12 @@
                       "hyperliquidChain",
                       "signatureChainId",
                       "destination",
+                      "sourceDex",
+                      "destinationDex",
+                      "token",
                       "amount",
-                      "time"
+                      "fromSubAccount",
+                      "nonce"
                     ],
                     "additionalProperties": false
                   },
@@ -9216,7 +9294,8 @@
                 "type": "string",
                 "enum": [
                   "EXACT_INPUT",
-                  "FLEX_INPUT"
+                  "FLEX_INPUT",
+                  "EXACT_OUTPUT"
                 ],
                 "description": "The quoteType this route was built for (EXACT_INPUT or FLEX_INPUT). Echoes the request's quoteType so /swap can carry the mode forward."
               },
@@ -9251,7 +9330,7 @@
                   "zcash-unsigned",
                   "STELLAR",
                   "EIP_712_HYPE_WITHDRAW",
-                  "EIP_712_HYPE_USD_SEND"
+                  "EIP_712_HYPE_SEND_ASSET"
                 ]
               },
               "chainflip": {
@@ -9483,6 +9562,18 @@
                 ],
                 "additionalProperties": false
               },
+              "providerDepositChannelId": {
+                "type": "string",
+                "description": "Deposit channel ID"
+              },
+              "depositChannelExpiration": {
+                "description": "Deposit channel expiry, unix seconds. NEAR/FLASHNET/GARDEN: the provider's own real deadline. CHAINFLIP: channel creation time + 24h (Chainflip's documented fixed channel lifetime).",
+                "type": "number"
+              },
+              "depositChannelExpirationBlock": {
+                "description": "CHAINFLIP only: the raw source-chain block at which the deposit channel expires (sourceChainExpiryBlock). Not used to compute depositChannelExpiration.",
+                "type": "number"
+              },
               "isFastQuote": {
                 "type": "boolean"
               },
@@ -9643,6 +9734,10 @@
                   "signature"
                 ],
                 "additionalProperties": false
+              },
+              "allowance": {
+                "type": "string",
+                "description": "Current on-chain allowance held by meta.approvalAddress for the sell token, in base units (unlike sellAmount, which is human decimals). Omitted when no ERC-20 approval applies (gas assets, non-EVM). `approvalTx` presence, not this value, signals approval is required."
               }
             },
             "required": [

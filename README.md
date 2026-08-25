@@ -120,8 +120,9 @@ const { data: swap } = await SwapKitService.getSwap({
 });
 
 // Track a transaction
+// Pass the routeId from the quote to get realized-slippage reporting on completion
 const { data: status } = await SwapKitService.trackTransaction({
-  body: { hash: "0xabc...", chainId: "1" },
+  body: { hash: "0xabc...", chainId: "1", routeId: route.routeId },
 });
 
 // Screen an address
@@ -171,11 +172,15 @@ const { data: swap } = await SwapKitService.getSwap({
 });
 
 // 4. Track the transaction
+// Passing routeId lets /track report `slippageTolerance` and `realizedSlippageBps`
+// once the swap settles. Best-effort: send it on the first call, right after
+// broadcast — quote data expires ~5 minutes after quoting.
 const { data: status } = await SwapKitService.trackTransaction({
-  body: { hash: "0xBroadcastedTxHash...", chainId: "1" },
+  body: { hash: "0xBroadcastedTxHash...", chainId: "1", routeId: route.routeId },
 });
 
 console.log(`Status: ${status?.status}`);
+console.log(`Realized slippage: ${status?.realizedSlippageBps} bps`);
 ```
 
 ## Direct Function Access
