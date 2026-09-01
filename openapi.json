@@ -1143,6 +1143,9 @@
                         },
                         "failTargetAddress": {
                           "type": "string"
+                        },
+                        "targetAddress": {
+                          "type": "string"
                         }
                       },
                       "additionalProperties": false
@@ -1708,6 +1711,9 @@
                                 "type": "string"
                               },
                               "failTargetAddress": {
+                                "type": "string"
+                              },
+                              "targetAddress": {
                                 "type": "string"
                               }
                             },
@@ -5170,6 +5176,9 @@
               },
               "failTargetAddress": {
                 "type": "string"
+              },
+              "targetAddress": {
+                "type": "string"
               }
             },
             "additionalProperties": false
@@ -5735,6 +5744,9 @@
                       "type": "string"
                     },
                     "failTargetAddress": {
+                      "type": "string"
+                    },
+                    "targetAddress": {
                       "type": "string"
                     }
                   },
@@ -6332,6 +6344,9 @@
                       "type": "string"
                     },
                     "failTargetAddress": {
+                      "type": "string"
+                    },
+                    "targetAddress": {
                       "type": "string"
                     }
                   }
