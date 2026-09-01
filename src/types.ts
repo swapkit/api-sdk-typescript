@@ -334,6 +334,7 @@ export type TrackTransactionResponse = {
         }>;
         failReason?: string;
         failTargetAddress?: string;
+        targetAddress?: string;
     };
     payload?: {
         evmCalldata?: string;
@@ -437,6 +438,7 @@ export type TrackTransactionResponse = {
             }>;
             failReason?: string;
             failTargetAddress?: string;
+            targetAddress?: string;
         };
         payload?: {
             evmCalldata?: string;
@@ -544,6 +546,7 @@ export type InsertTrackedTransactionRequest = {
             }>;
             failReason?: string;
             failTargetAddress?: string;
+            targetAddress?: string;
         };
         payload?: {
             evmCalldata?: string;
@@ -1879,6 +1882,7 @@ export type TrackTransactionResponses = {
             }>;
             failReason?: string;
             failTargetAddress?: string;
+            targetAddress?: string;
         };
         payload?: {
             evmCalldata?: string;
@@ -1982,6 +1986,7 @@ export type TrackTransactionResponses = {
                 }>;
                 failReason?: string;
                 failTargetAddress?: string;
+                targetAddress?: string;
             };
             payload?: {
                 evmCalldata?: string;
