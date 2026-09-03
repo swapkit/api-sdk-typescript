@@ -7892,6 +7892,8 @@
                     "txLogsParsingError",
                     "txFailed",
                     "jobDataParsingError",
+                    "dataformRunFailed",
+                    "dataformAssertionFailed",
                     "blockNotFound",
                     "balanceNotFound",
                     "blockbookCallFailed",
