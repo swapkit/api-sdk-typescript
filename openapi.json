@@ -2113,6 +2113,7 @@
         "tags": [
           "Quote"
         ],
+        "description": "Geo-restricted tokens return 451: the asset is not available in the caller's jurisdiction. Send the end user's IP in `X-Forwarded-For` (or `X-User-Ip`) so the region is resolved for them rather than for the calling server.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -2135,6 +2136,30 @@
             }
           },
           "400": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "string"
+                    },
+                    "data": {}
+                  },
+                  "required": [
+                    "message",
+                    "error"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "451": {
             "description": "Default Response",
             "content": {
               "application/json": {
@@ -2191,6 +2216,7 @@
         "tags": [
           "Swap"
         ],
+        "description": "Geo-restricted tokens return 451: the asset is not available in the caller's jurisdiction. The cached quote's assets are re-checked here, so a route id priced in a permitted region cannot be executed from a blocked one. Send the end user's IP in `X-Forwarded-For` (or `X-User-Ip`).",
         "requestBody": {
           "content": {
             "application/json": {
@@ -2237,6 +2263,30 @@
             }
           },
           "404": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "string"
+                    },
+                    "data": {}
+                  },
+                  "required": [
+                    "message",
+                    "error"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "451": {
             "description": "Default Response",
             "content": {
               "application/json": {
@@ -2587,6 +2637,9 @@
                     },
                     "coingeckoId": {
                       "type": "string"
+                    },
+                    "isRWA": {
+                      "type": "boolean"
                     }
                   },
                   "required": [
@@ -3060,6 +3113,9 @@
                       },
                       "coingeckoId": {
                         "type": "string"
+                      },
+                      "isRWA": {
+                        "type": "boolean"
                       }
                     },
                     "required": [
@@ -3330,6 +3386,9 @@
                 },
                 "coingeckoId": {
                   "type": "string"
+                },
+                "isRWA": {
+                  "type": "boolean"
                 },
                 "chain": {
                   "type": "string",
@@ -4303,6 +4362,9 @@
                       },
                       "coingeckoId": {
                         "type": "string"
+                      },
+                      "isRWA": {
+                        "type": "boolean"
                       }
                     },
                     "required": [
@@ -4528,6 +4590,9 @@
                       },
                       "coingeckoId": {
                         "type": "string"
+                      },
+                      "isRWA": {
+                        "type": "boolean"
                       }
                     },
                     "required": [
@@ -9233,6 +9298,7 @@
                     "noConstantsFound",
                     "noMimirsFound",
                     "noRoutesFound",
+                    "geoRestrictedToken",
                     "quoteNotFound",
                     "providerResponseFormError",
                     "ledgerWrongPayload",
