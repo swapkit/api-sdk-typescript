@@ -7682,7 +7682,8 @@
                           "unableToBuildTransaction",
                           "unableToEstimateGas",
                           "limitPriceBelowSpot",
-                          "limitPriceWithinFeeGap"
+                          "limitPriceWithinFeeGap",
+                          "litecoinMwebNotSupported"
                         ]
                       },
                       "display": {
@@ -8071,6 +8072,7 @@
                     "zcashTransactionBuildFailed",
                     "zcashShieldedRefundMissing",
                     "zcashMemoTooLong",
+                    "litecoinMwebAddressUnsupported",
                     "zcashUnifiedAddressUnsupported",
                     "zcashShieldedMemoUnavailable",
                     "invalidTokenProgram",
@@ -8655,7 +8657,8 @@
                     "unableToBuildTransaction",
                     "unableToEstimateGas",
                     "limitPriceBelowSpot",
-                    "limitPriceWithinFeeGap"
+                    "limitPriceWithinFeeGap",
+                    "litecoinMwebNotSupported"
                   ]
                 },
                 "display": {
