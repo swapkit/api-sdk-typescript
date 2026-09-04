@@ -5815,6 +5815,1260 @@
         ],
         "additionalProperties": false
       },
+      "TrackLedgerSwapResponse": {
+        "type": "object",
+        "properties": {
+          "ledgerSwap": {
+            "type": "object",
+            "properties": {
+              "swapId": {
+                "type": "string",
+                "format": "uuid",
+                "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+              },
+              "status": {
+                "type": "string",
+                "description": "Last persisted Ledger status. e.g. `READY`, `PENDING`, `FINISHED`"
+              },
+              "provider": {
+                "type": "string",
+                "description": "Provider that quoted the swap. e.g. `NEAR`"
+              },
+              "createdAt": {
+                "type": "string",
+                "description": "ISO-8601 timestamp of when the swap payload was built"
+              },
+              "fromAsset": {
+                "type": "string"
+              },
+              "toAsset": {
+                "type": "string"
+              },
+              "fromAmount": {
+                "type": "string"
+              },
+              "expectedAmountTo": {
+                "type": "string"
+              },
+              "payinAddress": {
+                "type": "string",
+                "description": "Deposit address the end user was instructed to fund"
+              },
+              "payinTransactionId": {
+                "type": "string"
+              },
+              "payoutTransactionId": {
+                "type": "string"
+              },
+              "providerFees": {
+                "type": "string"
+              },
+              "referralFees": {
+                "type": "string"
+              },
+              "payoutNetworkFees": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "swapId",
+              "status",
+              "createdAt",
+              "fromAsset",
+              "toAsset",
+              "fromAmount",
+              "payinAddress",
+              "providerFees",
+              "referralFees",
+              "payoutNetworkFees"
+            ],
+            "additionalProperties": false
+          },
+          "transaction": {
+            "type": "object",
+            "properties": {
+              "chainId": {
+                "type": "string",
+                "enum": [
+                  "36900",
+                  "aleo",
+                  "aptos",
+                  "42161",
+                  "1313161554",
+                  "43114",
+                  "8453",
+                  "80094",
+                  "56",
+                  "bitcoin",
+                  "bitcoincash",
+                  "3637",
+                  "cardano",
+                  "chainflip",
+                  "1116",
+                  "21000000",
+                  "cosmoshub-4",
+                  "25",
+                  "dash",
+                  "dogecoin",
+                  "1",
+                  "100",
+                  "harbor-1",
+                  "harbor-stagenet-1",
+                  "999",
+                  "hype",
+                  "kaiyo-1",
+                  "litecoin",
+                  "59144",
+                  "mayachain-mainnet-v1",
+                  "mayachain-stagenet-v1",
+                  "4326",
+                  "143",
+                  "near",
+                  "noble-1",
+                  "10",
+                  "9745",
+                  "polkadot",
+                  "137",
+                  "radix-mainnet",
+                  "ripple",
+                  "4663",
+                  "solana",
+                  "146",
+                  "spark",
+                  "stellar",
+                  "0x534e5f4d41494e",
+                  "sui",
+                  "thorchain-1",
+                  "thorchain-stagenet-v2",
+                  "ton",
+                  "728126428",
+                  "130",
+                  "196",
+                  "zcash"
+                ]
+              },
+              "hash": {
+                "type": "string"
+              },
+              "block": {
+                "type": "number"
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "approve",
+                  "claim",
+                  "deposit",
+                  "lending",
+                  "lp_action",
+                  "native_contract_call",
+                  "native_send",
+                  "stake",
+                  "unstake",
+                  "streaming_swap",
+                  "swap",
+                  "thorname_action",
+                  "token_contract_call",
+                  "token_transfer",
+                  "unknown",
+                  "donate"
+                ]
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "unknown",
+                  "not_started",
+                  "pending",
+                  "swapping",
+                  "completed",
+                  "refunded",
+                  "failed"
+                ]
+              },
+              "trackingStatus": {
+                "type": "string",
+                "enum": [
+                  "not_started",
+                  "starting",
+                  "broadcasted",
+                  "mempool",
+                  "inbound",
+                  "outbound",
+                  "swapping",
+                  "completed",
+                  "refunded",
+                  "partially_refunded",
+                  "dropped",
+                  "reverted",
+                  "replaced",
+                  "retries_exceeded",
+                  "parsing_error"
+                ]
+              },
+              "fromAsset": {
+                "type": "string"
+              },
+              "fromAmount": {
+                "type": "string"
+              },
+              "fromAddress": {
+                "type": "string"
+              },
+              "toAsset": {
+                "type": "string"
+              },
+              "toAmount": {
+                "type": "string"
+              },
+              "toAddress": {
+                "type": "string"
+              },
+              "finalAsset": {
+                "type": "object",
+                "properties": {
+                  "chain": {
+                    "type": "string",
+                    "enum": [
+                      "ADI",
+                      "ALEO",
+                      "APT",
+                      "ARB",
+                      "AURORA",
+                      "AVAX",
+                      "BASE",
+                      "BERA",
+                      "BSC",
+                      "BTC",
+                      "BCH",
+                      "BOTANIX",
+                      "ADA",
+                      "FLIP",
+                      "CORE",
+                      "CORN",
+                      "GAIA",
+                      "CRO",
+                      "DASH",
+                      "DOGE",
+                      "ETH",
+                      "GNO",
+                      "HARBOR",
+                      "HYPEREVM",
+                      "HYPE",
+                      "KUJI",
+                      "LTC",
+                      "LINEA",
+                      "MAYA",
+                      "MEGAETH",
+                      "MONAD",
+                      "NEAR",
+                      "NOBLE",
+                      "OP",
+                      "XPL",
+                      "DOT",
+                      "POL",
+                      "XRD",
+                      "XRP",
+                      "HOOD",
+                      "SOL",
+                      "SONIC",
+                      "SPARK",
+                      "XLM",
+                      "STRK",
+                      "SUI",
+                      "THOR",
+                      "TON",
+                      "TRON",
+                      "UNI",
+                      "XLAYER",
+                      "ZEC"
+                    ]
+                  },
+                  "symbol": {
+                    "type": "string"
+                  },
+                  "ticker": {
+                    "type": "string"
+                  },
+                  "decimal": {
+                    "type": "number"
+                  },
+                  "address": {
+                    "type": "string"
+                  },
+                  "isGasAsset": {
+                    "type": "boolean"
+                  },
+                  "isSynthetic": {
+                    "type": "boolean"
+                  },
+                  "tax": {
+                    "type": "object",
+                    "properties": {
+                      "buy": {
+                        "type": "number"
+                      },
+                      "sell": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "buy",
+                      "sell"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "chain",
+                  "symbol",
+                  "ticker",
+                  "isGasAsset",
+                  "isSynthetic"
+                ],
+                "additionalProperties": false
+              },
+              "finalAddress": {
+                "type": "string"
+              },
+              "finalisedAt": {
+                "type": "number"
+              },
+              "slippageTolerance": {
+                "type": "number",
+                "description": "Slippage tolerance from the original quote, in basis points"
+              },
+              "realizedSlippageBps": {
+                "type": "number",
+                "description": "Realized slippage of the settled output vs the quoted expected output, in basis points. Positive means the swap settled for less than quoted"
+              },
+              "transient": {
+                "type": "object",
+                "properties": {
+                  "estimatedTimeToComplete": {
+                    "type": "number"
+                  },
+                  "currentLegIndex": {
+                    "type": "number"
+                  },
+                  "estimates": {
+                    "type": "object",
+                    "properties": {
+                      "inboundObservation": {
+                        "type": "number"
+                      },
+                      "inboundConfirmation": {
+                        "type": "number"
+                      },
+                      "streamingSwap": {
+                        "type": "number"
+                      },
+                      "outboundDelay": {
+                        "type": "number"
+                      },
+                      "outboundObservation": {
+                        "type": "number"
+                      },
+                      "currentStage": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "inboundObservation",
+                      "inboundConfirmation",
+                      "streamingSwap",
+                      "outboundDelay",
+                      "outboundObservation",
+                      "currentStage"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "providerDetails": {
+                    "type": "object",
+                    "properties": {
+                      "streamingDetails": {
+                        "type": "object",
+                        "properties": {
+                          "quantity": {
+                            "type": "number"
+                          },
+                          "count": {
+                            "type": "number"
+                          },
+                          "interval": {
+                            "type": "number"
+                          },
+                          "subSwapsMap": {
+                            "type": "array",
+                            "items": {
+                              "type": "number"
+                            }
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      "depositChannelId": {
+                        "type": "string"
+                      },
+                      "depositAddress": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "estimatedTimeToComplete"
+                ],
+                "additionalProperties": false
+              },
+              "meta": {
+                "type": "object",
+                "properties": {
+                  "broadcastedAt": {
+                    "type": "number"
+                  },
+                  "wallet": {
+                    "type": "string"
+                  },
+                  "quoteId": {
+                    "type": "string"
+                  },
+                  "explorerUrl": {
+                    "type": "string"
+                  },
+                  "providerExplorerUrl": {
+                    "type": "string"
+                  },
+                  "affiliate": {
+                    "type": "string"
+                  },
+                  "fees": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "liquidity",
+                            "network",
+                            "inbound",
+                            "outbound",
+                            "affiliate",
+                            "service",
+                            "tax",
+                            "priority"
+                          ]
+                        },
+                        "amount": {
+                          "type": "string"
+                        },
+                        "amountBps": {
+                          "type": "number"
+                        },
+                        "asset": {
+                          "type": "string"
+                        },
+                        "chain": {
+                          "type": "string"
+                        },
+                        "protocol": {
+                          "type": "string",
+                          "enum": [
+                            "CHAINFLIP",
+                            "CHAINFLIP_STREAMING",
+                            "MAYACHAIN",
+                            "MAYACHAIN_STREAMING",
+                            "ONEINCH",
+                            "PANCAKESWAP",
+                            "SUSHISWAP_V2",
+                            "THORCHAIN",
+                            "THORCHAIN_STREAMING",
+                            "TRADERJOE_V2",
+                            "UNISWAP_V2",
+                            "UNISWAP_V3",
+                            "JUPITER",
+                            "OKX",
+                            "NEAR",
+                            "GARDEN",
+                            "HARBOR",
+                            "FLASHNET",
+                            "MAYAN",
+                            "PANGOLIN_V1",
+                            "CAVIAR_V1",
+                            "OPENOCEAN_V2",
+                            "OCISWAP_V1",
+                            "CAMELOT_V3"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "type",
+                        "amount",
+                        "asset",
+                        "chain",
+                        "protocol"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "amountInUsd": {
+                    "type": "string"
+                  },
+                  "amountOutUsd": {
+                    "type": "string"
+                  },
+                  "provider": {
+                    "type": "string",
+                    "enum": [
+                      "CHAINFLIP",
+                      "CHAINFLIP_STREAMING",
+                      "MAYACHAIN",
+                      "MAYACHAIN_STREAMING",
+                      "ONEINCH",
+                      "PANCAKESWAP",
+                      "SUSHISWAP_V2",
+                      "THORCHAIN",
+                      "THORCHAIN_STREAMING",
+                      "TRADERJOE_V2",
+                      "UNISWAP_V2",
+                      "UNISWAP_V3",
+                      "JUPITER",
+                      "OKX",
+                      "NEAR",
+                      "GARDEN",
+                      "HARBOR",
+                      "FLASHNET",
+                      "MAYAN",
+                      "PANGOLIN_V1",
+                      "CAVIAR_V1",
+                      "OPENOCEAN_V2",
+                      "OCISWAP_V1",
+                      "CAMELOT_V3"
+                    ]
+                  },
+                  "providerAction": {
+                    "type": "string",
+                    "enum": [
+                      "swap",
+                      "aggregation",
+                      "addLiquidity",
+                      "withdrawLiquidity",
+                      "addSavers",
+                      "withdrawSavers",
+                      "borrow",
+                      "repay",
+                      "name",
+                      "donate",
+                      "claim",
+                      "stake",
+                      "unstake",
+                      "createOrder",
+                      "cancelOrder"
+                    ]
+                  },
+                  "providerOrderId": {
+                    "type": "string"
+                  },
+                  "images": {
+                    "type": "object",
+                    "properties": {
+                      "from": {
+                        "type": "string"
+                      },
+                      "to": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "chain": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "affiliateFees": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "affiliate": {
+                          "type": "string"
+                        },
+                        "bps": {
+                          "type": "string"
+                        },
+                        "isReferrer": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "affiliate",
+                        "bps",
+                        "isReferrer"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "failReason": {
+                    "type": "string"
+                  },
+                  "failTargetAddress": {
+                    "type": "string"
+                  },
+                  "targetAddress": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "payload": {
+                "type": "object",
+                "properties": {
+                  "evmCalldata": {
+                    "type": "string"
+                  },
+                  "evmValue": {
+                    "type": "string"
+                  },
+                  "logs": {},
+                  "memo": {
+                    "type": "string"
+                  },
+                  "spender": {
+                    "type": "string"
+                  },
+                  "manifest": {},
+                  "intentHash": {
+                    "type": "string"
+                  },
+                  "thorname": {
+                    "type": "string"
+                  },
+                  "decodedPayload": {}
+                },
+                "additionalProperties": false
+              },
+              "legs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "chainId": {
+                      "type": "string",
+                      "enum": [
+                        "36900",
+                        "aleo",
+                        "aptos",
+                        "42161",
+                        "1313161554",
+                        "43114",
+                        "8453",
+                        "80094",
+                        "56",
+                        "bitcoin",
+                        "bitcoincash",
+                        "3637",
+                        "cardano",
+                        "chainflip",
+                        "1116",
+                        "21000000",
+                        "cosmoshub-4",
+                        "25",
+                        "dash",
+                        "dogecoin",
+                        "1",
+                        "100",
+                        "harbor-1",
+                        "harbor-stagenet-1",
+                        "999",
+                        "hype",
+                        "kaiyo-1",
+                        "litecoin",
+                        "59144",
+                        "mayachain-mainnet-v1",
+                        "mayachain-stagenet-v1",
+                        "4326",
+                        "143",
+                        "near",
+                        "noble-1",
+                        "10",
+                        "9745",
+                        "polkadot",
+                        "137",
+                        "radix-mainnet",
+                        "ripple",
+                        "4663",
+                        "solana",
+                        "146",
+                        "spark",
+                        "stellar",
+                        "0x534e5f4d41494e",
+                        "sui",
+                        "thorchain-1",
+                        "thorchain-stagenet-v2",
+                        "ton",
+                        "728126428",
+                        "130",
+                        "196",
+                        "zcash"
+                      ]
+                    },
+                    "hash": {
+                      "type": "string"
+                    },
+                    "block": {
+                      "type": "number"
+                    },
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "approve",
+                        "claim",
+                        "deposit",
+                        "lending",
+                        "lp_action",
+                        "native_contract_call",
+                        "native_send",
+                        "stake",
+                        "unstake",
+                        "streaming_swap",
+                        "swap",
+                        "thorname_action",
+                        "token_contract_call",
+                        "token_transfer",
+                        "unknown",
+                        "donate"
+                      ]
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "unknown",
+                        "not_started",
+                        "pending",
+                        "swapping",
+                        "completed",
+                        "refunded",
+                        "failed"
+                      ]
+                    },
+                    "trackingStatus": {
+                      "type": "string",
+                      "enum": [
+                        "not_started",
+                        "starting",
+                        "broadcasted",
+                        "mempool",
+                        "inbound",
+                        "outbound",
+                        "swapping",
+                        "completed",
+                        "refunded",
+                        "partially_refunded",
+                        "dropped",
+                        "reverted",
+                        "replaced",
+                        "retries_exceeded",
+                        "parsing_error"
+                      ]
+                    },
+                    "fromAsset": {
+                      "type": "string"
+                    },
+                    "fromAmount": {
+                      "type": "string"
+                    },
+                    "fromAddress": {
+                      "type": "string"
+                    },
+                    "toAsset": {
+                      "type": "string"
+                    },
+                    "toAmount": {
+                      "type": "string"
+                    },
+                    "toAddress": {
+                      "type": "string"
+                    },
+                    "finalAsset": {
+                      "type": "object",
+                      "properties": {
+                        "chain": {
+                          "type": "string",
+                          "enum": [
+                            "ADI",
+                            "ALEO",
+                            "APT",
+                            "ARB",
+                            "AURORA",
+                            "AVAX",
+                            "BASE",
+                            "BERA",
+                            "BSC",
+                            "BTC",
+                            "BCH",
+                            "BOTANIX",
+                            "ADA",
+                            "FLIP",
+                            "CORE",
+                            "CORN",
+                            "GAIA",
+                            "CRO",
+                            "DASH",
+                            "DOGE",
+                            "ETH",
+                            "GNO",
+                            "HARBOR",
+                            "HYPEREVM",
+                            "HYPE",
+                            "KUJI",
+                            "LTC",
+                            "LINEA",
+                            "MAYA",
+                            "MEGAETH",
+                            "MONAD",
+                            "NEAR",
+                            "NOBLE",
+                            "OP",
+                            "XPL",
+                            "DOT",
+                            "POL",
+                            "XRD",
+                            "XRP",
+                            "HOOD",
+                            "SOL",
+                            "SONIC",
+                            "SPARK",
+                            "XLM",
+                            "STRK",
+                            "SUI",
+                            "THOR",
+                            "TON",
+                            "TRON",
+                            "UNI",
+                            "XLAYER",
+                            "ZEC"
+                          ]
+                        },
+                        "symbol": {
+                          "type": "string"
+                        },
+                        "ticker": {
+                          "type": "string"
+                        },
+                        "decimal": {
+                          "type": "number"
+                        },
+                        "address": {
+                          "type": "string"
+                        },
+                        "isGasAsset": {
+                          "type": "boolean"
+                        },
+                        "isSynthetic": {
+                          "type": "boolean"
+                        },
+                        "tax": {
+                          "type": "object",
+                          "properties": {
+                            "buy": {
+                              "type": "number"
+                            },
+                            "sell": {
+                              "type": "number"
+                            }
+                          },
+                          "required": [
+                            "buy",
+                            "sell"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "required": [
+                        "chain",
+                        "symbol",
+                        "ticker",
+                        "isGasAsset",
+                        "isSynthetic"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "finalAddress": {
+                      "type": "string"
+                    },
+                    "finalisedAt": {
+                      "type": "number"
+                    },
+                    "slippageTolerance": {
+                      "type": "number",
+                      "description": "Slippage tolerance from the original quote, in basis points"
+                    },
+                    "realizedSlippageBps": {
+                      "type": "number",
+                      "description": "Realized slippage of the settled output vs the quoted expected output, in basis points. Positive means the swap settled for less than quoted"
+                    },
+                    "transient": {
+                      "type": "object",
+                      "properties": {
+                        "estimatedTimeToComplete": {
+                          "type": "number"
+                        },
+                        "currentLegIndex": {
+                          "type": "number"
+                        },
+                        "estimates": {
+                          "type": "object",
+                          "properties": {
+                            "inboundObservation": {
+                              "type": "number"
+                            },
+                            "inboundConfirmation": {
+                              "type": "number"
+                            },
+                            "streamingSwap": {
+                              "type": "number"
+                            },
+                            "outboundDelay": {
+                              "type": "number"
+                            },
+                            "outboundObservation": {
+                              "type": "number"
+                            },
+                            "currentStage": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "inboundObservation",
+                            "inboundConfirmation",
+                            "streamingSwap",
+                            "outboundDelay",
+                            "outboundObservation",
+                            "currentStage"
+                          ],
+                          "additionalProperties": false
+                        },
+                        "providerDetails": {
+                          "type": "object",
+                          "properties": {
+                            "streamingDetails": {
+                              "type": "object",
+                              "properties": {
+                                "quantity": {
+                                  "type": "number"
+                                },
+                                "count": {
+                                  "type": "number"
+                                },
+                                "interval": {
+                                  "type": "number"
+                                },
+                                "subSwapsMap": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "number"
+                                  }
+                                }
+                              },
+                              "additionalProperties": false
+                            },
+                            "depositChannelId": {
+                              "type": "string"
+                            },
+                            "depositAddress": {
+                              "type": "string"
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      },
+                      "required": [
+                        "estimatedTimeToComplete"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "meta": {
+                      "type": "object",
+                      "properties": {
+                        "broadcastedAt": {
+                          "type": "number"
+                        },
+                        "wallet": {
+                          "type": "string"
+                        },
+                        "quoteId": {
+                          "type": "string"
+                        },
+                        "explorerUrl": {
+                          "type": "string"
+                        },
+                        "providerExplorerUrl": {
+                          "type": "string"
+                        },
+                        "affiliate": {
+                          "type": "string"
+                        },
+                        "fees": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string",
+                                "enum": [
+                                  "liquidity",
+                                  "network",
+                                  "inbound",
+                                  "outbound",
+                                  "affiliate",
+                                  "service",
+                                  "tax",
+                                  "priority"
+                                ]
+                              },
+                              "amount": {
+                                "type": "string"
+                              },
+                              "amountBps": {
+                                "type": "number"
+                              },
+                              "asset": {
+                                "type": "string"
+                              },
+                              "chain": {
+                                "type": "string"
+                              },
+                              "protocol": {
+                                "type": "string",
+                                "enum": [
+                                  "CHAINFLIP",
+                                  "CHAINFLIP_STREAMING",
+                                  "MAYACHAIN",
+                                  "MAYACHAIN_STREAMING",
+                                  "ONEINCH",
+                                  "PANCAKESWAP",
+                                  "SUSHISWAP_V2",
+                                  "THORCHAIN",
+                                  "THORCHAIN_STREAMING",
+                                  "TRADERJOE_V2",
+                                  "UNISWAP_V2",
+                                  "UNISWAP_V3",
+                                  "JUPITER",
+                                  "OKX",
+                                  "NEAR",
+                                  "GARDEN",
+                                  "HARBOR",
+                                  "FLASHNET",
+                                  "MAYAN",
+                                  "PANGOLIN_V1",
+                                  "CAVIAR_V1",
+                                  "OPENOCEAN_V2",
+                                  "OCISWAP_V1",
+                                  "CAMELOT_V3"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "type",
+                              "amount",
+                              "asset",
+                              "chain",
+                              "protocol"
+                            ],
+                            "additionalProperties": false
+                          }
+                        },
+                        "amountInUsd": {
+                          "type": "string"
+                        },
+                        "amountOutUsd": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string",
+                          "enum": [
+                            "CHAINFLIP",
+                            "CHAINFLIP_STREAMING",
+                            "MAYACHAIN",
+                            "MAYACHAIN_STREAMING",
+                            "ONEINCH",
+                            "PANCAKESWAP",
+                            "SUSHISWAP_V2",
+                            "THORCHAIN",
+                            "THORCHAIN_STREAMING",
+                            "TRADERJOE_V2",
+                            "UNISWAP_V2",
+                            "UNISWAP_V3",
+                            "JUPITER",
+                            "OKX",
+                            "NEAR",
+                            "GARDEN",
+                            "HARBOR",
+                            "FLASHNET",
+                            "MAYAN",
+                            "PANGOLIN_V1",
+                            "CAVIAR_V1",
+                            "OPENOCEAN_V2",
+                            "OCISWAP_V1",
+                            "CAMELOT_V3"
+                          ]
+                        },
+                        "providerAction": {
+                          "type": "string",
+                          "enum": [
+                            "swap",
+                            "aggregation",
+                            "addLiquidity",
+                            "withdrawLiquidity",
+                            "addSavers",
+                            "withdrawSavers",
+                            "borrow",
+                            "repay",
+                            "name",
+                            "donate",
+                            "claim",
+                            "stake",
+                            "unstake",
+                            "createOrder",
+                            "cancelOrder"
+                          ]
+                        },
+                        "providerOrderId": {
+                          "type": "string"
+                        },
+                        "images": {
+                          "type": "object",
+                          "properties": {
+                            "from": {
+                              "type": "string"
+                            },
+                            "to": {
+                              "type": "string"
+                            },
+                            "provider": {
+                              "type": "string"
+                            },
+                            "chain": {
+                              "type": "string"
+                            }
+                          },
+                          "additionalProperties": false
+                        },
+                        "affiliateFees": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "affiliate": {
+                                "type": "string"
+                              },
+                              "bps": {
+                                "type": "string"
+                              },
+                              "isReferrer": {
+                                "type": "boolean"
+                              }
+                            },
+                            "required": [
+                              "affiliate",
+                              "bps",
+                              "isReferrer"
+                            ],
+                            "additionalProperties": false
+                          }
+                        },
+                        "failReason": {
+                          "type": "string"
+                        },
+                        "failTargetAddress": {
+                          "type": "string"
+                        },
+                        "targetAddress": {
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "payload": {
+                      "type": "object",
+                      "properties": {
+                        "evmCalldata": {
+                          "type": "string"
+                        },
+                        "evmValue": {
+                          "type": "string"
+                        },
+                        "logs": {},
+                        "memo": {
+                          "type": "string"
+                        },
+                        "spender": {
+                          "type": "string"
+                        },
+                        "manifest": {},
+                        "intentHash": {
+                          "type": "string"
+                        },
+                        "thorname": {
+                          "type": "string"
+                        },
+                        "decodedPayload": {}
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "chainId",
+                    "hash",
+                    "block",
+                    "type",
+                    "status",
+                    "fromAsset",
+                    "fromAmount",
+                    "fromAddress",
+                    "toAsset",
+                    "toAmount",
+                    "toAddress",
+                    "finalisedAt"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "chainId",
+              "hash",
+              "block",
+              "type",
+              "status",
+              "fromAsset",
+              "fromAmount",
+              "fromAddress",
+              "toAsset",
+              "toAmount",
+              "toAddress",
+              "finalisedAt",
+              "legs"
+            ],
+            "additionalProperties": false
+          },
+          "pendingReason": {
+            "type": "string",
+            "enum": [
+              "awaiting_deposit",
+              "indexing"
+            ]
+          }
+        },
+        "required": [
+          "ledgerSwap"
+        ],
+        "additionalProperties": false
+      },
       "InsertTrackedTransactionRequest": {
         "type": "object",
         "properties": {
