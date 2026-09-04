@@ -1144,6 +1144,9 @@
                         "failTargetAddress": {
                           "type": "string"
                         },
+                        "refundReason": {
+                          "type": "string"
+                        },
                         "targetAddress": {
                           "type": "string"
                         }
@@ -1711,6 +1714,9 @@
                                 "type": "string"
                               },
                               "failTargetAddress": {
+                                "type": "string"
+                              },
+                              "refundReason": {
                                 "type": "string"
                               },
                               "targetAddress": {
@@ -5177,6 +5183,9 @@
               "failTargetAddress": {
                 "type": "string"
               },
+              "refundReason": {
+                "type": "string"
+              },
               "targetAddress": {
                 "type": "string"
               }
@@ -5744,6 +5753,9 @@
                       "type": "string"
                     },
                     "failTargetAddress": {
+                      "type": "string"
+                    },
+                    "refundReason": {
                       "type": "string"
                     },
                     "targetAddress": {
@@ -6418,6 +6430,9 @@
                   "failTargetAddress": {
                     "type": "string"
                   },
+                  "refundReason": {
+                    "type": "string"
+                  },
                   "targetAddress": {
                     "type": "string"
                   }
@@ -6985,6 +7000,9 @@
                           "type": "string"
                         },
                         "failTargetAddress": {
+                          "type": "string"
+                        },
+                        "refundReason": {
                           "type": "string"
                         },
                         "targetAddress": {
@@ -7598,6 +7616,9 @@
                       "type": "string"
                     },
                     "failTargetAddress": {
+                      "type": "string"
+                    },
+                    "refundReason": {
                       "type": "string"
                     },
                     "targetAddress": {

@@ -334,6 +334,7 @@ export type TrackTransactionResponse = {
         }>;
         failReason?: string;
         failTargetAddress?: string;
+        refundReason?: string;
         targetAddress?: string;
     };
     payload?: {
@@ -438,6 +439,7 @@ export type TrackTransactionResponse = {
             }>;
             failReason?: string;
             failTargetAddress?: string;
+            refundReason?: string;
             targetAddress?: string;
         };
         payload?: {
@@ -574,6 +576,7 @@ export type TrackLedgerSwapResponse = {
             }>;
             failReason?: string;
             failTargetAddress?: string;
+            refundReason?: string;
             targetAddress?: string;
         };
         payload?: {
@@ -678,6 +681,7 @@ export type TrackLedgerSwapResponse = {
                 }>;
                 failReason?: string;
                 failTargetAddress?: string;
+                refundReason?: string;
                 targetAddress?: string;
             };
             payload?: {
@@ -788,6 +792,7 @@ export type InsertTrackedTransactionRequest = {
             }>;
             failReason?: string;
             failTargetAddress?: string;
+            refundReason?: string;
             targetAddress?: string;
         };
         payload?: {
@@ -2124,6 +2129,7 @@ export type TrackTransactionResponses = {
             }>;
             failReason?: string;
             failTargetAddress?: string;
+            refundReason?: string;
             targetAddress?: string;
         };
         payload?: {
@@ -2228,6 +2234,7 @@ export type TrackTransactionResponses = {
                 }>;
                 failReason?: string;
                 failTargetAddress?: string;
+                refundReason?: string;
                 targetAddress?: string;
             };
             payload?: {
