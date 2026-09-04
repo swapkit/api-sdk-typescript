@@ -8551,6 +8551,20 @@
           "buyAmount": {
             "type": "string",
             "description": "Amount of asset to buy. Required when quoteType is EXACT_OUTPUT, and rejected otherwise."
+          },
+          "txHints": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "simpleTransfer",
+                "transferWithMemo",
+                "contractCall"
+              ]
+            },
+            "description": "Only return routes with one of these txHints. Returns 404 noRoutesFound if none match.",
+            "x-docs-description": "Only return routes your wallet can sign.\n\n- `simpleTransfer` — transfer to a deposit address\n- `transferWithMemo` — transfer with a memo or OP_RETURN\n- `contractCall` — calldata to a contract\n\nAn alternative to filtering by `providers` — a provider can emit different shapes per chain. No match returns `404 noRoutesFound`."
           }
         },
         "required": [

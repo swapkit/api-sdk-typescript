@@ -1013,6 +1013,10 @@ export type GetQuoteRequest = {
      * Amount of asset to buy. Required when quoteType is EXACT_OUTPUT, and rejected otherwise.
      */
     buyAmount?: string;
+    /**
+     * Only return routes with one of these txHints. Returns 404 noRoutesFound if none match.
+     */
+    txHints?: Array<'simpleTransfer' | 'transferWithMemo' | 'contractCall'>;
 };
 
 export type GetQuoteResponse = {
