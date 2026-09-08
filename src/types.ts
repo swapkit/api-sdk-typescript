@@ -275,6 +275,9 @@ export type TrackTransactionResponse = {
         };
     };
     finalAddress?: string;
+    /**
+     * Unix timestamp in SECONDS at which this leg finalised, or -1 when not finalised or unknown.
+     */
     finalisedAt: number;
     /**
      * Slippage tolerance from the original quote, in basis points
@@ -380,6 +383,9 @@ export type TrackTransactionResponse = {
             };
         };
         finalAddress?: string;
+        /**
+         * Unix timestamp in SECONDS at which this leg finalised, or -1 when not finalised or unknown.
+         */
         finalisedAt: number;
         /**
          * Slippage tolerance from the original quote, in basis points
@@ -517,6 +523,9 @@ export type TrackLedgerSwapResponse = {
             };
         };
         finalAddress?: string;
+        /**
+         * Unix timestamp in SECONDS at which this leg finalised, or -1 when not finalised or unknown.
+         */
         finalisedAt: number;
         /**
          * Slippage tolerance from the original quote, in basis points
@@ -622,6 +631,9 @@ export type TrackLedgerSwapResponse = {
                 };
             };
             finalAddress?: string;
+            /**
+             * Unix timestamp in SECONDS at which this leg finalised, or -1 when not finalised or unknown.
+             */
             finalisedAt: number;
             /**
              * Slippage tolerance from the original quote, in basis points
@@ -733,6 +745,9 @@ export type InsertTrackedTransactionRequest = {
             };
         };
         finalAddress?: string;
+        /**
+         * Unix timestamp in SECONDS at which this leg finalised, or -1 when not finalised or unknown.
+         */
         finalisedAt: number;
         /**
          * Slippage tolerance from the original quote, in basis points
@@ -2078,6 +2093,9 @@ export type TrackTransactionResponses = {
             };
         };
         finalAddress?: string;
+        /**
+         * Unix timestamp in SECONDS at which this leg finalised, or -1 when not finalised or unknown.
+         */
         finalisedAt: number;
         /**
          * Slippage tolerance from the original quote, in basis points
@@ -2183,6 +2201,9 @@ export type TrackTransactionResponses = {
                 };
             };
             finalAddress?: string;
+            /**
+             * Unix timestamp in SECONDS at which this leg finalised, or -1 when not finalised or unknown.
+             */
             finalisedAt: number;
             /**
              * Slippage tolerance from the original quote, in basis points

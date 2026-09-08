@@ -858,7 +858,8 @@
                       "type": "string"
                     },
                     "finalisedAt": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Unix timestamp in SECONDS at which this leg finalised, or -1 when not finalised or unknown."
                     },
                     "slippageTolerance": {
                       "type": "number",
@@ -1430,7 +1431,8 @@
                             "type": "string"
                           },
                           "finalisedAt": {
-                            "type": "number"
+                            "type": "number",
+                            "description": "Unix timestamp in SECONDS at which this leg finalised, or -1 when not finalised or unknown."
                           },
                           "slippageTolerance": {
                             "type": "number",
@@ -4986,7 +4988,8 @@
             "type": "string"
           },
           "finalisedAt": {
-            "type": "number"
+            "type": "number",
+            "description": "Unix timestamp in SECONDS at which this leg finalised, or -1 when not finalised or unknown."
           },
           "slippageTolerance": {
             "type": "number",
@@ -5558,7 +5561,8 @@
                   "type": "string"
                 },
                 "finalisedAt": {
-                  "type": "number"
+                  "type": "number",
+                  "description": "Unix timestamp in SECONDS at which this leg finalised, or -1 when not finalised or unknown."
                 },
                 "slippageTolerance": {
                   "type": "number",
@@ -6233,7 +6237,8 @@
                 "type": "string"
               },
               "finalisedAt": {
-                "type": "number"
+                "type": "number",
+                "description": "Unix timestamp in SECONDS at which this leg finalised, or -1 when not finalised or unknown."
               },
               "slippageTolerance": {
                 "type": "number",
@@ -6805,7 +6810,8 @@
                       "type": "string"
                     },
                     "finalisedAt": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Unix timestamp in SECONDS at which this leg finalised, or -1 when not finalised or unknown."
                     },
                     "slippageTolerance": {
                       "type": "number",
@@ -7428,7 +7434,8 @@
                   "type": "string"
                 },
                 "finalisedAt": {
-                  "type": "number"
+                  "type": "number",
+                  "description": "Unix timestamp in SECONDS at which this leg finalised, or -1 when not finalised or unknown."
                 },
                 "slippageTolerance": {
                   "type": "number",
