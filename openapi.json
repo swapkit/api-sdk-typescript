@@ -2286,6 +2286,30 @@
               }
             }
           },
+          "409": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "string"
+                    },
+                    "data": {}
+                  },
+                  "required": [
+                    "message",
+                    "error"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
           "451": {
             "description": "Default Response",
             "content": {
@@ -9037,6 +9061,7 @@
                           "unableToEstimateGas",
                           "limitPriceBelowSpot",
                           "limitPriceWithinFeeGap",
+                          "outputBelowPublishedFloor",
                           "litecoinMwebNotSupported"
                         ]
                       },
@@ -9444,6 +9469,7 @@
                     "pubsubEnvelopeParsingError",
                     "invalidSpender",
                     "outputAmountDeviationTooHigh",
+                    "outputBelowPublishedFloor",
                     "swapSizeExceeded",
                     "v2EndpointNotAllowed",
                     "externalServiceFailed",
@@ -9541,7 +9567,16 @@
           },
           "overrideSlippage": {
             "type": "boolean",
-            "description": "Whether to override slippage validation on quote refresh"
+            "description": "DEPRECATED — use slippageSetting instead. Equivalent to slippageSetting: 'OVERRIDE'. Ignored when slippageSetting is set."
+          },
+          "slippageSetting": {
+            "type": "string",
+            "enum": [
+              "OVERRIDE",
+              "WARNING",
+              "STRICT"
+            ],
+            "description": "How to react when the refreshed quote falls below the route's published expectedBuyAmountMaxSlippage. 'WARNING' (default) proceeds and reports it in warnings[], 'STRICT' rejects the swap, 'OVERRIDE' skips output validation entirely. The separate 5%+$10 deviation guard still applies under WARNING and STRICT. Takes precedence over the deprecated overrideSlippage."
           },
           "disableBuildTx": {
             "type": "boolean",
@@ -10018,6 +10053,7 @@
                     "unableToEstimateGas",
                     "limitPriceBelowSpot",
                     "limitPriceWithinFeeGap",
+                    "outputBelowPublishedFloor",
                     "litecoinMwebNotSupported"
                   ]
                 },
