@@ -2664,8 +2664,11 @@
                     "coingeckoId": {
                       "type": "string"
                     },
-                    "isRWA": {
-                      "type": "boolean"
+                    "geoBlockRule": {
+                      "type": "string",
+                      "enum": [
+                        "tokenized-securities"
+                      ]
                     }
                   },
                   "required": [
@@ -3140,8 +3143,11 @@
                       "coingeckoId": {
                         "type": "string"
                       },
-                      "isRWA": {
-                        "type": "boolean"
+                      "geoBlockRule": {
+                        "type": "string",
+                        "enum": [
+                          "tokenized-securities"
+                        ]
                       }
                     },
                     "required": [
@@ -3413,8 +3419,11 @@
                 "coingeckoId": {
                   "type": "string"
                 },
-                "isRWA": {
-                  "type": "boolean"
+                "geoBlockRule": {
+                  "type": "string",
+                  "enum": [
+                    "tokenized-securities"
+                  ]
                 },
                 "chain": {
                   "type": "string",
@@ -4389,8 +4398,11 @@
                       "coingeckoId": {
                         "type": "string"
                       },
-                      "isRWA": {
-                        "type": "boolean"
+                      "geoBlockRule": {
+                        "type": "string",
+                        "enum": [
+                          "tokenized-securities"
+                        ]
                       }
                     },
                     "required": [
@@ -4617,8 +4629,11 @@
                       "coingeckoId": {
                         "type": "string"
                       },
-                      "isRWA": {
-                        "type": "boolean"
+                      "geoBlockRule": {
+                        "type": "string",
+                        "enum": [
+                          "tokenized-securities"
+                        ]
                       }
                     },
                     "required": [
