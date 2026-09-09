@@ -34,6 +34,7 @@ export type GetTokensResponse = {
         };
         shortCode?: string;
         coingeckoId?: string;
+        geoBlockRule?: 'tokenized-securities';
     }>;
     logoURI?: string;
     url?: string;
@@ -70,6 +71,7 @@ export type GetTokensResponse = {
         };
         shortCode?: string;
         coingeckoId?: string;
+        geoBlockRule?: 'tokenized-securities';
     }>;
     logoURI?: string;
     url?: string;
@@ -89,6 +91,7 @@ export type SearchTokensResponse = {
         decimals: number;
         logoURI?: string;
         coingeckoId?: string;
+        geoBlockRule?: 'tokenized-securities';
         chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
         providers: Array<'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3'>;
         marketCapUsd?: number;
@@ -167,6 +170,7 @@ export type GetWhitelistPoolsResponse = Array<{
         };
         shortCode?: string;
         coingeckoId?: string;
+        geoBlockRule?: 'tokenized-securities';
     } & {
         cg?: unknown;
     }>;
@@ -197,6 +201,7 @@ export type GetWhitelistTokensResponse = Array<{
         };
         shortCode?: string;
         coingeckoId?: string;
+        geoBlockRule?: 'tokenized-securities';
     } & {
         cg?: unknown;
     }>;
@@ -270,6 +275,9 @@ export type TrackTransactionResponse = {
         };
     };
     finalAddress?: string;
+    /**
+     * Unix timestamp in SECONDS at which this leg finalised, or -1 when not finalised or unknown.
+     */
     finalisedAt: number;
     /**
      * Slippage tolerance from the original quote, in basis points
@@ -334,6 +342,7 @@ export type TrackTransactionResponse = {
         }>;
         failReason?: string;
         failTargetAddress?: string;
+        refundReason?: string;
         targetAddress?: string;
     };
     payload?: {
@@ -374,6 +383,9 @@ export type TrackTransactionResponse = {
             };
         };
         finalAddress?: string;
+        /**
+         * Unix timestamp in SECONDS at which this leg finalised, or -1 when not finalised or unknown.
+         */
         finalisedAt: number;
         /**
          * Slippage tolerance from the original quote, in basis points
@@ -438,6 +450,7 @@ export type TrackTransactionResponse = {
             }>;
             failReason?: string;
             failTargetAddress?: string;
+            refundReason?: string;
             targetAddress?: string;
         };
         payload?: {
@@ -452,6 +465,256 @@ export type TrackTransactionResponse = {
             decodedPayload?: unknown;
         };
     }>;
+};
+
+export type TrackLedgerSwapResponse = {
+    ledgerSwap: {
+        swapId: string;
+        /**
+         * Last persisted Ledger status. e.g. `READY`, `PENDING`, `FINISHED`
+         */
+        status: string;
+        /**
+         * Provider that quoted the swap. e.g. `NEAR`
+         */
+        provider?: string;
+        /**
+         * ISO-8601 timestamp of when the swap payload was built
+         */
+        createdAt: string;
+        fromAsset: string;
+        toAsset: string;
+        fromAmount: string;
+        expectedAmountTo?: string;
+        /**
+         * Deposit address the end user was instructed to fund
+         */
+        payinAddress: string;
+        payinTransactionId?: string;
+        payoutTransactionId?: string;
+        providerFees: string;
+        referralFees: string;
+        payoutNetworkFees: string;
+    };
+    transaction?: {
+        chainId: '36900' | 'aleo' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | '4663' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
+        hash: string;
+        block: number;
+        type: 'approve' | 'claim' | 'deposit' | 'lending' | 'lp_action' | 'native_contract_call' | 'native_send' | 'stake' | 'unstake' | 'streaming_swap' | 'swap' | 'thorname_action' | 'token_contract_call' | 'token_transfer' | 'unknown' | 'donate';
+        status: 'unknown' | 'not_started' | 'pending' | 'swapping' | 'completed' | 'refunded' | 'failed';
+        trackingStatus?: 'not_started' | 'starting' | 'broadcasted' | 'mempool' | 'inbound' | 'outbound' | 'swapping' | 'completed' | 'refunded' | 'partially_refunded' | 'dropped' | 'reverted' | 'replaced' | 'retries_exceeded' | 'parsing_error';
+        fromAsset: string;
+        fromAmount: string;
+        fromAddress: string;
+        toAsset: string;
+        toAmount: string;
+        toAddress: string;
+        finalAsset?: {
+            chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+            symbol: string;
+            ticker: string;
+            decimal?: number;
+            address?: string;
+            isGasAsset: boolean;
+            isSynthetic: boolean;
+            tax?: {
+                buy: number;
+                sell: number;
+            };
+        };
+        finalAddress?: string;
+        /**
+         * Unix timestamp in SECONDS at which this leg finalised, or -1 when not finalised or unknown.
+         */
+        finalisedAt: number;
+        /**
+         * Slippage tolerance from the original quote, in basis points
+         */
+        slippageTolerance?: number;
+        /**
+         * Realized slippage of the settled output vs the quoted expected output, in basis points. Positive means the swap settled for less than quoted
+         */
+        realizedSlippageBps?: number;
+        transient?: {
+            estimatedTimeToComplete: number;
+            currentLegIndex?: number;
+            estimates?: {
+                inboundObservation: number;
+                inboundConfirmation: number;
+                streamingSwap: number;
+                outboundDelay: number;
+                outboundObservation: number;
+                currentStage: string;
+            };
+            providerDetails?: {
+                streamingDetails?: {
+                    quantity?: number;
+                    count?: number;
+                    interval?: number;
+                    subSwapsMap?: Array<number>;
+                };
+                depositChannelId?: string;
+                depositAddress?: string;
+            };
+        };
+        meta?: {
+            broadcastedAt?: number;
+            wallet?: string;
+            quoteId?: string;
+            explorerUrl?: string;
+            providerExplorerUrl?: string;
+            affiliate?: string;
+            fees?: Array<{
+                type: 'liquidity' | 'network' | 'inbound' | 'outbound' | 'affiliate' | 'service' | 'tax' | 'priority';
+                amount: string;
+                amountBps?: number;
+                asset: string;
+                chain: string;
+                protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+            }>;
+            amountInUsd?: string;
+            amountOutUsd?: string;
+            provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+            providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder';
+            providerOrderId?: string;
+            images?: {
+                from?: string;
+                to?: string;
+                provider?: string;
+                chain?: string;
+            };
+            affiliateFees?: Array<{
+                affiliate: string;
+                bps: string;
+                isReferrer: boolean;
+            }>;
+            failReason?: string;
+            failTargetAddress?: string;
+            refundReason?: string;
+            targetAddress?: string;
+        };
+        payload?: {
+            evmCalldata?: string;
+            evmValue?: string;
+            logs?: unknown;
+            memo?: string;
+            spender?: string;
+            manifest?: unknown;
+            intentHash?: string;
+            thorname?: string;
+            decodedPayload?: unknown;
+        };
+        legs: Array<{
+            chainId: '36900' | 'aleo' | 'aptos' | '42161' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | '4663' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
+            hash: string;
+            block: number;
+            type: 'approve' | 'claim' | 'deposit' | 'lending' | 'lp_action' | 'native_contract_call' | 'native_send' | 'stake' | 'unstake' | 'streaming_swap' | 'swap' | 'thorname_action' | 'token_contract_call' | 'token_transfer' | 'unknown' | 'donate';
+            status: 'unknown' | 'not_started' | 'pending' | 'swapping' | 'completed' | 'refunded' | 'failed';
+            trackingStatus?: 'not_started' | 'starting' | 'broadcasted' | 'mempool' | 'inbound' | 'outbound' | 'swapping' | 'completed' | 'refunded' | 'partially_refunded' | 'dropped' | 'reverted' | 'replaced' | 'retries_exceeded' | 'parsing_error';
+            fromAsset: string;
+            fromAmount: string;
+            fromAddress: string;
+            toAsset: string;
+            toAmount: string;
+            toAddress: string;
+            finalAsset?: {
+                chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
+                symbol: string;
+                ticker: string;
+                decimal?: number;
+                address?: string;
+                isGasAsset: boolean;
+                isSynthetic: boolean;
+                tax?: {
+                    buy: number;
+                    sell: number;
+                };
+            };
+            finalAddress?: string;
+            /**
+             * Unix timestamp in SECONDS at which this leg finalised, or -1 when not finalised or unknown.
+             */
+            finalisedAt: number;
+            /**
+             * Slippage tolerance from the original quote, in basis points
+             */
+            slippageTolerance?: number;
+            /**
+             * Realized slippage of the settled output vs the quoted expected output, in basis points. Positive means the swap settled for less than quoted
+             */
+            realizedSlippageBps?: number;
+            transient?: {
+                estimatedTimeToComplete: number;
+                currentLegIndex?: number;
+                estimates?: {
+                    inboundObservation: number;
+                    inboundConfirmation: number;
+                    streamingSwap: number;
+                    outboundDelay: number;
+                    outboundObservation: number;
+                    currentStage: string;
+                };
+                providerDetails?: {
+                    streamingDetails?: {
+                        quantity?: number;
+                        count?: number;
+                        interval?: number;
+                        subSwapsMap?: Array<number>;
+                    };
+                    depositChannelId?: string;
+                    depositAddress?: string;
+                };
+            };
+            meta?: {
+                broadcastedAt?: number;
+                wallet?: string;
+                quoteId?: string;
+                explorerUrl?: string;
+                providerExplorerUrl?: string;
+                affiliate?: string;
+                fees?: Array<{
+                    type: 'liquidity' | 'network' | 'inbound' | 'outbound' | 'affiliate' | 'service' | 'tax' | 'priority';
+                    amount: string;
+                    amountBps?: number;
+                    asset: string;
+                    chain: string;
+                    protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+                }>;
+                amountInUsd?: string;
+                amountOutUsd?: string;
+                provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+                providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder';
+                providerOrderId?: string;
+                images?: {
+                    from?: string;
+                    to?: string;
+                    provider?: string;
+                    chain?: string;
+                };
+                affiliateFees?: Array<{
+                    affiliate: string;
+                    bps: string;
+                    isReferrer: boolean;
+                }>;
+                failReason?: string;
+                failTargetAddress?: string;
+                refundReason?: string;
+                targetAddress?: string;
+            };
+            payload?: {
+                evmCalldata?: string;
+                evmValue?: string;
+                logs?: unknown;
+                memo?: string;
+                spender?: string;
+                manifest?: unknown;
+                intentHash?: string;
+                thorname?: string;
+                decodedPayload?: unknown;
+            };
+        }>;
+    };
+    pendingReason?: 'awaiting_deposit' | 'indexing';
 };
 
 export type InsertTrackedTransactionRequest = {
@@ -482,6 +745,9 @@ export type InsertTrackedTransactionRequest = {
             };
         };
         finalAddress?: string;
+        /**
+         * Unix timestamp in SECONDS at which this leg finalised, or -1 when not finalised or unknown.
+         */
         finalisedAt: number;
         /**
          * Slippage tolerance from the original quote, in basis points
@@ -546,6 +812,7 @@ export type InsertTrackedTransactionRequest = {
             }>;
             failReason?: string;
             failTargetAddress?: string;
+            refundReason?: string;
             targetAddress?: string;
         };
         payload?: {
@@ -761,6 +1028,10 @@ export type GetQuoteRequest = {
      * Amount of asset to buy. Required when quoteType is EXACT_OUTPUT, and rejected otherwise.
      */
     buyAmount?: string;
+    /**
+     * Only return routes with one of these txHints. Returns 404 noRoutesFound if none match.
+     */
+    txHints?: Array<'simpleTransfer' | 'transferWithMemo' | 'contractCall'>;
 };
 
 export type GetQuoteResponse = {
@@ -896,7 +1167,7 @@ export type GetQuoteResponse = {
             nextLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
         }>;
         warnings: Array<{
-            code: 'highSlippage' | 'highPriceImpact' | 'noSourceAddressToBuildTransaction' | 'affiliateFeeTooSmallSoRemoved' | 'unableToApplyReferralProgram' | 'insufficientBalance' | 'insufficientGas' | 'unableToBuildTransaction' | 'unableToEstimateGas' | 'limitPriceBelowSpot' | 'limitPriceWithinFeeGap';
+            code: 'highSlippage' | 'highPriceImpact' | 'noSourceAddressToBuildTransaction' | 'affiliateFeeTooSmallSoRemoved' | 'unableToApplyReferralProgram' | 'insufficientBalance' | 'insufficientGas' | 'unableToBuildTransaction' | 'unableToEstimateGas' | 'limitPriceBelowSpot' | 'limitPriceWithinFeeGap' | 'outputBelowPublishedFloor' | 'litecoinMwebNotSupported';
             display: string;
             tooltip?: string;
         }>;
@@ -941,7 +1212,7 @@ export type GetQuoteResponse = {
     error?: string;
     providerErrors?: Array<{
         provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
-        errorCode?: 'noRpcFallbacks' | 'requestTimeout' | 'invalidApiVersion' | 'isSanctionedAddress' | 'unknownError' | 'internalServerError' | 'test_error' | 'blockHeaderNotFound' | 'blockHashNotFoundAtHeight' | 'blackListAsset' | 'txHashMissing' | 'invalidAsset' | 'currentBlockHeaderNotFound' | 'failedToRetrieveBalance' | 'failedToRetrieveBlock' | 'failedToRetrieveFees' | 'notImplementedBCH' | 'notImplementedDoge' | 'noPoolsFound' | 'noVaultsFound' | 'noTxFound' | 'multipleCosmosMessages' | 'heightOrHashNotProvided' | 'priceTooVolatile' | 'unknownDenom' | 'invalidBlockHeight' | 'timestampExtrinsicNoArgumentsForBlock' | 'timestampExtrinsicNoTimestampForBlock' | 'noTimestampExtrinsicForHash' | 'timestampExtrinsicNoArgumentsForHash' | 'txMemoUndefined' | 'txMemoIncorrect' | 'txTypeNotFound' | 'txNoMessage' | 'txNotFound' | 'txReceiptNotFound' | 'txParsingError' | 'txLogsParsingError' | 'txFailed' | 'jobDataParsingError' | 'dataformRunFailed' | 'dataformAssertionFailed' | 'blockNotFound' | 'balanceNotFound' | 'blockbookCallFailed' | 'configError' | 'unsafeTestDatabase' | 'synthSwapDisallowed' | 'noQuoteResponse' | 'noPoolAssetsFound' | 'noThorchainPools' | 'noMayachainPools' | 'noThorchainNetworkInfo' | 'invalidAffiliateFee' | 'invalidBuyAssetAddress' | 'invalidSellAssetAddress' | 'invalidSourceAddress' | 'invalidDestinationAddress' | 'invalidParam' | 'xrpAddressRequiresTag' | 'invalidChainId' | 'invalidChain' | 'unsupportedChainId' | 'unsupportedEVMChainId' | 'unsupportedMethod' | 'unsupportedProvider' | 'unsupportedProgram' | 'unsupportedEvent' | 'invalidParamsForMethod' | 'noWhitelistTokens' | 'failedFetchGasPrice' | 'chainflipBrokerApiUnavailable' | 'failedToBuildVaultSwapTransaction' | 'failedToOpenBtcPrivateChannel' | 'failedToCloseBtcPrivateChannel' | 'affiliateNotRegistered' | 'failedToCreateDepositChannel' | 'failedToRegisterAccount' | 'failedToRegisterAffiliate' | 'failedToWithdrawAffiliate' | 'noProviderDetailsFound' | 'noTokenListsFound' | 'tokenNotFound' | 'tokenPriceNotFound' | 'tokenPriceUnavailable' | 'tokenPriceFailedToUpdate' | 'legsArrayIsEmpty' | 'failedToFetchQuoteForLeg' | 'noBlockHeaderFound' | 'failedToSimulateSwap' | 'swapHalted' | 'memoTooLongForSourceChain' | 'addressScreeningFailed' | 'missingScreeningConfig' | 'insufficientLiquidity' | 'noSaversFound' | 'noInbounDataFound' | 'noInboundAddressesFound' | 'noTargetAddress' | 'noInboundAddressFoundForChain' | 'noLastBlocksFound' | 'noVersionFound' | 'noConstantsFound' | 'noMimirsFound' | 'noRoutesFound' | 'quoteNotFound' | 'providerResponseFormError' | 'ledgerWrongPayload' | 'failedToFetchTx' | 'failedBuildTransactionDetails' | 'failedToCreateRouteMetadata' | 'txBuildingTimeout' | 'noLegsForRoute' | 'insufficientBalance' | 'insufficientAllowance' | 'insufficientGas' | 'unableToBuildTransaction' | 'noRouterAddressFound' | 'noAggregatorAddressFound' | 'noContractInstanceFound' | 'noContractAddressFound' | 'invalidAffiliate' | 'invalidAffiliateName' | 'thornameNotFound' | 'thornameAffiliate' | 'No provider found' | 'providerAssetNotFound' | 'No Record found' | 'Slippage too low' | 'tradingHalted' | 'mayanameNotFound' | 'noWrappedGasAsset' | 'aggregatorAddressNotFound' | 'routerAddressNotFound' | 'dummyAddressNotFound' | 'trackerError' | 'thorchainPoolUnavailable' | 'noTradingPairs' | 'missingState' | 'ledgerSwapNotFound' | 'ledgerSwapNotReadyForTracking' | 'ledgerInvalidParsingMode' | 'ledgerWebhookNotifyFailed' | 'errorEstimatingGas' | 'apiKeyInvalid' | 'apiKeyFailedToUpdate' | 'apiKeySignatureExists' | 'apiKeySignatureKeyTypeMismatch' | 'apiKeyExpired' | 'unauthorized' | 'failedToCreateMemo' | 'invalidAddressForChain' | 'invalidAddress' | 'riskyAddress' | 'noRoutesToProcess' | 'sellAssetAmountTooSmall' | 'sellAssetAmountTooLarge' | 'missingPrivateKey' | 'noMemoPriceProtection' | 'nodeMethodNotFound' | 'nodeRpcNotFound' | 'thirdPartyProviderNotFound' | 'quoteUnavailable' | 'targetInstructionNotFound' | 'referrerExist' | 'referrerNotFound' | 'invalidReferrer' | 'quoteLogicError' | 'missingDecimal' | 'noGasInfoInDB' | 'quoteError' | 'valueOverflow' | 'missingChainflipMeta' | 'contractAndMethodRequired' | 'tokenImageError' | 'fileNotFound' | 'fileFormatError' | 'ipError' | 'failedToSaveLedgerSwap' | 'missingValue' | 'missingDBQueryParam' | 'unableEstimateTxTime' | 'affiliateStatsMissingDate' | 'affiliateStatsMissingNextFilter' | 'affiliateStatsNoActions' | 'unsupportedNotificationEvent' | 'unsupportedNotificationChannel' | 'invalidWebhookUrl' | 'webhookDeliveryFailed' | 'serverStateNotFound' | 'apiRequestFailed' | 'apiRateLimit' | 'invalidActionStep' | 'providerIsRequired' | 'rateLimitExceeded' | 'depositChannelNotFound' | 'auditLogInsertFailed' | 'affiliateNameHistoryInsertFailed' | 'invalidRouteId' | 'invalidQuoteId' | 'invalidRoute' | 'quoteExpired' | 'swapQuoteNotFound' | 'swapRouteNotFound' | 'swapTransactionFailed' | 'swapChainflipMetaMissing' | 'swapChainflipChannelFailed' | 'swapTransferTxFailed' | 'chainflipVaultSwapNotSupported' | 'chainflipVaultSwapEncodingFailed' | 'chainflipVaultSwapInvalidChain' | 'chainflipVaultSwapBitcoinCCMNotSupported' | 'chainflipVaultSwapTransactionBuildFailed' | 'zcashInvalidAddress' | 'zcashInsufficientUTXOs' | 'zcashUTXOSelectionFailed' | 'zcashTransactionBuildFailed' | 'zcashShieldedRefundMissing' | 'zcashMemoTooLong' | 'zcashUnifiedAddressUnsupported' | 'zcashShieldedMemoUnavailable' | 'invalidTokenProgram' | 'solanaOutputBelowRentExemptMinimum' | 'solanaTokenProgramUnavailable' | 'invalidRequest' | 'pubsubEventNotRegistered' | 'pubsubTopicNotFound' | 'pubsubEnvelopeParsingError' | 'invalidSpender' | 'outputAmountDeviationTooHigh' | 'swapSizeExceeded' | 'v2EndpointNotAllowed' | 'externalServiceFailed' | 'tenantEncryptKeyNotFound' | 'tenantKeyPairEncryptionError' | 'slip24AmountOverflow' | 'slip24InvalidSignature' | 'slip24DigestComputationFailed' | 'invalidTxHashFormat' | 'affiliateNotFound' | 'nearAffiliateProviderAssetNotFound' | 'nearAffiliateDepositAddressFailed' | 'flashnetAffiliateRegistrationFailed' | 'flashnetAffiliateClaimFailed' | 'flashnetAffiliateNotFound' | 'limitOrderUnsupportedChain' | 'limitOrderQuoteNotFound' | 'limitOrderRouteNotFound' | 'limitOrderNotFound' | 'limitOrderInvalidState' | 'limitOrderBuildFailed' | 'limitOrderSubmissionFailed' | 'limitOrderCancelFailed' | 'limitOrderExpirationOutOfBounds' | 'limitOrderUnsupportedFillFlags' | 'limitOrderAmountAmbiguous' | 'limitOrderChainMismatch' | 'limitOrderUnsupportedPair' | 'limitOrderActionUnavailable' | 'limitOrderProviderError';
+        errorCode?: 'noRpcFallbacks' | 'requestTimeout' | 'invalidApiVersion' | 'isSanctionedAddress' | 'unknownError' | 'collectorEgressForbidden' | 'collectorUpstreamHttpError' | 'collectorUpstreamTransient' | 'collectorRetriesExhausted' | 'collectorUnreachable' | 'internalServerError' | 'test_error' | 'blockHeaderNotFound' | 'blockHashNotFoundAtHeight' | 'blackListAsset' | 'txHashMissing' | 'invalidAsset' | 'currentBlockHeaderNotFound' | 'failedToRetrieveBalance' | 'failedToRetrieveBlock' | 'failedToRetrieveFees' | 'notImplementedBCH' | 'notImplementedDoge' | 'noPoolsFound' | 'noVaultsFound' | 'noTxFound' | 'multipleCosmosMessages' | 'heightOrHashNotProvided' | 'priceTooVolatile' | 'unknownDenom' | 'invalidBlockHeight' | 'timestampExtrinsicNoArgumentsForBlock' | 'timestampExtrinsicNoTimestampForBlock' | 'noTimestampExtrinsicForHash' | 'timestampExtrinsicNoArgumentsForHash' | 'txMemoUndefined' | 'txMemoIncorrect' | 'txTypeNotFound' | 'txNoMessage' | 'txNotFound' | 'txReceiptNotFound' | 'txParsingError' | 'txLogsParsingError' | 'txFailed' | 'jobDataParsingError' | 'dataformRunFailed' | 'dataformAssertionFailed' | 'blockNotFound' | 'balanceNotFound' | 'blockbookCallFailed' | 'configError' | 'unsafeTestDatabase' | 'synthSwapDisallowed' | 'noQuoteResponse' | 'noPoolAssetsFound' | 'noThorchainPools' | 'noMayachainPools' | 'noThorchainNetworkInfo' | 'invalidAffiliateFee' | 'invalidBuyAssetAddress' | 'invalidSellAssetAddress' | 'invalidSourceAddress' | 'invalidDestinationAddress' | 'invalidParam' | 'xrpAddressRequiresTag' | 'invalidChainId' | 'invalidChain' | 'unsupportedChainId' | 'unsupportedEVMChainId' | 'unsupportedMethod' | 'unsupportedProvider' | 'unsupportedProgram' | 'unsupportedEvent' | 'invalidParamsForMethod' | 'noWhitelistTokens' | 'failedFetchGasPrice' | 'chainflipBrokerApiUnavailable' | 'failedToBuildVaultSwapTransaction' | 'failedToOpenBtcPrivateChannel' | 'failedToCloseBtcPrivateChannel' | 'affiliateNotRegistered' | 'failedToCreateDepositChannel' | 'failedToRegisterAccount' | 'failedToRegisterAffiliate' | 'failedToWithdrawAffiliate' | 'noProviderDetailsFound' | 'noTokenListsFound' | 'tokenNotFound' | 'tokenPriceNotFound' | 'tokenPriceUnavailable' | 'tokenPriceFailedToUpdate' | 'legsArrayIsEmpty' | 'failedToFetchQuoteForLeg' | 'noBlockHeaderFound' | 'failedToSimulateSwap' | 'swapHalted' | 'memoTooLongForSourceChain' | 'addressScreeningFailed' | 'missingScreeningConfig' | 'insufficientLiquidity' | 'noSaversFound' | 'noInbounDataFound' | 'noInboundAddressesFound' | 'noTargetAddress' | 'noInboundAddressFoundForChain' | 'noLastBlocksFound' | 'noVersionFound' | 'noConstantsFound' | 'noMimirsFound' | 'noRoutesFound' | 'geoRestrictedToken' | 'quoteNotFound' | 'providerResponseFormError' | 'ledgerWrongPayload' | 'failedToFetchTx' | 'failedBuildTransactionDetails' | 'failedToCreateRouteMetadata' | 'txBuildingTimeout' | 'noLegsForRoute' | 'insufficientBalance' | 'insufficientAllowance' | 'insufficientGas' | 'unableToBuildTransaction' | 'noRouterAddressFound' | 'noAggregatorAddressFound' | 'noContractInstanceFound' | 'noContractAddressFound' | 'invalidAffiliate' | 'invalidAffiliateName' | 'thornameNotFound' | 'thornameAffiliate' | 'No provider found' | 'providerAssetNotFound' | 'No Record found' | 'Slippage too low' | 'tradingHalted' | 'mayanameNotFound' | 'noWrappedGasAsset' | 'aggregatorAddressNotFound' | 'routerAddressNotFound' | 'dummyAddressNotFound' | 'trackerError' | 'thorchainPoolUnavailable' | 'noTradingPairs' | 'missingState' | 'ledgerSwapNotFound' | 'ledgerSwapNotReadyForTracking' | 'ledgerInvalidParsingMode' | 'ledgerWebhookNotifyFailed' | 'errorEstimatingGas' | 'apiKeyInvalid' | 'apiKeyFailedToUpdate' | 'apiKeySignatureExists' | 'apiKeySignatureKeyTypeMismatch' | 'apiKeyExpired' | 'unauthorized' | 'failedToCreateMemo' | 'invalidAddressForChain' | 'invalidAddress' | 'riskyAddress' | 'noRoutesToProcess' | 'sellAssetAmountTooSmall' | 'sellAssetAmountTooLarge' | 'missingPrivateKey' | 'noMemoPriceProtection' | 'nodeMethodNotFound' | 'nodeRpcNotFound' | 'thirdPartyProviderNotFound' | 'quoteUnavailable' | 'targetInstructionNotFound' | 'referrerExist' | 'referrerNotFound' | 'invalidReferrer' | 'quoteLogicError' | 'missingDecimal' | 'noGasInfoInDB' | 'quoteError' | 'valueOverflow' | 'missingChainflipMeta' | 'contractAndMethodRequired' | 'tokenImageError' | 'fileNotFound' | 'fileFormatError' | 'ipError' | 'failedToSaveLedgerSwap' | 'missingValue' | 'missingDBQueryParam' | 'unableEstimateTxTime' | 'affiliateStatsMissingDate' | 'affiliateStatsMissingNextFilter' | 'affiliateStatsNoActions' | 'unsupportedNotificationEvent' | 'unsupportedNotificationChannel' | 'invalidWebhookUrl' | 'webhookDeliveryFailed' | 'serverStateNotFound' | 'apiRequestFailed' | 'apiRateLimit' | 'invalidActionStep' | 'providerIsRequired' | 'rateLimitExceeded' | 'depositChannelNotFound' | 'auditLogInsertFailed' | 'affiliateNameHistoryInsertFailed' | 'invalidRouteId' | 'invalidQuoteId' | 'invalidRoute' | 'destinationTrustlineRequired' | 'stellarHorizonUnavailable' | 'quoteExpired' | 'swapQuoteNotFound' | 'swapRouteNotFound' | 'swapTransactionFailed' | 'swapChainflipMetaMissing' | 'swapChainflipChannelFailed' | 'swapTransferTxFailed' | 'chainflipVaultSwapNotSupported' | 'chainflipVaultSwapEncodingFailed' | 'chainflipVaultSwapInvalidChain' | 'chainflipVaultSwapBitcoinCCMNotSupported' | 'chainflipVaultSwapTransactionBuildFailed' | 'zcashInvalidAddress' | 'zcashInsufficientUTXOs' | 'zcashUTXOSelectionFailed' | 'zcashTransactionBuildFailed' | 'zcashShieldedRefundMissing' | 'zcashMemoTooLong' | 'litecoinMwebAddressUnsupported' | 'zcashUnifiedAddressUnsupported' | 'zcashShieldedMemoUnavailable' | 'invalidTokenProgram' | 'solanaOutputBelowRentExemptMinimum' | 'solanaTokenProgramUnavailable' | 'invalidRequest' | 'pubsubEventNotRegistered' | 'pubsubTopicNotFound' | 'pubsubEnvelopeParsingError' | 'invalidSpender' | 'outputAmountDeviationTooHigh' | 'outputBelowPublishedFloor' | 'swapSizeExceeded' | 'v2EndpointNotAllowed' | 'externalServiceFailed' | 'tenantEncryptKeyNotFound' | 'tenantKeyPairEncryptionError' | 'slip24AmountOverflow' | 'slip24InvalidSignature' | 'slip24DigestComputationFailed' | 'invalidTxHashFormat' | 'affiliateNotFound' | 'nearAffiliateProviderAssetNotFound' | 'nearAffiliateDepositAddressFailed' | 'flashnetAffiliateRegistrationFailed' | 'flashnetAffiliateClaimFailed' | 'flashnetAffiliateNotFound' | 'limitOrderUnsupportedChain' | 'limitOrderQuoteNotFound' | 'limitOrderRouteNotFound' | 'limitOrderNotFound' | 'limitOrderInvalidState' | 'limitOrderBuildFailed' | 'limitOrderSubmissionFailed' | 'limitOrderCancelFailed' | 'limitOrderExpirationOutOfBounds' | 'limitOrderUnsupportedFillFlags' | 'limitOrderAmountAmbiguous' | 'limitOrderChainMismatch' | 'limitOrderUnsupportedPair' | 'limitOrderActionUnavailable' | 'limitOrderProviderError' | 'limitOrderMakerBlacklisted' | 'limitOrderInsufficientAllowance' | 'limitOrderMaxOrdersExceeded' | 'limitOrderRejected';
         message?: string;
         /**
          * Provider minimum sell amount (human units), when the provider reported one
@@ -988,9 +1259,13 @@ export type ExecuteSwapRequest = {
      */
     disableSecurityChecks?: boolean;
     /**
-     * Whether to override slippage validation on quote refresh
+     * DEPRECATED — use slippageSetting instead. Equivalent to slippageSetting: 'OVERRIDE'. Ignored when slippageSetting is set.
      */
     overrideSlippage?: boolean;
+    /**
+     * How to react when the refreshed quote falls below the route's published expectedBuyAmountMaxSlippage. 'WARNING' (default) proceeds and reports it in warnings[], 'STRICT' rejects the swap, 'OVERRIDE' skips output validation entirely. The separate 5%+$10 deviation guard still applies under WARNING and STRICT. Takes precedence over the deprecated overrideSlippage.
+     */
+    slippageSetting?: 'OVERRIDE' | 'WARNING' | 'STRICT';
     /**
      * Set to true to skip building a transaction. Used when you build a custom transaction from our response.
      */
@@ -1133,7 +1408,7 @@ export type ExecuteSwapResponse = {
         nextLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
     }>;
     warnings: Array<{
-        code: 'highSlippage' | 'highPriceImpact' | 'noSourceAddressToBuildTransaction' | 'affiliateFeeTooSmallSoRemoved' | 'unableToApplyReferralProgram' | 'insufficientBalance' | 'insufficientGas' | 'unableToBuildTransaction' | 'unableToEstimateGas' | 'limitPriceBelowSpot' | 'limitPriceWithinFeeGap';
+        code: 'highSlippage' | 'highPriceImpact' | 'noSourceAddressToBuildTransaction' | 'affiliateFeeTooSmallSoRemoved' | 'unableToApplyReferralProgram' | 'insufficientBalance' | 'insufficientGas' | 'unableToBuildTransaction' | 'unableToEstimateGas' | 'limitPriceBelowSpot' | 'limitPriceWithinFeeGap' | 'outputBelowPublishedFloor' | 'litecoinMwebNotSupported';
         display: string;
         tooltip?: string;
     }>;
@@ -1254,28 +1529,30 @@ export type ExecuteSwapResponse = {
         contractAddress: string;
         entrypoint: string;
         calldata: Array<string>;
-    }> | Array<{
-        /**
-         * Destination address in friendly format
-         */
-        address: string;
-        /**
-         * Amount in nanotons
-         */
-        amount: string;
-        /**
-         * Base64 BOC of body cell
-         */
-        payload?: string;
-        /**
-         * Base64 BOC of state init
-         */
-        stateInit?: string;
-        /**
-         * Optional @ton/ton SendMode bitmask. Set to 130 (CARRY_ALL_REMAINING_BALANCE | IGNORE_ERRORS) on sweeps so the wallet sends balance − fees instead of the literal amount.
-         */
-        sendMode?: number;
     }> | {
+        /**
+         * @ton/ton SendMode bitmask applied to the whole transfer — TON wallets take a single mode per transaction, not per message. 3 (PAY_GAS_SEPARATELY | IGNORE_ERRORS) normally; 130 (CARRY_ALL_REMAINING_BALANCE | IGNORE_ERRORS) on sweeps, so the wallet sends balance − fees instead of the literal amount.
+         */
+        sendMode: number;
+        messages: Array<{
+            /**
+             * Destination address in friendly format
+             */
+            address: string;
+            /**
+             * Amount in nanotons
+             */
+            amount: string;
+            /**
+             * Base64 BOC of body cell
+             */
+            payload?: string;
+            /**
+             * Base64 BOC of state init
+             */
+            stateInit?: string;
+        }>;
+    } | {
         domain: {
             name: string;
             version: string;
@@ -1492,7 +1769,7 @@ export type ExecuteSwapResponse = {
      */
     quoteCreatedAt: string;
     /**
-     * Optional approval transaction if ERC-20 approval is required before swap
+     * Optional approval transaction required before swap execution
      */
     approvalTx?: {
         /**
@@ -1519,7 +1796,18 @@ export type ExecuteSwapResponse = {
          * Current gas price
          */
         gasPrice?: string;
+    } | {
+        txType: 'STELLAR';
+        /**
+         * Unsigned changeTrust transaction XDR (base64) — sign and submit, then re-call /swap
+         */
+        tx: string;
     };
+    nextActions?: Array<{
+        method: string;
+        url: string;
+        payload?: unknown;
+    }>;
 };
 
 export type GetProvidersData = {
@@ -1818,6 +2106,9 @@ export type TrackTransactionResponses = {
             };
         };
         finalAddress?: string;
+        /**
+         * Unix timestamp in SECONDS at which this leg finalised, or -1 when not finalised or unknown.
+         */
         finalisedAt: number;
         /**
          * Slippage tolerance from the original quote, in basis points
@@ -1882,6 +2173,7 @@ export type TrackTransactionResponses = {
             }>;
             failReason?: string;
             failTargetAddress?: string;
+            refundReason?: string;
             targetAddress?: string;
         };
         payload?: {
@@ -1922,6 +2214,9 @@ export type TrackTransactionResponses = {
                 };
             };
             finalAddress?: string;
+            /**
+             * Unix timestamp in SECONDS at which this leg finalised, or -1 when not finalised or unknown.
+             */
             finalisedAt: number;
             /**
              * Slippage tolerance from the original quote, in basis points
@@ -1986,6 +2281,7 @@ export type TrackTransactionResponses = {
                 }>;
                 failReason?: string;
                 failTargetAddress?: string;
+                refundReason?: string;
                 targetAddress?: string;
             };
             payload?: {
@@ -2117,6 +2413,14 @@ export type GetQuoteErrors = {
     /**
      * Default Response
      */
+    451: {
+        message: string;
+        error: string;
+        data?: unknown;
+    };
+    /**
+     * Default Response
+     */
     500: {
         message: string;
         error: string;
@@ -2155,6 +2459,22 @@ export type ExecuteSwapErrors = {
      * Default Response
      */
     404: {
+        message: string;
+        error: string;
+        data?: unknown;
+    };
+    /**
+     * Default Response
+     */
+    409: {
+        message: string;
+        error: string;
+        data?: unknown;
+    };
+    /**
+     * Default Response
+     */
+    451: {
         message: string;
         error: string;
         data?: unknown;

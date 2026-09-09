@@ -100,6 +100,9 @@ export const getCachedPrice = <ThrowOnError extends boolean = false>(options: Op
     }
 });
 
+/**
+ * Geo-restricted tokens return 451: the asset is not available in the caller's jurisdiction. Send the end user's IP in `X-Forwarded-For` (or `X-User-Ip`) so the region is resolved for them rather than for the calling server.
+ */
 export const getQuote = <ThrowOnError extends boolean = false>(options: Options<GetQuoteData, ThrowOnError>): RequestResult<GetQuoteResponses, GetQuoteErrors, ThrowOnError> => (options.client ?? client).post<GetQuoteResponses, GetQuoteErrors, ThrowOnError>({
     security: [{ name: 'x-api-key', type: 'apiKey' }],
     url: '/v3/quote',
@@ -110,6 +113,9 @@ export const getQuote = <ThrowOnError extends boolean = false>(options: Options<
     }
 });
 
+/**
+ * Geo-restricted tokens return 451: the asset is not available in the caller's jurisdiction. The cached quote's assets are re-checked here, so a route id priced in a permitted region cannot be executed from a blocked one. Send the end user's IP in `X-Forwarded-For` (or `X-User-Ip`).
+ */
 export const executeSwap = <ThrowOnError extends boolean = false>(options: Options<ExecuteSwapData, ThrowOnError>): RequestResult<ExecuteSwapResponses, ExecuteSwapErrors, ThrowOnError> => (options.client ?? client).post<ExecuteSwapResponses, ExecuteSwapErrors, ThrowOnError>({
     security: [{ name: 'x-api-key', type: 'apiKey' }],
     url: '/v3/swap',
