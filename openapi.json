@@ -9506,7 +9506,11 @@
                     "limitOrderChainMismatch",
                     "limitOrderUnsupportedPair",
                     "limitOrderActionUnavailable",
-                    "limitOrderProviderError"
+                    "limitOrderProviderError",
+                    "limitOrderMakerBlacklisted",
+                    "limitOrderInsufficientAllowance",
+                    "limitOrderMaxOrdersExceeded",
+                    "limitOrderRejected"
                   ]
                 },
                 "message": {
@@ -10438,37 +10442,47 @@
                 }
               },
               {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "address": {
-                      "type": "string",
-                      "description": "Destination address in friendly format"
-                    },
-                    "amount": {
-                      "type": "string",
-                      "description": "Amount in nanotons"
-                    },
-                    "payload": {
-                      "description": "Base64 BOC of body cell",
-                      "type": "string"
-                    },
-                    "stateInit": {
-                      "description": "Base64 BOC of state init",
-                      "type": "string"
-                    },
-                    "sendMode": {
-                      "description": "Optional @ton/ton SendMode bitmask. Set to 130 (CARRY_ALL_REMAINING_BALANCE | IGNORE_ERRORS) on sweeps so the wallet sends balance − fees instead of the literal amount.",
-                      "type": "number"
-                    }
+                "type": "object",
+                "properties": {
+                  "sendMode": {
+                    "type": "number",
+                    "description": "@ton/ton SendMode bitmask applied to the whole transfer — TON wallets take a single mode per transaction, not per message. 3 (PAY_GAS_SEPARATELY | IGNORE_ERRORS) normally; 130 (CARRY_ALL_REMAINING_BALANCE | IGNORE_ERRORS) on sweeps, so the wallet sends balance − fees instead of the literal amount."
                   },
-                  "required": [
-                    "address",
-                    "amount"
-                  ],
-                  "additionalProperties": false
-                }
+                  "messages": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "address": {
+                          "type": "string",
+                          "description": "Destination address in friendly format"
+                        },
+                        "amount": {
+                          "type": "string",
+                          "description": "Amount in nanotons"
+                        },
+                        "payload": {
+                          "description": "Base64 BOC of body cell",
+                          "type": "string"
+                        },
+                        "stateInit": {
+                          "description": "Base64 BOC of state init",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "address",
+                        "amount"
+                      ],
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "required": [
+                  "sendMode",
+                  "messages"
+                ],
+                "additionalProperties": false
               },
               {
                 "type": "object",
