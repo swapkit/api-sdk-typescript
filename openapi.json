@@ -9461,6 +9461,8 @@
                     "invalidRouteId",
                     "invalidQuoteId",
                     "invalidRoute",
+                    "destinationTrustlineRequired",
+                    "stellarHorizonUnavailable",
                     "quoteExpired",
                     "swapQuoteNotFound",
                     "swapRouteNotFound",
@@ -11212,41 +11214,85 @@
             "description": "Creation timestamp of the underlying quote (ISO 8601)"
           },
           "approvalTx": {
-            "description": "Optional approval transaction if ERC-20 approval is required before swap",
-            "type": "object",
-            "properties": {
-              "to": {
-                "type": "string",
-                "description": "Token contract address"
+            "description": "Optional approval transaction required before swap execution",
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "to": {
+                    "type": "string",
+                    "description": "Token contract address"
+                  },
+                  "from": {
+                    "type": "string",
+                    "description": "User wallet address"
+                  },
+                  "value": {
+                    "type": "string",
+                    "description": "ETH value (always '0' for approvals)"
+                  },
+                  "data": {
+                    "type": "string",
+                    "description": "Encoded approval call data"
+                  },
+                  "gasLimit": {
+                    "description": "Estimated gas limit",
+                    "type": "string"
+                  },
+                  "gasPrice": {
+                    "description": "Current gas price",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "to",
+                  "from",
+                  "value",
+                  "data"
+                ],
+                "additionalProperties": false
               },
-              "from": {
-                "type": "string",
-                "description": "User wallet address"
-              },
-              "value": {
-                "type": "string",
-                "description": "ETH value (always '0' for approvals)"
-              },
-              "data": {
-                "type": "string",
-                "description": "Encoded approval call data"
-              },
-              "gasLimit": {
-                "description": "Estimated gas limit",
-                "type": "string"
-              },
-              "gasPrice": {
-                "description": "Current gas price",
-                "type": "string"
+              {
+                "type": "object",
+                "properties": {
+                  "txType": {
+                    "type": "string",
+                    "enum": [
+                      "STELLAR"
+                    ]
+                  },
+                  "tx": {
+                    "type": "string",
+                    "description": "Unsigned changeTrust transaction XDR (base64) — sign and submit, then re-call /swap"
+                  }
+                },
+                "required": [
+                  "txType",
+                  "tx"
+                ],
+                "additionalProperties": false
               }
-            },
-            "required": [
-              "to",
-              "from",
-              "value",
-              "data"
-            ],
-            "additionalProperties": false
+            ]
+          },
+          "nextActions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "method": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "payload": {}
+              },
+              "required": [
+                "method",
+                "url"
+              ],
+              "additionalProperties": false
+            }
           }
         },
         "required": [
