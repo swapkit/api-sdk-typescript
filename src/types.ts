@@ -1847,6 +1847,10 @@ export type GetTokensData = {
          * Provider name, or "all" to combine all providers
          */
         provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3' | 'all';
+        /**
+         * Asset class filter. "rwa" returns only tokenized real-world assets, "crypto" only everything else, "all" (the default) returns both.
+         */
+        category?: 'all' | 'crypto' | 'rwa';
     };
     url: '/tokens';
 };
@@ -1899,6 +1903,10 @@ export type SearchTokensData = {
         provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
         limit?: number;
         page?: number;
+        /**
+         * Asset class filter. "rwa" returns only tokenized real-world assets, "crypto" only everything else, "all" (the default) returns both.
+         */
+        category?: 'all' | 'crypto' | 'rwa';
     };
     url: '/tokens/search';
 };

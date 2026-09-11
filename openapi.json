@@ -117,6 +117,21 @@
             "name": "provider",
             "required": false,
             "description": "Provider name, or \"all\" to combine all providers"
+          },
+          {
+            "schema": {
+              "default": "all",
+              "type": "string",
+              "enum": [
+                "all",
+                "crypto",
+                "rwa"
+              ]
+            },
+            "in": "query",
+            "name": "category",
+            "required": false,
+            "description": "Asset class filter. \"rwa\" returns only tokenized real-world assets, \"crypto\" only everything else, \"all\" (the default) returns both."
           }
         ],
         "responses": {
@@ -318,6 +333,21 @@
             "in": "query",
             "name": "page",
             "required": false
+          },
+          {
+            "schema": {
+              "default": "all",
+              "type": "string",
+              "enum": [
+                "all",
+                "crypto",
+                "rwa"
+              ]
+            },
+            "in": "query",
+            "name": "category",
+            "required": false,
+            "description": "Asset class filter. \"rwa\" returns only tokenized real-world assets, \"crypto\" only everything else, \"all\" (the default) returns both."
           }
         ],
         "responses": {
