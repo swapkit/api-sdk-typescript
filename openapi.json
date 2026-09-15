@@ -9571,6 +9571,8 @@
                     "flashnetAffiliateRegistrationFailed",
                     "flashnetAffiliateClaimFailed",
                     "flashnetAffiliateNotFound",
+                    "pactswapAffiliateRegistrationFailed",
+                    "pactswapAffiliateNotFound",
                     "limitOrderUnsupportedChain",
                     "limitOrderQuoteNotFound",
                     "limitOrderRouteNotFound",
