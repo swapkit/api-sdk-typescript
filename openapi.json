@@ -8571,6 +8571,324 @@
         ],
         "additionalProperties": false
       },
+      "ListChainflipAffiliatesResponse": {
+        "type": "object",
+        "properties": {
+          "brokerAddress": {
+            "type": "string"
+          },
+          "capacity": {
+            "type": "object",
+            "properties": {
+              "used": {
+                "type": "number"
+              },
+              "limit": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "used",
+              "limit"
+            ],
+            "additionalProperties": false
+          },
+          "sinceDays": {
+            "type": "number"
+          },
+          "affiliates": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "accountId": {
+                  "type": "string"
+                },
+                "shortId": {
+                  "type": "number"
+                },
+                "withdrawalAddress": {
+                  "type": "string"
+                },
+                "orphan": {
+                  "type": "boolean"
+                },
+                "swapCount": {
+                  "type": "number"
+                },
+                "apiKey": {
+                  "type": "object",
+                  "properties": {
+                    "key": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "tenantId": {
+                      "type": "string"
+                    },
+                    "enabled": {
+                      "type": "boolean"
+                    },
+                    "vaultSwapsEnabled": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "key",
+                    "enabled",
+                    "vaultSwapsEnabled"
+                  ],
+                  "additionalProperties": false
+                },
+                "availableBalanceUsdc": {
+                  "type": "string"
+                },
+                "lifetimeFeesUsdc": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "accountId",
+                "shortId",
+                "withdrawalAddress",
+                "orphan",
+                "swapCount"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "brokerAddress",
+          "capacity",
+          "sinceDays",
+          "affiliates"
+        ],
+        "additionalProperties": false
+      },
+      "DeregisterChainflipAffiliateRequest": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "affiliateAccountId": {
+            "type": "string"
+          },
+          "updatedBy": {
+            "type": "object",
+            "properties": {
+              "userId": {
+                "type": "string"
+              }
+            }
+          },
+          "force": {
+            "default": false,
+            "type": "boolean"
+          },
+          "minIdleDays": {
+            "default": 30,
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          }
+        },
+        "required": [
+          "updatedBy"
+        ]
+      },
+      "DeregisterChainflipAffiliateResponse": {
+        "type": "object",
+        "properties": {
+          "affiliateAccountId": {
+            "type": "string"
+          },
+          "shortId": {
+            "type": "number"
+          },
+          "apiKeyCleared": {
+            "type": "boolean"
+          },
+          "apiKey": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "affiliateAccountId",
+          "shortId",
+          "apiKeyCleared"
+        ],
+        "additionalProperties": false
+      },
+      "PruneChainflipAffiliatesRequest": {
+        "type": "object",
+        "properties": {
+          "dryRun": {
+            "default": true,
+            "type": "boolean"
+          },
+          "minIdleDays": {
+            "default": 30,
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9007199254740991
+          },
+          "maxCount": {
+            "default": 10,
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 25
+          },
+          "includeLinkedApiKeys": {
+            "default": false,
+            "type": "boolean"
+          },
+          "updatedBy": {
+            "type": "object",
+            "properties": {
+              "userId": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "required": [
+          "updatedBy"
+        ]
+      },
+      "PruneChainflipAffiliatesResponse": {
+        "type": "object",
+        "properties": {
+          "dryRun": {
+            "type": "boolean"
+          },
+          "capacity": {
+            "type": "object",
+            "properties": {
+              "used": {
+                "type": "number"
+              },
+              "limit": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "used",
+              "limit"
+            ],
+            "additionalProperties": false
+          },
+          "examined": {
+            "type": "number"
+          },
+          "candidates": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "accountId": {
+                  "type": "string"
+                },
+                "shortId": {
+                  "type": "number"
+                },
+                "withdrawalAddress": {
+                  "type": "string"
+                },
+                "orphan": {
+                  "type": "boolean"
+                },
+                "swapCount": {
+                  "type": "number"
+                },
+                "apiKey": {
+                  "type": "object",
+                  "properties": {
+                    "key": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "tenantId": {
+                      "type": "string"
+                    },
+                    "enabled": {
+                      "type": "boolean"
+                    },
+                    "vaultSwapsEnabled": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "key",
+                    "enabled",
+                    "vaultSwapsEnabled"
+                  ],
+                  "additionalProperties": false
+                },
+                "availableBalanceUsdc": {
+                  "type": "string"
+                },
+                "lifetimeFeesUsdc": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "accountId",
+                "shortId",
+                "withdrawalAddress",
+                "orphan",
+                "swapCount"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "accountId": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "deregistered",
+                    "failed"
+                  ]
+                },
+                "shortId": {
+                  "type": "number"
+                },
+                "apiKeyCleared": {
+                  "type": "boolean"
+                },
+                "error": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "accountId",
+                "status"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "dryRun",
+          "capacity",
+          "examined",
+          "candidates",
+          "results"
+        ],
+        "additionalProperties": false
+      },
       "WithdrawChainflipAffiliateFeesRequest": {
         "type": "object",
         "properties": {
@@ -9445,6 +9763,9 @@
                     "failedToRegisterAccount",
                     "failedToRegisterAffiliate",
                     "failedToWithdrawAffiliate",
+                    "failedToDeregisterAffiliate",
+                    "affiliateHasUnclaimedBalance",
+                    "affiliateRecentlyActive",
                     "noProviderDetailsFound",
                     "noTokenListsFound",
                     "tokenNotFound",

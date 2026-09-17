@@ -953,6 +953,90 @@ export type RegisterChainflipAffiliateResponse = {
     explorerUrl: string;
 };
 
+export type ListChainflipAffiliatesResponse = {
+    brokerAddress: string;
+    capacity: {
+        used: number;
+        limit: number;
+    };
+    sinceDays: number;
+    affiliates: Array<{
+        accountId: string;
+        shortId: number;
+        withdrawalAddress: string;
+        orphan: boolean;
+        swapCount: number;
+        apiKey?: {
+            key: string;
+            name?: string;
+            tenantId?: string;
+            enabled: boolean;
+            vaultSwapsEnabled: boolean;
+        };
+        availableBalanceUsdc?: string;
+        lifetimeFeesUsdc?: string;
+    }>;
+};
+
+export type DeregisterChainflipAffiliateRequest = {
+    key?: string;
+    affiliateAccountId?: string;
+    updatedBy: {
+        userId?: string;
+    };
+    force?: boolean;
+    minIdleDays?: number;
+};
+
+export type DeregisterChainflipAffiliateResponse = {
+    affiliateAccountId: string;
+    shortId: number;
+    apiKeyCleared: boolean;
+    apiKey?: string;
+};
+
+export type PruneChainflipAffiliatesRequest = {
+    dryRun?: boolean;
+    minIdleDays?: number;
+    maxCount?: number;
+    includeLinkedApiKeys?: boolean;
+    updatedBy: {
+        userId?: string;
+    };
+};
+
+export type PruneChainflipAffiliatesResponse = {
+    dryRun: boolean;
+    capacity: {
+        used: number;
+        limit: number;
+    };
+    examined: number;
+    candidates: Array<{
+        accountId: string;
+        shortId: number;
+        withdrawalAddress: string;
+        orphan: boolean;
+        swapCount: number;
+        apiKey?: {
+            key: string;
+            name?: string;
+            tenantId?: string;
+            enabled: boolean;
+            vaultSwapsEnabled: boolean;
+        };
+        availableBalanceUsdc?: string;
+        lifetimeFeesUsdc?: string;
+    }>;
+    results: Array<{
+        accountId: string;
+        status: 'deregistered' | 'failed';
+        shortId?: number;
+        apiKeyCleared?: boolean;
+        error?: string;
+    }>;
+};
+
 export type WithdrawChainflipAffiliateFeesRequest = {
     key: string;
 };
@@ -1212,7 +1296,7 @@ export type GetQuoteResponse = {
     error?: string;
     providerErrors?: Array<{
         provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
-        errorCode?: 'noRpcFallbacks' | 'requestTimeout' | 'invalidApiVersion' | 'isSanctionedAddress' | 'unknownError' | 'collectorEgressForbidden' | 'collectorUpstreamHttpError' | 'collectorUpstreamTransient' | 'collectorRetriesExhausted' | 'collectorUnreachable' | 'internalServerError' | 'test_error' | 'blockHeaderNotFound' | 'blockHashNotFoundAtHeight' | 'blackListAsset' | 'txHashMissing' | 'invalidAsset' | 'currentBlockHeaderNotFound' | 'failedToRetrieveBalance' | 'failedToRetrieveBlock' | 'failedToRetrieveFees' | 'notImplementedBCH' | 'notImplementedDoge' | 'noPoolsFound' | 'noVaultsFound' | 'noTxFound' | 'multipleCosmosMessages' | 'heightOrHashNotProvided' | 'priceTooVolatile' | 'unknownDenom' | 'invalidBlockHeight' | 'timestampExtrinsicNoArgumentsForBlock' | 'timestampExtrinsicNoTimestampForBlock' | 'noTimestampExtrinsicForHash' | 'timestampExtrinsicNoArgumentsForHash' | 'txMemoUndefined' | 'txMemoIncorrect' | 'txTypeNotFound' | 'txNoMessage' | 'txNotFound' | 'txReceiptNotFound' | 'txParsingError' | 'txLogsParsingError' | 'txFailed' | 'jobDataParsingError' | 'dataformRunFailed' | 'dataformAssertionFailed' | 'blockNotFound' | 'balanceNotFound' | 'blockbookCallFailed' | 'configError' | 'unsafeTestDatabase' | 'synthSwapDisallowed' | 'noQuoteResponse' | 'invalidProviderResponse' | 'noPoolAssetsFound' | 'noThorchainPools' | 'noMayachainPools' | 'noThorchainNetworkInfo' | 'invalidAffiliateFee' | 'invalidBuyAssetAddress' | 'invalidSellAssetAddress' | 'invalidSourceAddress' | 'invalidDestinationAddress' | 'invalidParam' | 'xrpAddressRequiresTag' | 'invalidChainId' | 'invalidChain' | 'unsupportedChainId' | 'unsupportedEVMChainId' | 'unsupportedMethod' | 'unsupportedProvider' | 'unsupportedProgram' | 'unsupportedEvent' | 'invalidParamsForMethod' | 'noWhitelistTokens' | 'failedFetchGasPrice' | 'chainflipBrokerApiUnavailable' | 'failedToBuildVaultSwapTransaction' | 'failedToOpenBtcPrivateChannel' | 'failedToCloseBtcPrivateChannel' | 'affiliateNotRegistered' | 'failedToCreateDepositChannel' | 'failedToRegisterAccount' | 'failedToRegisterAffiliate' | 'failedToWithdrawAffiliate' | 'noProviderDetailsFound' | 'noTokenListsFound' | 'tokenNotFound' | 'tokenPriceNotFound' | 'tokenPriceUnavailable' | 'tokenPriceFailedToUpdate' | 'legsArrayIsEmpty' | 'failedToFetchQuoteForLeg' | 'noBlockHeaderFound' | 'failedToSimulateSwap' | 'swapHalted' | 'memoTooLongForSourceChain' | 'addressScreeningFailed' | 'missingScreeningConfig' | 'insufficientLiquidity' | 'noSaversFound' | 'noInbounDataFound' | 'noInboundAddressesFound' | 'noTargetAddress' | 'noInboundAddressFoundForChain' | 'noLastBlocksFound' | 'noVersionFound' | 'noConstantsFound' | 'noMimirsFound' | 'noRoutesFound' | 'geoRestrictedToken' | 'quoteNotFound' | 'providerResponseFormError' | 'ledgerWrongPayload' | 'failedToFetchTx' | 'failedBuildTransactionDetails' | 'failedToCreateRouteMetadata' | 'txBuildingTimeout' | 'noLegsForRoute' | 'insufficientBalance' | 'insufficientAllowance' | 'insufficientGas' | 'unableToBuildTransaction' | 'noRouterAddressFound' | 'noAggregatorAddressFound' | 'noContractInstanceFound' | 'noContractAddressFound' | 'invalidAffiliate' | 'invalidAffiliateName' | 'thornameNotFound' | 'thornameAffiliate' | 'No provider found' | 'providerStatusesUnavailable' | 'providerAssetNotFound' | 'No Record found' | 'Slippage too low' | 'tradingHalted' | 'mayanameNotFound' | 'noWrappedGasAsset' | 'aggregatorAddressNotFound' | 'routerAddressNotFound' | 'dummyAddressNotFound' | 'trackerError' | 'thorchainPoolUnavailable' | 'noTradingPairs' | 'missingState' | 'ledgerSwapNotFound' | 'ledgerSwapNotReadyForTracking' | 'ledgerInvalidParsingMode' | 'ledgerWebhookNotifyFailed' | 'errorEstimatingGas' | 'apiKeyInvalid' | 'apiKeyFailedToUpdate' | 'apiKeySignatureExists' | 'apiKeySignatureKeyTypeMismatch' | 'apiKeyExpired' | 'unauthorized' | 'failedToCreateMemo' | 'invalidAddressForChain' | 'invalidAddress' | 'riskyAddress' | 'noRoutesToProcess' | 'sellAssetAmountTooSmall' | 'sellAssetAmountTooLarge' | 'missingPrivateKey' | 'noMemoPriceProtection' | 'nodeMethodNotFound' | 'nodeRpcNotFound' | 'thirdPartyProviderNotFound' | 'quoteUnavailable' | 'targetInstructionNotFound' | 'referrerExist' | 'referrerNotFound' | 'invalidReferrer' | 'quoteLogicError' | 'missingDecimal' | 'noGasInfoInDB' | 'quoteError' | 'valueOverflow' | 'missingChainflipMeta' | 'contractAndMethodRequired' | 'tokenImageError' | 'fileNotFound' | 'fileFormatError' | 'ipError' | 'failedToSaveLedgerSwap' | 'missingValue' | 'missingDBQueryParam' | 'unableEstimateTxTime' | 'affiliateStatsMissingDate' | 'affiliateStatsMissingNextFilter' | 'affiliateStatsNoActions' | 'unsupportedNotificationEvent' | 'unsupportedNotificationChannel' | 'invalidWebhookUrl' | 'webhookDeliveryFailed' | 'serverStateNotFound' | 'apiRequestFailed' | 'apiRateLimit' | 'invalidActionStep' | 'providerIsRequired' | 'rateLimitExceeded' | 'depositChannelNotFound' | 'auditLogInsertFailed' | 'affiliateNameHistoryInsertFailed' | 'invalidRouteId' | 'invalidQuoteId' | 'invalidRoute' | 'destinationTrustlineRequired' | 'stellarHorizonUnavailable' | 'quoteExpired' | 'swapQuoteNotFound' | 'swapRouteNotFound' | 'swapTransactionFailed' | 'swapChainflipMetaMissing' | 'swapChainflipChannelFailed' | 'swapTransferTxFailed' | 'chainflipVaultSwapNotSupported' | 'chainflipVaultSwapEncodingFailed' | 'chainflipVaultSwapInvalidChain' | 'chainflipVaultSwapBitcoinCCMNotSupported' | 'chainflipVaultSwapTransactionBuildFailed' | 'zcashInvalidAddress' | 'zcashInsufficientUTXOs' | 'zcashUTXOSelectionFailed' | 'zcashTransactionBuildFailed' | 'zcashShieldedRefundMissing' | 'zcashMemoTooLong' | 'litecoinMwebAddressUnsupported' | 'zcashUnifiedAddressUnsupported' | 'zcashShieldedMemoUnavailable' | 'invalidTokenProgram' | 'solanaOutputBelowRentExemptMinimum' | 'solanaTokenProgramUnavailable' | 'invalidRequest' | 'pubsubEventNotRegistered' | 'pubsubTopicNotFound' | 'pubsubEnvelopeParsingError' | 'invalidSpender' | 'outputAmountDeviationTooHigh' | 'outputBelowPublishedFloor' | 'swapSizeExceeded' | 'v2EndpointNotAllowed' | 'externalServiceFailed' | 'tenantEncryptKeyNotFound' | 'tenantKeyPairEncryptionError' | 'slip24AmountOverflow' | 'slip24InvalidSignature' | 'slip24DigestComputationFailed' | 'invalidTxHashFormat' | 'affiliateNotFound' | 'nearAffiliateProviderAssetNotFound' | 'nearAffiliateDepositAddressFailed' | 'flashnetAffiliateRegistrationFailed' | 'flashnetAffiliateClaimFailed' | 'flashnetAffiliateNotFound' | 'pactswapAffiliateRegistrationFailed' | 'pactswapAffiliateNotFound' | 'limitOrderUnsupportedChain' | 'limitOrderQuoteNotFound' | 'limitOrderRouteNotFound' | 'limitOrderNotFound' | 'limitOrderInvalidState' | 'limitOrderBuildFailed' | 'limitOrderSubmissionFailed' | 'limitOrderCancelFailed' | 'limitOrderExpirationOutOfBounds' | 'limitOrderUnsupportedFillFlags' | 'limitOrderAmountAmbiguous' | 'limitOrderChainMismatch' | 'limitOrderUnsupportedPair' | 'limitOrderActionUnavailable' | 'limitOrderProviderError' | 'limitOrderMakerBlacklisted' | 'limitOrderInsufficientAllowance' | 'limitOrderMaxOrdersExceeded' | 'limitOrderRejected';
+        errorCode?: 'noRpcFallbacks' | 'requestTimeout' | 'invalidApiVersion' | 'isSanctionedAddress' | 'unknownError' | 'collectorEgressForbidden' | 'collectorUpstreamHttpError' | 'collectorUpstreamTransient' | 'collectorRetriesExhausted' | 'collectorUnreachable' | 'internalServerError' | 'test_error' | 'blockHeaderNotFound' | 'blockHashNotFoundAtHeight' | 'blackListAsset' | 'txHashMissing' | 'invalidAsset' | 'currentBlockHeaderNotFound' | 'failedToRetrieveBalance' | 'failedToRetrieveBlock' | 'failedToRetrieveFees' | 'notImplementedBCH' | 'notImplementedDoge' | 'noPoolsFound' | 'noVaultsFound' | 'noTxFound' | 'multipleCosmosMessages' | 'heightOrHashNotProvided' | 'priceTooVolatile' | 'unknownDenom' | 'invalidBlockHeight' | 'timestampExtrinsicNoArgumentsForBlock' | 'timestampExtrinsicNoTimestampForBlock' | 'noTimestampExtrinsicForHash' | 'timestampExtrinsicNoArgumentsForHash' | 'txMemoUndefined' | 'txMemoIncorrect' | 'txTypeNotFound' | 'txNoMessage' | 'txNotFound' | 'txReceiptNotFound' | 'txParsingError' | 'txLogsParsingError' | 'txFailed' | 'jobDataParsingError' | 'dataformRunFailed' | 'dataformAssertionFailed' | 'blockNotFound' | 'balanceNotFound' | 'blockbookCallFailed' | 'configError' | 'unsafeTestDatabase' | 'synthSwapDisallowed' | 'noQuoteResponse' | 'invalidProviderResponse' | 'noPoolAssetsFound' | 'noThorchainPools' | 'noMayachainPools' | 'noThorchainNetworkInfo' | 'invalidAffiliateFee' | 'invalidBuyAssetAddress' | 'invalidSellAssetAddress' | 'invalidSourceAddress' | 'invalidDestinationAddress' | 'invalidParam' | 'xrpAddressRequiresTag' | 'invalidChainId' | 'invalidChain' | 'unsupportedChainId' | 'unsupportedEVMChainId' | 'unsupportedMethod' | 'unsupportedProvider' | 'unsupportedProgram' | 'unsupportedEvent' | 'invalidParamsForMethod' | 'noWhitelistTokens' | 'failedFetchGasPrice' | 'chainflipBrokerApiUnavailable' | 'failedToBuildVaultSwapTransaction' | 'failedToOpenBtcPrivateChannel' | 'failedToCloseBtcPrivateChannel' | 'affiliateNotRegistered' | 'failedToCreateDepositChannel' | 'failedToRegisterAccount' | 'failedToRegisterAffiliate' | 'failedToWithdrawAffiliate' | 'failedToDeregisterAffiliate' | 'affiliateHasUnclaimedBalance' | 'affiliateRecentlyActive' | 'noProviderDetailsFound' | 'noTokenListsFound' | 'tokenNotFound' | 'tokenPriceNotFound' | 'tokenPriceUnavailable' | 'tokenPriceFailedToUpdate' | 'legsArrayIsEmpty' | 'failedToFetchQuoteForLeg' | 'noBlockHeaderFound' | 'failedToSimulateSwap' | 'swapHalted' | 'memoTooLongForSourceChain' | 'addressScreeningFailed' | 'missingScreeningConfig' | 'insufficientLiquidity' | 'noSaversFound' | 'noInbounDataFound' | 'noInboundAddressesFound' | 'noTargetAddress' | 'noInboundAddressFoundForChain' | 'noLastBlocksFound' | 'noVersionFound' | 'noConstantsFound' | 'noMimirsFound' | 'noRoutesFound' | 'geoRestrictedToken' | 'quoteNotFound' | 'providerResponseFormError' | 'ledgerWrongPayload' | 'failedToFetchTx' | 'failedBuildTransactionDetails' | 'failedToCreateRouteMetadata' | 'txBuildingTimeout' | 'noLegsForRoute' | 'insufficientBalance' | 'insufficientAllowance' | 'insufficientGas' | 'unableToBuildTransaction' | 'noRouterAddressFound' | 'noAggregatorAddressFound' | 'noContractInstanceFound' | 'noContractAddressFound' | 'invalidAffiliate' | 'invalidAffiliateName' | 'thornameNotFound' | 'thornameAffiliate' | 'No provider found' | 'providerStatusesUnavailable' | 'providerAssetNotFound' | 'No Record found' | 'Slippage too low' | 'tradingHalted' | 'mayanameNotFound' | 'noWrappedGasAsset' | 'aggregatorAddressNotFound' | 'routerAddressNotFound' | 'dummyAddressNotFound' | 'trackerError' | 'thorchainPoolUnavailable' | 'noTradingPairs' | 'missingState' | 'ledgerSwapNotFound' | 'ledgerSwapNotReadyForTracking' | 'ledgerInvalidParsingMode' | 'ledgerWebhookNotifyFailed' | 'errorEstimatingGas' | 'apiKeyInvalid' | 'apiKeyFailedToUpdate' | 'apiKeySignatureExists' | 'apiKeySignatureKeyTypeMismatch' | 'apiKeyExpired' | 'unauthorized' | 'failedToCreateMemo' | 'invalidAddressForChain' | 'invalidAddress' | 'riskyAddress' | 'noRoutesToProcess' | 'sellAssetAmountTooSmall' | 'sellAssetAmountTooLarge' | 'missingPrivateKey' | 'noMemoPriceProtection' | 'nodeMethodNotFound' | 'nodeRpcNotFound' | 'thirdPartyProviderNotFound' | 'quoteUnavailable' | 'targetInstructionNotFound' | 'referrerExist' | 'referrerNotFound' | 'invalidReferrer' | 'quoteLogicError' | 'missingDecimal' | 'noGasInfoInDB' | 'quoteError' | 'valueOverflow' | 'missingChainflipMeta' | 'contractAndMethodRequired' | 'tokenImageError' | 'fileNotFound' | 'fileFormatError' | 'ipError' | 'failedToSaveLedgerSwap' | 'missingValue' | 'missingDBQueryParam' | 'unableEstimateTxTime' | 'affiliateStatsMissingDate' | 'affiliateStatsMissingNextFilter' | 'affiliateStatsNoActions' | 'unsupportedNotificationEvent' | 'unsupportedNotificationChannel' | 'invalidWebhookUrl' | 'webhookDeliveryFailed' | 'serverStateNotFound' | 'apiRequestFailed' | 'apiRateLimit' | 'invalidActionStep' | 'providerIsRequired' | 'rateLimitExceeded' | 'depositChannelNotFound' | 'auditLogInsertFailed' | 'affiliateNameHistoryInsertFailed' | 'invalidRouteId' | 'invalidQuoteId' | 'invalidRoute' | 'destinationTrustlineRequired' | 'stellarHorizonUnavailable' | 'quoteExpired' | 'swapQuoteNotFound' | 'swapRouteNotFound' | 'swapTransactionFailed' | 'swapChainflipMetaMissing' | 'swapChainflipChannelFailed' | 'swapTransferTxFailed' | 'chainflipVaultSwapNotSupported' | 'chainflipVaultSwapEncodingFailed' | 'chainflipVaultSwapInvalidChain' | 'chainflipVaultSwapBitcoinCCMNotSupported' | 'chainflipVaultSwapTransactionBuildFailed' | 'zcashInvalidAddress' | 'zcashInsufficientUTXOs' | 'zcashUTXOSelectionFailed' | 'zcashTransactionBuildFailed' | 'zcashShieldedRefundMissing' | 'zcashMemoTooLong' | 'litecoinMwebAddressUnsupported' | 'zcashUnifiedAddressUnsupported' | 'zcashShieldedMemoUnavailable' | 'invalidTokenProgram' | 'solanaOutputBelowRentExemptMinimum' | 'solanaTokenProgramUnavailable' | 'invalidRequest' | 'pubsubEventNotRegistered' | 'pubsubTopicNotFound' | 'pubsubEnvelopeParsingError' | 'invalidSpender' | 'outputAmountDeviationTooHigh' | 'outputBelowPublishedFloor' | 'swapSizeExceeded' | 'v2EndpointNotAllowed' | 'externalServiceFailed' | 'tenantEncryptKeyNotFound' | 'tenantKeyPairEncryptionError' | 'slip24AmountOverflow' | 'slip24InvalidSignature' | 'slip24DigestComputationFailed' | 'invalidTxHashFormat' | 'affiliateNotFound' | 'nearAffiliateProviderAssetNotFound' | 'nearAffiliateDepositAddressFailed' | 'flashnetAffiliateRegistrationFailed' | 'flashnetAffiliateClaimFailed' | 'flashnetAffiliateNotFound' | 'pactswapAffiliateRegistrationFailed' | 'pactswapAffiliateNotFound' | 'limitOrderUnsupportedChain' | 'limitOrderQuoteNotFound' | 'limitOrderRouteNotFound' | 'limitOrderNotFound' | 'limitOrderInvalidState' | 'limitOrderBuildFailed' | 'limitOrderSubmissionFailed' | 'limitOrderCancelFailed' | 'limitOrderExpirationOutOfBounds' | 'limitOrderUnsupportedFillFlags' | 'limitOrderAmountAmbiguous' | 'limitOrderChainMismatch' | 'limitOrderUnsupportedPair' | 'limitOrderActionUnavailable' | 'limitOrderProviderError' | 'limitOrderMakerBlacklisted' | 'limitOrderInsufficientAllowance' | 'limitOrderMaxOrdersExceeded' | 'limitOrderRejected';
         message?: string;
         /**
          * Provider minimum sell amount (human units), when the provider reported one
