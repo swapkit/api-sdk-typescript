@@ -8421,6 +8421,9 @@
               "asset"
             ]
           },
+          "sourceAddress": {
+            "type": "string"
+          },
           "channelMetadata": {
             "type": "object",
             "properties": {
@@ -9008,6 +9011,19 @@
             "maximum": 1000,
             "description": "Affiliate fee in basis points. This should only be used as an override, for example when you have some rebate or discount program. If not provided, the fees configured in your API Key will be used."
           },
+          "refundAddress": {
+            "type": "string",
+            "description": "Address to refund to if the swap fails, on the SELL chain. Defaults to sourceAddress — set it when the sender cannot receive funds, e.g. a send-only contract wallet. Forwarded to CHAINFLIP, CHAINFLIP_STREAMING, MAYACHAIN, MAYACHAIN_STREAMING, THORCHAIN, THORCHAIN_STREAMING, NEAR, HARBOR, FLASHNET; routes through providers that always refund the on-chain sender are dropped from the response when this differs from sourceAddress."
+          },
+          "refundAddressSetting": {
+            "default": "WARNING",
+            "type": "string",
+            "enum": [
+              "STRICT",
+              "WARNING"
+            ],
+            "description": "How to react when a route cannot honour refundAddress: WARNING (default) keeps the route and reports refundAddressNotApplied in its warnings[], STRICT drops it instead. Ignored when refundAddress is absent."
+          },
           "buyAmount": {
             "type": "string",
             "description": "Amount of asset to buy. Required when quoteType is EXACT_OUTPUT, and rejected otherwise."
@@ -9506,7 +9522,9 @@
                           "limitPriceBelowSpot",
                           "limitPriceWithinFeeGap",
                           "outputBelowPublishedFloor",
-                          "litecoinMwebNotSupported"
+                          "litecoinMwebNotSupported",
+                          "refundAddressNotApplied",
+                          "vaultSwapUnavailable"
                         ]
                       },
                       "display": {
@@ -9740,6 +9758,7 @@
                     "invalidBuyAssetAddress",
                     "invalidSellAssetAddress",
                     "invalidSourceAddress",
+                    "invalidRefundAddress",
                     "invalidDestinationAddress",
                     "invalidParam",
                     "xrpAddressRequiresTag",
@@ -9749,6 +9768,8 @@
                     "unsupportedEVMChainId",
                     "unsupportedMethod",
                     "unsupportedProvider",
+                    "refundAddressUnsupportedByRoute",
+                    "refundAddressTooLongForSellChain",
                     "unsupportedProgram",
                     "unsupportedEvent",
                     "invalidParamsForMethod",
@@ -10002,6 +10023,18 @@
           "destinationAddress": {
             "type": "string",
             "description": "Recipient address to send asset to"
+          },
+          "refundAddress": {
+            "type": "string",
+            "description": "Address to refund to if the swap fails, on the SELL chain. Overrides the /v3/quote value; falls back to it, then to sourceAddress. See /v3/quote for per-provider behaviour."
+          },
+          "refundAddressSetting": {
+            "type": "string",
+            "enum": [
+              "STRICT",
+              "WARNING"
+            ],
+            "description": "How to react when the route cannot honour refundAddress: WARNING (default) proceeds and reports refundAddressNotApplied in the route's warnings[], STRICT rejects with refundAddressUnsupportedByRoute (the provider always refunds the sender) or refundAddressTooLongForSellChain (the provider carries it in a memo this sell chain has no room for). Inherited from the /v3/quote request when omitted."
           },
           "disableBalanceCheck": {
             "type": "boolean",
@@ -10520,7 +10553,9 @@
                     "limitPriceBelowSpot",
                     "limitPriceWithinFeeGap",
                     "outputBelowPublishedFloor",
-                    "litecoinMwebNotSupported"
+                    "litecoinMwebNotSupported",
+                    "refundAddressNotApplied",
+                    "vaultSwapUnavailable"
                   ]
                 },
                 "display": {
@@ -11277,6 +11312,9 @@
                       "asset"
                     ],
                     "additionalProperties": false
+                  },
+                  "sourceAddress": {
+                    "type": "string"
                   },
                   "channelMetadata": {
                     "type": "object",
