@@ -1815,7 +1815,7 @@ export type ExecuteSwapResponse = {
          */
         providerDepositChannelId?: string;
         /**
-         * Deposit channel expiry, unix seconds. NEAR/FLASHNET/GARDEN: the provider's own real deadline. CHAINFLIP: channel creation time + 24h (Chainflip's documented fixed channel lifetime).
+         * Deposit channel expiry, unix seconds. NEAR/GARDEN: the provider's own real deadline. CHAINFLIP/FLASHNET: channel creation time + 24h (Chainflip's documented fixed channel lifetime; Flashnet's own `expiresAt` is a ~2-minute price-validity window, not a channel lifetime — use `expiration` for that).
          */
         depositChannelExpiration?: number;
         /**
