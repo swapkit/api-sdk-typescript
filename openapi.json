@@ -1982,6 +1982,7 @@
                 "137",
                 "143",
                 "196",
+                "999",
                 "4663",
                 "5042",
                 "8453",
@@ -2064,6 +2065,7 @@
                 "137",
                 "143",
                 "196",
+                "999",
                 "4663",
                 "5042",
                 "8453",
@@ -8977,7 +8979,7 @@
           },
           "sourceAddress": {
             "type": "string",
-            "description": "Address to send asset from"
+            "description": "Address to send asset from. On a UTXO sell chain this may name several addresses to draw inputs from, separated by `;` — the first is used wherever a single address is required (refund address, memos, deposit channels). At most 6 addresses; repeats are ignored, empty entries are rejected."
           },
           "destinationAddress": {
             "type": "string",
@@ -9789,6 +9791,7 @@
                     "invalidBuyAssetAddress",
                     "invalidSellAssetAddress",
                     "invalidSourceAddress",
+                    "invalidSourceAddressList",
                     "invalidRefundAddress",
                     "invalidDestinationAddress",
                     "invalidParam",
@@ -10049,7 +10052,7 @@
           },
           "sourceAddress": {
             "type": "string",
-            "description": "Address to send asset from"
+            "description": "Address to send asset from. On a UTXO sell chain this may name several addresses to draw inputs from, separated by `;` — the first is used wherever a single address is required (refund address, memos, deposit channels). At most 6 addresses; repeats are ignored, empty entries are rejected."
           },
           "destinationAddress": {
             "type": "string",
