@@ -5,7 +5,7 @@ export type ClientOptions = {
 };
 
 export type GetTokensResponse = {
-    provider: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3' | 'SWAPKIT';
+    provider: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3' | 'SWAPKIT';
     chainId?: '36900' | 'aleo' | 'aptos' | '42161' | '5042' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | '4663' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
     name: string;
     tags?: {
@@ -42,7 +42,7 @@ export type GetTokensResponse = {
     supportedActions?: Array<'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder'>;
     supportedChainIds?: Array<'36900' | 'aleo' | 'aptos' | '42161' | '5042' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | '4663' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash'>;
 } | Array<{
-    provider: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3' | 'SWAPKIT';
+    provider: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3' | 'SWAPKIT';
     chainId?: '36900' | 'aleo' | 'aptos' | '42161' | '5042' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | '4663' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash';
     name: string;
     tags?: {
@@ -93,7 +93,7 @@ export type SearchTokensResponse = {
         coingeckoId?: string;
         geoBlockRule?: 'tokenized-securities';
         chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'ARC' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
-        providers: Array<'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3'>;
+        providers: Array<'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3'>;
         marketCapUsd?: number;
     }>;
     total: number;
@@ -103,8 +103,8 @@ export type SearchTokensResponse = {
 };
 
 export type GetProvidersResponse = Array<{
-    name: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
-    provider: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+    name: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+    provider: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
     displayName?: string;
     displayNameLong?: string;
     keywords?: Array<string>;
@@ -118,7 +118,7 @@ export type GetProvidersResponse = Array<{
 
 export type GetProvidersStatusResponse = {
     providersChains: Array<{
-        name: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+        name: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
         supportedChainsGlobal: Array<'36900' | 'aleo' | 'aptos' | '42161' | '5042' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | '4663' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash'>;
         enabledChainsGlobal: Array<'36900' | 'aleo' | 'aptos' | '42161' | '5042' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | '4663' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash'>;
         disabledChainsGlobal: Array<'36900' | 'aleo' | 'aptos' | '42161' | '5042' | '1313161554' | '43114' | '8453' | '80094' | '56' | 'bitcoin' | 'bitcoincash' | '3637' | 'cardano' | 'chainflip' | '1116' | '21000000' | 'cosmoshub-4' | '25' | 'dash' | 'dogecoin' | '1' | '100' | 'harbor-1' | 'harbor-stagenet-1' | '999' | 'hype' | 'kaiyo-1' | 'litecoin' | '59144' | 'mayachain-mainnet-v1' | 'mayachain-stagenet-v1' | '4326' | '143' | 'near' | 'noble-1' | '10' | '9745' | 'polkadot' | '137' | 'radix-mainnet' | 'ripple' | '4663' | 'solana' | '146' | 'spark' | 'stellar' | '0x534e5f4d41494e' | 'sui' | 'thorchain-1' | 'thorchain-stagenet-v2' | 'ton' | '728126428' | '130' | '196' | 'zcash'>;
@@ -322,11 +322,11 @@ export type TrackTransactionResponse = {
             amountBps?: number;
             asset: string;
             chain: string;
-            protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+            protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
         }>;
         amountInUsd?: string;
         amountOutUsd?: string;
-        provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+        provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
         providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder';
         providerOrderId?: string;
         images?: {
@@ -430,11 +430,11 @@ export type TrackTransactionResponse = {
                 amountBps?: number;
                 asset: string;
                 chain: string;
-                protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+                protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
             }>;
             amountInUsd?: string;
             amountOutUsd?: string;
-            provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+            provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
             providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder';
             providerOrderId?: string;
             images?: {
@@ -570,11 +570,11 @@ export type TrackLedgerSwapResponse = {
                 amountBps?: number;
                 asset: string;
                 chain: string;
-                protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+                protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
             }>;
             amountInUsd?: string;
             amountOutUsd?: string;
-            provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+            provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
             providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder';
             providerOrderId?: string;
             images?: {
@@ -678,11 +678,11 @@ export type TrackLedgerSwapResponse = {
                     amountBps?: number;
                     asset: string;
                     chain: string;
-                    protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+                    protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
                 }>;
                 amountInUsd?: string;
                 amountOutUsd?: string;
-                provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+                provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
                 providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder';
                 providerOrderId?: string;
                 images?: {
@@ -792,11 +792,11 @@ export type InsertTrackedTransactionRequest = {
                 amountBps?: number;
                 asset: string;
                 chain: string;
-                protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+                protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
             }>;
             amountInUsd?: string;
             amountOutUsd?: string;
-            provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+            provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
             providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder';
             providerOrderId?: string;
             images?: {
@@ -1110,7 +1110,7 @@ export type GetQuoteRequest = {
      */
     affiliateFee?: number;
     /**
-     * Address to refund to if the swap fails, on the SELL chain. Defaults to sourceAddress — set it when the sender cannot receive funds, e.g. a send-only contract wallet. Forwarded to CHAINFLIP, CHAINFLIP_STREAMING, MAYACHAIN, MAYACHAIN_STREAMING, THORCHAIN, THORCHAIN_STREAMING, NEAR, HARBOR, FLASHNET; routes through providers that always refund the on-chain sender are dropped from the response when this differs from sourceAddress.
+     * Address to refund to if the swap fails, on the SELL chain. Defaults to sourceAddress — set it when the sender cannot receive funds, e.g. a send-only contract wallet. Forwarded to CHAINFLIP, CHAINFLIP_STREAMING, MAYACHAIN, MAYACHAIN_STREAMING, THORCHAIN, THORCHAIN_STREAMING, NEAR, HARBOR, FLASHNET, RELAY; routes through providers that always refund the on-chain sender are dropped from the response when this differs from sourceAddress.
      */
     refundAddress?: string;
     /**
@@ -1171,21 +1171,21 @@ export type GetQuoteResponse = {
             amountBps?: number;
             asset: string;
             chain: string;
-            protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+            protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
         }>;
         /**
          * The provider of the previous leg in the route, if any
          */
-        previousLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+        previousLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
         /**
          * The provider of the next leg in the route, if any
          */
-        nextLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+        nextLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
         /**
          * Route ID
          */
         routeId: string;
-        providers: Array<'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3'>;
+        providers: Array<'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3'>;
         /**
          * Expiration
          */
@@ -1213,7 +1213,7 @@ export type GetQuoteResponse = {
          */
         totalSlippageBps: number;
         legs: Array<{
-            provider: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+            provider: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
             /**
              * Asset to sell
              */
@@ -1248,16 +1248,16 @@ export type GetQuoteResponse = {
                 amountBps?: number;
                 asset: string;
                 chain: string;
-                protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+                protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
             }>;
             /**
              * The provider of the previous leg in the route, if any
              */
-            previousLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+            previousLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
             /**
              * The provider of the next leg in the route, if any
              */
-            nextLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+            nextLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
         }>;
         warnings: Array<{
             code: 'highSlippage' | 'highPriceImpact' | 'noSourceAddressToBuildTransaction' | 'affiliateFeeTooSmallSoRemoved' | 'unableToApplyReferralProgram' | 'insufficientBalance' | 'insufficientGas' | 'unableToBuildTransaction' | 'unableToEstimateGas' | 'limitPriceBelowSpot' | 'limitPriceWithinFeeGap' | 'outputBelowPublishedFloor' | 'litecoinMwebNotSupported' | 'refundAddressNotApplied' | 'vaultSwapUnavailable';
@@ -1304,7 +1304,7 @@ export type GetQuoteResponse = {
      */
     error?: string;
     providerErrors?: Array<{
-        provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+        provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
         errorCode?: 'noRpcFallbacks' | 'requestTimeout' | 'invalidApiVersion' | 'isSanctionedAddress' | 'unknownError' | 'collectorEgressForbidden' | 'collectorUpstreamHttpError' | 'collectorUpstreamTransient' | 'collectorRetriesExhausted' | 'collectorUnreachable' | 'internalServerError' | 'test_error' | 'blockHeaderNotFound' | 'blockHashNotFoundAtHeight' | 'blackListAsset' | 'txHashMissing' | 'invalidAsset' | 'currentBlockHeaderNotFound' | 'failedToRetrieveBalance' | 'failedToRetrieveBlock' | 'failedToRetrieveFees' | 'notImplementedBCH' | 'notImplementedDoge' | 'noPoolsFound' | 'noVaultsFound' | 'noTxFound' | 'multipleCosmosMessages' | 'heightOrHashNotProvided' | 'priceTooVolatile' | 'unknownDenom' | 'invalidBlockHeight' | 'timestampExtrinsicNoArgumentsForBlock' | 'timestampExtrinsicNoTimestampForBlock' | 'noTimestampExtrinsicForHash' | 'timestampExtrinsicNoArgumentsForHash' | 'txMemoUndefined' | 'txMemoIncorrect' | 'txTypeNotFound' | 'txNoMessage' | 'txNotFound' | 'txReceiptNotFound' | 'txParsingError' | 'txLogsParsingError' | 'txFailed' | 'jobDataParsingError' | 'dataformRunFailed' | 'dataformAssertionFailed' | 'blockNotFound' | 'balanceNotFound' | 'blockbookCallFailed' | 'configError' | 'unsafeTestDatabase' | 'synthSwapDisallowed' | 'noQuoteResponse' | 'invalidProviderResponse' | 'noPoolAssetsFound' | 'noThorchainPools' | 'noMayachainPools' | 'noThorchainNetworkInfo' | 'invalidAffiliateFee' | 'invalidBuyAssetAddress' | 'invalidSellAssetAddress' | 'invalidSourceAddress' | 'invalidRefundAddress' | 'invalidDestinationAddress' | 'invalidParam' | 'xrpAddressRequiresTag' | 'invalidChainId' | 'invalidChain' | 'unsupportedChainId' | 'unsupportedEVMChainId' | 'unsupportedMethod' | 'unsupportedProvider' | 'refundAddressUnsupportedByRoute' | 'refundAddressTooLongForSellChain' | 'unsupportedProgram' | 'unsupportedEvent' | 'invalidParamsForMethod' | 'noWhitelistTokens' | 'failedFetchGasPrice' | 'chainflipBrokerApiUnavailable' | 'failedToBuildVaultSwapTransaction' | 'failedToOpenBtcPrivateChannel' | 'failedToCloseBtcPrivateChannel' | 'affiliateNotRegistered' | 'failedToCreateDepositChannel' | 'failedToRegisterAccount' | 'failedToRegisterAffiliate' | 'failedToWithdrawAffiliate' | 'failedToDeregisterAffiliate' | 'affiliateHasUnclaimedBalance' | 'affiliateRecentlyActive' | 'noProviderDetailsFound' | 'noTokenListsFound' | 'tokenNotFound' | 'tokenPriceNotFound' | 'tokenPriceUnavailable' | 'tokenPriceFailedToUpdate' | 'legsArrayIsEmpty' | 'failedToFetchQuoteForLeg' | 'noBlockHeaderFound' | 'failedToSimulateSwap' | 'swapHalted' | 'memoTooLongForSourceChain' | 'addressScreeningFailed' | 'missingScreeningConfig' | 'insufficientLiquidity' | 'noSaversFound' | 'noInbounDataFound' | 'noInboundAddressesFound' | 'noTargetAddress' | 'noInboundAddressFoundForChain' | 'noLastBlocksFound' | 'noVersionFound' | 'noConstantsFound' | 'noMimirsFound' | 'noRoutesFound' | 'geoRestrictedToken' | 'quoteNotFound' | 'providerResponseFormError' | 'ledgerWrongPayload' | 'failedToFetchTx' | 'failedBuildTransactionDetails' | 'failedToCreateRouteMetadata' | 'txBuildingTimeout' | 'noLegsForRoute' | 'insufficientBalance' | 'insufficientAllowance' | 'insufficientGas' | 'unableToBuildTransaction' | 'noRouterAddressFound' | 'noAggregatorAddressFound' | 'noContractInstanceFound' | 'noContractAddressFound' | 'invalidAffiliate' | 'invalidAffiliateName' | 'thornameNotFound' | 'thornameAffiliate' | 'No provider found' | 'providerStatusesUnavailable' | 'providerAssetNotFound' | 'No Record found' | 'Slippage too low' | 'tradingHalted' | 'mayanameNotFound' | 'noWrappedGasAsset' | 'aggregatorAddressNotFound' | 'routerAddressNotFound' | 'dummyAddressNotFound' | 'trackerError' | 'thorchainPoolUnavailable' | 'noTradingPairs' | 'missingState' | 'ledgerSwapNotFound' | 'ledgerSwapNotReadyForTracking' | 'ledgerInvalidParsingMode' | 'ledgerWebhookNotifyFailed' | 'errorEstimatingGas' | 'apiKeyInvalid' | 'apiKeyFailedToUpdate' | 'apiKeySignatureExists' | 'apiKeySignatureKeyTypeMismatch' | 'apiKeyExpired' | 'unauthorized' | 'failedToCreateMemo' | 'invalidAddressForChain' | 'invalidAddress' | 'riskyAddress' | 'noRoutesToProcess' | 'sellAssetAmountTooSmall' | 'sellAssetAmountTooLarge' | 'missingPrivateKey' | 'noMemoPriceProtection' | 'nodeMethodNotFound' | 'nodeRpcNotFound' | 'thirdPartyProviderNotFound' | 'quoteUnavailable' | 'targetInstructionNotFound' | 'referrerExist' | 'referrerNotFound' | 'invalidReferrer' | 'quoteLogicError' | 'missingDecimal' | 'noGasInfoInDB' | 'quoteError' | 'valueOverflow' | 'missingChainflipMeta' | 'contractAndMethodRequired' | 'tokenImageError' | 'fileNotFound' | 'fileFormatError' | 'ipError' | 'failedToSaveLedgerSwap' | 'missingValue' | 'missingDBQueryParam' | 'unableEstimateTxTime' | 'affiliateStatsMissingDate' | 'affiliateStatsMissingNextFilter' | 'affiliateStatsNoActions' | 'unsupportedNotificationEvent' | 'unsupportedNotificationChannel' | 'invalidWebhookUrl' | 'webhookDeliveryFailed' | 'serverStateNotFound' | 'apiRequestFailed' | 'apiRateLimit' | 'invalidActionStep' | 'providerIsRequired' | 'rateLimitExceeded' | 'depositChannelNotFound' | 'auditLogInsertFailed' | 'affiliateNameHistoryInsertFailed' | 'invalidRouteId' | 'invalidQuoteId' | 'invalidRoute' | 'destinationTrustlineRequired' | 'stellarHorizonUnavailable' | 'quoteExpired' | 'swapQuoteNotFound' | 'swapRouteNotFound' | 'swapTransactionFailed' | 'swapChainflipMetaMissing' | 'swapChainflipChannelFailed' | 'swapTransferTxFailed' | 'chainflipVaultSwapNotSupported' | 'chainflipVaultSwapEncodingFailed' | 'chainflipVaultSwapInvalidChain' | 'chainflipVaultSwapBitcoinCCMNotSupported' | 'chainflipVaultSwapTransactionBuildFailed' | 'zcashInvalidAddress' | 'zcashInsufficientUTXOs' | 'zcashUTXOSelectionFailed' | 'zcashTransactionBuildFailed' | 'zcashShieldedRefundMissing' | 'zcashMemoTooLong' | 'litecoinMwebAddressUnsupported' | 'zcashUnifiedAddressUnsupported' | 'zcashShieldedMemoUnavailable' | 'invalidTokenProgram' | 'solanaOutputBelowRentExemptMinimum' | 'solanaTokenProgramUnavailable' | 'invalidRequest' | 'pubsubEventNotRegistered' | 'pubsubTopicNotFound' | 'pubsubEnvelopeParsingError' | 'invalidSpender' | 'outputAmountDeviationTooHigh' | 'outputBelowPublishedFloor' | 'swapSizeExceeded' | 'v2EndpointNotAllowed' | 'externalServiceFailed' | 'tenantEncryptKeyNotFound' | 'tenantKeyPairEncryptionError' | 'slip24AmountOverflow' | 'slip24InvalidSignature' | 'slip24DigestComputationFailed' | 'invalidTxHashFormat' | 'affiliateNotFound' | 'nearAffiliateProviderAssetNotFound' | 'nearAffiliateDepositAddressFailed' | 'flashnetAffiliateRegistrationFailed' | 'flashnetAffiliateClaimFailed' | 'flashnetAffiliateNotFound' | 'pactswapAffiliateRegistrationFailed' | 'pactswapAffiliateNotFound' | 'limitOrderUnsupportedChain' | 'limitOrderQuoteNotFound' | 'limitOrderRouteNotFound' | 'limitOrderNotFound' | 'limitOrderInvalidState' | 'limitOrderBuildFailed' | 'limitOrderSubmissionFailed' | 'limitOrderCancelFailed' | 'limitOrderExpirationOutOfBounds' | 'limitOrderUnsupportedFillFlags' | 'limitOrderAmountAmbiguous' | 'limitOrderChainMismatch' | 'limitOrderUnsupportedPair' | 'limitOrderActionUnavailable' | 'limitOrderProviderError' | 'limitOrderMakerBlacklisted' | 'limitOrderInsufficientAllowance' | 'limitOrderMaxOrdersExceeded' | 'limitOrderRejected';
         message?: string;
         /**
@@ -1420,21 +1420,21 @@ export type ExecuteSwapResponse = {
         amountBps?: number;
         asset: string;
         chain: string;
-        protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+        protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
     }>;
     /**
      * The provider of the previous leg in the route, if any
      */
-    previousLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+    previousLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
     /**
      * The provider of the next leg in the route, if any
      */
-    nextLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+    nextLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
     /**
      * Route ID
      */
     routeId: string;
-    providers: Array<'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3'>;
+    providers: Array<'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3'>;
     /**
      * Expiration
      */
@@ -1462,7 +1462,7 @@ export type ExecuteSwapResponse = {
      */
     totalSlippageBps: number;
     legs: Array<{
-        provider: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+        provider: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
         /**
          * Asset to sell
          */
@@ -1497,16 +1497,16 @@ export type ExecuteSwapResponse = {
             amountBps?: number;
             asset: string;
             chain: string;
-            protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+            protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
         }>;
         /**
          * The provider of the previous leg in the route, if any
          */
-        previousLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+        previousLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
         /**
          * The provider of the next leg in the route, if any
          */
-        nextLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+        nextLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
     }>;
     warnings: Array<{
         code: 'highSlippage' | 'highPriceImpact' | 'noSourceAddressToBuildTransaction' | 'affiliateFeeTooSmallSoRemoved' | 'unableToApplyReferralProgram' | 'insufficientBalance' | 'insufficientGas' | 'unableToBuildTransaction' | 'unableToEstimateGas' | 'limitPriceBelowSpot' | 'limitPriceWithinFeeGap' | 'outputBelowPublishedFloor' | 'litecoinMwebNotSupported' | 'refundAddressNotApplied' | 'vaultSwapUnavailable';
@@ -1960,7 +1960,7 @@ export type GetTokensData = {
         /**
          * Provider name, or "all" to combine all providers
          */
-        provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3' | 'all';
+        provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3' | 'all';
         /**
          * Asset class filter. "rwa" returns only tokenized real-world assets, "crypto" only everything else, "all" (the default) returns both.
          */
@@ -2014,7 +2014,7 @@ export type SearchTokensData = {
         /**
          * Restrict search to a provider token list
          */
-        provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+        provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
         limit?: number;
         page?: number;
         /**
@@ -2275,11 +2275,11 @@ export type TrackTransactionResponses = {
                 amountBps?: number;
                 asset: string;
                 chain: string;
-                protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+                protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
             }>;
             amountInUsd?: string;
             amountOutUsd?: string;
-            provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+            provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
             providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder';
             providerOrderId?: string;
             images?: {
@@ -2383,11 +2383,11 @@ export type TrackTransactionResponses = {
                     amountBps?: number;
                     asset: string;
                     chain: string;
-                    protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+                    protocol: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
                 }>;
                 amountInUsd?: string;
                 amountOutUsd?: string;
-                provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
+                provider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
                 providerAction?: 'swap' | 'aggregation' | 'addLiquidity' | 'withdrawLiquidity' | 'addSavers' | 'withdrawSavers' | 'borrow' | 'repay' | 'name' | 'donate' | 'claim' | 'stake' | 'unstake' | 'createOrder' | 'cancelOrder';
                 providerOrderId?: string;
                 images?: {
