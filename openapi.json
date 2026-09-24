@@ -1189,6 +1189,10 @@
                         "refundReason": {
                           "type": "string"
                         },
+                        "privacyMode": {
+                          "type": "boolean",
+                          "description": "True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise"
+                        },
                         "targetAddress": {
                           "type": "string"
                         }
@@ -1767,6 +1771,10 @@
                               },
                               "refundReason": {
                                 "type": "string"
+                              },
+                              "privacyMode": {
+                                "type": "boolean",
+                                "description": "True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise"
                               },
                               "targetAddress": {
                                 "type": "string"
@@ -5385,6 +5393,10 @@
               "refundReason": {
                 "type": "string"
               },
+              "privacyMode": {
+                "type": "boolean",
+                "description": "True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise"
+              },
               "targetAddress": {
                 "type": "string"
               }
@@ -5963,6 +5975,10 @@
                     },
                     "refundReason": {
                       "type": "string"
+                    },
+                    "privacyMode": {
+                      "type": "boolean",
+                      "description": "True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise"
                     },
                     "targetAddress": {
                       "type": "string"
@@ -6646,6 +6662,10 @@
                   "refundReason": {
                     "type": "string"
                   },
+                  "privacyMode": {
+                    "type": "boolean",
+                    "description": "True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise"
+                  },
                   "targetAddress": {
                     "type": "string"
                   }
@@ -7224,6 +7244,10 @@
                         },
                         "refundReason": {
                           "type": "string"
+                        },
+                        "privacyMode": {
+                          "type": "boolean",
+                          "description": "True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise"
                         },
                         "targetAddress": {
                           "type": "string"
@@ -7847,6 +7871,10 @@
                     },
                     "refundReason": {
                       "type": "string"
+                    },
+                    "privacyMode": {
+                      "type": "boolean",
+                      "description": "True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise"
                     },
                     "targetAddress": {
                       "type": "string"

@@ -343,6 +343,10 @@ export type TrackTransactionResponse = {
         failReason?: string;
         failTargetAddress?: string;
         refundReason?: string;
+        /**
+         * True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise
+         */
+        privacyMode?: boolean;
         targetAddress?: string;
     };
     payload?: {
@@ -451,6 +455,10 @@ export type TrackTransactionResponse = {
             failReason?: string;
             failTargetAddress?: string;
             refundReason?: string;
+            /**
+             * True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise
+             */
+            privacyMode?: boolean;
             targetAddress?: string;
         };
         payload?: {
@@ -591,6 +599,10 @@ export type TrackLedgerSwapResponse = {
             failReason?: string;
             failTargetAddress?: string;
             refundReason?: string;
+            /**
+             * True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise
+             */
+            privacyMode?: boolean;
             targetAddress?: string;
         };
         payload?: {
@@ -699,6 +711,10 @@ export type TrackLedgerSwapResponse = {
                 failReason?: string;
                 failTargetAddress?: string;
                 refundReason?: string;
+                /**
+                 * True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise
+                 */
+                privacyMode?: boolean;
                 targetAddress?: string;
             };
             payload?: {
@@ -813,6 +829,10 @@ export type InsertTrackedTransactionRequest = {
             failReason?: string;
             failTargetAddress?: string;
             refundReason?: string;
+            /**
+             * True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise
+             */
+            privacyMode?: boolean;
             targetAddress?: string;
         };
         payload?: {
@@ -2296,6 +2316,10 @@ export type TrackTransactionResponses = {
             failReason?: string;
             failTargetAddress?: string;
             refundReason?: string;
+            /**
+             * True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise
+             */
+            privacyMode?: boolean;
             targetAddress?: string;
         };
         payload?: {
@@ -2404,6 +2428,10 @@ export type TrackTransactionResponses = {
                 failReason?: string;
                 failTargetAddress?: string;
                 refundReason?: string;
+                /**
+                 * True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise
+                 */
+                privacyMode?: boolean;
                 targetAddress?: string;
             };
             payload?: {
