@@ -98,6 +98,7 @@
                     "HARBOR",
                     "FLASHNET",
                     "MAYAN",
+                    "RELAY",
                     "PACTSWAP",
                     "PANGOLIN_V1",
                     "CAVIAR_V1",
@@ -302,6 +303,7 @@
                 "HARBOR",
                 "FLASHNET",
                 "MAYAN",
+                "RELAY",
                 "PACTSWAP",
                 "PANGOLIN_V1",
                 "CAVIAR_V1",
@@ -1057,6 +1059,7 @@
                                   "HARBOR",
                                   "FLASHNET",
                                   "MAYAN",
+                                  "RELAY",
                                   "PACTSWAP",
                                   "PANGOLIN_V1",
                                   "CAVIAR_V1",
@@ -1104,6 +1107,7 @@
                             "HARBOR",
                             "FLASHNET",
                             "MAYAN",
+                            "RELAY",
                             "PACTSWAP",
                             "PANGOLIN_V1",
                             "CAVIAR_V1",
@@ -1184,6 +1188,10 @@
                         },
                         "refundReason": {
                           "type": "string"
+                        },
+                        "privacyMode": {
+                          "type": "boolean",
+                          "description": "True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise"
                         },
                         "targetAddress": {
                           "type": "string"
@@ -1634,6 +1642,7 @@
                                         "HARBOR",
                                         "FLASHNET",
                                         "MAYAN",
+                                        "RELAY",
                                         "PACTSWAP",
                                         "PANGOLIN_V1",
                                         "CAVIAR_V1",
@@ -1681,6 +1690,7 @@
                                   "HARBOR",
                                   "FLASHNET",
                                   "MAYAN",
+                                  "RELAY",
                                   "PACTSWAP",
                                   "PANGOLIN_V1",
                                   "CAVIAR_V1",
@@ -1761,6 +1771,10 @@
                               },
                               "refundReason": {
                                 "type": "string"
+                              },
+                              "privacyMode": {
+                                "type": "boolean",
+                                "description": "True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise"
                               },
                               "targetAddress": {
                                 "type": "string"
@@ -1976,6 +1990,7 @@
                 "137",
                 "143",
                 "196",
+                "999",
                 "4663",
                 "5042",
                 "8453",
@@ -2058,6 +2073,7 @@
                 "137",
                 "143",
                 "196",
+                "999",
                 "4663",
                 "5042",
                 "8453",
@@ -2438,6 +2454,7 @@
                       "HARBOR",
                       "FLASHNET",
                       "MAYAN",
+                      "RELAY",
                       "PACTSWAP",
                       "PANGOLIN_V1",
                       "CAVIAR_V1",
@@ -2923,6 +2940,7 @@
                         "HARBOR",
                         "FLASHNET",
                         "MAYAN",
+                        "RELAY",
                         "PACTSWAP",
                         "PANGOLIN_V1",
                         "CAVIAR_V1",
@@ -3563,6 +3581,7 @@
                       "HARBOR",
                       "FLASHNET",
                       "MAYAN",
+                      "RELAY",
                       "PACTSWAP",
                       "PANGOLIN_V1",
                       "CAVIAR_V1",
@@ -3636,6 +3655,7 @@
                 "HARBOR",
                 "FLASHNET",
                 "MAYAN",
+                "RELAY",
                 "PACTSWAP",
                 "PANGOLIN_V1",
                 "CAVIAR_V1",
@@ -3666,6 +3686,7 @@
                 "HARBOR",
                 "FLASHNET",
                 "MAYAN",
+                "RELAY",
                 "PACTSWAP",
                 "PANGOLIN_V1",
                 "CAVIAR_V1",
@@ -3885,6 +3906,7 @@
                     "HARBOR",
                     "FLASHNET",
                     "MAYAN",
+                    "RELAY",
                     "PACTSWAP",
                     "PANGOLIN_V1",
                     "CAVIAR_V1",
@@ -5241,6 +5263,7 @@
                         "HARBOR",
                         "FLASHNET",
                         "MAYAN",
+                        "RELAY",
                         "PACTSWAP",
                         "PANGOLIN_V1",
                         "CAVIAR_V1",
@@ -5288,6 +5311,7 @@
                   "HARBOR",
                   "FLASHNET",
                   "MAYAN",
+                  "RELAY",
                   "PACTSWAP",
                   "PANGOLIN_V1",
                   "CAVIAR_V1",
@@ -5368,6 +5392,10 @@
               },
               "refundReason": {
                 "type": "string"
+              },
+              "privacyMode": {
+                "type": "boolean",
+                "description": "True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise"
               },
               "targetAddress": {
                 "type": "string"
@@ -5818,6 +5846,7 @@
                               "HARBOR",
                               "FLASHNET",
                               "MAYAN",
+                              "RELAY",
                               "PACTSWAP",
                               "PANGOLIN_V1",
                               "CAVIAR_V1",
@@ -5865,6 +5894,7 @@
                         "HARBOR",
                         "FLASHNET",
                         "MAYAN",
+                        "RELAY",
                         "PACTSWAP",
                         "PANGOLIN_V1",
                         "CAVIAR_V1",
@@ -5945,6 +5975,10 @@
                     },
                     "refundReason": {
                       "type": "string"
+                    },
+                    "privacyMode": {
+                      "type": "boolean",
+                      "description": "True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise"
                     },
                     "targetAddress": {
                       "type": "string"
@@ -6498,6 +6532,7 @@
                             "HARBOR",
                             "FLASHNET",
                             "MAYAN",
+                            "RELAY",
                             "PACTSWAP",
                             "PANGOLIN_V1",
                             "CAVIAR_V1",
@@ -6545,6 +6580,7 @@
                       "HARBOR",
                       "FLASHNET",
                       "MAYAN",
+                      "RELAY",
                       "PACTSWAP",
                       "PANGOLIN_V1",
                       "CAVIAR_V1",
@@ -6625,6 +6661,10 @@
                   },
                   "refundReason": {
                     "type": "string"
+                  },
+                  "privacyMode": {
+                    "type": "boolean",
+                    "description": "True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise"
                   },
                   "targetAddress": {
                     "type": "string"
@@ -7075,6 +7115,7 @@
                                   "HARBOR",
                                   "FLASHNET",
                                   "MAYAN",
+                                  "RELAY",
                                   "PACTSWAP",
                                   "PANGOLIN_V1",
                                   "CAVIAR_V1",
@@ -7122,6 +7163,7 @@
                             "HARBOR",
                             "FLASHNET",
                             "MAYAN",
+                            "RELAY",
                             "PACTSWAP",
                             "PANGOLIN_V1",
                             "CAVIAR_V1",
@@ -7202,6 +7244,10 @@
                         },
                         "refundReason": {
                           "type": "string"
+                        },
+                        "privacyMode": {
+                          "type": "boolean",
+                          "description": "True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise"
                         },
                         "targetAddress": {
                           "type": "string"
@@ -7699,6 +7745,7 @@
                               "HARBOR",
                               "FLASHNET",
                               "MAYAN",
+                              "RELAY",
                               "PACTSWAP",
                               "PANGOLIN_V1",
                               "CAVIAR_V1",
@@ -7745,6 +7792,7 @@
                         "HARBOR",
                         "FLASHNET",
                         "MAYAN",
+                        "RELAY",
                         "PACTSWAP",
                         "PANGOLIN_V1",
                         "CAVIAR_V1",
@@ -7823,6 +7871,10 @@
                     },
                     "refundReason": {
                       "type": "string"
+                    },
+                    "privacyMode": {
+                      "type": "boolean",
+                      "description": "True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise"
                     },
                     "targetAddress": {
                       "type": "string"
@@ -8955,7 +9007,7 @@
           },
           "sourceAddress": {
             "type": "string",
-            "description": "Address to send asset from"
+            "description": "Address to send asset from. On a UTXO sell chain this may name several addresses to draw inputs from, separated by `;` — the first is used wherever a single address is required (refund address, memos, deposit channels). At most 6 addresses; repeats are ignored, empty entries are rejected."
           },
           "destinationAddress": {
             "type": "string",
@@ -9013,7 +9065,7 @@
           },
           "refundAddress": {
             "type": "string",
-            "description": "Address to refund to if the swap fails, on the SELL chain. Defaults to sourceAddress — set it when the sender cannot receive funds, e.g. a send-only contract wallet. Forwarded to CHAINFLIP, CHAINFLIP_STREAMING, MAYACHAIN, MAYACHAIN_STREAMING, THORCHAIN, THORCHAIN_STREAMING, NEAR, HARBOR, FLASHNET; routes through providers that always refund the on-chain sender are dropped from the response when this differs from sourceAddress."
+            "description": "Address to refund to if the swap fails, on the SELL chain. Defaults to sourceAddress — set it when the sender cannot receive funds, e.g. a send-only contract wallet. Forwarded to CHAINFLIP, CHAINFLIP_STREAMING, MAYACHAIN, MAYACHAIN_STREAMING, THORCHAIN, THORCHAIN_STREAMING, NEAR, HARBOR, FLASHNET, RELAY; routes through providers that always refund the on-chain sender are dropped from the response when this differs from sourceAddress."
           },
           "refundAddressSetting": {
             "default": "WARNING",
@@ -9144,6 +9196,7 @@
                           "HARBOR",
                           "FLASHNET",
                           "MAYAN",
+                          "RELAY",
                           "PACTSWAP",
                           "PANGOLIN_V1",
                           "CAVIAR_V1",
@@ -9186,6 +9239,7 @@
                     "HARBOR",
                     "FLASHNET",
                     "MAYAN",
+                    "RELAY",
                     "PACTSWAP",
                     "PANGOLIN_V1",
                     "CAVIAR_V1",
@@ -9217,6 +9271,7 @@
                     "HARBOR",
                     "FLASHNET",
                     "MAYAN",
+                    "RELAY",
                     "PACTSWAP",
                     "PANGOLIN_V1",
                     "CAVIAR_V1",
@@ -9253,6 +9308,7 @@
                       "HARBOR",
                       "FLASHNET",
                       "MAYAN",
+                      "RELAY",
                       "PACTSWAP",
                       "PANGOLIN_V1",
                       "CAVIAR_V1",
@@ -9322,6 +9378,7 @@
                           "HARBOR",
                           "FLASHNET",
                           "MAYAN",
+                          "RELAY",
                           "PACTSWAP",
                           "PANGOLIN_V1",
                           "CAVIAR_V1",
@@ -9410,6 +9467,7 @@
                                 "HARBOR",
                                 "FLASHNET",
                                 "MAYAN",
+                                "RELAY",
                                 "PACTSWAP",
                                 "PANGOLIN_V1",
                                 "CAVIAR_V1",
@@ -9452,6 +9510,7 @@
                           "HARBOR",
                           "FLASHNET",
                           "MAYAN",
+                          "RELAY",
                           "PACTSWAP",
                           "PANGOLIN_V1",
                           "CAVIAR_V1",
@@ -9483,6 +9542,7 @@
                           "HARBOR",
                           "FLASHNET",
                           "MAYAN",
+                          "RELAY",
                           "PACTSWAP",
                           "PANGOLIN_V1",
                           "CAVIAR_V1",
@@ -9684,6 +9744,7 @@
                     "HARBOR",
                     "FLASHNET",
                     "MAYAN",
+                    "RELAY",
                     "PACTSWAP",
                     "PANGOLIN_V1",
                     "CAVIAR_V1",
@@ -9758,6 +9819,7 @@
                     "invalidBuyAssetAddress",
                     "invalidSellAssetAddress",
                     "invalidSourceAddress",
+                    "invalidSourceAddressList",
                     "invalidRefundAddress",
                     "invalidDestinationAddress",
                     "invalidParam",
@@ -9822,6 +9884,9 @@
                     "txBuildingTimeout",
                     "noLegsForRoute",
                     "insufficientBalance",
+                    "utxoSelectionRefused",
+                    "utxoFeeHeadroomInsufficient",
+                    "utxoBalanceBelowAmount",
                     "insufficientAllowance",
                     "insufficientGas",
                     "unableToBuildTransaction",
@@ -10018,7 +10083,7 @@
           },
           "sourceAddress": {
             "type": "string",
-            "description": "Address to send asset from"
+            "description": "Address to send asset from. On a UTXO sell chain this may name several addresses to draw inputs from, separated by `;` — the first is used wherever a single address is required (refund address, memos, deposit channels). At most 6 addresses; repeats are ignored, empty entries are rejected."
           },
           "destinationAddress": {
             "type": "string",
@@ -10175,6 +10240,7 @@
                     "HARBOR",
                     "FLASHNET",
                     "MAYAN",
+                    "RELAY",
                     "PACTSWAP",
                     "PANGOLIN_V1",
                     "CAVIAR_V1",
@@ -10217,6 +10283,7 @@
               "HARBOR",
               "FLASHNET",
               "MAYAN",
+              "RELAY",
               "PACTSWAP",
               "PANGOLIN_V1",
               "CAVIAR_V1",
@@ -10248,6 +10315,7 @@
               "HARBOR",
               "FLASHNET",
               "MAYAN",
+              "RELAY",
               "PACTSWAP",
               "PANGOLIN_V1",
               "CAVIAR_V1",
@@ -10284,6 +10352,7 @@
                 "HARBOR",
                 "FLASHNET",
                 "MAYAN",
+                "RELAY",
                 "PACTSWAP",
                 "PANGOLIN_V1",
                 "CAVIAR_V1",
@@ -10353,6 +10422,7 @@
                     "HARBOR",
                     "FLASHNET",
                     "MAYAN",
+                    "RELAY",
                     "PACTSWAP",
                     "PANGOLIN_V1",
                     "CAVIAR_V1",
@@ -10441,6 +10511,7 @@
                           "HARBOR",
                           "FLASHNET",
                           "MAYAN",
+                          "RELAY",
                           "PACTSWAP",
                           "PANGOLIN_V1",
                           "CAVIAR_V1",
@@ -10483,6 +10554,7 @@
                     "HARBOR",
                     "FLASHNET",
                     "MAYAN",
+                    "RELAY",
                     "PACTSWAP",
                     "PANGOLIN_V1",
                     "CAVIAR_V1",
@@ -10514,6 +10586,7 @@
                     "HARBOR",
                     "FLASHNET",
                     "MAYAN",
+                    "RELAY",
                     "PACTSWAP",
                     "PANGOLIN_V1",
                     "CAVIAR_V1",
