@@ -243,6 +243,10 @@ export type TrackTransactionRequest = {
      */
     depositAddress?: string;
     /**
+     * Share-link token (`t` on a track.swapkit.dev link) issued to the API key that opened a confidential swap. A valid token unlocks the full response for any API key; without it, confidential swaps are redacted unless the caller opened the deposit channel.
+     */
+    token?: string;
+    /**
      * routeId of the /v3/quote route this transaction executed. Pass it on /track calls until the response contains a parsed transaction, to enable realized-slippage reporting on completion. Best-effort: quote data expires ~5 minutes after quoting and is region-local, so the first call should come right after broadcast.
      */
     routeId?: string;
@@ -347,6 +351,8 @@ export type TrackTransactionResponse = {
          * True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise
          */
         privacyMode?: boolean;
+        redacted?: boolean;
+        redactionReason?: 'notOwner' | 'tokenExpired' | 'tokenInvalid';
         targetAddress?: string;
     };
     payload?: {
@@ -459,6 +465,8 @@ export type TrackTransactionResponse = {
              * True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise
              */
             privacyMode?: boolean;
+            redacted?: boolean;
+            redactionReason?: 'notOwner' | 'tokenExpired' | 'tokenInvalid';
             targetAddress?: string;
         };
         payload?: {
@@ -603,6 +611,8 @@ export type TrackLedgerSwapResponse = {
              * True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise
              */
             privacyMode?: boolean;
+            redacted?: boolean;
+            redactionReason?: 'notOwner' | 'tokenExpired' | 'tokenInvalid';
             targetAddress?: string;
         };
         payload?: {
@@ -715,6 +725,8 @@ export type TrackLedgerSwapResponse = {
                  * True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise
                  */
                 privacyMode?: boolean;
+                redacted?: boolean;
+                redactionReason?: 'notOwner' | 'tokenExpired' | 'tokenInvalid';
                 targetAddress?: string;
             };
             payload?: {
@@ -833,6 +845,8 @@ export type InsertTrackedTransactionRequest = {
              * True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise
              */
             privacyMode?: boolean;
+            redacted?: boolean;
+            redactionReason?: 'notOwner' | 'tokenExpired' | 'tokenInvalid';
             targetAddress?: string;
         };
         payload?: {
@@ -2320,6 +2334,8 @@ export type TrackTransactionResponses = {
              * True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise
              */
             privacyMode?: boolean;
+            redacted?: boolean;
+            redactionReason?: 'notOwner' | 'tokenExpired' | 'tokenInvalid';
             targetAddress?: string;
         };
         payload?: {
@@ -2432,6 +2448,8 @@ export type TrackTransactionResponses = {
                  * True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise
                  */
                 privacyMode?: boolean;
+                redacted?: boolean;
+                redactionReason?: 'notOwner' | 'tokenExpired' | 'tokenInvalid';
                 targetAddress?: string;
             };
             payload?: {

@@ -1193,6 +1193,17 @@
                           "type": "boolean",
                           "description": "True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise"
                         },
+                        "redacted": {
+                          "type": "boolean"
+                        },
+                        "redactionReason": {
+                          "type": "string",
+                          "enum": [
+                            "notOwner",
+                            "tokenExpired",
+                            "tokenInvalid"
+                          ]
+                        },
                         "targetAddress": {
                           "type": "string"
                         }
@@ -1775,6 +1786,17 @@
                               "privacyMode": {
                                 "type": "boolean",
                                 "description": "True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise"
+                              },
+                              "redacted": {
+                                "type": "boolean"
+                              },
+                              "redactionReason": {
+                                "type": "string",
+                                "enum": [
+                                  "notOwner",
+                                  "tokenExpired",
+                                  "tokenInvalid"
+                                ]
                               },
                               "targetAddress": {
                                 "type": "string"
@@ -4843,6 +4865,10 @@
             "type": "string",
             "description": "Deposit address associated with a deposit channel"
           },
+          "token": {
+            "type": "string",
+            "description": "Share-link token (`t` on a track.swapkit.dev link) issued to the API key that opened a confidential swap. A valid token unlocks the full response for any API key; without it, confidential swaps are redacted unless the caller opened the deposit channel."
+          },
           "routeId": {
             "type": "string",
             "description": "routeId of the /v3/quote route this transaction executed. Pass it on /track calls until the response contains a parsed transaction, to enable realized-slippage reporting on completion. Best-effort: quote data expires ~5 minutes after quoting and is region-local, so the first call should come right after broadcast."
@@ -5396,6 +5422,17 @@
               "privacyMode": {
                 "type": "boolean",
                 "description": "True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise"
+              },
+              "redacted": {
+                "type": "boolean"
+              },
+              "redactionReason": {
+                "type": "string",
+                "enum": [
+                  "notOwner",
+                  "tokenExpired",
+                  "tokenInvalid"
+                ]
               },
               "targetAddress": {
                 "type": "string"
@@ -5979,6 +6016,17 @@
                     "privacyMode": {
                       "type": "boolean",
                       "description": "True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise"
+                    },
+                    "redacted": {
+                      "type": "boolean"
+                    },
+                    "redactionReason": {
+                      "type": "string",
+                      "enum": [
+                        "notOwner",
+                        "tokenExpired",
+                        "tokenInvalid"
+                      ]
                     },
                     "targetAddress": {
                       "type": "string"
@@ -6666,6 +6714,17 @@
                     "type": "boolean",
                     "description": "True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise"
                   },
+                  "redacted": {
+                    "type": "boolean"
+                  },
+                  "redactionReason": {
+                    "type": "string",
+                    "enum": [
+                      "notOwner",
+                      "tokenExpired",
+                      "tokenInvalid"
+                    ]
+                  },
                   "targetAddress": {
                     "type": "string"
                   }
@@ -7248,6 +7307,17 @@
                         "privacyMode": {
                           "type": "boolean",
                           "description": "True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise"
+                        },
+                        "redacted": {
+                          "type": "boolean"
+                        },
+                        "redactionReason": {
+                          "type": "string",
+                          "enum": [
+                            "notOwner",
+                            "tokenExpired",
+                            "tokenInvalid"
+                          ]
                         },
                         "targetAddress": {
                           "type": "string"
@@ -7875,6 +7945,17 @@
                     "privacyMode": {
                       "type": "boolean",
                       "description": "True when the provider executed the swap in privacy mode (e.g. NEAR Confidential Intents). Consumers displaying the transaction publicly should redact destination details. Omitted otherwise"
+                    },
+                    "redacted": {
+                      "type": "boolean"
+                    },
+                    "redactionReason": {
+                      "type": "string",
+                      "enum": [
+                        "notOwner",
+                        "tokenExpired",
+                        "tokenInvalid"
+                      ]
                     },
                     "targetAddress": {
                       "type": "string"
