@@ -10047,6 +10047,7 @@
                     "webhookDeliveryFailed",
                     "serverStateNotFound",
                     "apiRequestFailed",
+                    "upstreamRequestFailed",
                     "apiRateLimit",
                     "invalidActionStep",
                     "providerIsRequired",
