@@ -1294,7 +1294,7 @@ export type GetQuoteResponse = {
             nextLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
         }>;
         warnings: Array<{
-            code: 'highSlippage' | 'highPriceImpact' | 'noSourceAddressToBuildTransaction' | 'affiliateFeeTooSmallSoRemoved' | 'unableToApplyReferralProgram' | 'insufficientBalance' | 'insufficientGas' | 'unableToBuildTransaction' | 'unableToEstimateGas' | 'limitPriceBelowSpot' | 'limitPriceWithinFeeGap' | 'outputBelowPublishedFloor' | 'litecoinMwebNotSupported' | 'refundAddressNotApplied' | 'vaultSwapUnavailable';
+            code: 'highSlippage' | 'highPriceImpact' | 'noSourceAddressToBuildTransaction' | 'affiliateFeeTooSmallSoRemoved' | 'unableToApplyReferralProgram' | 'insufficientBalance' | 'insufficientGas' | 'unableToBuildTransaction' | 'unableToEstimateGas' | 'limitPriceBelowSpot' | 'limitPriceWithinFeeGap' | 'limitOrderNotionalTooSmall' | 'outputBelowPublishedFloor' | 'litecoinMwebNotSupported' | 'refundAddressNotApplied' | 'vaultSwapUnavailable';
             display: string;
             tooltip?: string;
         }>;
@@ -1543,7 +1543,7 @@ export type ExecuteSwapResponse = {
         nextLegProvider?: 'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3';
     }>;
     warnings: Array<{
-        code: 'highSlippage' | 'highPriceImpact' | 'noSourceAddressToBuildTransaction' | 'affiliateFeeTooSmallSoRemoved' | 'unableToApplyReferralProgram' | 'insufficientBalance' | 'insufficientGas' | 'unableToBuildTransaction' | 'unableToEstimateGas' | 'limitPriceBelowSpot' | 'limitPriceWithinFeeGap' | 'outputBelowPublishedFloor' | 'litecoinMwebNotSupported' | 'refundAddressNotApplied' | 'vaultSwapUnavailable';
+        code: 'highSlippage' | 'highPriceImpact' | 'noSourceAddressToBuildTransaction' | 'affiliateFeeTooSmallSoRemoved' | 'unableToApplyReferralProgram' | 'insufficientBalance' | 'insufficientGas' | 'unableToBuildTransaction' | 'unableToEstimateGas' | 'limitPriceBelowSpot' | 'limitPriceWithinFeeGap' | 'limitOrderNotionalTooSmall' | 'outputBelowPublishedFloor' | 'litecoinMwebNotSupported' | 'refundAddressNotApplied' | 'vaultSwapUnavailable';
         display: string;
         tooltip?: string;
     }>;
