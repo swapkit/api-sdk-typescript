@@ -10126,7 +10126,12 @@
                     "limitOrderMakerBlacklisted",
                     "limitOrderInsufficientAllowance",
                     "limitOrderMaxOrdersExceeded",
-                    "limitOrderRejected"
+                    "limitOrderRejected",
+                    "tokenAdmissionEvaluationFailed",
+                    "tokenAdmissionAnalysisSaveFailed",
+                    "tokenAdmissionVerdictWriteFailed",
+                    "tokenAdmissionRecordFailed",
+                    "tokenAdmissionSpendUnreadable"
                   ]
                 },
                 "message": {
