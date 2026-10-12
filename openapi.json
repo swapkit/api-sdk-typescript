@@ -9857,6 +9857,7 @@
                     "blackListAsset",
                     "txHashMissing",
                     "invalidAsset",
+                    "assetDecimalsUnknown",
                     "currentBlockHeaderNotFound",
                     "failedToRetrieveBalance",
                     "failedToRetrieveBlock",
@@ -10133,7 +10134,9 @@
                     "tokenAdmissionAnalysisSaveFailed",
                     "tokenAdmissionVerdictWriteFailed",
                     "tokenAdmissionRecordFailed",
-                    "tokenAdmissionSpendUnreadable"
+                    "tokenAdmissionSpendUnreadable",
+                    "dynamicTokenNotFound",
+                    "dynamicTokenIdentifierUnavailable"
                   ]
                 },
                 "message": {
