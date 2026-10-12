@@ -9848,6 +9848,8 @@
                     "collectorUpstreamTransient",
                     "collectorRetriesExhausted",
                     "collectorUnreachable",
+                    "mergeScriptResultMissing",
+                    "mergeTargetFailed",
                     "internalServerError",
                     "test_error",
                     "blockHeaderNotFound",
