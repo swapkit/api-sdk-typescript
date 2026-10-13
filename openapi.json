@@ -1918,7 +1918,55 @@
               }
             }
           },
+          "404": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "string"
+                    },
+                    "data": {}
+                  },
+                  "required": [
+                    "message",
+                    "error"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
           "500": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "string"
+                    },
+                    "data": {}
+                  },
+                  "required": [
+                    "message",
+                    "error"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "502": {
             "description": "Default Response",
             "content": {
               "application/json": {
@@ -9875,6 +9923,8 @@
                     "mergeScriptResultMissing",
                     "mergeTargetFailed",
                     "internalServerError",
+                    "upstreamDependencyFailed",
+                    "chainflipSwapNotFound",
                     "test_error",
                     "blockHeaderNotFound",
                     "blockHashNotFoundAtHeight",
