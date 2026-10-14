@@ -10174,6 +10174,7 @@
                     "limitOrderAmountAmbiguous",
                     "limitOrderChainMismatch",
                     "limitOrderUnsupportedPair",
+                    "limitOrderProviderUnsupported",
                     "limitOrderActionUnavailable",
                     "limitOrderProviderError",
                     "limitOrderMakerBlacklisted",
