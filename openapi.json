@@ -10191,6 +10191,17 @@
                     "tokenAdmissionVerdictWriteFailed",
                     "tokenAdmissionRecordFailed",
                     "tokenAdmissionSpendUnreadable",
+                    "rawImportFetchFailed",
+                    "rawImportOpenSetFailed",
+                    "rawImportLookupFailed",
+                    "rawImportLookupAmbiguous",
+                    "rawImportMapFailed",
+                    "rawImportPublishFailed",
+                    "rawImportChangeStoreFailed",
+                    "rawImportProviderUnsupported",
+                    "rawImportProgressFailed",
+                    "rawImportInvalidCursor",
+                    "feeFixtureRunFailed",
                     "dynamicTokenNotFound",
                     "dynamicTokenIdentifierUnavailable"
                   ]
