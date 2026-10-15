@@ -10194,6 +10194,7 @@
                     "rawImportFetchFailed",
                     "rawImportOpenSetFailed",
                     "rawImportLookupFailed",
+                    "rawImportLookupAmbiguous",
                     "rawImportMapFailed",
                     "rawImportPublishFailed",
                     "rawImportChangeStoreFailed",
