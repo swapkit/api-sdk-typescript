@@ -10201,6 +10201,7 @@
                     "rawImportProviderUnsupported",
                     "rawImportProgressFailed",
                     "rawImportInvalidCursor",
+                    "rawImportThrottled",
                     "feeFixtureRunFailed",
                     "dynamicTokenNotFound",
                     "dynamicTokenIdentifierUnavailable"
