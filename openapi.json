@@ -10067,6 +10067,7 @@
                     "noRoutesToProcess",
                     "sellAssetAmountTooSmall",
                     "sellAssetAmountTooLarge",
+                    "estimatedTimeTooLong",
                     "missingPrivateKey",
                     "noMemoPriceProtection",
                     "nodeMethodNotFound",
