@@ -10313,6 +10313,10 @@
           "includeNonWitnessUtxo": {
             "type": "boolean",
             "description": "UTXO chains only. Set to true to embed the full previous transaction (nonWitnessUtxo) for each input in the returned PSBT. Required by legacy signers such as the Ledger Litecoin app."
+          },
+          "includeAttestation": {
+            "type": "boolean",
+            "description": "Set to true to return the provider's signed attestation of the deposit address as meta.nearSignedQuote (opt-in; NEAR-routed swaps only). See that field for how to verify it. Omitted from the response unless set."
           }
         },
         "required": [
@@ -11921,6 +11925,39 @@
               "allowance": {
                 "type": "string",
                 "description": "Current on-chain allowance held by meta.approvalAddress for the sell token, in base units (unlike sellAmount, which is human decimals). Omitted when no ERC-20 approval applies (gas assets, non-EVM). `approvalTx` presence, not this value, signals approval is required."
+              },
+              "nearSignedQuote": {
+                "description": "1Click's signed quote response, verbatim — present only when the request set includeAttestation and the route deposits via NEAR. Pass it to verifyQuoteSignature from @defuse-protocol/one-click-sdk-typescript >= 0.1.25 to prove quote.depositAddress — the address 1Click will watch for your deposit — genuinely came from 1Click. Compare it against where you are about to send funds, NOT blindly against targetAddress: the two are the same on a direct NEAR route, but a route that swaps through a DEX first puts that DEX's router in targetAddress and reaches the attested address on a later leg. The signature covers 1Click's quote, not the transaction we built. Keep a copy: 1Click treats it as the record for resolving disputes.",
+                "type": "object",
+                "properties": {
+                  "correlationId": {
+                    "type": "string"
+                  },
+                  "timestamp": {
+                    "type": "string"
+                  },
+                  "signature": {
+                    "type": "string"
+                  },
+                  "quoteRequest": {
+                    "type": "object",
+                    "properties": {},
+                    "additionalProperties": {}
+                  },
+                  "quote": {
+                    "type": "object",
+                    "properties": {},
+                    "additionalProperties": {}
+                  }
+                },
+                "required": [
+                  "correlationId",
+                  "timestamp",
+                  "signature",
+                  "quoteRequest",
+                  "quote"
+                ],
+                "additionalProperties": {}
               }
             },
             "required": [

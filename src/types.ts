@@ -1417,6 +1417,10 @@ export type ExecuteSwapRequest = {
      * UTXO chains only. Set to true to embed the full previous transaction (nonWitnessUtxo) for each input in the returned PSBT. Required by legacy signers such as the Ledger Litecoin app.
      */
     includeNonWitnessUtxo?: boolean;
+    /**
+     * Set to true to return the provider's signed attestation of the deposit address as meta.nearSignedQuote (opt-in; NEAR-routed swaps only). See that field for how to verify it. Omitted from the response unless set.
+     */
+    includeAttestation?: boolean;
 };
 
 export type ExecuteSwapResponse = {
@@ -1903,6 +1907,21 @@ export type ExecuteSwapResponse = {
          * Current on-chain allowance held by meta.approvalAddress for the sell token, in base units (unlike sellAmount, which is human decimals). Omitted when no ERC-20 approval applies (gas assets, non-EVM). `approvalTx` presence, not this value, signals approval is required.
          */
         allowance?: string;
+        /**
+         * 1Click's signed quote response, verbatim — present only when the request set includeAttestation and the route deposits via NEAR. Pass it to verifyQuoteSignature from @defuse-protocol/one-click-sdk-typescript >= 0.1.25 to prove quote.depositAddress — the address 1Click will watch for your deposit — genuinely came from 1Click. Compare it against where you are about to send funds, NOT blindly against targetAddress: the two are the same on a direct NEAR route, but a route that swaps through a DEX first puts that DEX's router in targetAddress and reaches the attested address on a later leg. The signature covers 1Click's quote, not the transaction we built. Keep a copy: 1Click treats it as the record for resolving disputes.
+         */
+        nearSignedQuote?: {
+            correlationId: string;
+            timestamp: string;
+            signature: string;
+            quoteRequest: {
+                [key: string]: unknown;
+            };
+            quote: {
+                [key: string]: unknown;
+            };
+            [key: string]: unknown;
+        };
     };
     /**
      * The unique swap ID for tracking
