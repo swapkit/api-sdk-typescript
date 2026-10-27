@@ -1099,7 +1099,7 @@ export type GetQuoteRequest = {
     sellAmount?: string;
     providers?: Array<string>;
     /**
-     * Address to send asset from. On a UTXO sell chain this may name several addresses to draw inputs from, separated by `;` — the first is used wherever a single address is required (refund address, memos, deposit channels). At most 6 addresses; repeats are ignored, empty entries are rejected.
+     * Address to send asset from. On a UTXO sell chain this may name several addresses to draw inputs from, separated by `;` — the first is used wherever a single address is required (refund address, memos, deposit channels). At most 20 addresses when every one is native SegWit (`bc1…`/`ltc1…`) on Bitcoin or Litecoin, and at most 6 addresses otherwise; repeats are ignored, empty entries are rejected.
      */
     sourceAddress?: string;
     /**
@@ -1358,7 +1358,7 @@ export type ExecuteSwapRequest = {
      */
     quoteType?: 'EXACT_INPUT' | 'FLEX_INPUT' | 'EXACT_OUTPUT';
     /**
-     * Address to send asset from. On a UTXO sell chain this may name several addresses to draw inputs from, separated by `;` — the first is used wherever a single address is required (refund address, memos, deposit channels). At most 6 addresses; repeats are ignored, empty entries are rejected.
+     * Address to send asset from. On a UTXO sell chain this may name several addresses to draw inputs from, separated by `;` — the first is used wherever a single address is required (refund address, memos, deposit channels). At most 20 addresses when every one is native SegWit (`bc1…`/`ltc1…`) on Bitcoin or Litecoin, and at most 6 addresses otherwise; repeats are ignored, empty entries are rejected.
      */
     sourceAddress: string;
     /**

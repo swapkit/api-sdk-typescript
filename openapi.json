@@ -9136,7 +9136,7 @@
           },
           "sourceAddress": {
             "type": "string",
-            "description": "Address to send asset from. On a UTXO sell chain this may name several addresses to draw inputs from, separated by `;` — the first is used wherever a single address is required (refund address, memos, deposit channels). At most 6 addresses; repeats are ignored, empty entries are rejected."
+            "description": "Address to send asset from. On a UTXO sell chain this may name several addresses to draw inputs from, separated by `;` — the first is used wherever a single address is required (refund address, memos, deposit channels). At most 20 addresses when every one is native SegWit (`bc1…`/`ltc1…`) on Bitcoin or Litecoin, and at most 6 addresses otherwise; repeats are ignored, empty entries are rejected."
           },
           "destinationAddress": {
             "type": "string",
@@ -10247,7 +10247,7 @@
           },
           "sourceAddress": {
             "type": "string",
-            "description": "Address to send asset from. On a UTXO sell chain this may name several addresses to draw inputs from, separated by `;` — the first is used wherever a single address is required (refund address, memos, deposit channels). At most 6 addresses; repeats are ignored, empty entries are rejected."
+            "description": "Address to send asset from. On a UTXO sell chain this may name several addresses to draw inputs from, separated by `;` — the first is used wherever a single address is required (refund address, memos, deposit channels). At most 20 addresses when every one is native SegWit (`bc1…`/`ltc1…`) on Bitcoin or Litecoin, and at most 6 addresses otherwise; repeats are ignored, empty entries are rejected."
           },
           "destinationAddress": {
             "type": "string",
