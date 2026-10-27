@@ -10205,7 +10205,9 @@
                     "rawImportThrottled",
                     "feeFixtureRunFailed",
                     "dynamicTokenNotFound",
-                    "dynamicTokenIdentifierUnavailable"
+                    "dynamicTokenIdentifierUnavailable",
+                    "swapkitTokenNotFound",
+                    "swapkitTokenDataDiscarded"
                   ]
                 },
                 "message": {
