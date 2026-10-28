@@ -9168,7 +9168,8 @@
                     "dynamicTokenNotFound",
                     "dynamicTokenIdentifierUnavailable",
                     "swapkitTokenNotFound",
-                    "swapkitTokenDataDiscarded"
+                    "swapkitTokenDataDiscarded",
+                    "swapkitTokenAdmissionDecimalsMismatch"
                   ]
                 },
                 "message": {
