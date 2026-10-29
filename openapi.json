@@ -8127,7 +8127,7 @@
               "FLEX_INPUT",
               "EXACT_OUTPUT"
             ],
-            "description": "EXACT_INPUT (default), FLEX_INPUT or EXACT_OUTPUT. EXACT_OUTPUT requires buyAmount and is currently supported by Flashnet only. On FLEX_INPUT, routes whose first-leg provider can't honour the mode are filtered out."
+            "description": "EXACT_INPUT (default), FLEX_INPUT or EXACT_OUTPUT. EXACT_OUTPUT requires buyAmount (and must omit sellAmount) and is supported by FLASHNET and NEAR; routes on any other provider are filtered out. FLASHNET additionally serves EXACT_OUTPUT only when the buy asset is USDC or USDT. On FLEX_INPUT, routes whose first-leg provider can't honour the mode are filtered out."
           },
           "disableEstimate": {
             "default": true,
@@ -8755,7 +8755,7 @@
                         "FLEX_INPUT",
                         "EXACT_OUTPUT"
                       ],
-                      "description": "The quoteType this route was built for (EXACT_INPUT or FLEX_INPUT). Echoes the request's quoteType so /swap can carry the mode forward."
+                      "description": "The quoteType this route was built for (EXACT_INPUT, FLEX_INPUT or EXACT_OUTPUT). Echoes the request's quoteType so /swap can carry the mode forward."
                     },
                     "approvalAddress": {
                       "type": "string",
@@ -9105,6 +9105,7 @@
                     "pubsubEnvelopeParsingError",
                     "invalidSpender",
                     "outputAmountDeviationTooHigh",
+                    "inputAmountDeviationTooHigh",
                     "outputBelowPublishedFloor",
                     "swapSizeExceeded",
                     "v2EndpointNotAllowed",
@@ -9205,7 +9206,7 @@
               "FLEX_INPUT",
               "EXACT_OUTPUT"
             ],
-            "description": "Override the EXACT_INPUT/FLEX_INPUT mode for this swap. Defaults to the quoteType from the original /v3/quote request when omitted."
+            "description": "Override the EXACT_INPUT/FLEX_INPUT/EXACT_OUTPUT mode for this swap. Defaults to the quoteType from the original /v3/quote request when omitted."
           },
           "sourceAddress": {
             "type": "string",
@@ -10443,7 +10444,7 @@
                   "FLEX_INPUT",
                   "EXACT_OUTPUT"
                 ],
-                "description": "The quoteType this route was built for (EXACT_INPUT or FLEX_INPUT). Echoes the request's quoteType so /swap can carry the mode forward."
+                "description": "The quoteType this route was built for (EXACT_INPUT, FLEX_INPUT or EXACT_OUTPUT). Echoes the request's quoteType so /swap can carry the mode forward."
               },
               "priceImpact": {
                 "type": "number",
