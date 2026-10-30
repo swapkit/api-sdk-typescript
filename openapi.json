@@ -127,13 +127,14 @@
               "enum": [
                 "all",
                 "crypto",
-                "rwa"
+                "rwa",
+                "stablecoin"
               ]
             },
             "in": "query",
             "name": "category",
             "required": false,
-            "description": "Asset class filter. \"rwa\" returns only tokenized real-world assets, \"crypto\" only everything else, \"all\" (the default) returns both."
+            "description": "Asset class filter. \"rwa\" returns only tokenized real-world assets, \"crypto\" only everything else, \"all\" (the default) returns both. \"stablecoin\" returns only fiat-pegged tokens; it cuts across the other two rather than nesting inside them, so a tokenized-security stablecoin answers to both \"stablecoin\" and \"rwa\"."
           }
         ],
         "responses": {
@@ -346,13 +347,14 @@
               "enum": [
                 "all",
                 "crypto",
-                "rwa"
+                "rwa",
+                "stablecoin"
               ]
             },
             "in": "query",
             "name": "category",
             "required": false,
-            "description": "Asset class filter. \"rwa\" returns only tokenized real-world assets, \"crypto\" only everything else, \"all\" (the default) returns both."
+            "description": "Asset class filter. \"rwa\" returns only tokenized real-world assets, \"crypto\" only everything else, \"all\" (the default) returns both. \"stablecoin\" returns only fiat-pegged tokens; it cuts across the other two rather than nesting inside them, so a tokenized-security stablecoin answers to both \"stablecoin\" and \"rwa\"."
           }
         ],
         "responses": {
@@ -2803,6 +2805,9 @@
                       "enum": [
                         "tokenized-securities"
                       ]
+                    },
+                    "isStablecoin": {
+                      "type": "boolean"
                     }
                   },
                   "required": [
@@ -3289,6 +3294,9 @@
                         "enum": [
                           "tokenized-securities"
                         ]
+                      },
+                      "isStablecoin": {
+                        "type": "boolean"
                       }
                     },
                     "required": [
@@ -3568,6 +3576,9 @@
                   "enum": [
                     "tokenized-securities"
                   ]
+                },
+                "isStablecoin": {
+                  "type": "boolean"
                 },
                 "chain": {
                   "type": "string",
@@ -4565,6 +4576,9 @@
                         "enum": [
                           "tokenized-securities"
                         ]
+                      },
+                      "isStablecoin": {
+                        "type": "boolean"
                       }
                     },
                     "required": [
@@ -4798,6 +4812,9 @@
                         "enum": [
                           "tokenized-securities"
                         ]
+                      },
+                      "isStablecoin": {
+                        "type": "boolean"
                       }
                     },
                     "required": [
@@ -9168,7 +9185,14 @@
                     "feeFixtureRunFailed",
                     "candidateTokenNotFound",
                     "candidateTokenIdentifierUnavailable",
+                    "candidateTokenInvalidTransition",
                     "swapkitTokenNotFound",
+                    "swapkitTokenAlreadyExists",
+                    "swapkitTokenDecimalsMismatch",
+                    "swapkitTokenImplausibleDecimals",
+                    "swapkitTokenDenylisted",
+                    "swapkitTokenFieldNotEdited",
+                    "swapkitTokenDiscoveryFailed",
                     "swapkitTokenDataDiscarded",
                     "swapkitTokenAdmissionDecimalsMismatch"
                   ]
