@@ -9166,8 +9166,8 @@
                     "rawImportInvalidCursor",
                     "rawImportThrottled",
                     "feeFixtureRunFailed",
-                    "dynamicTokenNotFound",
-                    "dynamicTokenIdentifierUnavailable",
+                    "candidateTokenNotFound",
+                    "candidateTokenIdentifierUnavailable",
                     "swapkitTokenNotFound",
                     "swapkitTokenDataDiscarded",
                     "swapkitTokenAdmissionDecimalsMismatch"
