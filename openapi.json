@@ -9113,6 +9113,8 @@
                     "litecoinMwebAddressUnsupported",
                     "zcashUnifiedAddressUnsupported",
                     "zcashShieldedMemoUnavailable",
+                    "zcashTransactionFormatRetired",
+                    "zcashNetworkUpgradeImminent",
                     "invalidTokenProgram",
                     "solanaOutputBelowRentExemptMinimum",
                     "solanaTokenProgramUnavailable",
