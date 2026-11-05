@@ -8615,6 +8615,40 @@
                       },
                       "tooltip": {
                         "type": "string"
+                      },
+                      "data": {
+                        "description": "Structured form of the figures embedded in `display`. Present only on `insufficientGas`; absent on every other warning code.",
+                        "type": "object",
+                        "properties": {
+                          "chain": {
+                            "type": "string",
+                            "description": "Chain whose native gas asset is short, e.g. \"TRON\"."
+                          },
+                          "asset": {
+                            "type": "string",
+                            "description": "Identifier of the gas asset, e.g. \"TRON.TRX\"."
+                          },
+                          "ticker": {
+                            "type": "string",
+                            "description": "Ticker of the gas asset, e.g. \"TRX\"."
+                          },
+                          "estimatedFee": {
+                            "type": "string",
+                            "description": "Estimated network fee, as a decimal string in the gas asset's own units. An estimate, not a quoted fee: on TRON it is what a node says this specific wallet would pay, and it drifts as staked energy/bandwidth regenerates. Good for display and for comparing against the balance; not a 'top up exactly this much' figure."
+                          },
+                          "balance": {
+                            "type": "string",
+                            "description": "The source address' gas-asset balance as read while building this swap, as a decimal string in the gas asset's own units. Read at /swap time, not at quote time."
+                          }
+                        },
+                        "required": [
+                          "chain",
+                          "asset",
+                          "ticker",
+                          "estimatedFee",
+                          "balance"
+                        ],
+                        "additionalProperties": false
                       }
                     },
                     "required": [
@@ -9713,6 +9747,40 @@
                 },
                 "tooltip": {
                   "type": "string"
+                },
+                "data": {
+                  "description": "Structured form of the figures embedded in `display`. Present only on `insufficientGas`; absent on every other warning code.",
+                  "type": "object",
+                  "properties": {
+                    "chain": {
+                      "type": "string",
+                      "description": "Chain whose native gas asset is short, e.g. \"TRON\"."
+                    },
+                    "asset": {
+                      "type": "string",
+                      "description": "Identifier of the gas asset, e.g. \"TRON.TRX\"."
+                    },
+                    "ticker": {
+                      "type": "string",
+                      "description": "Ticker of the gas asset, e.g. \"TRX\"."
+                    },
+                    "estimatedFee": {
+                      "type": "string",
+                      "description": "Estimated network fee, as a decimal string in the gas asset's own units. An estimate, not a quoted fee: on TRON it is what a node says this specific wallet would pay, and it drifts as staked energy/bandwidth regenerates. Good for display and for comparing against the balance; not a 'top up exactly this much' figure."
+                    },
+                    "balance": {
+                      "type": "string",
+                      "description": "The source address' gas-asset balance as read while building this swap, as a decimal string in the gas asset's own units. Read at /swap time, not at quote time."
+                    }
+                  },
+                  "required": [
+                    "chain",
+                    "asset",
+                    "ticker",
+                    "estimatedFee",
+                    "balance"
+                  ],
+                  "additionalProperties": false
                 }
               },
               "required": [

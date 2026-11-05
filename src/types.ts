@@ -1065,6 +1065,31 @@ export type GetQuoteResponse = {
             code: 'highSlippage' | 'highPriceImpact' | 'noSourceAddressToBuildTransaction' | 'affiliateFeeTooSmallSoRemoved' | 'unableToApplyReferralProgram' | 'insufficientBalance' | 'insufficientGas' | 'unableToBuildTransaction' | 'unableToEstimateGas' | 'limitPriceBelowSpot' | 'limitPriceWithinFeeGap' | 'limitOrderNotionalTooSmall' | 'outputBelowPublishedFloor' | 'litecoinMwebNotSupported' | 'refundAddressNotApplied' | 'vaultSwapUnavailable';
             display: string;
             tooltip?: string;
+            /**
+             * Structured form of the figures embedded in `display`. Present only on `insufficientGas`; absent on every other warning code.
+             */
+            data?: {
+                /**
+                 * Chain whose native gas asset is short, e.g. "TRON".
+                 */
+                chain: string;
+                /**
+                 * Identifier of the gas asset, e.g. "TRON.TRX".
+                 */
+                asset: string;
+                /**
+                 * Ticker of the gas asset, e.g. "TRX".
+                 */
+                ticker: string;
+                /**
+                 * Estimated network fee, as a decimal string in the gas asset's own units. An estimate, not a quoted fee: on TRON it is what a node says this specific wallet would pay, and it drifts as staked energy/bandwidth regenerates. Good for display and for comparing against the balance; not a 'top up exactly this much' figure.
+                 */
+                estimatedFee: string;
+                /**
+                 * The source address' gas-asset balance as read while building this swap, as a decimal string in the gas asset's own units. Read at /swap time, not at quote time.
+                 */
+                balance: string;
+            };
         }>;
         txHint?: 'simpleTransfer' | 'transferWithMemo' | 'contractCall';
         meta: {
@@ -1318,6 +1343,31 @@ export type ExecuteSwapResponse = {
         code: 'highSlippage' | 'highPriceImpact' | 'noSourceAddressToBuildTransaction' | 'affiliateFeeTooSmallSoRemoved' | 'unableToApplyReferralProgram' | 'insufficientBalance' | 'insufficientGas' | 'unableToBuildTransaction' | 'unableToEstimateGas' | 'limitPriceBelowSpot' | 'limitPriceWithinFeeGap' | 'limitOrderNotionalTooSmall' | 'outputBelowPublishedFloor' | 'litecoinMwebNotSupported' | 'refundAddressNotApplied' | 'vaultSwapUnavailable';
         display: string;
         tooltip?: string;
+        /**
+         * Structured form of the figures embedded in `display`. Present only on `insufficientGas`; absent on every other warning code.
+         */
+        data?: {
+            /**
+             * Chain whose native gas asset is short, e.g. "TRON".
+             */
+            chain: string;
+            /**
+             * Identifier of the gas asset, e.g. "TRON.TRX".
+             */
+            asset: string;
+            /**
+             * Ticker of the gas asset, e.g. "TRX".
+             */
+            ticker: string;
+            /**
+             * Estimated network fee, as a decimal string in the gas asset's own units. An estimate, not a quoted fee: on TRON it is what a node says this specific wallet would pay, and it drifts as staked energy/bandwidth regenerates. Good for display and for comparing against the balance; not a 'top up exactly this much' figure.
+             */
+            estimatedFee: string;
+            /**
+             * The source address' gas-asset balance as read while building this swap, as a decimal string in the gas asset's own units. Read at /swap time, not at quote time.
+             */
+            balance: string;
+        };
     }>;
     txHint?: 'simpleTransfer' | 'transferWithMemo' | 'contractCall';
     /**
