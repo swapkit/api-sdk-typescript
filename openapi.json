@@ -9092,6 +9092,7 @@
                     "slip24AmountOverflow",
                     "slip24InvalidSignature",
                     "slip24DigestComputationFailed",
+                    "slip24RefundUnverifiable",
                     "invalidTxHashFormat",
                     "affiliateNotFound",
                     "affiliateQuickSetupRunNotFound",
@@ -10834,7 +10835,18 @@
                               ]
                             },
                             "refund": {
-                              "type": "string"
+                              "type": "object",
+                              "properties": {
+                                "address": {
+                                  "type": "string",
+                                  "minLength": 1,
+                                  "description": "Refund destination the provider was configured with for this payment request"
+                                }
+                              },
+                              "required": [
+                                "address"
+                              ],
+                              "additionalProperties": false
                             }
                           },
                           "required": [
@@ -10888,7 +10900,17 @@
                       "type": "object",
                       "properties": {
                         "amount": {
-                          "type": "number"
+                          "anyOf": [
+                            {
+                              "type": "number",
+                              "minimum": 0
+                            },
+                            {
+                              "type": "string",
+                              "pattern": "^\\d+$"
+                            }
+                          ],
+                          "description": "Output amount in base units (satoshis, wei, …). A JSON number (exact only up to 2^53) for SLIP24_HEX and SLIP24_BASE64 keys; a decimal integer string, exact for u64/u256 amounts, for key types that use it"
                         },
                         "address": {
                           "type": "string"
