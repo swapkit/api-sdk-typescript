@@ -9118,6 +9118,7 @@
                     "limitOrderBuildFailed",
                     "limitOrderSubmissionFailed",
                     "limitOrderCancelFailed",
+                    "limitOrderCancelSignatureInvalid",
                     "limitOrderExpirationOutOfBounds",
                     "limitOrderUnsupportedFillFlags",
                     "limitOrderAmountAmbiguous",
