@@ -8959,6 +8959,7 @@
                     "insufficientAllowance",
                     "insufficientGas",
                     "unableToBuildTransaction",
+                    "unableToDecodeTransaction",
                     "noRouterAddressFound",
                     "noAggregatorAddressFound",
                     "noContractInstanceFound",
@@ -8990,6 +8991,7 @@
                     "errorEstimatingGas",
                     "apiKeyInvalid",
                     "apiKeyFailedToUpdate",
+                    "apiKeyUpdateConflict",
                     "apiKeySignatureExists",
                     "apiKeySignatureKeyTypeMismatch",
                     "apiKeyExpired",
@@ -9112,9 +9114,11 @@
                     "limitOrderRouteNotFound",
                     "limitOrderNotFound",
                     "limitOrderInvalidState",
+                    "limitOrderInvalidCursor",
                     "limitOrderBuildFailed",
                     "limitOrderSubmissionFailed",
                     "limitOrderCancelFailed",
+                    "limitOrderCancelSignatureInvalid",
                     "limitOrderExpirationOutOfBounds",
                     "limitOrderUnsupportedFillFlags",
                     "limitOrderAmountAmbiguous",
@@ -9147,6 +9151,7 @@
                     "candidateTokenNotFound",
                     "candidateTokenIdentifierUnavailable",
                     "candidateTokenInvalidTransition",
+                    "candidateTokenExtensionUnavailable",
                     "swapkitTokenNotFound",
                     "swapkitTokenAlreadyExists",
                     "swapkitTokenDecimalsMismatch",
@@ -9260,7 +9265,16 @@
           },
           "includeNonWitnessUtxo": {
             "type": "boolean",
-            "description": "UTXO chains only. Set to true to embed the full previous transaction (nonWitnessUtxo) for each input in the returned PSBT. Required by legacy signers such as the Ledger Litecoin app."
+            "description": "Deprecated — send previousTxData: \"ALL\" instead, which is the same request and is what this is read as. Still honoured, and unchanged: UTXO chains only, embeds the full previous transaction (nonWitnessUtxo) for each input in the returned PSBT, as legacy signers such as the Ledger Litecoin app require. Rejected alongside a previousTxData asking for anything other than \"ALL\"."
+          },
+          "previousTxData": {
+            "type": "string",
+            "enum": [
+              "AUTO",
+              "ALL",
+              "NONE"
+            ],
+            "description": "UTXO chains only; ignored on every other sell chain. How much previous-transaction data to attach to the returned PSBT's inputs. \"AUTO\" (the default) fetches one only for the inputs that cannot be signed without it. \"ALL\" fetches one for every input however modern its address — what the deprecated includeNonWitnessUtxo asks for, and what legacy signers such as the Ledger Litecoin app need; it costs a lookup per coin, which is why it holds the sourceAddress ceiling at 6. \"NONE\" fetches none: send it when you hold the previous transactions yourself and need only the unsigned transaction. At \"NONE\" the inputs whose script cannot be derived from their address (legacy, P2SH, and every input on Bitcoin Cash, Dash and Dogecoin) carry neither witnessUtxo nor nonWitnessUtxo and cannot be signed from the PSBT alone — supply them yourself before signing. The unsigned transaction is byte-identical at all three values: we still list the address's unspent outputs, so the inputs, outputs, memo, change and fee never move. \"NONE\" is rejected with enableSweep and on Zcash."
           },
           "includeAttestation": {
             "type": "boolean",
