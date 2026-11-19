@@ -805,6 +805,10 @@ export type GetCachedPriceResponse = Array<{
     error?: string;
 }>;
 
+export type GetChainflipBrokerHealthResponse = {
+    status: string;
+};
+
 export type CreateBrokerChannelRequest = {
     destinationAddress: string;
     sellAsset: {
