@@ -7860,6 +7860,18 @@
           "additionalProperties": false
         }
       },
+      "GetChainflipBrokerHealthResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status"
+        ],
+        "additionalProperties": false
+      },
       "CreateBrokerChannelRequest": {
         "type": "object",
         "properties": {
