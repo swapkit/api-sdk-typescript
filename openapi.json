@@ -9082,6 +9082,7 @@
                     "zcashMemoTooLong",
                     "litecoinMwebAddressUnsupported",
                     "zcashUnifiedAddressUnsupported",
+                    "zcashUnifiedReceiverUnsupported",
                     "zcashShieldedMemoUnavailable",
                     "zcashTransactionFormatRetired",
                     "zcashNetworkUpgradeImminent",
