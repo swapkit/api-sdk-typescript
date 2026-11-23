@@ -9005,6 +9005,7 @@
                     "apiKeyFailedToUpdate",
                     "apiKeyUpdateConflict",
                     "apiKeySignatureExists",
+                    "apiKeyWebhookSignatureExists",
                     "apiKeySignatureKeyTypeMismatch",
                     "apiKeyExpired",
                     "unauthorized",
