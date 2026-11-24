@@ -9166,6 +9166,7 @@
                     "candidateTokenNotFound",
                     "candidateTokenIdentifierUnavailable",
                     "candidateTokenInvalidTransition",
+                    "candidateTokenReviewNotAcknowledged",
                     "candidateTokenExtensionUnavailable",
                     "swapkitTokenNotFound",
                     "swapkitTokenAlreadyExists",
