@@ -9174,6 +9174,9 @@
                     "swapkitTokenImplausibleDecimals",
                     "swapkitTokenDenylisted",
                     "swapkitTokenFieldNotEdited",
+                    "swapkitTokenAlreadyBlocked",
+                    "swapkitTokenNotBlocked",
+                    "swapkitTokenNotBlockable",
                     "swapkitTokenDiscoveryFailed",
                     "swapkitTokenDataDiscarded",
                     "swapkitTokenAdmissionDecimalsMismatch"
