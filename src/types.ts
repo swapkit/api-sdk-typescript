@@ -36,6 +36,7 @@ export type GetTokensResponse = {
         coingeckoId?: string;
         geoBlockRule?: 'tokenized-securities';
         isStablecoin?: boolean;
+        isVerified?: boolean;
     }>;
     logoURI?: string;
     url?: string;
@@ -74,6 +75,7 @@ export type GetTokensResponse = {
         coingeckoId?: string;
         geoBlockRule?: 'tokenized-securities';
         isStablecoin?: boolean;
+        isVerified?: boolean;
     }>;
     logoURI?: string;
     url?: string;
@@ -95,6 +97,7 @@ export type SearchTokensResponse = {
         coingeckoId?: string;
         geoBlockRule?: 'tokenized-securities';
         isStablecoin?: boolean;
+        isVerified?: boolean;
         chain: 'ADI' | 'ALEO' | 'APT' | 'ARB' | 'ARC' | 'AURORA' | 'AVAX' | 'BASE' | 'BERA' | 'BSC' | 'BTC' | 'BCH' | 'BOTANIX' | 'ADA' | 'FLIP' | 'CORE' | 'CORN' | 'GAIA' | 'CRO' | 'DASH' | 'DOGE' | 'ETH' | 'GNO' | 'HARBOR' | 'HYPEREVM' | 'HYPE' | 'KUJI' | 'LTC' | 'LINEA' | 'MAYA' | 'MEGAETH' | 'MONAD' | 'NEAR' | 'NOBLE' | 'OP' | 'XPL' | 'DOT' | 'POL' | 'XRD' | 'XRP' | 'HOOD' | 'SOL' | 'SONIC' | 'SPARK' | 'XLM' | 'STRK' | 'SUI' | 'THOR' | 'TON' | 'TRON' | 'UNI' | 'XLAYER' | 'ZEC';
         providers: Array<'CHAINFLIP' | 'CHAINFLIP_STREAMING' | 'MAYACHAIN' | 'MAYACHAIN_STREAMING' | 'ONEINCH' | 'PANCAKESWAP' | 'SUSHISWAP_V2' | 'THORCHAIN' | 'THORCHAIN_STREAMING' | 'TRADERJOE_V2' | 'UNISWAP_V2' | 'UNISWAP_V3' | 'JUPITER' | 'OKX' | 'NEAR' | 'GARDEN' | 'HARBOR' | 'FLASHNET' | 'MAYAN' | 'RELAY' | 'PACTSWAP' | 'PANGOLIN_V1' | 'CAVIAR_V1' | 'OPENOCEAN_V2' | 'OCISWAP_V1' | 'CAMELOT_V3'>;
         marketCapUsd?: number;
@@ -175,6 +178,7 @@ export type GetWhitelistPoolsResponse = Array<{
         coingeckoId?: string;
         geoBlockRule?: 'tokenized-securities';
         isStablecoin?: boolean;
+        isVerified?: boolean;
     } & {
         cg?: unknown;
     }>;
@@ -207,6 +211,7 @@ export type GetWhitelistTokensResponse = Array<{
         coingeckoId?: string;
         geoBlockRule?: 'tokenized-securities';
         isStablecoin?: boolean;
+        isVerified?: boolean;
     } & {
         cg?: unknown;
     }>;
