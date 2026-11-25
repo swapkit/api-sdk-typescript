@@ -1,6 +1,6 @@
 {
   "name": "@swapkit/api-sdk-typescript",
-  "version": "6.9.0-nightly.20261124153921",
+  "version": "6.9.0-nightly.20261125102220",
   "description": "Type-safe TypeScript SDK for the SwapKit API",
   "license": "MIT",
   "type": "module",

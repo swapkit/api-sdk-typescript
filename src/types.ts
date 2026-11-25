@@ -1857,6 +1857,10 @@ export type GetTokensData = {
          * Asset class filter. "rwa" returns only tokenized real-world assets, "crypto" only everything else, "all" (the default) returns both. "stablecoin" returns only fiat-pegged tokens; it cuts across the other two rather than nesting inside them, so a tokenized-security stablecoin answers to both "stablecoin" and "rwa".
          */
         category?: 'all' | 'crypto' | 'rwa' | 'stablecoin';
+        /**
+         * "true" returns only verified tokens (the token people mean by that name on its chain), "false" only the rest; omitted returns both. Combines with category.
+         */
+        isVerified?: string;
     };
     url: '/tokens';
 };
