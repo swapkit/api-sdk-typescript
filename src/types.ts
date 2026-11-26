@@ -218,6 +218,19 @@ export type GetWhitelistTokensResponse = Array<{
     url: string;
 }>;
 
+export type ScreenAddressRequest = {
+    addresses: string | Array<string>;
+    chains: string | Array<string>;
+};
+
+export type ScreenAddressResponse = {
+    isRisky?: boolean;
+    isSanctioned?: boolean;
+    isBlacklisted?: boolean;
+    confirm: boolean;
+    module?: number;
+};
+
 export type TrackTransactionRequest = {
     /**
      * Hash for the first transaction broadcasted by the end user. e.g. `88D1819378ECD09E5284C54937CDC1E99B52F253C007617A02DD1200710CE677`
@@ -2333,6 +2346,33 @@ export type TrackTransactionResponses = {
 };
 
 export type TrackTransactionResponse2 = TrackTransactionResponses[keyof TrackTransactionResponses];
+
+export type ScreenAddressData = {
+    body: ScreenAddressRequest;
+    path?: never;
+    query?: never;
+    url: '/screen';
+};
+
+export type ScreenAddressErrors = {
+    /**
+     * Default Response
+     */
+    400: {
+        message: string;
+    };
+};
+
+export type ScreenAddressError = ScreenAddressErrors[keyof ScreenAddressErrors];
+
+export type ScreenAddressResponses = {
+    /**
+     * Default Response
+     */
+    200: ScreenAddressResponse;
+};
+
+export type ScreenAddressResponse2 = ScreenAddressResponses[keyof ScreenAddressResponses];
 
 export type GetGasPricesData = {
     body?: never;

@@ -24,6 +24,7 @@ import {
   getSwapFromAssets,
   getSwapToAssets,
   getTokens,
+  screenAddress,
   searchTokens,
   trackTransaction,
 } from "./sdk";
@@ -37,6 +38,7 @@ export class SwapKitService {
   static getQuote = getQuote;
   static getSwap = executeSwap;
   static trackTransaction = trackTransaction;
+  static screenAddress = screenAddress;
   static getGasPrices = getGasPrices;
   static getGasHistory = getGasHistory;
   static getCachedPrice = getCachedPrice;
@@ -69,6 +71,11 @@ export const SwapService = {
 /** @deprecated Use `SwapKitService` instead */
 export const TrackService = {
   trackTransaction,
+} as const;
+
+/** @deprecated Use `SwapKitService` instead */
+export const ScreenService = {
+  screenAddress,
 } as const;
 
 /** @deprecated Use `SwapKitService` instead */
