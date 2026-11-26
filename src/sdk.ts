@@ -2,7 +2,7 @@
 
 import type { Client, ClientMeta, Options as Options2, RequestResult, TDataShape } from './http';
 import { client } from './client';
-import type { CreateBrokerChannelData, CreateBrokerChannelResponses, ExecuteSwapData, ExecuteSwapErrors, ExecuteSwapResponses, GetCachedPriceData, GetCachedPriceResponses, GetGasHistoryData, GetGasHistoryResponses, GetGasPricesData, GetGasPricesResponses, GetProvidersData, GetProvidersErrors, GetProvidersResponses, GetQuoteData, GetQuoteErrors, GetQuoteResponses, GetSwapFromAssetsData, GetSwapFromAssetsErrors, GetSwapFromAssetsResponses, GetSwapToAssetsData, GetSwapToAssetsErrors, GetSwapToAssetsResponses, GetTokensData, GetTokensErrors, GetTokensResponses, ScreenAddressData, ScreenAddressErrors, ScreenAddressResponses, SearchTokensData, SearchTokensErrors, SearchTokensResponses, TrackTransactionData, TrackTransactionErrors, TrackTransactionResponses } from './types';
+import type { CreateBrokerChannelData, CreateBrokerChannelResponses, ExecuteSwapData, ExecuteSwapErrors, ExecuteSwapResponses, GetCachedPriceData, GetCachedPriceResponses, GetGasHistoryData, GetGasHistoryResponses, GetGasPricesData, GetGasPricesResponses, GetProvidersData, GetProvidersErrors, GetProvidersResponses, GetQuoteData, GetQuoteErrors, GetQuoteResponses, GetSwapFromAssetsData, GetSwapFromAssetsErrors, GetSwapFromAssetsResponses, GetSwapToAssetsData, GetSwapToAssetsErrors, GetSwapToAssetsResponses, GetTokensData, GetTokensErrors, GetTokensResponses, SearchTokensData, SearchTokensErrors, SearchTokensResponses, TrackTransactionData, TrackTransactionErrors, TrackTransactionResponses } from './types';
 
 export type Options<TData extends TDataShape = TDataShape, ThrowOnError extends boolean = boolean, TResponse = unknown> = Options2<TData, ThrowOnError, TResponse> & {
     /**
@@ -65,16 +65,6 @@ export const trackTransaction = <ThrowOnError extends boolean = false>(options?:
     headers: {
         'Content-Type': 'application/json',
         ...options?.headers
-    }
-});
-
-export const screenAddress = <ThrowOnError extends boolean = false>(options: Options<ScreenAddressData, ThrowOnError>): RequestResult<ScreenAddressResponses, ScreenAddressErrors, ThrowOnError> => (options.client ?? client).post<ScreenAddressResponses, ScreenAddressErrors, ThrowOnError>({
-    security: [{ name: 'x-api-key', type: 'apiKey' }],
-    url: '/screen',
-    ...options,
-    headers: {
-        'Content-Type': 'application/json',
-        ...options.headers
     }
 });
 

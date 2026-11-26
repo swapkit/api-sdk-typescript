@@ -77,7 +77,6 @@ All API methods are available as static methods on the `SwapKitService` class:
 | `getQuote({ body })` | POST | `/v3/quote` |
 | `getSwap({ body })` | POST | `/v3/swap` |
 | `trackTransaction({ body })` | POST | `/track` |
-| `screenAddress({ body })` | POST | `/screen` |
 | `getGasPrices()` | GET | `/gas` |
 | `getGasHistory({ query? })` | GET | `/gas/history` |
 | `getCachedPrice({ body })` | POST | `/price/cached-price` |
@@ -123,11 +122,6 @@ const { data: swap } = await SwapKitService.getSwap({
 // Pass the routeId from the quote to get realized-slippage reporting on completion
 const { data: status } = await SwapKitService.trackTransaction({
   body: { hash: "0xabc...", chainId: "1", routeId: route.routeId },
-});
-
-// Screen an address
-const { data: screen } = await SwapKitService.screenAddress({
-  body: { addresses: ["0xabc..."], chains: ["ETH"] },
 });
 
 // Get gas prices

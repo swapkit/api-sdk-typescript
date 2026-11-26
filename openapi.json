@@ -1998,55 +1998,6 @@
         }
       }
     },
-    "/screen": {
-      "post": {
-        "operationId": "screenAddress",
-        "tags": [
-          "Screen"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ScreenAddressRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "Default Response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ScreenAddressResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Default Response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "message": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "message"
-                  ],
-                  "additionalProperties": false
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/gas": {
       "get": {
         "operationId": "getGasPrices",
@@ -4811,65 +4762,6 @@
           ],
           "additionalProperties": false
         }
-      },
-      "ScreenAddressRequest": {
-        "type": "object",
-        "properties": {
-          "addresses": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            ]
-          },
-          "chains": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            ]
-          }
-        },
-        "required": [
-          "addresses",
-          "chains"
-        ]
-      },
-      "ScreenAddressResponse": {
-        "type": "object",
-        "properties": {
-          "isRisky": {
-            "type": "boolean"
-          },
-          "isSanctioned": {
-            "type": "boolean"
-          },
-          "isBlacklisted": {
-            "type": "boolean"
-          },
-          "confirm": {
-            "type": "boolean"
-          },
-          "module": {
-            "type": "number"
-          }
-        },
-        "required": [
-          "confirm"
-        ],
-        "additionalProperties": false
       },
       "TrackTransactionRequest": {
         "type": "object",
